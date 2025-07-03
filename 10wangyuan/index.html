@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>王源演唱会歌词本</title>
+  <style>
+    body {
+      margin: 0; 
+    font-family: "Microsoft YaHei", sans-serif; 
+    color: #6a283e; 
+    font-size: 16px; 
+    /*background-color: #F6D222; */
+    background: linear-gradient(to bottom, #FFB4DB, #F7FDE1);
+    background-size: cover; 
+    -webkit-background-size: cover; /* 适配苹果手机 */
+    background-position: top left; 
+    -webkit-background-position: top left; /* 适配苹果手机 */
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    -webkit-background-attachment: fixed; 
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    /* 移除min-height，因为它可能干扰导航栏的定位 */ 
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #F47CBB;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.25em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: url('https://img.picui.cn/free/2025/06/25/685bef0564c46.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: #F6C0CF;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid #ddd;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav li:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .developer-info {
+      font-size: 0.8em;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 30px;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      color: #4f2c35;
+      font-size: 1.3em;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: rgba(255, 255, 255, 0.5); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      /*border: 1px solid #ffffff;*/
+      font-size: 1.25rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        left: -250px;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      pre {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    王源演唱会歌词本
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <!-- 自动生成的歌曲列表 -->
+    </ul>
+  </nav>
+
+  <main id="content">
+    <p class="developer-info">本网页由Bunnysong007自主开发，如有定制需求请微信联系。</p>
+    <!-- 歌词内容动态插入 -->
+  </main>
+
+  <script>
+  const songs = [
+   {
+    title: "客厅狂欢",
+    lyrics: "霓虹光影氛围\n感官放弃戒备\n入夜准时起飞\n天亮再返回\nI don't wanna go back\n白天的气味\nU don't need to know that\nI need u so bad\n心跳就慢了一拍\n呼吸随着音乐加快\n突破重力的阻碍\nFly me so high\n释放最感性的讯号\n夜晚不需要太礼貌\n我只想放弃思考\n放肆在这城市一角\n只需要你来打扰\n别人都嘈杂无聊\n日夜颠倒\n站在人海中的荒岛\n舞池里放声大笑\n客厅就刚好\n情绪做好准备\n眼泪不用安慰\n身体留下空位\n就远离是非\nI don't wanna go back\n白天的气味\nU don't need to know that\nI need u so bad\n心跳就慢了一拍\n呼吸随着音乐加快\n突破重力的阻碍\nFly me so high\n释放最感性的讯号\n夜晚不需要太礼貌\n我只想放弃思考\n放肆在这城市一角\n只需要你来打扰\n别人都嘈杂无聊\n日夜颠倒\n站在人海中的荒岛\n舞池里放声大笑\n客厅就刚好"
+  },
+  {
+    title: "疯人公园",
+    lyrics: "星期九 痛觉营业\n诚实点 夜是气氛学\n我们约在屋顶见面\n我们去疯人公园\n我们在野\n跟自己打成一片\nLet it go Let it go Let it go yeah\nLet you know Let you know yeah\nLet it go Let it go Let it go yeah\nLet you know Let you know yeah\n差点 红了眼\n背对世界 荡秋千\nLet it go Let it go Let it go yeah\nLet you know Let you know yeah\n不听劝 不不不听劝\n想要的 画个圈\n讨厌的 拉根线\n吃电影 嚼出个泪点\n喝三月 狂欢一杯音乐节\n我左脚 踩脏右边鞋\n你也跟 自己划着拳\n真新鲜 我们穷得只剩甜\nLet it go Let it go Let it go yeah\nLet you know Let you know yeah\nLet it go Let it go Let it go yeah\nLet you know Let you know yeah\n我们一起 多安全\n疯人公园 荡秋千\nLet it go Let it go Let it go yeah\nLet you know Let you know yeah"
+  },
+  {
+    title: "Back to Life",
+    lyrics: "Somewhere far away there's a man who lost his soul\nHaving the hardest days don't know which way to go\nHe nearly lost his faith it's starting to take a toll\nAs he drowns his tears in pools of alcohol\nDead on his feet\nDown on his knees\nScreaming out why\nSick of the grief\nIt's harder to see with pain in his eyes\nDead on his feet\nDown on his knees\nScreaming out why\nBegging lord please\nBegging lord please\nBring me back to life\nBring me back to life\nNow there is a broken mirror upon the wall\nHe looked right at it and he hated what he saw\nJust to realize the eyes he locked with were his own\nI'm the man the myth the one who's all alone\nDead on his feet\nDown on his knees\nScreaming out why\nSick of the grief\nIt's harder to see with pain in his eyes\nDead on his feet\nDown on his knees\nScreaming out why\nBegging lord please\nBegging lord please\nBring me back to life\nBring me back to life\nBring me back to life\nIt goes on and on and on and on\nOn and on and on and on\nOn and on and on and on\nOh Oh Oh Oh\nOn and on and on and on\nOn and on and on and on\nOn and on and on and on\nOh Oh Oh Oh\nDead on his feet\nDown on his knees\nScreaming out why\nSick of the grief\nIt's harder to see with pain in his eyes\nDead on his feet\nDown on his knees\nScreaming out why\nBegging lord please\nBegging lord please\nBring me back to life"
+  },
+  {
+    title: "海风吹",
+    lyrics: "海风吹啊吹\n吹透彻心扉\n海风吹啊吹\n吹透彻心扉\n想带你去海边 不用准备\n就让海风吹啊吹\n吹动你金黄发尾\n我想你 想给你\n一瓶橘子汽水\n无论多遥远距离\n你就是我的宿命\n我想你 我想你\nYou're my babe my babe\n声音变沙哑\n复述了几百遍\n爱上这感觉\n不顾一切去追\n美丽的傍晚\n撒满了星星的夜\n呼吸在放缓\n享受这种感觉\n就让海风吹啊吹\n会保护你的心碎\n我想你 我想你\n不会感觉疲惫\n无论多遥远距离\n歌声会伴你安睡\n我想你 我想你\nYou're my babe my babe\n像雨后的天晴 像初夏的草坪\n和你仰望这夜里每颗流星落地\n声音变沙哑\n复述了几百遍\n爱上这感觉\n不顾一切去追\n美丽的傍晚\n撒满星星的夜\n呼吸在放缓\n享受这种感觉\n海风吹\n海风吹\n我说过会保护你的心碎\n海风吹\n海风吹\n这歌声会自然伴你安睡\n海风吹\n我说过会保护你的心碎\n海风吹\n海风吹\n这歌声会自然伴你安睡\n你的微笑耐人寻味\n让我不自觉的陷入沉醉\n海浪已经快把我包围\n此刻就让海风轻轻吹"
+  },
+  {
+    title: "这里",
+    lyrics: "关上灯 张开眼\n行李箱在失眠\n大半夜 三四点\n尽管身体感到很疲累\n灵魂早已飞到遥远经纬\nHere I am It's OK\n远方的鼓声震动耳朵\n明天我将会目击什么 喔\nHere you are It's OK\n我这样鼓励这里的我\n要记得此刻我汹涌的脉搏\n从指尖 到天边\n星火夜里点缀\n从房间 到世界\n沿途风景让未来特写\n这里的我已经做好准备\nHere I am It's OK\n远方的鼓声震动耳朵\n明天我将会目击什么 喔\nHere you are It's OK\n我这样鼓励这里的我\n要记得此刻我汹涌的脉搏\nHere I am It's OK\n一千零一个未知如果\n明天它们会结果什么 喔\nHere you are It's OK\n我这样告别这里的我\n去那里遇见面目崭新的我"
+  },
+  {
+    title: "Stop the clock（Clocks）",
+    lyrics: "Brave faces\nCover scrapes up with band aids\nBut I can't keep on lying to myself\nAnd keep on saying I don't need nobody else\nCold sheets\nFelt so good to the old me\nI can't keep on lying by myself\nHate to admit it\nBut I need to be held need to be held again\nSeeing all my friends holding hands at the bar\nWatching old lovers feeding birds in the park\nSecond hand feelings never quite enough\nWish I could just stop the clocks\nAnd tear this city down til I find us\nI know the words but not the sound\nMy heart is tired\nOf sleeping far away from home\nIf there's a God above my head\nIf it's not too much to ask\nJust stop the clocks\nMistakes\nFrom my past come to haunt me\nThe devil I could never put to rest\nLet it hurt me once it's gonna hurt again\nSeeing all my friends holding hands at the bar\nWatching old lovers feeding birds in the park\nSecond hand feelings never quite enough\nWish I could just stop the clocks\nAnd tear this city down til I find us\nI know the words but not the sound\nMy heart is tired\nOf sleeping far away from home\nIf there's a God above my head\nIf it's not too much to ask\nJust stop the clocks\nStop the clocks\nStop the clocks\nJust stop the clocks\nJust stop the clocks\nStop the clocks"
+  },
+  {
+    title: "飘",
+    lyrics: "被遗忘的\n不被承认的\n像飞行器落入银河\n被击中后坠落\n曾被谈起的\n绚烂如花火\n舍命光亮过\n就不会不舍\n被遗忘就是结局吧\n跨不过时间的长河\n飘啊飘啊 飘啊飘啊\n够潇洒就不会遇见狼狈\n放得下时间就不再浪费\n就这样飘啊 飘啊飘啊\n曾重要的\n不再重要了\n如果不舍弃点什么\n就奢望太多\n说过的承诺\n必须遵守吗\n可是被惩罚的\n是守规则者\n假定放不下的太多\n不用说一定是弱者\n飘啊飘啊 飘啊飘啊\n时间的长河有多么广阔\n尘埃还妄想要螳臂挡车\n就这样 飘啊 飘啊 飘啊"
+  },
+  {
+    title: "随想",
+    lyrics: "躺在床上\n月光怎么这么炽烈像太阳\n陪着我的\n忽闪忽闪尘硝翻云婉转\n曾说过的\n说过了就变成你的我的\n不知名的\n平淡音乐刺穿耳膜\n天花吊灯\n怎么一动不动倒吊在这呢\n我燥动的\n好像一刻也不曾停息过\n天上的风\n你看不见却还是来势汹汹\n北辙南辕\n是不是还需要时间\n我想要飞到天上去\n看悠闲游荡的鲸鱼\n我想要坠入深海里\n独自去最深的海底\n还想潜入你梦里\n不渝的陪着你\n陪着你\n陪着你\n陪着你\n陪着你\n陪着你\n陪着你\n陪着你\n我燥动的\n好像一刻也不曾停息过"
+  },
+  {
+    title: "多云转晴又转阴",
+    lyrics: "纯白色\n附在玻璃窗\n城市的高层被遮挡\n感觉到\n风中的湿润\n触碰我身体的表层\n浮动的气温\n情绪的围城\n晴天又转阴\n是我的心情\n想要抓住云层的空隙\n听日落的声音\n难过的水汽\n变成雨是宿命\n填满了心里凹陷的地\n反射我 每一种 表情\n雨降落\n凌晨的广场\n覆盖了城市的声响\n一把伞\n将人群阻挡\n让孤单都合理具象\n浮动的气温\n情绪的围城\n晴天又转阴\n是我的心情\n想要抓住云层的空隙\n听日落的声音\n难过的水汽\n变成雨是宿命\n填满了心里凹陷的地\n反射我 每一种 表情\n晴天又转阴\n何时又转晴\n想要抓住云层的空隙\n听日落的声音\n难过的水汽\n最后变成乌云\n填满了心里凹陷的地\n反射我 唯一的 表情"
+  },
+  {
+    title: "我们都会变成雨降落",
+    lyrics: "我们都会变成雨降落\n在城市的某一个角落\n有你和我经过\n最假的谎如果是你说\n义无反顾的 笨拙的\n相信了\n降落一场雨\n换季再换季\n如果世界只剩下你 剩下我两个\n如果沉默变成雨会倾盆降落\n会不会冲掉所有的 颠沛和波折\n就不用再说了 祝你喜乐\n降落几场雨\n换几本日历\n这城市不只困住你 困住我 两个\n至暗时刻却只有我一个人捱过\n结局总是变化的 转折的 摆脱\n所有承诺过的 那些深刻"
+  },
+  {
+    title: "The Wrong Things",
+    lyrics: "No it wasn't meant to be\nBut all the words you said to me are still so clear\nSometimes my mind plays tricks on me\nAnd I pretend that I can see you laying here\nIf I'm supposed to heal in time\nShould you still be on my mind like you are\nCuz I've been living with the fear\nThat this pain won't disappear from my heart\nSometimes the wrong things feel so right\nSometimes the lights shine brighter at night\nSometimes the truth's a lie\nSo when you ask me how I am I say fine\nSo when you ask me how I am I say fine\nIt's impossible to quit\nWhen every thought of you's a hit that keeps me high\nAll the memories make me numb\nBut they're barely just enough to get me by\nYou know I wonder all the time\nIf I occupy your mind at all\nI'm embarrassed to confess\nI'm not strong enough to let you go\nSometimes the wrong things feel so right\nSometimes the lights shine brighter at night\nSometimes the truth's a lie\nSo when you ask me how I am I say fine\nSo when you ask me how I am I say fine\nI'm embarrassed to confess\nI'm not strong enough to let you go\nThe wrong things feel so right\nSometimes the lights shine brighter at night\nSometimes the truth's a lie\nSo when you ask me how I am I say fine\nSo when you ask me how I am I say fine\nWon't you please ask me how I am\nSo I would like to say I am fine"
+  },
+  {
+    title: "世界上没有真正的感同身受",
+    lyrics: "世界怎么这么安静\n感觉被所有人抛弃\n生活这么拼命努力\n是不是也算一种远离\n这世上除了我\n只有千万个你\n逃离那些让你\n波动情绪的事情\n世上没有真的感同身受\n面对其实只有一个人\n一个人在夜里哭着\n哭到头疼直到睡着\n没有人能真的理解你啊\n觉得虚伪你逢场作戏\n我一直都会记得一句话\n强大到无往不利\n世界怎么这么安静\n感觉被所有人抛弃\n生活这么拼命努力\n是不是也算一种远离\n这世上除了我\n只有千万个你\n逃离那些让你\n波动情绪的事情\n每天都笑着暖的像太阳\n可是否是真的快乐呢\n是否你有看过我\n独自难过的生活\n你说天塌下来你会陪我\n可你又如何同感我寂寞\n只是我的习惯罢了\n其实也有一面脆弱\n世上\n没有真的感同身受"
+  },
+  {
+    title: "一样",
+    lyrics: "我也只是个普通人\n一颗普通而平凡的尘\n烟火浮沉 渺小星辰\n并不过分 我的人生\n我也很难和你共情\n毕竟我生而不是你\n郁郁寡欢 左右为难\n生活常态 皆为同感\n我其实真的和你一样\n会在深夜兀自哀伤\n有原因的 没理由的\n有些事情很难忘\n我也会为自己心疼\n为琐事坠入无尽沉沦\n天真灿烂 尘世游慢\n请拿出鼓动风云的勇敢\n你我一样吃着三餐\n彻夜不睡找人倾诉愤懑\n很多事情 解决不完\n拖到明天对它说早安\n我其实真的和你一样\n向前走带着遍体鳞伤\n一点希望 一线曙光\n我竟丝毫不敢放\n我也经历过很多挫折\n万事顺遂毫无蹉跎\n南柯一梦 终归成空\n为自己誓死效忠\n生而自由 爱而无畏\n我和你一样"
+  },
+  {
+    title: "流星也为你落下来了",
+    lyrics: "一片萤火\n整个星河\n都被你捕捉\n流星也为你落下来了\n在想什么\n在想什么\n你望着那朵\n说看到了些颜色\n追问我那是什么\nI want want want to dance with you til sunrise\n我们在草坪上\n谈论什么都不再重要了\nOh run run run away the fate of clockwise\n看萤火虫萦绕着火亮了几颗\n对你悄悄说\nSee your eyes\n浅浅的海风\n拂着草表达着\n我最真挚的爱\nStay for life oh\n我想牵着你的手\n看月亮慢慢温柔\nI want want want to dance with you til sunrise\n我们在草坪上\n谈论什么都不再重要了\nOh run run run away the fate of clockwise\n看萤火虫萦绕着火亮了几颗\n对你悄悄说\n一片萤火\n整个星河\n都被你捕捉\n流星也为你落下来了\n在想什么\n在想什么\n你望着那朵\n你说你也看到了我\n是透明的"
+  },
+    {
+    title: "姑娘",
+    lyrics: "想要谈恋爱这件事\n也没什么不好意思讲\n关上了灯\n我总是会想\n我会遇到个什么样的姑娘\n她的头发是短是长\n姓刘姓周或姓王\n其实姓什么不勉强\n当然也不能叫苏大强\n她是可爱或是漂亮\n还是可爱又漂亮\n我们相遇在什么地方\n我就先去那里逛逛\n她到底是什么样\n命运会安排妥当\n我觉得最重要的\n我还没唱\n她一定像天使一样\n会给楼下的小黄买狗粮\n她一定会特别善良\n会给晚班的张姨送碗汤\n她一定要很坚强\n再艰难也会在我身旁\n在我惶恐的时候\n抱我肩膀\n她一定像天使一样\n会给楼下的小黄买狗粮\n她一定会特别善良\n会给晚班的张姨送碗汤\n她一定要很坚强\n再艰难也会在我身旁\n在我惶恐的时候\n抱我肩膀\n她一定像天使一样\n会把重要的日子记心上\n她一定会特别善良\n会给流浪的老人送衣裳\n她一定要很坚强\n流言蜚语都不放心上\n在我无助的时候\n给我力量\n想要谈恋爱这件事\n也没什么不好意思讲\n关上了灯\n我总是会想\n我会遇到个什么样的姑娘\n想啊想\n想啊想\n我想啊想啊想\n不知不觉\n天就快亮"
+  },
+  {
+    title: "你的名字是世界瞒着我最大的事情",
+    lyrics: "我想过和你散步仲夏夜海边\n这不过是我见你第一面\n怎么会这种念头不断出现\n不住看你的视线\n怎么表现不明显\n而我 不过在这天遇见了你\n我的世界雨过天晴\n可是还有个小问题\n怎么靠近你 和你的姓名\n哪会难过\n能见到你就重新定义了快乐\n虽然遗憾不多\n但还是有一个想对你说\n我的名字是\nDalala Dalala Ei\nDalala Dalala Ei\n好想用所有的语言\n让你对我更了解\n说不出口\nDalala Dalala Ei\nDalala Dalala Ei\n想亲口说一次\n让你知道我名字\n其实只想知道关于你的名字\n这样就有了人事物地点\n给最初心动画上句点圆圈\n每次想起都很甜\n闭上眼睛就看见\n和你牵手散步在沙滩海边\n和你在街角咖啡店\n和你在暴雨的屋檐\n春天的花田\n和梦的里面\nDalala Dalala Ei\nDalala Dalala Ei\n世界瞒着你的名字\n对我说到此为止\noh no 还有\nDalala Dalala Ei\nDalala Dalala Ei\n不知道你的名字\n就暂且叫故事"
+  },
+  {
+    title: "奔赴时间尽头的流萤",
+    lyrics: "望向远方你的神情\n眼底倒映纯净森林\n一颗吻漂浮在空气里\n结尾有了另一段插叙\n夕阳是我脸红证据\n我脑海中浮现场景\n电影里的某种隐喻\n这瞬间变得有迹可循\n笨拙的心动开始唤醒\n勇敢是你热烈回应\n奔赴这一场流萤\n黄昏梦境 美好在交替\n陷落时间尽头里\n你的眼睛 忽闪的光影\n呼应所有浪漫\n难过变成空镜\n感知所有温柔\n与你相映\n奔赴这一场流萤\n旷野旅行\n我只要与你\n和风说 喜欢你\n像夏夜星晴\n倒悬的 光和影\n夜轻声细雨\n我脑海中浮现场景\n电影里的某种隐喻\n这瞬间变得有迹可循\n笨拙的心动开始唤醒\n勇敢是你热烈回应\n奔赴这一场流萤\n黄昏梦境 美好在交替\n陷落时间尽头里\n你的眼睛 忽闪的光影\n呼应所有浪漫\n难过变成空镜\n感知所有温柔\n与你相映\n奔赴这场流萤\n旷野之中旅行\n陷落这时间里\n我和你"
+  },
+  {
+    title: "Fingerprints",
+    lyrics: "Tears\nStart in a well\nThe looking your eyes tells me your mind is somewhere else\nSo overwhelmed\nI know you got history that made you bleed\nAnd I\nCan see that you're hurt over somebody else\nI'm paralyzed\n'Cuz don't have the words I don't know how to help\nOh I shoulda known from the start\nThat when things fall apart\nThey don't always heal too quick\nYou got too many scars\nAnd no room in your heart\nI keep watching you pretend\nYou're looking at me\nBut you're thinking about him\nHolding me right outside of your fingertips\nI know we couldn't be what you miss\n'Cuz I can't wash the fingerprints off you\nI can't wash the fingerprints off you\nNo I can't wash the fingerprints off you\nI can count on one hand\nThe times that we spent\nWhere you were just honest\nAnd meant what you said\nI know I'm not him\nI'm just a loose end\nAnd you don't wanna be tied up again\nAnd I\nCan see that you're hurt over somebody else\nI'm paralyzed\n'Cuz don't have the words I don't know how to help\nYou're looking at me\nBut you're thinking about him\nHolding me right outside of your fingertips\nI know we couldn't be what you miss\n'Cuz I can't wash the fingerprints off you\nI can't wash the fingerprints off you\nNo I can't wash the fingerprints off you\nFingerprints off you"
+  },
+  {
+    title: "空置状态",
+    lyrics: "敏感的那段\n空置状态\n思维置身事外\n重力在作怪\n四周都失真\n我躲在 关系的隔层\n争吵在发生\n我选择 暂时性失声\nLet me hush\n我还在\nTake me down\n寻找轻松 氛围的办法\nLet me hush\n在等待\nTake me down\n某个瞬间 分解情绪的复杂\n小心的试探\n相互躲闪\n人群之海的岸\n不在彼端\nLet me hush\n我还在\nTake me down\n寻找轻松 氛围的办法\nLet me hush\n在等待\nTake me down\n某个瞬间 分解情绪的复杂\nLet me hush"
+  },
+  {
+    title: "我在屋顶等雨也等你",
+    lyrics: "凌晨三点半的消息提醒\n会不会是你心血来潮降临\n我站在屋顶，等雨也等你\n雨可以降落但你不会回信\n笨拙的，不安的\n等待着的我\n等不到我要的回音\n\n在暴雨都倾盆的夜\n冷风都变得更缠绵\n空荡的街，错失的约\n等来的只有一句抱歉\n整条街飘落的叶\n飘落的一个又一个季节\n不结的结，不解的解\nOh，不解\n你都不会回到我身边\n你都不会回到我身边\n你都不会回到我身边\n你都不会回到我身边\n你都不会回到我身边\n\n在整个宇宙里\n没有什么是永恒的\n之所以珍贵\n是因为一切都有尽头\n我爱过，也被爱过\n我体验过\n已经足够了\n\n在暴雨都倾盆的夜\n不知道想了你几遍\n喧闹的街，应允的约\n像你对我承诺的那些\n整条街飘落的叶\n飘落的一个又一个季节\n解开的结，无解的解\n如果有解\n你能不能回到我身边\n你能不能回到我身边\n你能不能回到我身边\n你能不能回到我身边\n你能不能回到我身边\n\n清晨六点半的消息提醒\n会不会是你心血来潮降临"
+  },
+  {
+    title: "Home",
+    lyrics: "(Roy Wang)\nHey I've been calling\nI'm thinkin bout the things I've got to say to you\nHey 航 班 定 了 没\n有太多小时候的 回忆被翻出\nAnd the sun will rise again\nAll the cloud will separate\nI know it's true\nAnd I'll be standing with you\nCan we go\nCan we runaway\nWe can runaway runaway runaway back to home\nCan we go\nCan we fly away\nWe can runaway runaway runaway back to home\nThis place we could go\n(刘宪华)\n下过雨后清新的气味\n奶茶店门口排着队的街口\n这城市的节奏\n(王源)\nI FOUND MY WAY BACK HOME\n(刘宪华)\n不管多疲惫都无所谓\n(王源)\n无所谓\n(刘宪华)\n每当想起回家的时候\n有你们的温柔\n(合)\nAnd the sun will rise again\nAll the cloud will separate\nI know it's true\nAnd I'll be standing with you\nCan we go\nCan we runaway\nWe can runaway runaway runaway back to home\nCan we go\nCan we fly away\nWe can runaway runaway runaway back to home\nThis place we could go\n(王源)\n多期盼 以后的每天你们都在\n(刘宪华)\nYeah 不平淡很幸运能有你们陪伴\n(合)\n永远在我身旁\n像电影每一段\n故事对白\n生命中最珍贵的存在\n(Roy Wang)\nCan we go\nCan we runaway\nWe can runaway runaway runaway back to home\nCan we go\nCan we fly away\nWe can runaway runaway runaway back to home\nThis place is we could go"
+  },
+  {
+    title: "十七",
+    lyrics: "我害怕回头望\n身后遗落下山川和海洋\n昏黄路灯的光\n照在我背影更加的凄凉\n一个人在路上\n背起行囊走向前方\n被遗忘的过往\n遗忘的就让它遗忘\n蝴蝶飞过了山岗\n去寻找那点微弱的光亮\n故事不能停在这第七章\n写下去才知道梦有多长\n我害怕自己受伤\n有时找不到方向\n旅途匆忙 人生漫长\n追寻一个不存在的地方\n我害怕世界疯狂\n一路上跌跌撞撞\n时间湍流\n磨灭我的锋芒\n我真的不想要这样\n旅途匆忙 人生漫长\n追寻一个不存在的地方"
+  },
+  {
+    title: "在哪里都很好",
+    lyrics: "我或许还在找\n能连结到明天的管道\n想要按好的封闭和弦\n得弹到第几遍 多寂寞 才熟练\n假如每次离别是真的\n那人们为何还没绝望\n我敢闯祸 我敢放纵 我思考\n相信世界会 为我骄傲\n叛逆也对 顺从也对 都不怕被比较\n我在这里我很好\n我失去也不少\n伤痕变成昨天的符号\n倘若生命像黑白琴键\n弹奏到第几年 能学会 不取悦\n既然没有什么是对的\n不需要想清楚才出发\n一样脆弱 一样想逃 一样傻\n还窥探不了 爱的全貌\n天真也对 世故也对 都不造成困扰\n我在这里我很好\n我望着你 你看着我 相对照\n完不完美再也不重要\n青涩也对 成熟也对 总会相视而笑\n我在哪里都很好"
+  },
+  {
+    title: "我可以自己点燃火炬",
+    lyrics: "这就是一个秘密\n就藏在我的心底\n像呼吸\n不需要刻意\n当我迷失阴郁它会照亮我前行\n告诉我点燃火的是自己\n教会我燃烧汗水去代替\n泪的痕迹\n火苗燃起 在待人苏醒\n别轻易\n说了放弃尽管暂时无光明\n我仍然坚挺双臂\n谁说放弃就是在逃避\n谁说坚持必须有意义\n侧耳倾听内心每一次奋起\n在困境\n最冷的夜已降临\n被禁锢住的身体\n深呼吸 太阳会升起\n越走越坚定尽管还是孤身前行\n相信自己相信的是真理\n不怕世界与我为敌\n又怕什么失去\n火苗苏醒在待人传递\n别轻易\n说了放弃尽管暂时无光明\n我仍然坚挺双臂\n火把高举爆燃的勇气\n火种不熄不畏惧风雨\n不要忘记寻觅心底的光明\n和火星\n这就是一个秘密\n就藏在我的心底\n像呼吸\n不需要刻意\n当我迷失阴郁它会照亮我前行\n告诉我点燃火的是自己\n教会我燃烧汗水去代替\n泪的痕迹\n内心每一次奋起\n在困境\n不要忘记寻觅心底的光明\n和火星"
+  },
+  {
+    title: "源",
+    lyrics: "我路过海边\n沿着那道蜿蜒\n我爬上过山巅\n又回荒野\n我在熟睡时是清醒着\n睁眼醒来后却辗转反侧\n有一些地点\n还是没法躲过\n有一些时间\n已习惯了消磨\n常会有情绪泛滥的时刻\n会陷入 灿烂的\n疼痛的 漩涡\n每个人都是一个圆\n在原地打转\n这世界就是一个圆\n从不会停下\n善良的人从不在\n受伤的时候哭泣\n只是思念总在某个夜晚弥漫\n有一些地点\n还是没法躲过\n有一些时间\n已习惯了消磨\n常会有情绪泛滥的时刻\n会陷入 灿烂的\n疼痛的 漩涡\n每个人都是一个圆\n在原地打转\n这世界就是一个圆\n从不会停下\n善良的人\n从不在受伤的时候哭泣\n只是思念总在某个夜晚弥漫\n每个人都是一个圆\n在谁的身边\n谁能陪着谁走好远\n荒唐的答案\n爱上一个人\n会在她身上留下什么\n或许只是她渺小人生中一点\n人生中一点\n爱上一个人\n会在她身上留下什么\n或许只是她渺小人生中一点"
+  },
+  {
+    title: "骄傲",
+    lyrics: "走的那天装作匆忙\n怕看见你湿了眼眶\n本该留在你的身旁\n醒来不知身在何方\n你说男人要有理想\n我说不会让你失望\n看着家乡和你都变了模样\n不知何时给你炖那碗\n说了很久的汤\n我不要沙滩小岛马车和城堡\n我不要人山人海热情的尖叫\n我不要五光十色\n灿烂辉煌的灯光在闪耀\n我只想有一天你能为我骄傲\n你说男人要有理想\n我说不会让你失望\n看着家乡和你都变了模样\n不知何时给你炖那碗\n说了很久的汤\n我不要沙滩小岛马车和城堡\n我不要人山人海热情的尖叫\n我不要五光十色\n灿烂辉煌的灯光在闪耀\n我只想有一天你能为我骄傲\n我不要沙滩小岛马车和城堡\n我不要人山人海热情的尖叫\n我不要五光十色\n灿烂辉煌的灯光在闪耀\n我只想有一天你能为我骄傲\n我只想有一天你能为我骄傲"
+  },
+  {
+    title: "易碎的吻",
+    lyrics: "我的生活一如往常\n时而平凡时而匆忙\n却不忘对孤独喊话\n我想象你在我身旁\n说着言不及义的话\n只相信沉默的立场\n安静的时候\n我们都想了一下\n确认彼此的眼光\n你说我是易碎的吻\n我再也不认识完整\n当零散的灯火错乱地投射在合二为一的时光\n我看见了繁星点点\n落在你和我的脚下\n像成真的愿望在生命里头化作某一瞬间的光亮\n我想象你在我身旁\n说着言不及义的话\n只相信沉默的立场\n安静的时候\n我们都想了一下\n确认彼此的眼光\n你说我是易碎的吻\n我再也不认识完整\n当零散的灯火错乱地投射在合二为一的时光\n我看见了繁星点点\n落在你和我的脚下\n像成真的愿望在生命里头化作某一瞬间的光亮\n而你旋即消逝在那之上\n而你旋即消逝在那之上\n而你旋即消逝在那之上\n而你旋即消逝在那之上"
+  },
+  {
+    title: "鱼缸旅馆",
+    lyrics: "你真的无法想象\n我就像是住在一个鱼缸\n鱼缸旅馆里该有的什么都有\n像一个小小的时空胶囊\n那些说爱我的人\n都可以清楚地追踪我\n不像鱼无视目光只有鱼自己\n我努力做他们热爱的我\n我与陌生的自己窃窃私语\n就像看到透明人一览无遗\n我没有退缩也没有闪躲\n当我流泪也没有人看穿\n那些不爱我的人\n也可以无谓地注视我\n看我在鱼缸里因无聊而崩溃\n我努力让他们也会爱我\n我与陌生的自己窃窃私语\n就像看到透明人一览无遗\n我没有退缩也没有闪躲\n当我流泪也没有人看穿\n我派无人飞机出去寻找\n以为你会带来救兵的讯号\n除了想你时吐出的气泡\n我在机场冰冷等待拥抱\n鱼缸里没有黑夜\n我也失去了我的睡眠\n我忘了我是水里游荡的王子\n还是他已经溺毙的爱人\n还是他已经溺毙的爱人"
+  },
+  {
+    title: "参演角色",
+    lyrics: "你像云漂浮空中\n尽力也无法相拥\n我躲在人海之中\n拼凑着你的线索\n你知道故事最后\n不是都有始有终\n关心只作为朋友\n无关爱情的拉扯\n原谅胆怯的我\n藏在城市角落\n有观众在身后\n心事隔着镜头\n下一秒就收走\n情绪的翻涌\n原谅炽热的我\n站在夜晚背后\n笑着表演难过\n真实感叫醒我\n所有参演角色\n只有你会穿过\n人群看我\n你知道故事最后\n不是都有始有终\n关心只作为朋友\n无关爱情的拉扯\n原谅胆怯的我\n藏在城市角落\n有观众在身后\n心事隔着镜头\n下一秒就收走\n情绪的翻涌\n原谅炽热的我\n站在夜晚背后\n笑着表演难过\n真实感叫醒我\n所有参演角色\n只有你会穿过\n人群看我"
+  },
+  {
+    title: "圆舞曲",
+    lyrics: "疯长鲁莽而夺目的幻想\n撞上有好运的姑娘\n夏天的影子拉得腿好长\n她们穿过有回声的墙\n那时候问题好多啊\n时间的答案只一个\n啦啦啦啦啦 一二三四\n啦啦啦啦啦 四三二一\n啦啦啦啦啦 一二三四\n啦啦啦啦啦 四三二一\n啦啦啦啦啦 你带来的风\n啦啦啦 吹走了秩序\n山那边还有一座山\n只一场好梦就做起来没完\n为表白脸红的少年\n可别说出来许过的心愿\n那时候隔着江看到的世界\n它的样子美到我们无法拒绝\n做一个有心的伙伴\n给你一万种友爱的可能\n那时候问题好多啊\n时间的答案只一个\n啦啦啦啦啦 一二三四\n啦啦啦啦啦 四三二一\n啦啦啦啦啦 一二三四\n啦啦啦啦啦 四三二一\n啦啦啦啦啦 你带来的风\n啦啦啦 吹走了秩序\n这是一场拒绝成人的舞会\n天真的舞伴不需要排队\n干净到让人想哭的模样\n每一颗笑容都是一束光\n干净到让人想哭的模样\n怎么会有人舍得散场"
+  },
+  {
+    title: "天亮一起追太阳",
+    lyrics: "喜欢在阳台种假花\n这样就不用浇水了\n骑木马 练书法 很好笑吗\n喜欢凌晨三点的海\n因为比阳光下凉快\n你说你 不喜欢 与我无关\n有本事就在家 浪迹天涯\n天亮一起去追太阳\n睡到天黑 再出发\n别人看我都像傻瓜\n我也不觉得尴尬\n天亮和我去追太阳\n想做什么就做呀\n这个世界真真假假\n不信自己最可怕\n干点蠢事无伤大雅\n好坏谁又知道呢\n不怕你 对着我 笑掉头发\n有本事就在家 浪迹天涯\n天亮一起去追太阳\n睡到天黑 再出发\n别人看我都像傻瓜\n我也不觉得尴尬\n天亮和我去追太阳\n想做什么就做呀\n这个世界真真假假\n不信自己最可怕\n天亮一起去追太阳\n睡到天黑 再出发\n别人看我都像傻瓜\n我也不觉得尴尬"
+  },
+  {
+    title: "彩虹云朵",
+    lyrics: "第一次见到你的时候\n就像看到了彩虹云朵\n我乘着飞机身边飞过\n看见你可爱酒窝\n奔向你身边路程漫长\n我带着笑沿途中张望\n可你才是那最美丽的风景\n所有美好都像你\n好多话想对你说\n有好多话想对你说\n分享给你我生活 从今以后\n好多话想对你说\n有好多话想对你说\n一切都值得\n给你我所有快乐\n彩虹云朵一直在天上\n赤脚坐在柔软沙滩上\n我会带你去看天上的鲸鱼\n再和你潜入海底\n我等你说你爱我\n好想听你说你爱我\n分享给你我生活 以及所有\n好想你说你爱我\n我回答我也是的\n想牵着你手\n这样一直到永远\n一起去世界的每个角落\n你没有听错\n我陪你开心难过\n你的笑就是那彩虹云朵\n你开心我都愿意\n给你我所有\n对你说\n有好多话想对你说\n分享给你我生活\n给你我的生活\n从今以后\n好多话想对你说\n有好多话想对你说\n一切都值得\n一切都值得\n给你我所有快乐\n我等你说\n等你说你爱我\n想听你说\n听你说你爱我\n好想你说\n想你说你爱我\n我回答我\n回答我也是的\n我等你说\n等你说你爱我\n想听你说\n听你说你爱我\n好想你说\n想你说你爱我\n我回答我\n回答我也是的\n我喜欢你"
+  },
+  {
+    title: "我不知道",
+    lyrics: "太阳的光 月亮的光\n哪个是我躲藏\n寄生的地方\n我不停幻想\n想你所想\n前路崎岖漫长\n怎么忍心带你逃亡\n忘多难忘\n还想如果就此相忘\n伤有多伤\n还故作坚强 模样不慌张\n我想知道的是\n怎么让你 不受伤\n越心向远方 越渴望流浪\n我想知道的是\n怎么让你不失望\n越无法抵挡 越无处安放\n我知道你爱我\n那就让我卸下伪装\n放肆的年少轻狂一场\n我不想 我不想\n辜负你的期望\n原地孤芳自赏\n不如自由盛放\n我想知道的是\n怎么让你 不受伤\n越心向远方 越渴望流浪\n我想知道的是\n怎么让你 不失望\n越无法抵挡 越无处安放\n我知道你爱我\n请原谅我褪去光芒\n放肆的年少轻狂 一场\n骄傲的 磊落的 倔强"
+  },
+  {
+    title: "滚烫的青春",
+    lyrics: "我想你也曾有过\n在青春里蹒跚跋涉\n有着远大的梦\n也无情破灭过\n我觉得你也像我\n是个不愿服输的孩子\n很多艰难叵测\n心中仍有一团火\n滚烫的青春\n我自己也恨\n在很多时分\n怎么这么无能\n滚烫的青春\n我没有天分\n还想倔强\n不留遗憾一分\n我想你也曾有过\n在青春里蹒跚跋涉\n有着远大的梦\n也无情破灭过\n我觉得你也像我\n是个不愿服输的孩子\n很多艰难叵测\n心中仍有一团火\n滚烫的青春\n我自己也恨\n在许多时分\n怎么这么无能\n滚烫的青春\n我没有天分\n还想倔强\n不留遗憾一分\n滚烫的青春\n骄傲的我们\n最强烈自尊\n留最后天真\n滚烫的青春\n有很多过程\n经历过了\n就变成了大人"
+  },
+  {
+    title: "吆不到台",
+    lyrics: "我不再是你印象中的小孩\n不能独当一面也没有现在\n我生于川山蜀地江海\n身体流着滚烫血脉\n走着我的路\n冷眼看你不必理睬\n不意外闲言碎语想我崩坏\n未能如你所愿我感到抱歉\n窥屏看见你可笑嘴脸\n寄生网络肆意疯癫\n你转脸才发现\n你我不是同一水平线\n崽儿 你很吆不到台哟\n啷个 我就是很吆不到台\n嘞是雾都\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是重庆的崽\n我站在这个舞台\n我没得撒子后台\n我输了都要遭淘汰\n赢了不得耍大牌\n为撒子我楞个拽\n为撒我不请自来\n因为我要让你们晓得\n我都是吆不到台\n大家问我为撒子要选你\n因为觉得狗哥相当高级\n音乐圈子每天都下暴雨\n没得人会同情你的遭遇\n我还听过你的九局下半\n重庆火锅底料给你下饭\n重庆崽儿不得倒地不起\n嘞首歌是你源哥的炸弹\n今天起我就要做我自己\n你不想听那就请你出去\n妈妈说过做人要有骨气\n这是我13岁就懂的道理\n我都是吆不到台 重庆\n我都是吆不到台 雄起\n我都是吆不到台 重庆\n我都是吆不到台 雄起\n我都是吆不到台 重庆\n我都是吆不到台 雄起\n我都是吆不到台\n我都是重庆的崽\n我曾住在沙南街\n我上中学在南开\n在我面前不要歪\n小心你走路要遭拽\n重庆你们晓得有很多山\n重庆你们晓得有很多寺\n重庆你们晓得有很多坝\n不信我来给你们摆一哈\n歌乐山 缙云山 凤鸣山 云篆山\n没人逼你上凉山 \n华岩寺 罗汉寺 金竹寺 相国寺\n但是没得道明寺\n沙坪坝 菜园坝 珊瑚坝 大石坝\n还有个李子坝\n看我重庆楞个好耍\n确定不来耍一哈\n因为遇见你 一切就注定\n错了错了 给我调回去\n嘞是雾都\n我都是吆不到台 \n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是吆不到台\n我都是重庆的崽\n今天起我就要做我自己\n不唱民谣也不唱抒情歌曲\n你不想听那就请你出去\n让你晓得你源哥你惹不起"
+  },
+  {
+    title: "四百击",
+    lyrics: "浪迹天涯的勇敢 还存在\n突如其来的茫然 也频繁\n总会有一片海\n适合我去看看\n愉快 都被消费\n悲哀 浑然不觉\n喜欢 不太完美\n离开 所有虚伪\n不为人知的黑暗 别窥探\n就算被全盘看穿 也孤单\n远方有一片海\n我来不及去看\n璀璨 只是片面\n惨淡 近似永远\n艰难 视而不见\n简单 令人厌倦\nWa wa 坚持放弃 都差不多\nWa wa 成长何苦 带来背叛\n旁观 荒唐世界\n崇拜 共生破灭\n飞快 我的时间\n缓慢 等你出现\nWa wa Wa wa\nWa wa Wa wa\nWa wa Wa wa"
+  },
+  {
+    title: "课桌背后",
+    lyrics: "刻在心里的\n放心交给过去吧\n有什么 有什么\n像火车不断飞速驶过\n飞机从天空划过\n带走什么\n又留下些什么\n课本上曾写下的\n夏天过了\n他们都去哪儿了\n人潮把我推去见你又把我带走\n你的名字只能留在我的课桌背后\n刻在心里的\n放心交给过去吧\n有什么 有什么\n像火车不断飞速驶过\n放在心里的\n会变成一个角落\n在不经意的时刻停留\n然后回首 路过\n心不甘 心不安 不圆满\n到底是 谁不够勇敢\n足够勇敢\n草草收场变成好聚好散\n没有遗憾\n刻在心里的\n安心交给过去吧\n有什么 有什么\n像火车不断飞速驶过\n刻在心里的\n会变成一个角落\n在不经意的时刻停留\n然后回首 路过"
+  },
+  {
+    title: "Sleep",
+    lyrics: "Sleep's cold in these sheets\nAfter All these days\nKnow it feels the same\nSleep\nChase away dreams\nOf a love so close\nWhen it meant the most\nWrapped in all these memories and moonlight\nDon't let me forget them when I close my eyes\nLove no I can't forget this love\nKnow it kills me to relive what's gone\nBut I can't get enough of long lost\nLove know I miss the days of us\nKnow we tried and paid the highest cost\nSleeplessly I'll dream of what I lost\nSleeplessly I'll dream of what I lost\nSleep's cold in these sheets\nAfter All these days\nKnow it feels the same\nSleep\nChase away dreams\nOf a love so close\nWhen it meant the most\nWrapped in all these memories and moonlight\nDon't let me forget them when I close my eyes\nLove no I can't forget this love\nKnow it kills me to relive what's gone\nBut I can't get enough of long lost\nLove know I miss the days of us\nKnow we tried and paid the highest cost\nSleeplessly I'll dream of what I lost\nSleeplessly I'll dream of what I lost"
+  },
+  {
+    title: "盛夏的果实",
+    lyrics: "也许放弃 才能靠近你\n不再见你 你才会把我记起\n时间累积 这盛夏的果实\n回忆里寂寞的香气\n我要试着离开你\n不要再想你\n你曾说过 会永远爱我\n也许承诺\n不过因为没把握\n别用沉默\n再去掩饰什么\n当结果是那么赤裸裸\n以为你会说什么 才会离开我\n你只是转过头 不看我\n不要刻意说 你还爱我\n当看尽潮起潮落\n只要你记得我\n你曾说过 会永远爱我\n也许承诺\n不过证明没把握\n不用难过\n不用掩饰什么\n当结果是那么赤裸裸\n其实不必说什么 才能离开我\n起码那些经过 属于我\n也许放弃 才能靠近你\n不再见你 你才会把我记起\n时间累积\n这盛夏的果实\n回忆里爱情的香气\n我以为不露痕迹 思念却满溢\n或许这代表了我的心\n不要刻意说 你还爱我\n当看尽潮起潮落\n只要你记得我\n如果你会梦见我\n请你再抱紧我"
+  }
+];
+
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // 动态生成导航栏
+    const navList = sidebar.querySelector('ul');
+    songs.forEach((song, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = song.title;
+      listItem.addEventListener('click', () => {
+        const targetSection = document.getElementById(`song-${index}`);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
+        }
+      });
+      navList.appendChild(listItem);
+    });
+
+    // 动态生成歌词内容
+    songs.forEach((song, index) => {
+      const section = document.createElement('section');
+      section.id = `song-${index}`;
+
+      const h2 = document.createElement('h2');
+      h2.textContent = song.title;
+
+      const pre = document.createElement('pre');
+      pre.textContent = song.lyrics;
+
+      section.appendChild(h2);
+      section.appendChild(pre);
+      content.appendChild(section);
+    });
+
+    // 菜单切换功能
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>

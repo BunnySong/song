@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>王力宏演唱会歌词本</title>
+  <style>
+    body {
+    margin: 0; 
+    font-family: "Microsoft YaHei", sans-serif; 
+    color: #CFE5FF; 
+    font-size: 16px; 
+   /* background-color: #101E38; */
+    background: linear-gradient(to bottom, #0a163c, #1945ac);
+  
+    /*background-image: url('https://img.picui.cn/free/2025/06/27/685eb0840b78e.png'); */
+    background-size: cover; 
+    -webkit-background-size: cover; /* 适配苹果手机 */
+    background-position: top left; 
+    -webkit-background-position: top left; /* 适配苹果手机 */
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    -webkit-background-attachment: fixed; 
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    /* 移除min-height，因为它可能干扰导航栏的定位 */ 
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #273A7B;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.25em;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: url('https://img.picui.cn/free/2025/06/27/685ea4b139f4c.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: #1e3e79;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid #4d5273;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 12px 20px;
+      border-bottom: 1px solid #4d5273;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav li:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .developer-info {
+      font-size: 0.8em;
+      color: #8aa9d7;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 30px;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      color: #CFE5FF;
+      font-size: 1.3em;
+    }
+
+    pre {
+      /*white-space: pre-wrap;
+      word-wrap: break-word;
+      background: rgba(255, 255, 255, 0.5); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      
+      font-size: 1.25rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);*/
+
+      white-space: pre-wrap;
+      word-wrap: break-word;
+     /* background: rgba(23, 30, 48, 0.5); */
+      background: rgba(255, 255,255, 0.1); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #3D4865;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        left: -250px;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      pre {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    王力宏演唱会歌词本
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <!-- 自动生成的歌曲列表 -->
+    </ul>
+  </nav>
+
+  <main id="content">
+    <p class="developer-info">本网页由Bunnysong007自主开发，如有定制需求请微信联系。</p>
+    <!-- 歌词内容动态插入 -->
+  </main>
+
+  <script>
+  const songs = [
+    {
+    title: "缘分一道桥",
+    lyrics: "男：\n万里长征人未还\n但使龙城飞将在\n不教胡马度阴山\n女：\n狼烟千里乱葬岗\n乱世孤魂无人访\n无言苍天笔墨寒\n笔刀春秋以血偿\n男：\n谈爱恨 不能潦草\n战鼓敲啊敲\n用信任 立下誓言我来熬\n女：\n这缘分 像一道桥\n旌旗飘啊飘\n你想走\n就请立马抽刀\n爱一笔勾销\n合：\n谈爱恨 不能潦草\n红尘烧啊烧\n以生死 无愧证明谁重要\n女：\n这缘分 像一道桥\n故事瞧一瞧\n男：\n走天涯 你我卸下战袍\n合：\n梦回长城谣\n男：\n秦时明月汉时关\n万里长征人未还\n但使龙城飞将在\n不教胡马度阴山\n女：\n血肉筑城万箭穿\n盔甲染血映月光\n远方胡笳催断肠\n狼嚎骤起震边关\n谈爱恨 不能潦草\n战鼓敲啊敲\n用信任 立下誓言我来熬\n男：\n这缘分 像一道桥\n旌旗飘啊飘\n你想走\n就请立马抽刀\n爱一笔勾销\n合：\n谈爱恨 不能潦草\n红尘烧啊烧\n男：\n以生死 无愧证明谁重要\n女：\n这缘分 像一道桥\n故事瞧一瞧\n男：\n走天涯 你我卸下战袍\n合：\n梦回长城谣\n这缘分 像一道桥\n故事瞧一瞧\n走天涯\n你我卸下战袍\n梦回长城谣"
+  },
+  {
+    title: "天地龙鳞",
+    lyrics: "天地龙鳞 Wu\n这江山我起笔 \n民族血脉又几万里\n几世纪六百年里 \n龙的传人历经风雨\n这京畿中轴地 \n一如君子气节不移\n九龙壁瓦上琉璃 \n历史从这衰落又崛起\n这龙鳞却曾经 \n铿锵落地犹如碎冰\n一片鳞一寸心 \n故事飘摇我不忍听\n人守礼心守静 \n悠扬古琴弹君子心\n我清醒等回音 \n盘旋泱泱华夏文明\n敬过去我落笔 \n东方辽阔的黄土地\n山水里泼墨抹去 \n只见嶙峋的华夏骨气\n紫禁城神武门 \n多少沧桑铸造中华魂\n我继承文化深耕 \n突破变局去扭转乾坤\n这龙鳞却曾经 \n铿锵落地犹如碎冰\n一片鳞一寸心 \n以小成其大我坚信\n将民族的命运 \n昂首抬起再次复兴\n游天地寻龙鳞 \n龙的血脉蔚然成林\n天地龙鳞 Wu\n这龙鳞却曾经 \n铿锵落地犹如碎冰\n一片鳞一寸心 \n故事飘摇我不忍听\n将民族的命运 \n昂首抬起再次复兴\n游天地寻龙鳞 \n龙的血脉蔚然成林"
+  },
+  {
+    title: "心中的日月",
+    lyrics: "你是我心中的日月光芒\n手中握着格桑花呀\n美的让我忘了摘下\n你的真 带着香 你的香 会说话\n你的话 好像只 对我说\n我的专长叫做流浪\n你注定要为我绽放\n我的心 寻找家 我的家 没有花\n我的花却在这山谷等着我\n若一开始 没有上帝 \n暗中偷偷的怂恿\n我们怎知选择相逢\n你是心中的日月 落在这里\n旅程的前后多余 只为遇到你\n多么想幻化成为你脚下的泥\n此刻的无人山谷 \n仿佛听见说爱你\n你是我心中的日月光芒\n我的漂泊不懂泥巴\n你的美丽不堪动荡\n你单纯 我迷惘 你恋家 我流浪\n山谷中 这一切 带不走\n你爱抬头拥抱阳光\n我得眺望下个前往\n我走开 你留下 我回忆 你升华\n至少我们会仰望同一片天空\n若一开始 没有上帝 \n暗中偷偷的怂恿\n我们怎知选择相逢~喔\n你是心中的日月 落在这里\n旅程的前后多余 只为遇到你\n多么想幻化成为你脚下的泥\n那天的无人山谷（那一天）\n仿佛听见说爱你\n置身在 传说中 人间天堂\n你是我 心中的 日月光芒\n带领我 找到你 的芬芳\n放不下\n你是心中的日月 落在这里\n旅程的前后多余 只为遇到你\n多么想幻化成为你脚下的泥\n那天的无人山谷 \n仿佛听见说爱你\n那天听见说爱你"
+  },
+  {
+    title: "改变自己",
+    lyrics: "今早起床了\n看镜子里的我\n忽然发现我发型睡得有点kuso\n一点点改变，有很大的差别\n你我的力量也能改变世界\n最近比较烦 最近情绪很down\n每天看新闻都会很想大声尖叫\n但脏话没用 大家只会嫌凶\n我改变自己发现大有不同\n新一代的朋友我们好好地加油\n大家一起大声地说\nNA NA NA NA NA\nNA NA NA NA NA\n我可以改变世界\n改变自己 改变隔膜 改变小气\n要一直 努力努力 永不放弃\n才可以 改变世界 come on\n改变自己\n今早起床了 觉得头有点痛\n可能是二氧化碳太多 氧气不够\n一点点改变\n有很大的差别\n你我的热情也能改变世界\n只能代表自己\n没有政治立场\n即使这世界让我看得十分紧张\n要调整自己\n没想到一点就能画龙点睛\n新一代的朋友我们好好地加油\n大家一起大声地说\nNA NA NA NA NA\nNA NA NA NA NA\n我可以改变世界\n改变自己 改变隔膜 改变小气\n要一直 努力努力 永不放弃\n才可以 改变世界 come on改变自己\n我可以改变世界\n改变自己 改变隔膜 改变小气\n要一直 努力努力 永不放弃\n才可以 改变世界 come on \n改变自己"
+  },
+  {
+    title: "大城小爱",
+    lyrics: "乌黑的发尾盘成一个圈\n缠绕所有对你的眷恋\n隔着半透明门帘\n嘴里说的语言完全没有欺骗\n屋顶灰色瓦片安静的画面\n灯火是你美丽那张脸\n终于找到所有流浪的终点\n你的微笑结束了疲倦\n千万不要说天长地久\n免得你觉得我不切实际\n想多么简单就多么简单\n是妈妈告诉我的哲理\n脑袋都是你心里都是你\n小小的爱在大城里好甜蜜\n念的都是你全部都是你\n小小的爱在大城里只为你倾心\n那回程的票根你留做纪念\n不必害怕面对离别\n剪掉一束头发让我放在胸前\n走到那里都有你陪\n相随\n脑袋都是你心里都是你\n小小的爱在大城里好甜蜜\n念的都是你全部都是你\n小小的爱在大城里只为你倾心\n脑袋都是你心里都是你\n小小的爱在大城里好甜蜜\nOH~~念的都是你全部都是你\n小小的爱在大城里只为你倾心\n啦啦啦啦啦啦啦啦啦啦"
+  },
+  {
+    title: "我们的歌",
+    lyrics: "已经听了一百遍 \n怎么听都不会倦\n从白天唱到黑夜\n你一直在身边 一直在身边\n如果世界太危险\n只有音乐最安全\n带着我进梦里面\n让歌词都实现\n无论是开心还是难过\n我的爱一直不变\n不必担心时间流失带走一切\n无论是 hiphop 还是摇滚\n我的爱一直不变\n所有美好回忆记录在里面\n这张\nForever love\n那么深 我们的歌那么真\n无国界 跨时代 再不会叫\nKiss goodbye\n让每一句能够动人心弦\nYe ye\n情人总分分合合\n可是我们却越爱越深\n认识你让我的幸福\n如此悦耳\n能不能不要切歌\n继续唱我们的歌\n让感动一辈子都记得\n已经听了一百遍\n怎么听都不会倦\n从白天唱到黑夜\n你一直在身边 一直在身边\n如果世界太危险 \n只有音乐最安全\n带着我进梦里面 让歌词都实现\n无论是开心还是难过\n我的爱一直不变\n不必担心时间流失带走一切\n无论是 hiphop 还是摇滚\n我的爱一直不变\n所有美好回忆记录在里面\n这张\nForever love\n那么深 我们的歌那么真\n无国界 跨时代\n再不会叫\nKiss goodbye\n让每一句能够动人心弦\nYe ye\n情人总分分合合\n可是我们却越爱越深\n认识你让我的幸福\n如此悦耳\n能不能不要切歌\n继续唱我们的歌\n让感动一辈子都记得\n情人总分分合合\n可是我们却越爱越深\n认识你让我的幸福\n如此悦耳\n能不能不要切歌\n继续唱我们的歌\n让感动一辈子都记得"
+  },
+  {
+    title: "花田错",
+    lyrics: "夜好深了　纸窗里怎么亮着\n那不是　彻夜等候　\n你为我点的烛火\n不过是　一次邂逅　\n红楼那一场梦\n我的山水　全部褪色　\n像被大雨洗过\n杯中景色诡魅　我忘了我是谁　心情就像夜凉如水\n手里握着蝴蝶杯　\n单飞　不醉不归\n花田里犯了错　\n说好　破晓前忘掉\n花田里犯了错　\n拥抱　变成了煎熬\n花田里犯了错　\n犯错　像迷恋镜花水月的无聊\n花田里犯了错　\n请　原谅我多情的打扰\n醉　怎么会喝醉　\n美　因为你的美\n爱匆匆一瞥不过点缀\n飞　看大雪纷飞　\n却　再也找不回\n被白雪覆盖那些青翠\n当时空成为拥有你　\n唯一条件　我…又醉\n琥珀色的月　结了霜的泪　\n我会记得这段岁月\n花田里犯了错　\n说好　破晓前忘掉\n花田里犯了错　\n拥抱　变成了煎熬\n花田里犯了错　\n犯错　像迷恋镜花水月的无聊\n花田里犯了错　\n请　原谅我多情的打扰\n我的山水全部褪了色　\n多情的打扰请原谅我\n不是彻夜为我点的火　\n在那花田里我犯了错\n我的山水全部褪了色　\n多情的打扰请原谅我\n不是彻夜为我点的火　\n在那花田里我犯了错\n花田里犯了错　\n说好　破晓前忘掉\n花田里犯了错　\n拥抱　变成了煎熬\n花田里犯了错　\n犯错　像迷恋镜花水月的无聊\n花田里犯了错　\n请　原谅我多情的打扰"
+  },
+  {
+    title: "盖世英雄",
+    lyrics: "盖世英雄 到来\nCOME ON COME ON \nCOME ON\n大家一起说一次 \n盖世英雄 到来\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来\n盖世英雄 到来\n迫不及待看见我的未来\n对什么都期待\n盖世英雄站上舞台 世界是舞台\n我出门儿了载四个哥儿们儿\n镀络轮框24寸\n今晚我的目的明确\n带Chinked-out到全世界\n加入了京剧昆曲 \nhip-hop进入新的格局\n新的突破新的曲风\n才有新的盖世英雄\n把收音机开最大声\n听见的声音又是武生\n道白的共鸣又最流行\n要 模仿他　真的是不容易\n他的唱法独一无二\n这种艺术属一属二\n希望帮助全世界的华人\n唱出大家的心声\n霸气傲中原王者扬烽烟\n盖世英雄 到来\n力拔山河天 宏威征凯旋\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来 \n盖世英雄 到来\n迫不及待看见我的未来\n对什么都期待\n盖世英雄站上舞台 世界是舞台\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来 \n盖世英雄 到来\n迫不及待看见我的未来\n对什么都期待\n盖世英雄站上舞台 请勿让开\nYo,it`s Jin and Leehom\nit feels good to be home\ni got the skills to be know\nso I`m a chill on my throne\nyes ,I keeps it blazing n\nfrom Shanghai out to Beijing\nstop in Taiwan back to Hong Kong\nwhere they stay don`t they thing\nthis something special\nmy coach is so contagious\nthey wanna kown about us\nwe been around for ageas\na couple thousand years\na bunch of pioneers\nscholars making noise it was loud and clear\nhey yo,the future`s here\nthe revolution`s near\njin got the solution for pullution in your ear\nswitch it up\n不用问 你得同意 \n做英雄 是不容易\nbut yo you will get take for me\njust listen close to 李老师\n霸气傲中原 王者扬烽烟\n盖世英雄 到来\n力拔山河天气宏威征凯旋\n盖世英雄 到来\n世界是舞台\n盖世英雄 到来\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来 \n盖世英雄 到来\n迫不及待看见我的未来\n对什么都期待\n是英雄站上舞台 世界是舞台\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来 \n盖世英雄 到来\n迫不及待看见我的未来\n迫不及待看见我的未来\n对什么都期待\n对什么都期待\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来 \n盖世英雄 到来\n迫不及待看见我的未来\n对什么都期待\n是英雄站上舞台 世界是舞台\n迫不及待看见我的未来\n对什么都看开\n盖世英雄真的到来 \n盖世英雄 到来\n迫不及待看见我的未来\n对什么都期待"
+  },
+  {
+    title: "爱一点",
+    lyrics: "风吹动窗 吹动叶声响\n梦在游荡 去更远地方\n天上的月 露出半只角\n看地上有个人 还睡不着\n云遮住光 遮住夜更长\n风轻轻穿过你的头发\n夜闭上双眼不说话\n我知道你在听 我怎么讲\n我想说我会爱你多一点点\n一直就在你的耳边\n相信你也爱我有一点点\n只是你一直没发现\n我想说我会爱你多一点点\n一直就在你的耳边\n相信我会爱你永远不变\n知道你一定会发现\n风吹动窗 吹动叶声响\n梦在游荡 去更远地方\n天上的月 露出半只角\n看地上有个人 还睡不着\n云遮住光 遮住夜更长\n风轻轻穿过你的头发\n夜闭上双眼不说话\n你知道我在听 你怎么讲\n我想说我会爱你多一点点\n一直就在你的耳边\n相信你也爱我有一点点\n只是你一直没发现\n我想说我会爱你多一点点\n一直就在你的耳边\n相信我会爱你永远不变\n知道你一定会发现\n我想说我会爱你多一点点\n一直就在你的耳边\n相信我会爱你永远不变\n知道你一定会发现"
+  },
+  {
+    title: "落叶归根",
+    lyrics: "举头望 无尽灰云\n那季节叫做寂寞\n背包 塞满了家用\n路就这样开始走\n日不见太阳的暖\n夜不见月光的蓝\n不得不选择寒冷的开始\n留下只拥有遗憾\n命运的安排\n遵守自然的逻辑\n谁都无法揭谜底\n远离家乡不甚唏嘘\n幻化成秋夜\n而我却像落叶归根\n坠在你心间\n几分忧郁几分孤单\n都心甘情愿\n我的爱像落叶归根\n家唯独在你身边\n举头望无尽灰云\n那季节叫做寂寞\n背包塞满了家用\n路就这样开始走\n日不见太阳的暖\n夜不见月光的蓝\n不得不选择寒冷的开始\n留下只拥有遗憾\n命运的安排\n遵守自然的逻辑\n谁都无法揭谜底\n喔 远离家乡不甚唏嘘\n幻化成秋夜\n而我却像落叶归根\n坠在你心间\n几分忧郁几分孤单\n都心甘情愿\n我的爱像落叶归根\n家唯独在你身边\n但愿陪你找回\n所遗失的永恒\n当我开口你却沉默\n只剩一场梦\n我却像落叶归根\n坠在你心间\n几分忧郁几分孤单\n都心甘情愿\n我的爱像落叶归根\n家 唯独在你身边"
+  },
+  {
+    title: "Julia",
+    lyrics: "Here we go\n看着你走得倔强头也不会\n我该不该挽回\n每一次都是这样跑了又追\n你到底累不累\n为什么爱情变成一种受罪\n放弃又后悔\n如果是你的感觉已无所谓\n就让我把爱收回\nJulia Julia\n不要拖泥又带水\n错与对 是与非\n去面对\nJulia Julia\n不要让爱情枯萎\n笑或泪 别后悔\n去体会\n要懂得珍惜爱才完美\n看着你走得倔强头也不会\n我该不该挽回\n每一次都是这样跑了又追\n你到底累不累\n为什么爱情变成一种受罪\n放弃又后悔\n如果是你的感觉已无所谓\n就让我把爱收回\nJulia Julia\n不要拖泥又带水\n错与对 是与非\n去面对\nJulia Julia\n不要让爱情枯萎\n笑或泪 别后悔\n去体会\n要懂得珍惜爱才完美\n爱是付出 而不是赌注\n珍惜是幸福\nJulia Julia\n不要拖泥又带水\n错与对 是与非\n去面对\nJulia Julia\n不要让爱情枯萎\n笑或泪 别后悔\n去体会\nJulia Julia\n不要拖泥又带水\n错与对 是与非\n去面对\nJulia Julia\n不要让爱情枯萎\n笑或泪 别后悔\n去体会"
+  },
+  {
+    title: "你不知道的事",
+    lyrics: "蝴蝶眨几次眼睛 才学会飞行\n夜空洒满了星星 但几颗会落地\n我飞行 但你坠落之际\n很靠近 还听见呼吸\n对不起 我却没捉紧你\n你不知道我为什么离开你\n我坚持不能说放任你哭泣\n你的泪滴像倾盆大雨\n碎了满地 在心里清晰\n你不知道我为什么狠下心\n盘旋在你看不见的高空里\n多的是 你不知道的事\n蝴蝶眨几次眼睛 才学会飞行\n夜空洒满了星星 但几颗会落地\n我飞行 但你坠落之际\n很靠近 还听见呼吸\n对不起 我却没捉紧你\n你不知道我为什么离开你\n我坚持不能说放任你哭泣\n你的泪滴像倾盆大雨\n碎了满地 在心里清晰\n你不知道我为什么狠下心\n盘旋在你看不见的高空里\n多的是 你不知道的事\n我飞行 但你坠落之际\n你不知道我为什么离开你\n我坚持不能说放任你哭泣\n你的泪滴像倾盆大雨\n碎了满地 在心里清晰\n你不知道我为什么狠下心\n盘旋在你看不见的高空里\n多的是 你不知道的事\n你不知道的事"
+  },
+  {
+    title: "心跳",
+    lyrics: "想跟我吵架 我没那么无聊\n不懂得道歉 我没那么聪明\n好想要回到我们的原点\n你又在哭泣 我给不了安慰\n我又在摇头 有那么点后悔\n爱情的发展已难以回头却无法往前走\n但身不由己出现在胸口\n两颗心能塞几个问号\n爱让我们流多少眼泪\n你的眼神充满美丽带走我的心跳\n你的温柔如此靠近带走我的心跳\n逆转时光到一开始 \n能不能给一秒\n等着哪一天你也想起\n那悬在记忆中的美好\n想跟我吵架 我没那么无聊\n不懂得道歉 我没那么聪明\n好想要回到我们的原点\n但身不由己出现在胸口\n两颗心能塞几个问号\n爱让我们流多少眼泪\n你的眼神充满美丽带走我的心跳\n你的温柔如此靠近带走我的心跳\n逆转时光到一开始 \n能不能给一秒\n等着哪一天你也想起\n那悬在记忆中的美好\n你的眼神充满美丽带走我的心跳\n你的温柔如此靠近带走我的心跳\n逆转时光到一开始 \n能不能给一秒\n等着哪一天你也想起\n那悬在记忆中的美好"
+  },
+  {
+    title: "Kiss Goodbye",
+    lyrics: "Baby不要再哭泣\n这一幕多么熟悉\n紧握着你的手彼此都舍不得分离\n每一次想开口但不如保持安静\n给我一分钟专心\n好好欣赏你的美\n还欠你的我不能给\n别把我心也带走\n去跟随\n幸福搭配悲伤\n痛是在我心交叉\n挫折的眼泪不能测试爱的重量\n付出的爱收不回\n但欠你的我不能给\n我才明白爱最真实的滋味\n我终于明白\n深深的被你打败\n每一次放弃你的温柔\n痛苦难以释怀\n每一次和你分开\n每一次kiss you Goodbye\n爱情的滋味此刻我终于最明白"
+  },
+  {
+    title: "Forever Love",
+    lyrics: "o~~~ 爱你,\n不是因为你的美而已\n我越来越爱你,\n每个眼神触动我的心\n因为你让我看见forever\n才了解自己,\n未来这些日子\n要好好珍惜\n爱我\n有些痛苦有些不公平\n如果真的爱我\n不是理所当然的决定\n感到你的呼吸在我耳边\n像微风深情\n温柔的安抚,\n我的不安定\n所以我要\n每天研究你的笑容\nwo~~ 多么自然\nforever love forever love\n我只想用我这一辈子去爱你\n从今以后,\n你会是所有\n幸福的理由\n爱情,\n是场最美最远的旅行\n沿途遇经泥泞\n偶尔阻碍我们的前进\n感到你的体温在我怀里\n像阳光和煦\n巧妙的熔化\n我的不安定\n不可思议\n证明我爱你的理由多么自然\nforever love forever love\n我只想用我这一辈子去爱你\n从今以后,\n你会是所有\n幸福的理由\nwo\n多么自然\n你感动的眼睛,\n我沉默的声音,\n仿佛就是最好的证明\n就让我再说一次\nilove you ~~\n直到永远\nforever love forever love\n我只想用我这一辈子去爱你\n从今以后,\n你会是所有\n幸福的理由\noh\nforever love\nforever love\nforever love"
+  },
+  {
+    title: "你不要害怕",
+    lyrics: "不要害怕 不要害怕\n爱一个人其实并不复杂\n不要害怕 不要害怕\n过去的眼泪用今天去擦\n午夜的两点半\n我走不进梦乡\n时间在逃亡\n悲伤还在原地方\n我将一床被单\n绞成混乱一片\n爱已经灭亡\n然而思念更坚强\n不要害怕 不要害怕\n爱一个人其实并不复杂\n不要害怕 不要害怕\n过去的眼泪用今天去擦\n我答应自己不要放弃\n我答应自己不要忘记\n闭上眼想一遍\n你转身的模样\n每一个角度\n都好像一种飞翔\n我因为看着你\n回忆你而悲伤\n是你在心里不断的想\n不要害怕 不要害怕\n爱一个人其实并不复杂\n不要害怕 不要害怕\n过去的眼泪用今天去擦\n我答应自己不要放弃\n我答应自己不要忘记\n不要害怕 不要害怕\n爱一个人其实并不复杂\n不要害怕 不要害怕\n过去的眼泪用今天去擦\n不要害怕 不要害怕\n爱一个人其实并不复杂\n不要害怕 不要害怕\n过去的眼泪用今天去擦"
+  },
+  {
+    title: "依然爱你",
+    lyrics: "一闪一闪亮晶晶\n留下岁月的痕迹\n我的世界的中心\n依然还是你\n一年一年又一年\n飞逝尽在一转眼\n唯一永远不改变\n是不停的改变\n我不像从前的自己\n你也有点不像你\n但在我眼中你的笑\n依然的美丽\n日子只能往前走\n一个方向顺时钟\n不知道还有多久\n所以要让你懂\n我依然爱你\n就是唯一的退路\n我依然珍惜\n时时刻刻的幸福\n你每个呼吸\n每个动作\n每个表情\n到最后一定会依然爱你\n依然爱你\n依然爱你\n我不像从前的自己\n你也有点不像你\n但在我眼中你的笑\n依然的美丽\n日子只能往前走\n一个方向顺时钟\n不知道还有多久\n所以要让你懂\n我依然爱你\n就是唯一的退路\n我依然珍惜\n时时刻刻的幸福\n你每个呼吸\n每个动作\n每个表情\n到最后一定会依然爱你"
+  },
+  {
+    title: "你不在",
+    lyrics: "当世界只剩下这床头灯\n你那边是早晨已经出门\n我侧身感到你在转身\n无数陌生人\n正在等下一个绿灯\n一再错身彼此脆弱的时分\n如果渴望一个吻的余温\n我关了灯黑暗把我并吞\n你不在\n当我最需要爱\n你却不在\n无尽等待像独白的难捱\n你不在\n高兴还是悲哀\n你都不在\n我受了伤在偷偷好起来\n但你不在不在\n时间再按下许多次快门\n沉默里听见转动的秒針\n一个人吃饭这个凌晨\n孤单一人份\n你低声说你有別人\n我的话筒只有自己的体温\n怎样认真也不一定成真\n你说的对我不得不承认\n你不在\n当我最需要爱\n你却不在\n无尽等待像独白的难捱\n你不在\n高兴还是悲哀\n你都不在\n我受了伤再偷偷好起來\n但你不在\n那些摇摆\n我都明白都明白\n但你不在\n爱已不在不在\n你不在\n当我最需要爱\n你都不在\n一个人分饰两角的恋爱\n你不在\n高兴还是悲哀\n你都不在\n像空气般不存在的存在\n再沒有痕跡的爱\n你不在\n当我需要你的爱\n你不在"
+  },
+  {
+    title: "需要人陪",
+    lyrics: "打开窗户让孤单透气\n这一间屋子 如此密闭\n欢呼声仍飘在空气里\n像空无一人一样华丽\n我 渐渐失去知觉\n就当做是种自我逃避\n你 飞到天的边缘\n我也不猜落在何地\n一个我 需要梦想 需要方向\n需要眼泪\n更需要 一个人来 点亮天的黑\n我已经 无能为力 无法抗拒\n无路可退\n这无声的夜 现在的我 需要人陪\n闭上眼睛 就看不清\n这双人床 欠缺的 温馨\n谁能 陪我 直到天明\n穿透这片 迷蒙寂静\n我 渐渐失去知觉\n就当做是种自我逃避\n你 飞到天的边缘\n我已不猜落在何地\n一个我 需要梦想 需要方向\n需要眼泪\n更需要 一个人来 点亮天的黑\n我已经 无能为力 无法抗拒\n无路可退\n这无声的夜 现在的我\n需要人陪\n一个我 需要梦想 需要方向\n需要眼泪\n更需要 一个人来 点亮天的黑\n我已经 无能为力 无法抗拒\n无路可退\n这无声的夜 现在的我\n需要人陪\n需要人陪"
+  },
+  {
+    title: "第一个清晨",
+    lyrics: "光透进来 把梦刷白\n舍不得你会醒过来\n不要现在 昨夜走太快\nwu...\n说不上来 隐隐烫在胸口一块\n吻你脸颊 证明此刻真的存在\n是你让我相信爱 对我慷慨\nhei ye ho\n是爱我们是注定不是意外\n这是爱 我们的爱\n还不确定却好实在\n把你贴在胸怀\n静静的代替表白\n再不愿放开\n这是爱 给你的爱\n没名字却停不下来\n在忐忑里期待\n雀跃中想到未来是你我才明白\n这就是爱\n第一个我们的清晨\n比任何默契都私密的 无限可能\n言语都显得太肤浅\nho w o o o\n这是爱我们的爱\n还不确定却好实在\n把你贴在胸怀\n静静的代替表白\n再不愿放开\n这是爱给你的爱\n没名字却停不下来\n在忐忑里期待\n雀跃中想到未来是你我才明白\n这就是爱"
+  },
+  {
+    title: "好心分手",
+    lyrics: "(女):是否很惊讶 讲不出说话\n没错我是说 你想分手吗\n曾给你驯服到 就像绵羊\n何解会反咬你一下 你知吗\n(男):也许该反省 不应再说话\n被放弃的我 应有此报吗\n如果我曾是个坏牧羊人\n能否再让我 试一下 抱一下\n(女):回头望 伴你走 从来未曾幸福过\n(男):恨太多 没结果 往事重提是折磨\n(女):下半生 陪住你 怀疑快乐也不多\n(男):被我伤 让你痛\n(女):好心一早放开我\n从头努力也坎坷 统统不要好过\n(男):为何唱着这首歌\n为怨恨而分手 问你是否原谅我\n(女):若注定有一点苦楚\n不如自己亲手割破\n(男):回头吧 不要走 不要这样离开我\n恨太多 没结果 往事重提是折磨\n(女):下半生 陪住你 怀疑快乐也不多\n没有心 别再拖\n好心一早放开我\n重头努力也坎坷 通通不要好过\n(男):为何唱着这首歌\n为怨恨而分手 问你是否原谅我\n(女):若勉强也分到不多 不如什么也摔破\n(男):好心分手 每天播\n(女):可知歌者也奈何\n(女):难行就无谓再拖\n好心一早放开我\n重头努力也坎坷 通通不要好过\n(男):为何唱着这首歌\n为怨恨而分手 问你是否原谅我\n(女):若注定有一点苦楚 不如自己亲手割破"
+  },
+  {
+    title: "爱的就是你",
+    lyrics: "在爱的幸福国度 你就是我唯一\n我唯一爱的就是你\nYE----YE\n我真的爱的就是你\n失去才会懂得珍惜\n但我珍惜你\n伤越痛就是爱越深\n我不相信\n你和我同时停止呼吸\n每一次我们靠近\n你让我忘了困惑\n忘了所有烦心\n我把你紧紧拥入怀里\n捧你在我手心\n谁叫我真的爱的就是你\n在爱的纯净世界\n你就是我唯一\n永远永远不要怀疑\n我把你当作我的空气\n如此形影不离\n我大声说我爱的就是你\n在爱的幸福国度\n你就是我唯一\n我唯一爱的就是你\n我真的爱的就是你\nOh-oh\n失去才会懂得珍惜\n但我珍惜你\n伤越痛就是爱越深\nEn-en\n我不相信\n你和我同时停止呼吸\n每一次我们靠近\n你让我忘了困惑\n忘了所有烦心\n我把你紧紧拥入怀里\n捧你在我手心\n谁叫我真的爱的就是你\n在爱的纯净世界\n你就是我唯一\n永远永远不要怀疑\n我把你当作我的空气\n如此形影不离\n我大声说我爱的就是你\n在爱的幸福国度\n你就是我唯一\n我唯一爱的就是你\nYE-ye\n我真的爱的就是你\n就是你\nye-ye 就是你 就是你\nye-ye 唯一爱的就是你\nOh-oh\n我把你紧紧拥入怀里\n捧你在我手心\n谁叫我真的爱的就是你\n在爱的纯净世界\n你就是我唯一\n永远永远不要怀疑\n我把你当作我的空气\n如此形影不离\n我大声说我爱的就是你\n在爱的幸福国度\n你就是我唯一\n我唯一爱的就是你\n我真的爱的就是你\n我唯一爱的就是你\n我真的爱的就是你\n爱的就是你"
+  },
+    {
+    title: "一首简单的歌",
+    lyrics: "这世界很复杂\n混淆我想说的话\n我不懂\n太复杂的文法\n什么样的礼物\n能够永远记得住\n让幸福别走得太仓促\n云和天 蝶和花\n从来不需要说话\n断不了 依然日夜牵挂\n唱情歌 说情话\n只想让你听清楚\n我爱你是唯一的倾诉\n\n写一首简单的歌\n让你的心情快乐\n爱情就像一条河\n难免会碰到波折\n这一首简单的歌\n并没有什么独特\n好像我\n那么的平凡却又深刻\n\n我一直在思考\n让你了解我的好\n却忘了\n常常对你微笑\n失去的 忘记的\n我会尽力去弥补\n你是我最珍贵的财富\n\n写一首简单的歌\n让你的心情快乐\n爱情就像一条河\n难免会碰到波折\n这一首简单的歌\n并没有什么独特\n好像我\n那么的平凡却又深刻\n深刻\n简单的歌\n简单的歌 Wo~\n\n写一首简单的歌\n让你的心情快乐\n爱情就像一条河\n难免会碰到波折\n这一首简单的歌\n并没有什么独特\n好像我\n那么的平凡却又\n深刻"
+  },
+  {
+    title: "W-H-Y",
+    lyrics: "W-H-Y\n我的完美世界还一直都不肯来\nW-H-Y W-H-Y-Y\n就算红配绿 生活还是要继续\n跟着他的旋律\n我丢个黑色的歌词飞射\n射到灰色的耳膜就象个镭射\n盗版是怎么回事\n现在的唱片公司同时都说赔死\n类似被一个锤子用力的打下那个让人唱歌\n高八度的位置不可能再大卖\n制作预算拜拜\n如果有更好的未来\n我看不出来 W-H-Y\n我的完美世界还一直都不肯来\nW-H-Y W-H-Y-Y\n就算红配绿\n生活还是要继续\n跟着他的旋律\nmedia疯了\n我讲没有用了 已经不通了\n因为你脑袋空了\n什么人红了 就被你玩弄了\n难怪最终都抓狂了你懂吗\n我累是媒体让我无奈\n我是谁是非阿菲阿妹阿狗仔队\n我是不是gay\no mai ga un ko kue(日文)\nW-H-Y W-H-Y-Y why\n来到此段请麻烦你洗耳恭听\n昨晚我入定在屋顶被\n一只乌鹰吓醒\n它的人生哲理跟我分析\n它说:「世界和平要从自己的心理开始做起」\n我拿起了原子笔\n抄下了这个笔记\n马上谱曲\n中版的舞曲\n丢给了sony独家ktv\n大家的反应都说好听\n我丢个黑色的歌词飞射\n射到你灰色的耳膜就像个雷射\n盗版这怎么回事\n现在的唱片公司同时都说赔死\n沸腾的心情转冷\n本来的精神翻过来变成神经病\n是大家真的想不开\n这是什么时代\n这环境让我太无奈\n但我离不开 W-H-Y\n我的完美世界还一直都不肯来\nW-H-W-H-Y-Y\n就算红配绿\n生活还是要继续\n跟着他的旋律游戏"
+  },
+  {
+    title: "爱错",
+    lyrics: "北风毫不留情\n把叶子吹落\n脆弱的她选择了逃脱\n叶子失去消息\n风才感觉寂寞\n整个冬天 北风的痛没人能说\n我从来没想过我会这样做\n从来没爱过所以爱错\n我从哪里起飞\n从哪里降落\n多少不能原谅的错\n却不能重来过\n翻开回忆角落完美的生活\n以为幸福都可以掌握\n仔细回味当初那个故事背后\nOh 原来是我 原来是我\n犯下从没承认的错\n我从来没想过我会这样做\n从来没爱过所以爱错\n我从哪里起飞从哪里降落\n多少不能原谅的错\n却不能重来过\n在这少了你的世界 Oh\n找不回那些感觉\n其实我不想道别那些过去\n我从来没想过我会这样做\n从来没爱过所以爱错\n从来没有爱过那么认真\n我从哪里起飞\n从哪里降落\n多少不能原谅的错\n却不能重\n我从来没想过我会这样做\n从来没爱过所以爱错\n我从哪里起飞\n从哪里降落\n多少不能原谅的错\n请你原谅我的爱错"
+  },
+  {
+    title: "依然爱你",
+    lyrics: "一闪一闪亮晶晶\n留下岁月的痕迹\n我的世界的中心\n依然还是你\n一年一年又一年\n飞逝尽在一转眼\n唯一永远不改变\n是不停的改变\n我不像从前的自己\n你也有点不像你\n但在我眼中你的笑\n依然的美丽\n日子只能往前走\n一个方向顺时钟\n不知道还有多久\n所以要让你懂\n我依然爱你\n就是唯一的退路\n我依然珍惜\n时时刻刻的幸福\n你每个呼吸\n每个动作\n每个表情\n到最后一定会依然爱你\n依然爱你\n依然爱你\n我不像从前的自己\n你也有点不像你\n但在我眼中你的笑\n依然的美丽\n日子只能往前走\n一个方向顺时钟\n不知道还有多久\n所以要让你懂\n我依然爱你\n就是唯一的退路\n我依然珍惜\n时时刻刻的幸福\n你每个呼吸\n每个动作\n每个表情\n到最后一定会依然爱你"
+  },
+  {
+    title: "你不在",
+    lyrics: "当世界只剩下这床头灯\n你那边是早晨已经出门\n我侧身感到你在转身\n无数陌生人\n正在等下一个绿灯\n一再错身彼此脆弱的时分\n如果渴望一个吻的余温\n我关了灯黑暗把我并吞\n你不在\n当我最需要爱\n你却不在\n无尽等待像独白的难捱\n你不在\n高兴还是悲哀\n你都不在\n我受了伤在偷偷好起来\n但你不在不在\n时间再按下许多次快门\n沉默里听见转动的秒針\n一个人吃饭这个凌晨\n孤单一人份\n你低声说你有別人\n我的话筒只有自己的体温\n怎样认真也不一定成真\n你说的对我不得不承认\n你不在\n当我最需要爱\n你却不在\n无尽等待像独白的难捱\n你不在\n高兴还是悲哀\n你都不在\n我受了伤再偷偷好起來\n但你不在\n那些摇摆\n我都明白都明白\n但你不在\n爱已不在不在\n你不在\n当我最需要爱\n你都不在\n一个人分饰两角的恋爱\n你不在\n高兴还是悲哀\n你都不在\n像空气般不存在的存在\n再沒有痕跡的爱\n你不在\n当我需要你的爱 你不在"
+  },
+  {
+    title: "火力全开",
+    lyrics: "打倒帝国主义 不愿再做奴隶\n我家大门被入侵\n你说LADY卡卡 我说何必怕她\noh~~~~~ 别向她们磕头\n文化是武器 埋在每根神经\n被优人神鼓打醒\n绝不允许失败 胜利不必等待\n因为MUSIC-MAN的到来\n忽然间整个世界开始在摇摆\n节奏和音乐入侵了血脉\n这次的战略 是火力全开\n火力全 开 火力全 开\n火力全 开\nSo many accusations\nof an Asian invasion\nhere they come a point'n fingers at me\npreyin'on a mass emotion\nstirrin'up a big commotion\ntrying to assign responsibilities\ngonna stop this negativity\nturn it into positivity with integrity\ngiving all of me.for all to see\nthis fight for equality\nbut even if they blame us\ntry to frame us nobody can shame us\ni'm a sing this next verse in Chinese\n忽然间整个世界开始在摇摆\n节奏和音乐入侵了血脉\n这次的战略是火力全开\n火力全 开 火力全 开\n火力全 开\n火力全 开\n火力全 开"
+  },
+  {
+    title: "安全感",
+    lyrics: "看着天\n一边开车一边打哈欠\nDJ 报时说清晨六点\n想到见你就不累\nOh 这些年\n我还留着你的高跟鞋\n也会嫉妒今天谁的吻\n有落在你的唇边\nOh 亲爱的\n你家的路怎会越开越远\nOh 天知道怎么办\n我们都失去了方向感\nOh 亲爱的\n你是否也在等着那一天\n心的距离能缩短\n找回遗失的安全感\nOh 忘不了\n曾经爱得那么的狂野\n不管经过多少的错觉\n爱情留下的余味\n依然这么浓烈\n亲爱的\n你是否也在等着那一天\n心的距离能缩短\n帮助我找回遗失的安全感\nOh\noh 亲爱的\n你家的路怎会越开越远\nOh 天知道怎么办\n我们都失去了方向感\nOh 亲爱的\n你是否也在等着那一天\n心的距离能缩短\n让我给你安全感\n心的距离能缩短\n让我给你安全感"
+  },
+  {
+    title: "飘向北方",
+    lyrics: "呦 我先开始\ncause I'm a leader for\n十几亿个爱听歌的人已腻了\n你逼了我让自己的耳朵变细致\n押韵更密实\n尤其是四分之一世纪的历史\n但我越来越有气势\n生命是自由搏击\n几次跌倒就几次爬起\n这不是一场party 这是一场革命 \n这是我宝贵的生命\n这是天赐的声音\n我们都太过于年轻\n带着信念迈着脚步\n意志像钢铁般坚硬\n所以不Care你幼稚的套路\n一路潜行在险境捍卫自己的边境\n我从不相信天命人生就如赌注\n攀登巅峰的欲望总会让我\n持续保持向上\n像永不败的战将\n在沙场一路过关斩将\n我宁愿锋芒毕露在战场横行霸道\n也不愿为了功名利禄变得油腔滑调\n有人说他在老家欠了一堆钱\n需要避避风头\n有人说他练就了一身武艺\n却没机会崭露\n有人失去了自我\n手足无措 四处漂流\n有人为了梦想 为了三餐\n为了养家糊口\n他住在燕郊区 残破的求职公寓\n拥挤的大楼里他们陌生人都来自外地\n他埋头写着履历 \n怀抱着多少憧憬\n往返在930号公路 \n内心盼着奇迹\n如果你不喜欢这首就切歌 Woo\nMan whatever\n反正也话不投机半句多 Yeah\nGet out of here\n一觉夯到晚上起make some beat\nlike Dre\n带上耳机世界跟我没关系\nI'm just doing my thing\n懒得浪费时间去炒作\n绝不唱烂情歌 Yeah\n都在攀比谁的流量多\n干货却没几个 Yeah\n一个比一个都想火\n争的你死我活 Yeah\n只能用我的手势概括\n飘向北方 别问我家乡\n高耸古老的城墙\n挡不住忧伤 我飘向北方\n家人是否无恙\n肩上沉重的行囊 盛满了惆怅\n也是最后期望 回不去的远方\n那吾克热你凭什么飘向北方\n凭我自己的实力\n我听说新疆来的饶舌歌手\n都会快嘴是真的吗\nOh 那都是基本功\n真的假的 你说啊\n哼 谁怕谁\n我才不会迎合你的喜好去改变我的style\n因为没有必要Man\n之前是我太过于低调 不去斤斤计较\n随便你们拿我跟谁比较\n但非要说我的歌词没有味道 Man\nOk确实没你键盘酸\n当我自食其力不再飘向北方\n你却依然用键盘伪装\n翻过了寒冷的山坡\n穿过了无人的沙漠\n看着我怎么在宇宙穿梭\n面临着无形的压力\n面对这无情的沙地\n看我怎么漂亮闪躲\n从不在意自己是否可以\n重点在狂野的跟着信号继续\n骑着我的机车搭配我的皮衣\n我用我的速度来激励自己\n炸这个炸 我的节奏可怕\n我的舌头火辣我的口水发烫\n那个有那个的味道\n我必须要承认我的\n饶舌功夫可以征服 中国有嘻哈\nMakin and breakin it down\nNobody round  That can be found\nBetter than me  \nI'm hearin' em sing\nReturn of the king\n这么好听\nThere I go makin'a beat\nAin't nobody\nBe touchin'me\n跟我距离 差十万八千里\nThis is all I gotta say to Haters\nWho be leaving comments on\nMy Weibo thinkin' I won't see them but I do\nThere's somepm' wrong with chu\nYou're wasting all your time cause\nI don't know you I don't care to\nyou should find a job or some m else to do\n别听任何人说不能实现你的梦想\n从纽约到乌鲁木齐 龙的传人\n相信自己\n任何病毒 都压不住\n我们实力 有感染力\n来塑造\n我们的胜利 一起努力\nRespect\n飘向北方 别问我家乡\n高耸古老的城墙 挡不住忧伤\n飘向北方 家人是否无恙\n肩上沉重的行囊 盛满了惆怅\n也是最后期望 回不去的远方\n透支的信用卡额度乘Double\n儿时的梦想为生存屈膝\n窗外的新生命吹着Bubble\n空气中弥漫着春天的柳絮\n或许不再渴望天真的幻想\n未落地的蒲公英飘向北方\n晚霞的太阳照在爱人的脸庞\n才发现我已不再飘向北方"
+  },
+  {
+    title: "美",
+    lyrics: "你这么美 美 美 妹妹\n你是寒冬里的花蕾\n你是西施搅乱了春水\n你是天使般的恩惠\n你是我宠爱的贵妃\n世间的伤悲 全都被你摧毁\n你是美酒千杯 我怎能不醉\n不小心爱上 oh 你的香味\n只有你 占据了视线\n其它的 我都看不见\n这是爱情或 这是对你的迷恋\n你这么美 你这么媚\n你这么美 你这么美 美 美 妹妹\n你这么美 美 美 妹妹\n你是寒冬里的花蕾\n你是西施搅乱了春水\n你是天使般的恩惠\n你是我宠爱的贵妃\n世间的伤悲 全都被你摧毁\n你是美酒千杯 我怎能不醉\n不小心爱上 oh 你的香味\n只有你 占据了视线\n其它的 我都看不见\n这是爱情或 这是对你的迷恋\n你这么美 你这么媚\n你这么美 你这么美 美 美 妹妹\n你这么美 美 美 妹妹\n是你让我想入非非\n想当一个偷心雅贼\n爱已萌芽 万分珍贵\n没有时间可以浪费\n我愿意用生命换一个机会\n让我吻上你的嘴\nHablo Espanol 给你拉丁味道\n你的美就是一种美好\n别责怪我的一点冒昧\n我想陪你度过年年岁岁\n你太美 你太媚\n为了你 我能 征服大江南北\n沉鱼落雁 难望你项背\n文字不足形容你的美\n嘿 宝贝 给我你的拥抱\n让我永远珍藏你的美\n怎么那么美\n你这么美 你这么媚\n你这么美 你这么美 美 美 妹妹\n你这么美 美 美 妹妹\n你这么美 你这么美 美 美 妹妹"
+  },
+  {
+    title: "Everything",
+    lyrics: "故事里的 起承转合 有一些忘记\n做了多少错误的选择\n原来波折 在暗示着 该走的方向\n指引你我来到这一刻\n就算别人都说 我们没什么出息\n不可能会这样轻易放弃\nCause You're My EVERYTHING\n就一个原因 \n让我勇敢面对这个世界\n想给你EVERYTHING\n不管用多少个明天 \n永远从此刻开始算起\n你的爱是我的EVERYTHING\n辽阔天际 巧合相遇 有多少机率\n多少烟火 坠落无痕迹\n因为幸福 没有捷径 难免要绕道\n不被看好越是要做到\n就算别人都说 我们没什么出息\n不可能会这样轻易放弃\n你就是EVERYTHING\n就这个原因 \n让我勇敢面对这个世界\n想给你EVERYTHING\n只要你说一声愿意 \n所有的未来才有意义\n你的爱是我的EVERYTHING\nCause You're My EVERYTHING\n就这个原因 \n让我勇敢面对这个世界\n想给你EVERYTHING\n不管用多少个明天 \n永远从此刻开始算起\n你就是EVERYTHING\n就这个原因 \n我会永远记住这种感觉\n只要你说一声愿意\n所有的未来才有意义\n你的爱是我的EVERYTHING"
+  },
+  {
+    title: "I'm Alive",
+    lyrics: "一脚跌了浑身满是伤\n失去了自己也失去了方向\n不管曾经多么热烈\n都已经一片荒凉\n一瞬间让我对世界失望\n生命可以苦也可以糖\n但最后一幕的结局都一样\n现在还能吸一口气\n还能开口大声唱\n一颗受伤的心还能飞翔\nI'm alive I'm alive\nHallelujah I'm alive\nThrow your hands in the sky\nHallelujah I'm alive\nDon't know why I survived\nWhen everyone said I would die\nBut I'm alive\nHallelujah I'm alive\n重担可以扛也可以放\n那长途跋涉的终点都一样\n现在还能迎风而行\n还能笑看这无常\n大雨过后的天还能晴朗\nI'm alive I'm alive\nHallelujah I'm alive\nHold your hands way up high\nHallelujah I'm alive\nDon't know why I survived\nWhen everyone said I would die\nBut I'm alive\nHallelujah I'm alive\n走在死荫的幽谷中\n不再惧怕\n难关总会度过\n活下来的我\n醒来不过南柯一个梦\n你依然听得见\n我的脉搏\nI'm alive I'm alive\nGod almighty I'm alive\nThrow your hands in the sky\nThank the heavens I'm alive\nDon't know why I survived\nWhen everyone said I would die\nBut I'm alive\nHallelujah I'm alive\nBut I'm alive\nHallelujah I'm alive"
+  },
+  {
+    title: "唯一",
+    lyrics: "我的天空多么的清晰\n透明的承诺是过去的空气\n牵着我的手是你\n但你的笑容却看不清\n是否一颗星星变了心\n从前的愿望已全都被抛弃\n最近我无法呼吸\n连自己的影子都想逃避\nBaby 你就是我的唯一\n两个世界都变形\n回去谈何容易\n确定你就是我的唯一\n独自对着电话说我爱你\n我真的爱你\nBaby 我已不能多爱你一些\n是否一颗星星变了心\n从前的愿望已全都被抛弃\n最近我无法呼吸\n连自己的影子都想逃避\n逃避\nBaby 你就是我的唯一\n两个世界都变形\n回去谈何容易\n确定你就是我的唯一\n独自对着电话说我爱你\n我真的爱你\nBaby 我已不能多爱你一些 其实早已超过了爱的极限\nBaby 你就是我的唯一\n两个世界都变形\n回去谈何容易\n确定你就是我的唯一\n独自对着电话说我爱你\n我真的爱你\nBaby 我已不能多爱你一些"
+  },
+  {
+    title: "爱的鼓励",
+    lyrics: "太阳会出现\n只要你给我机会\n心情一飞冲天\n带你的烦恼 依偎\n每一次\n在谷底跌倒\n来一点高潮\nBaby想给你爱的鼓励 在你需要的时候加油打气\nBaby想给你爱的鼓励 雨后还能有彩虹别放弃\n太阳出现了\n感谢你给我机会\n心情哼出来是一首歌\n让你听的好甜美\n每一次\n在谷底跌倒\n来一点高潮\nBaby想给你爱的鼓励 在你需要的时候加油打气\nBaby想给你爱的鼓励 雨后还能有彩虹别放弃\n每一次\n在谷底跌倒\n来一点高潮\nBaby想给你爱的鼓励 在你需要的时候加油打气\nBaby想给你爱的鼓励 雨后还能有彩虹别放弃\n给你爱的鼓励 在你需要的时候加油打气\nBaby想给你爱的鼓励 雨后还能有彩虹别放弃"
+  },
+  {
+    title: "自己人",
+    lyrics: "上帝你在哪里 人们被什么疏离\n饥饿战争暴力 天堂的眼泪 是否流干了\n太阳晒他肩膀上 跑得快但他不知道方向\n家被烧完回不去 多少悲伤震撼大地\n看见你 听不见我声音 被抛弃\n太多黑暗的回忆 如何搜寻\n所有的希望 都在哪里 在哪里\n为什么 为什么 明明都是自己人\n为何把自己当成了敌人\n远方的 孩子们 通通都是自己人\n自己人的爱不该再疑问\n野心变了贪心 自私泛滥成疾病\n即便领了高薪 还买不了幸福的婚姻\n老公回来了脾气差 老婆从没梦过\n怎么会是他 边哭着边报警\n欺骗了朋友 欺骗自己\n如果没有了谁输谁赢\n看见你 听不见我声音\n发现你 并不爱惜你自己\n不要忘记 所有的希望 还在这里 在这里"
+  },
+  {
+    title: "爱你等于爱自己",
+    lyrics: "淋我淋过的雨\n吹你吹过的风\n比风雨还亲蜜\n两个人的影子\n在同一个天地\n拥有一样的回忆\n心想著你\n眼看著你\n就像贴近自己\n傻的笑的\n就好像你\n像你一样甜蜜\n是不是爱你就会变成你\noh yeah\n爱你就等於爱自己\nMm Well Well Alright\n我想你的难题\n你写我的日记\n比爱人还亲蜜\n我还没说可惜\n你已经在叹气\n不可思议的默契\n心想著你\n眼看著你\n就像贴近自己\n怪不得\n拥抱感觉\n会越来越熟悉\n是不是\n爱你就会变成你\noh yeah\n爱你就等於爱自己\nMm Well Well Alright\n是不是你所有的秘密\n已经成为我的呼吸\noh~~不再分离\n是不是爱你就会变成你\noh yeah\n爱你就等於爱自己\nMm Well Well\n爱你就等於爱自己~~\n爱你就等於爱自己\nMm Well Well\n是不是爱你就会变成你\noh yeah\n爱你就等於爱自己\nMm Well Well\n是不是爱你就会变成你\noh~~yeah~\n爱你就等於爱自己\nMm Well Well\n是不是爱你就会变成你\nDO WHAT YOU WANT\nSUCCESS WILL AROUND YOU!"
+  },
+  {
+    title: "不可能错过你",
+    lyrics: "有时候只需要一首歌就能让我自在\n忘掉要排队空气湿答答店员很坏\n就是这个时候有一朵玫瑰在我心盛开\n就在这个时候阳光跟着撒下来\n看见整个城市在恋爱\n不可能错过你\n缘份这件事有够奇怪我不期待却偏要来\n不可能错过你\n爱情总叫人迫不及待多么愉快\n自由自在（我就是自由自在）\n有时候只需要一首歌就会想谈恋爱\n忘掉不自由钱会花很多朋友责怪\n就是在这个时候有一朵玫瑰在我心盛开\n就是在这个时候彩虹跟着跑出来\n那是你的微笑你的爱\n不可能错过你\n缘份这件事有够奇怪我不期待却偏要来\n不可能错过你\n爱情总叫人迫不及待多么愉快\n自由自在（我就是自由自在）\n刚刚好转的心情就见乌云飘过来\n过去的阴影使你徘徊\n我不是爱神只好try try try\n我不变你就会明白\n不可能错过你\n缘份这件事有够奇怪我不期待却偏要来\n不可能错过你\n爱情总叫人迫不及待多么愉快\n自由自在（我就是自由自在）\n不可能错过你\n缘份这件事有够奇怪我不期待却偏要来\n不可能错过你\n爱情总叫人迫不及待多么愉快\n自由自在（我就是自由自在）\nAlright everybody alright listen up be quiet\nNow this is what making music is all about\nit's about getting stupid with your\n- friends a litter once in a while\nYeah you gotta let the music into your heart！\nYou know you gotta feel it！\nAlright here we go！\n不可能错过你\n缘份这件事有够奇怪我不期待却偏要来\n不可能错过你\n爱情总叫人迫不及待多么愉快\n自由自在（我就是自由自在）"
+  }
+
+];
+
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // 动态生成导航栏
+    const navList = sidebar.querySelector('ul');
+    songs.forEach((song, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = song.title;
+      listItem.addEventListener('click', () => {
+        const targetSection = document.getElementById(`song-${index}`);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
+        }
+      });
+      navList.appendChild(listItem);
+    });
+
+    // 动态生成歌词内容
+    songs.forEach((song, index) => {
+      const section = document.createElement('section');
+      section.id = `song-${index}`;
+
+      const h2 = document.createElement('h2');
+      h2.textContent = song.title;
+
+      const pre = document.createElement('pre');
+      pre.textContent = song.lyrics;
+
+      section.appendChild(h2);
+      section.appendChild(pre);
+      content.appendChild(section);
+    });
+
+    // 菜单切换功能
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>

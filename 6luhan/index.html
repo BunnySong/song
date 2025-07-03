@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鹿晗演唱会歌词本</title>
+  <style>
+body { 
+    margin: 0; 
+    font-family: "Microsoft YaHei", sans-serif; 
+    color: #54450d; 
+    font-size: 16px; 
+    /*background-color: #F6D222; */
+    background: linear-gradient(to bottom, #F6D121, white);
+    background-size: cover; 
+    -webkit-background-size: cover; /* 适配苹果手机 */
+    background-position: top left; 
+    -webkit-background-position: top left; /* 适配苹果手机 */
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    -webkit-background-attachment: fixed; 
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    /* 移除min-height，因为它可能干扰导航栏的定位 */ 
+} 
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #F6D222;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.25em;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: url('https://img.picui.cn/free/2025/06/23/68590fc116602.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: #ffe76f;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid #ddd;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 15px 20px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav li:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .developer-info {
+      font-size: 0.8em;
+      color: #ab9752;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 30px;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      color: #54450d;
+      font-size: 1.3em;
+    }
+
+    pre {
+
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: rgba(255, 255, 255, 0.3); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      /*border: 1px solid #ffffff;*/
+      font-size: 1.25rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        left: -250px;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      pre {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    鹿晗演唱会歌词本
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <!-- 自动生成的歌曲列表 -->
+    </ul>
+  </nav>
+
+  <main id="content">
+    <p class="developer-info">本网页由Bunnysong007自主开发，如有定制需求请微信联系。</p>
+    <!-- 歌词内容动态插入 -->
+  </main>
+
+  <script>
+  const songs = [
+ {
+    title: "Keep Me Alive",
+    lyrics: "My fate is lying in your hands tonight\nYou can take me out or bring me back to life\nSo what you waiting for\nWhat's your weapon of choice\nYou could do it alone\nI'm falling in love\nMy guard isn't up\nI am vulnerable\nYou got me dizzy\nIs this a hit and run\nI am on the floor\nI don't see a gun\nAre you gonna keep me alive\nAre you gonna keep me alive oh\nWill I make it past tonight\nWill I make it past midnight oh\nAm I running out of time\nAm I running out of time oh\nIf looks could kill then I'd be dead oh\nBaby your body in that dress oh\nIf looks could kill then I'd be dead no\nYou should save me while you can oh\nIf I have to be the target I don't mind\nIf you break my heart I promise I'll be fine\nI know we're strangers\nBut by the way you move\nI'd do anything for you\nIf looks could kill then I'd be dead oh\nBaby your body in that dress oh\nIf looks could kill then I'd be dead no\nYou should save me while you can oh\nIf looks could kill then I'd be dead oh\nBaby your body in that dress oh\nIf looks could kill then I'd be dead no\nYou should save me while you can oh\nAre you gonna keep me alive\nAre you gonna keep me alive oh\nWill I make it past tonight\nWill I make it past midnight oh\nAm I running out of time\nAm I running out of time oh\nIf looks could kill then I'd be dead oh\nBaby your body in that dress oh\nIf looks could kill then I'd be dead no\nYou should save me while you can oh\nIf looks could kill then I'd be dead oh\nBaby your body in that dress oh\nIf looks could kill then I'd be dead no\nYou should save me while you can oh"
+  },
+  {
+    title: "超级冠军",
+    lyrics: "Hear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nHear the crowed go\nOh oh oh oh oh\nYo here We go\n抓紧时间 挑战一切\nGet your game on\nWhoaaa\n平行世界 任我穿越\nYeah I like it\nWhoaaaa\nAll around the world\nJump in the air air jump in the air yeah\nAll the boys and girls\n全都听得见 全都会发现\nSing it like one two three\n画面全部接入memories\none two three\n一起进入这新世界 set it free\nDrop the beat now\nYeah Hear the crowd like\nHere we go\n创造极限 突破边缘\nGet your game on\nWhoaaa 新的体现\nCan you feel this\nYeah I like it\nWhoaaaa\nAll around the world\nJump in the air air jump in the air yeah\nAll the boys and girls\n全都听得见 全都会发现\nSing it like\none two three\n画面全部接入memories\none two three\n一起进入这新世界 set it free\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nBring the beat back\nHear the crowed go\nHere We go\nHear the crowed go\nBreathe it in\nBreathe it in\n让这时空围绕着你 baby\nWatch us win\nWatch us win\n追求未来的自由\nFree your mind and let it go\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nHear the crowd go\nOh oh oh oh oh\nOh oh oh oh oh\nOh oh oh oh oh\nOh oh oh oh oh\nOh oh oh oh oh"
+  },
+  {
+    title: "心率",
+    lyrics: "其实这不太像我自己\n特别是当和朋友们在一起\n喧闹中最安静的你\n却轻易点燃慢热的心\n上一秒这里还是倾盆大雨\n这一秒我的心就因你晴空万里\n这些话也许有点俗气\n但我相信这是一见钟情\n好奇你的名字你的过去\n想用美丽形容你的忧郁\nOh 也许这不过是你的面具\n犹豫却又无法停止靠近\n你的嘴唇你的气味和你的呼吸\nHold on 给我一点酒精\nWon't you be my lady maybe\n太多画面在脑中闪出\n疯狂的想法里都是你 是你\nBut I'm really tryna keep it cool\n你已走进我的心\n尽管只是站在这原地\n舞台为我升起\n而我只为你\nWon't you be my lady maybe\n画面在脑中闪出\nWon't you be my lady maybe\nBut I just tryna keep it cool\n上一秒这里还是倾盆大雨\n这一秒我的心就因你晴空万里\n这些话也许有点俗气\n但我相信这是一见钟情\n好奇你的名字你的过去\n想用美丽形容你的忧郁\nOh 也许这不过是你的面具\n犹豫却又无法停止靠近\n你的嘴唇你的气味和你的呼吸\nHold on 给我一点酒精\nWon't you be my lady maybe\n太多画面在脑中闪出\n疯狂的想法里都是你 是你\nBut I'm really tryna keep it cool\n你已走进我的心\n尽管只是站在这原地\n舞台为我升起\n而我只为你\n想牵着着你穿过水泥森林\n穿过众人目光不怕穿过闲言碎语\n为你不管是否迷失自己\n只要是你好的坏的都可以\nThe music\nCity\n是我们的背景\nFeeling\nBody\nEverything is like a dream\nLike a dream\nLike a dream\nTell me won't you be my lady maybe\nWon't you be my lady\nWon't you be my lady\n你已走进我的心\n尽管只是站在这原地\n舞台为我升起\n而我只为你"
+  },
+  {
+    title: "冒险时间",
+    lyrics: "如果有一天我会走远\nDon't you worry don't you worry yea\n如果有一天你也会想念\nDon't you worry don't you worry say\nNa na na na na na\n不要害怕我会改变\n我会永远在你的身边\nDon't you worry don't you worry about me\n游乐园 就像这世界\n这里所有的一切\n各种陌生人的脸\n我发现 神秘的秋千\n停在空中的冒险\n看到静止的世界\n魔术点燃火焰有点热\n海盗船的剧情跌荡失重\n效果开始发作\n睁开眼 游戏的规则\n被烟火的颜色 所替代\n变得不快乐\n如果有一天我会走远\nDon't you worry don't you worry yea\n如果有一天你也会想念\nDon't you worry don't you worry yea\nNa na na na na na\n不要害怕我会改变 yea\n我会永远在你的身边\nDon't you worry don't you worry about me\nDon't you worry about me\nDon't you worry about me\nDon't\n每一天\n花掉的时间\n获得游戏的经验\n贯彻英雄的理念\n冒个险\n有一点分裂\n希望得到的理解\n所有梦想会实现\n魔术点燃火焰有点热\n海盗船的剧情跌荡失重\n效果开始发作\n睁开眼 游戏的规则\n被烟火的颜色 所替代\n变得不快乐\n如果有一天我会走远\nDon't you worry don't you worry yea\n如果有一天你也会想念\nDon't you worry don't you worry yea\nNa na na na na na\n不要害怕我会改变 yeh\n我会永远在你的身边\nDon't you worry don't you worry about me\nDon't you worry about me\nDon't you worry about me\nDon't"
+  },
+  {
+    title: "Walking On The Moon",
+    lyrics: "Look what you did yea\nI'm in bliss yea\nGimme a trip yea\nGimme a kiss yea\nOo I need you by my side\nOo I need you in my life\nMake me feel like ooh ooh oh\nWalking on the moon\nOoh ooh\nWalking on the moon\nBaby so next\nGot me on flex\nTryna impress\nLike look at my wrist\nOut of this world\nDiamonds on swirl\nHeart is on twirl\nI've been working hard I've been on the chase\nPut on my arm what's it gonna take\nYou say that your tired need to get away\nLet's go somewhere private\nOoh I know the place\nGot the perfect place\nLook what you did yea\nI'm in bliss yea\nGimme a trip yea\nGimme a kiss yea\nOo I need you by my side\nOo I need you in my life\nMake me feel like ooh ooh oh\nWalking on the moon\nOoh ooh\nWalking on the moon\nFloating above cloud 9\nOh it's like a paradise\nAll the stars in the sky\nIma follow the signs\nI'm not far away\nI got time to waste\nI'm a call away\nAnd I'll be on my way\nLook what you did yea\nI'm in bliss yea\nGimme a trip yea\nGimme a kiss yea\nOo I need you by my side\nOo I need you in my life\nMake me feel like ooh ooh oh\nWalking on the moon\nOoh ooh\nWalking on the moon\nYea\nYea"
+  },
+  {
+    title: "夜行记",
+    lyrics: "我开着同样的车\n塞在了同样的街\n每天同样的拥挤 Why oh why\n同样无聊的一天\n想带你逃离眼前\n夜幕下潜入城市另一面\n当天际线亮起\n低音会做指引\n在我们的乐园\n摆脱地心引力\n让心情决定\n身体要在哪里停留\n一旦开始加速别回头\nSay it say it\n我们拥有这音乐\nLet me hear you say it say it\n想和你浪费一切\n当汗水沸腾起来\nThe hype is making me fly\n天亮也不必离开\nTake you on a ride\nJust say it\n我们是亿万富翁\n是国王或是皇后\n是流浪的艺术家\n是狂风\n忘掉白天的种种\n做你最爱的那种\nDamn 你的美已经让我失控\n当天际线亮起\n低音会做指引\n在我们的乐园\n摆脱地心引力\n让心情决定\n身体要在哪里停留\n一旦开始加速别回头\nSay it say it\n我们拥有这音乐\nLet me hear you say it say it\n想和你浪费一切\n当汗水沸腾起来\nThe hype is making me fly\n天亮也不必离开\nTake you on a ride\nJust say it\n再继续 come with me\nAfter party 后再换个场地\n再一杯 别犹豫\n我要的感觉就是把世界放手心\n看着它旋转直到双脚离地\n再没有秘密\n我们是年轻的神当太阳升起\nI wanna hear you\nSay it say it\n我们拥有这音乐\nLet me hear you say it say it\n想和你浪费一切\n当汗水沸腾起来\nThe hype is making me fly\n天亮也不必离开\nTake you on a ride\nJust say it"
+  },
+  {
+    title: "P.XyZ",
+    lyrics: "现在是几点钟\n思绪漂多久了\n无眠的夜\n像一个黑洞\n宇宙中心来电 i'm here\n邀我去转一转\n赶在破晓之前 woo ah ah\n往海王星方向飞\n要穿越虫洞对不对 ah\n洛希极限在破碎 ah\n那片星云有多么美\n漂向宇宙尽头\n一个人谁在乎\n漂向宇宙尽头\n一个人也不孤独\n忘掉时间\n听从内心的直觉\n纵身一跃的跟随\n意识交给夜的深邃\n这一刻忘了呼吸\n像散落的尘埃\n潜入一场梦境\n带我去哪里 woo ah ah\n往海王星方向飞\n要穿越虫洞对不对 ah\n洛希极限在破碎 ah\n那片星云有多么美\n漂向宇宙尽头\n一个人谁在乎\n漂向宇宙尽头\n一个人也不孤独"
+  },
+  {
+    title: "吹吹风",
+    lyrics: "与你相遇第一秒钟\n风也变温柔\n我闪烁的眼瞳\n藏不住的心动\n顷刻间翻涌\n难忘的是你的笑容\n将烦扰清空\n有个大大的梦\n悄悄刻在心中\n想和你共度余生\n想带你 落日黄昏后 吹吹风\n想陪你 浪漫星空下 做做梦\n流星穿过云层 划过暗夜长空\n一颗颗落入你眼中\n想陪你 晴天白日里发发疯\n想带你 穿越宇宙去外太空\n不问南北西东 不管阴霾晴空\n你是我生命中最美那道彩虹\n一步两步 把手牵住\n和你夕阳下漫步\n花田小树 乡间小路\n等每个日落日出\n我愿意 用尽一切\n只要能够 把你留住\n陪我一起看阳光雨露\n一束两束 玫瑰铺路\n我做你人生地图\n若你总是 糊里糊涂\n烦恼请向我倾诉\n我愿放弃一切 跟随你的脚步\n多想时间可以停住\n想带你 落日黄昏后 吹吹风\n想陪你 浪漫星空下 做做梦\n流星穿过云层 划过暗夜长空\n一颗颗落入你眼中\n想陪你 晴天白日里发发疯\n想带你 穿越宇宙去外太空\n不问南北西东 不管阴霾晴空\n你是我生命中最美那道彩虹\n你说要一起熬到黎明\n再看一部温暖的电影\n那爱已住进我的心\n就算翻山越岭\n想带你 落日黄昏后 吹吹风\n想陪你 浪漫星空下 做做梦\n流星穿过云层 划过暗夜长空\n一颗颗落入你眼中\n想陪你 在晴天白日里发发疯\n想带你 穿越到宇宙去外太空\n不问南北西东 不管阴霾晴空\n你是我生命中最美那道彩虹"
+  },
+  {
+    title: "梦",
+    lyrics: "这是个梦 如烟似梦坠入了其中\n烟雨朦胧初现你轮廓\n风花雨夜桥头与你相拥\n你和我 oh ye\n泼墨 晕开 藏下伏笔\n把胭脂气都遮盖\nLike super heros 凡人形态\n突然出现在\n不停想起你的调皮\n不断挑战我们的互相脾气\n我们闹得话题好孩子气\n就是喜欢把你惹生气\n这是个梦 如烟似梦坠入了其中\n烟雨朦胧初现你轮廓\n风花雨夜桥头与你相拥\n你和我 oh\n这是个梦 如烟似梦坠入了其中\n烟雨朦胧初现你轮廓\n风花雨夜桥头与你相拥\n你和我 oh ye\n\"Call me 如果需要我\"\n我越过星河再翻过山河 就为了\n点亮窗外灯火燃尽 这寂寥\n畅游龙猫的大林住所\n(凌波微步惊鸿落生尘)\n(思线精心织成九鸾章)\n这是个梦 如烟似梦坠入了其中\n烟雨朦胧初现你轮廓\n风花雨夜桥头与你相拥\n你和我 oh\n这是个梦 如烟似梦坠入了其中\n烟雨朦胧初现你轮廓\n风花雨夜桥头与你相拥\n你和我 oh ye\nYou're saving me\nBaby you're everything\n遇到了你就像坠入梦境\nYou say to me\n\"You're my everything\"\n为了你我全都可以\n如梦 如烟似梦坠入了其中\n烟雨朦胧初现你轮廓\n风花雨夜桥头与你相拥\n你和我 oh\n如梦 如烟似梦坠入了其中\n烟雨朦胧初见你轮廓\n风花雨夜桥头与你相拥\n你和我 oh ye\nHa\nYou're gonna fill me in love\nHa\n就让这幻化于烟雨之中 ye"
+  },
+  {
+    title: "致爱 Your Song",
+    lyrics: "在我眼中 在我心中\n有你的出现就有蔚蓝天空\n梦的城堡\n用爱守候\n最美好的时光在这停留\n就让我陪在你身旁\n当你快乐或是绝望\n就像你\n陪着我一样\n世界变化不停\n人潮川流不息\n我只想每个落日\n身边都有你\n如果有一天你会\n忘记我们的约定\n没关系\n至少有这首歌\n我再唱给你听\n孤单星球\n转了多久\n才遇到了你\n靠近在我左右\n青春汹涌\n成长会痛\n你皱起眉头\n让我给你温柔\n我们在昨天的经历\n是彼此明天的勇气\n因为你未来不畏惧\n世界变化不停\n人潮川流不息\n我只想每个落日\n身边都有你\n如果有一天你会\n忘记我们的约定\n没关系\n至少有这首歌\n我再唱给你\n可能未来的你会\n为另一个谁哭泣\n请记得\n还有一首歌\nI'll only sing for you girl\nIt's your song\nOh yeah\n世界变化不停\n人潮川流不息\n我只想每个落日\n身边都有你\n如果有一天你会\n忘记我们的约定\n没关系\n至少有这首歌\n我再唱给你听\n再唱给你听\nBabe it's your song\nBabe it's your song"
+  },
+  {
+    title: "某时某刻",
+    lyrics: "电影里的剧情今天就先到这里\n当黑夜变得安静\n剩我自己\n当黑夜唤醒清晨之后\n可是关于人生\n见过越多的清晨\n却越陌生\n我绕着梦想一路转\n你看到了哪一段\n不喜欢哪一段 都感谢收看\n当潮汐交换 当路灯都变暗\n当我厌倦天空 想坠入海中\nWho's gonna catch me when I fall\nAre you\nWho's gonna catch me when I fall\nAre you\n原谅我也会受伤会伪装会彷徨\nNo\nBut I don't wanna let you down let you down\n让你失望\nNo\n谁能从来不受伤\n不伪装 不彷徨 No\nI don't wanna let you down let you down\n让你失望\nNo\n他们说我是被上天眷顾那一个\n所以必须完美着\n每时每刻\n想诉说却发现已难开口坦白脆弱\n哪怕我此刻承受的已超负荷\n你总以为全都了解\n可只有我最清楚幸运来临之前\n每个失眠\n当潮汐冷却 当列车都停歇\n当我厌倦天空 想坠入海中\nWho's gonna catch me when I fall\nAre you\nWho's gonna catch me when I fall\nAre you\n原谅我也会受伤会伪装会彷徨 No\nBut I don't wanna let you down let you down\n让你失望\nNo\n谁能从来不受伤\n不伪装 不彷徨\nNo\nBut I don't wanna let you down let you down\n让你失望 No\n世界请等一等\n不想回家的人\n等他听完这首歌\n再回到他安身的那扇门\n我相信最后当我转身\n想坠入海中\nSomeone will catch me when I fall\nI know\nSomeone will catch me when I fall\nI know我们一样\n会受伤 会伪装 会彷徨\nNo谁能从来\n不受伤 不伪装 不彷徨\nNo就让我们\n去受伤 去伪装 去彷徨\nOh然后继续\n去感受 去冲撞 去飞翔\nNow"
+  },
+  {
+    title: "Skin to Skin",
+    lyrics: "Take your time\nLove me in the middle of your lowest night\nI'll be sure to lift you if you promise me\nGive me your affection\nAnd your honesty\nIf I could feel your touch\nIf I could be your love\nI wanna go beyond\nI wanna go to far\nNow tell me I'm the only one\nSkin to skin\nTake your time\nI'll be right here with you in the longest fight\nNever will neglect you I'll stay by your side\nNever would direct you\nIf I'm left behind\nWill I still feel your touch\nWill I still be your love\nI wanna go beyond\nI wanna go to far\nNow tell me I'm the only one\nSkin to skin\nGive me your affection\nNow tell me I'm the only one"
+  },
+  {
+    title: "Lu",
+    lyrics: "Ooh ooh I'm just tryna get you in the mood\nOoh ooh baby just show me what it do\nNow blow it like a flute ooh ooh\nOoh ooh ooh ooh ooh\nShow me what it do ooh ooh\nOoh ooh ooh ooh ooh\nI'm just out here with my crew\nMatter fact the troup\nTryna get the loot\nSwerving on you fools\nNever hitting snooze\nYea I act fool\nGot an attitude\nBut I get excused\nEverywhere I go they yelling Lu\nI tell em move move\nGot somewhere to go I'm making moves\nI been cooking up a stew\nTell ur girl come thru\nBetter get a hold or I'mma make that flower bloom ooh\nOo yea\nShe wanna ride she wanna fly so I say where\nCome inside I'll change your life better prepare\nPut in work in like the Renaissance\nBend that body like a gymnast\nShe ask me what I want\nBlow it like a flute ooh ooh\nOoh ooh ooh ooh ooh\nShow me what it do ooh ooh\nOoh ooh ooh ooh ooh\nDidn't Y'all get the news\nThis been overdue\nLeft a while ago and set up shop on the moon\nOn the moon\nYe the deer be everywhere\nEverybody scared\nRun n say ur prayers\nI'mma make it clear\nThis ain't for no goons like\nYou ooh\nCome at me I'll press u like some juice\nAnd I'm fresher than some Kools\nSmoke u with that ooz\nWatch how ur girl drool\nWhen I pull up in that coupe\nOo yea\nShe wanna ride she wanna fly so I say where\nCome inside I'll change your life better prepare\nPut in work in like the Renaissance\nBend that body like a gymnast\nShe ask me what I want\nShe wanna ride she wanna fly fly fly\nShe wanna ride she wanna fly fly fly\nShe wanna ride she wanna fly fly fly\nShe wanna ride she wanna fly fly fly\nFly fly fly\nBlow it like a flute ooh ooh\nOoh ooh ooh ooh ooh\nBlow it like a flute ooh ooh\nOoh ooh ooh ooh ooh"
+  },
+      { 
+        title: "剧中人", 
+        lyrics: "他答非所问 她双眼无神\n剧场亮着灯 沉闷\n这场戏没有剧本\n临场发挥靠本能\n舞台上百态众生\n观众席传来笑声\n你笑得单纯 我皱眉烦闷\n情绪一转瞬 变身\n演绎着各种版本\n真实虚假的人生\n旁观者揣摩过分\n观后感不太中肯\n命运是这戏的主题\n看主角要怎么破解迷局\n台词一句一句 揭露未来谜题\n悲和喜交替高潮迭起\n在不能倒退闪回的时间轴\n不用怕被剧情推着向前走\n演员谢幕后 观众泪流\n为情节 感同身受\n以为能与剧情分离\n却不自觉入戏 yeah\n又哭又笑无法抽身在这出荒诞剧\n他答非所问 她双眼无神\n剧场亮着灯 沉闷\n这场戏没有剧本\n临场发挥靠本能\n舞台上百态众生\n观众席传来笑声\n你笑得单纯 我皱眉烦闷\n情绪一转瞬 变身\n演绎着各种版本\n真实虚假的人生\n旁观者揣摩过分\n观后感不太中肯\n迟迟不肯落的幕\n不满结局的残酷\n有人认输 有人迷途\n怎能叫圆满结束\n最后疲倦那声叹息\n谁又会真的懂\n下一次帷幕再拉起\n早忘记曾经感动\n演员谢幕后 观众泪流\n为情节 感同身受\n以为能与剧情分离\n却不知不觉入戏\n独角戏 我自说自话 最真实表达\n却又被看作一场笑话 yeah\n难道要演默剧不说实话像个哑巴\n他答非所问 她双眼无神\n剧场亮着灯 沉闷\n这场戏没有剧本\n临场发挥靠本能\n舞台上百态众生\n观众席传来笑声\n谁笑得单纯 谁皱眉烦闷\n情绪一转瞬 变身\n演绎着各种版本\n真实虚假的人生\n旁观者揣摩过分\n观后感自己评分"
+    },
+    { 
+        title: "慢慢", 
+        lyrics: "把车停在路边 空气变新鲜\n你靠在我的肩\n现在才发现 生活给的甜\n好多来不及体验\n我忘了时间 想要安静一点\n关掉了朋友圈\n就 轻松的呼吸 两个人这样\n慢慢过一天\n沮丧颓废压力疲惫通通都赶走\n好心情翻倍 带你拥抱 我们的地球\n你看白云 慢慢的 慢慢的 走\n河水慢慢游\n追着微风 慢慢的 慢慢的 走\n风筝慢慢游\n跟着太阳 慢慢的 慢慢的 走\n影子慢慢游\n我们两个 慢慢的 慢慢的\n整个世界 慢慢的 没有烦忧\n牵你手 让我牵着你手\n我们慢慢慢慢走\n牵你手 让我牵着你手\n我们慢慢慢慢走\n你觉得热就绑了丸子头\n在我身后踩着我的影子走\n大自然像支乐队在演奏\n心跳充当一个天才鼓手 yeah\n闭上双眼好好感受\n填补过去那些缺口\n阳光是强有力的拳头\n把一记快乐送给了我\n沮丧颓废压力疲惫通通都赶走\n好心情翻倍 好像走到 另一个地球\n你看白云 慢慢的 慢慢的 走\n河水慢慢游\n追着微风 慢慢的 慢慢的 走\n风筝慢慢游\n跟着太阳 慢慢的 慢慢的 走\n影子慢慢游\n我们两个 慢慢的 慢慢的\n整个世界 慢慢的 没有烦忧\n牵你手 让我牵着你手\n我们慢慢慢慢走\n牵你手 让我牵着你手\n我们慢慢慢慢走\n牵你手 让我牵着你手\n我们慢慢慢慢走\n牵你手 让我牵着你手\n我们慢慢慢慢走"
+    },
+    { 
+        title: "时差", 
+        lyrics: "收到你的电话\n没想过多年后我们再联络\n你说“How have you been?”\n一句问候就扰乱我\n不知道从哪里开始诉说\n我们的生活都已变化太多\n那些炎热过我们的回忆\n随着电话铃声响起\nOoh\n我的双脚像踩着沙\n陷入了有你的那个仲夏\nI'll never let you fall\nI'm always on call\n对你不会变的承诺\n放不下对你的牵挂\n像隔着太平洋的时差\n我会奔向你\n当你需要我\nI'm always on call\n很多瞬间\n期待那个巷子背影转身就会是你\n现在的你喝醉时还会不会流泪\n午夜梦醒你会打给谁\n你知道我还在原地守候\n多想再次听到你专属的ring tone\n那些炎热过我们的回忆\n随着电话铃声响起\nOoh\n我的双脚像踩着沙\n陷入了有你的那个仲夏\nI'll never let you fall\nI'm always on call\n对你不会变的承诺\n放不下对你的牵挂\n像隔着太平洋的时差\n我会奔向你\n当你需要我\nI'm always on call\nGot me caught\nGot me caught up\n（舍不得睡的那些夜晚）\nGot me caught\nGot me caught up\n(And I can't put the phone down, no)\nI don't believe 我们的故事\n（就只能走到这里）\n你是我命中注定 yeah\n（忘不掉的声音）\nooh\n我的双脚像踩着沙\n陷入了有你的那个仲夏\nI'll never let you fall\nI'm always on call\n对你不会变的承诺\n放不下对你的牵挂\n像隔着太平洋的时差\n我会奔向你\n当你需要我\nI'm always on call\nYou know I'm always on call\n(I know you're always on call)\nYou know I'm always on call\n告诉我你需要我"
+    },
+    { 
+        title: "Slow ride", 
+        lyrics: "放慢你步调我想把时间倒流\n霓虹灯闪烁像你微醺的眼眸\nI see you dancing with them all night\nYeah 我大脑怎么一片空白\n你是我的 baby girl would you be all mine\n坐上副驾送你回家\nKeep it on a slow ride slow ride\n月色透过窗把我们粘在一起 moonlight\nAll night all night\n每个路口都是 green light\nCome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\nYeah 第一眼见到你 就很喜欢你\nOh 我\n不知道该怎么控制不去看你\nI see you dancing with them all night\nYeah 我大脑怎么一片空白\n你是我的 baby girl would u be all mine\n坐上副驾送你回家\nKeep it on a slow ride slow ride\n月色透过窗把我们粘在一起 moonlight\nAll night all night\n每个路口都是 green light\nCome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride\n坐上副驾送你回家\nKeep it on a slow ride slow ride\n月色透过窗把我们粘在一起 moonlight\nAll night all night\n每个路口都是 green light\nCome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride\n坐上副驾送你回家\nKeep it on a slow ride slow ride\n月色透过窗把我们粘在一起 moonlight\nAll night all night\n每个路口都是 green light\nCome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride"
+    },
+    { 
+        title: "兜风", 
+        lyrics: "放慢你步调我想把时间倒流\n霓虹灯闪烁像你微醺的眼眸\nI see you dancing with them all night\nYeah 我大脑怎么一片空白\n你是我的 baby girl would you be all mine\n坐上副驾送你回家 Keep it on a slow ride slow ride\n月色透过窗把我们粘在一起 Moonlight\nAll night all night\n每个路口都是 green light\nCome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\nYeah 第一眼见到你就很喜欢你\nOh 我\n不知道该怎么控制不去看你\nI see you dancing with them all night\nYeah 我大脑怎么一片空白\n你是我的 baby girl would u be all mine\n坐上副驾送你回家 Keep it on a slow ride slow ride\n月色透过窗把我们粘在一起 Moonlight\nAll night all night\n每个路口都是 green light\ncome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride\n坐上副驾送你回家 Keep it on a slow ride slow ride\n月色透过窗把我们粘在一起 Moonlight\nAll night all night\n每个路口都是 green light\nCome on let it go easy baby\n晚风吹着直到 sunrise keep it on a slow ride slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride\n天亮了才说晚安\n手机被你消息存满\n第一张我们的自拍\n有你在我享受这 slow ride"
+    },
+    { 
+        title: "微白城市", 
+        lyrics: "看雪在手中融化城市变白\n把爱装进礼物等你来拆\n愿望清单中你是我最想要的未来\n金色铃的声音\n霓虹灯的倒影\n冷风里向你靠近\n白色气息相遇\nYou look so wow wow\n路人都在回头看你\nSanta 也乱了心跳\nLet me take you out out\n等待彼此眼中的烟火慢慢升起\n看雪在手中融化城市变白\n把爱装进礼物等你来拆\n愿望清单中你是我最想要的未来\n倒数开始的时候\n你的双手 let me hold\n挂满心愿的枝头\nI will always be with you\n倒数开始的时候\n你的双手 let me hold\n挂满心愿的枝头\nI will always be with you\n纽约的水蒸气\n漂到了悉尼的那些热浪里\n不管你的冬天会不会结冰\n都是时候敞开 oh yea\nWe look so wow wow\n那些放肆欢笑是我们的 jingle bell bells\n烦恼都 get out\n这一次许愿的时候不用再闭上眼睛\n看雪在手中融化城市变白\n把爱装进礼物等你来拆\n愿望清单中你是我最想要的未来\n倒数开始的时候\n你的双手 let me hold\n挂满心愿的枝头\nI will always be with you\n倒数开始的时候\n你的双手 let me hold\n挂满心愿的枝头\nI will always be with you\nI will always be with you\nI will always be with you\n冬天到来的时候\nI will always be with you\nYou\nYou\nYou\nYou\nYou\nYou\nYou\nYou"
+    },
+    { 
+        title: "四季", 
+        lyrics: "窗外散落的树叶\n像思念 不知不觉\n像我的字迹 铺满房间\n来不急 说抱歉\n又是一个失眠夜\n把往事 翻来覆去捡\n没有你在身边 多不习惯\n我们之间\n像风筝断了线\n你说会再见\n却再也没出现\n如果能回到昨天\n我会拼了命去抱紧你\n不会让那些遗憾\n证明你曾来过我世界\n如果能回到那个季节\n和你相遇的瞬间\n绝不会松开你的手\n让我们一起跨越时间\n把回忆 冻结\n我们一起跨越时间\n把回忆 冻结\n把回忆 冻结\n把回忆 冻结\n又是一个失眠夜\n把往事 翻来覆去捡\n没有你在身边 多不习惯\n我们之间\n像风筝断了线\n你说会再见\n却再也没出现\n如果能回到昨天\n我会拼了命去抱紧你\n不会让那些遗憾\n证明你曾来过我世界\n如果能回到那个季节\n和你相遇的瞬间\n绝不会松开你的手\n让我们一起跨越时间\n把回忆 冻结\n我们一起跨越时间\n把回忆 冻结\n把回忆 冻结\n把回忆 冻结\n如果能回到昨天\n我会拼了命去抱紧你\n不会让那些遗憾\n证明你曾来过我世界\n如果能回到那个季节\n和你相遇的瞬间\n绝不会松开你的手\n让我们一起跨越时间\n把回忆 冻结\n我们一起跨越时间\n把回忆 冻结\n把回忆 冻结\n把回忆 冻结"
+    },
+    { 
+        title: "My sugar", 
+        lyrics: "You’re out in space\nI’m underground deep\nYou’re so outta my league\nHeat the atmosphere\nWhen you’re in town babe\nIt’s like a thousand degrees\nSomething in your eyes\nI can’t look away\nAnd I’ve never been so outta my mind\nBut I feel lucky today\nCan you be my sugar\nMake it alright\nTaste like summer\nIn the moonlight\nGet this feeling\nWe should rewrite\nEvery reason not to try\nI would die\nFor your sugar on mine\nUnder covers late I can barely\nBreathe through your lip balm\nOur engines starting to go\nWhen you say my name when you say my\nIt’s like a time bomb\nAnd it’s about to explode\nSomething in your eyes\nI can’t look away\nAnd I’ve never been so outta my mind\nBut I feel lucky today\nCan you be my sugar\nMake it alright\nTaste like summer\nIn the moonlight\nGet this feeling\nWe should rewrite\nEvery reason not to try\nI would die\nFor your sugar on mine\nSugar sugar, ahh when you put your lips on mine\nSugar sugar, uh huh\nSugar sugar, ahh when you put your lips on mine\nSugar sugar, uh huh\nSomething in your eyes\nI can’t look away\nAnd I’ve never been so outta my mind\nBut I feel lucky today\nCan you be my sugar\nMake it alright\nTaste like summer\nIn the moonlight\nGet this feeling\nWe should rewrite\nEvery reason not to try\nI would die\nFor your sugar on mine"
+    },
+    { 
+        title: "零界点", 
+        lyrics: "鹿：\n灯光打到 我的球鞋\n舞台中央 我在狩猎\nRun this town going nowhere\nWe ain't going nowhere\n换上新的装备 Yes Sir\nFresh\n不管搭配哪个颜色\n态度年轻 风格鲜明\n我的生活像场电影\n永远没有 ending\n因为 I will go higher\n天空没有任何界限\n无论冬季还是夏天\n眼睛冒的都是烈焰\nI get mine you get yours we go getters\nI don't stop 我没办法歇着\nThis is my pride\nThis is my city\nMy swag's on fire\nMy swag's on fire\nMy swag's on fire\nLu Lu\nA to the R  A to the R\nGo\nAR：\nMy Swag on the fire\nAR 和 Lu 坐马车来了\n把 Hater 脸部都打马赛克\n他们气的跺脚 下巴都歪了\n整个体育馆 都在做蹦极跳\n摆出笑脸加个 \"V\" 拍着冠军照\n像个胖子 没法弯低腰\n不能后退 像我开在单行道\n把整个宇宙 当成我们练习的沙袋\n干掉这伴奏 用说唱拳击着八拍\n开着跑车冲过\n谁能 follow 我的动作\n快到高速 camera 都不能连续的抓拍\n别再呱呱 叫着 blah blah\n嘴巴 \"唰\" 吐出子弹\n接着就是 啪嗒啪嗒啪嗒啪嗒\n气氛达到极点 party\n快要炸了炸了\n没时间再跟你说了\n哥们哥们 sayonara\n鹿：\n因为 I will go higher\n天空没有任何界限\n无论冬季还是夏天\n眼睛冒的都是烈焰\nI get mine you get yours we go getters\nI don't stop 我没办法歇着\nThis is my pride\nThis is my city\nMy swag's on fire\nMy swag's on fire\nMy swag's on fire\nFire\nMy swag's on fire\nFire\n因为 I will go higher\n天空没有任何界限\n无论冬季还是夏天\n眼睛冒的都是烈焰\nI get mine you get yours we go getters\nI don't stop 我没办法歇着\nThis is my pride\nThis is my city\nMy swag's on fire\nMy swag's on fire\nMy swag's on fire\nMy swag's on fire"
+    },
+    { 
+        title: "海底", 
+        lyrics: "Baby are you ready for me\n我是如此期盼\nJust Save your breath and take it easy\n耳边有我呼吸的余感\n你的胸口热不热在呼唤着什么\n你的愿望多不多又期盼着什么\nHey girl I know you're ready for me\n让我给你一切baby\n就让我坠入海底\n放开你的心别再束缚自己\n伸出你的手迎接我的热情\nSay that you are ready for me\n让我给你一切 baby\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep\nJump in sink or swim\nDon't you wanna trust me baby\n让我带你去飞\nI know this might sound so crazy\n给你最难忘的体会\n张开双手呼吸颤抖害怕会失控\n这种感觉有点放纵好像在游泳\nHey girl I know you are ready for me\n放弃所有只要为你\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep\nJump in sink or swim\n放开你的心别再束缚自己\n伸出你的手迎接我的热情\nSay that you're ready for me\n让我给你一切 baby 就让我\n记住这个夏天\n你和我的世界\n就让我坠入海底底底deep\n这新鲜的感受\n就让我坠入海底底底deep\nJust hold on don't let go\n底底底deep 底底底deep\n底底底deep\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep 底底底deep\n就让我坠入海底底底deep\n底底底deep"
+    },
+    { 
+        title: "fill me in love", 
+        lyrics: "还来不及电话简讯说想你\n我的心在哪里控制不住自己\n淅淅沥沥窗外下起了雨\n想回到过去初见你那场景\n夕阳下记录这个瞬间\n花开遍山野在你身边\nCan you fill me in love\n在浪漫宇宙\n和你的回忆都变慢镜头\n나를 알아보고\n또 사랑하고\n你和我牵着手\nFill me in love\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n말해줘 fill me in love\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n就这样 fill me in love\n想象着流星划过天际\nOh my girl 这场景是罗曼约定\n我想我不用再去说明\n许下的心愿直到永远\nCan you fill me in love\n在浪漫宇宙\n和你的回忆都变慢镜头\n나를 알아보고\n또 사랑하고\n你和我牵着手\nFill me in love\n靠近一点 你的温度\n心跳加速就 fill me in love\nCan you fill me in love\n在浪漫宇宙\n和你的回忆都变慢镜头\n나를 알아보고\n또 사랑하고\n你和我牵着手\nFill me in love\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n말해줘 fill me in love\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n嗯哼 嗯哼 嗯\n就这样 fill me in love"
+    },
+    { 
+        title: "勋章", 
+        lyrics: "故事开始在最初的那个梦中\n满天星光只因我而闪烁\n我看到平凡的我也会\n有一刻不普通\n前方是未知\n迎面是海风\n塞壬的歌会诱人忘记初衷\n他们说每一个风浪\n都能够淹没我\n可我会像奥德休斯一样\n朝着心中的方向\n哪怕众神会在彼岸阻挡\n当我需要独自站在\n远方的沙场\n武器就是我紧握的梦想\n而我受过的伤\n都是我的勋章\n是谁说伟大才值得被歌颂\n乘风破浪后也不会一定成功\n生命只能向前\n坚定信念的人都是英雄\n可我会像奥德休斯一样\n朝着心中的方向\n哪怕众神会在彼岸阻挡\n当我需要独自站在\n远方的沙场\n武器就是我紧握的梦想\n而我受过的伤\n都是我的勋章\n武器就是我紧握的梦想\n而我受过的伤\n都是我的成长\n我会像奥德休斯一样\n朝着心中的方向\n哪怕众神会在彼岸阻挡\n当我需要独自站在\n远方的沙场\n武器就是我紧握的梦想\n而我受过的伤\n都是我的勋章\n武器就是我紧握的梦想\n而我受过的伤\n都是我的成长\n哪怕明天的路有多漫长\n我再次启航\n带着我的勋章"
+    },
+    { 
+        title: "梦寐之地", 
+        lyrics: "如果可以把命运拽在手里\n别做投掷空中的硬币\n也许我平淡无奇像蝼蚁\n却没有想过放弃\n别再问这是第几场酣畅淋漓的雨\n反正不该沦为烂泥\n黑暗自以为把我弄得奄奄一息\n不曾想我还盛放在春光里\n黑夜赐予我做梦的权利\n让我某一刻相信\n有不尽的晨曦\n会爬过脚下的土地\n那里会有花开四季的屋顶\n那里有广阔的天际\n那里心向黎明\n便不怕要我燃烧殆尽\nLalala\n如果可以把命运拽在手里\n别做投掷空中的硬币\n也许我平淡无奇像蝼蚁\n却没有想过放弃\n别再问这是第几场酣畅淋漓的雨\n反正不该沦为烂泥\n黑暗自以为把我弄得奄奄一息\n不曾想我还盛放在春光里\n黑夜赐予我做梦的权利\n让我某一刻相信\n有不尽的晨曦\n会爬过脚下的土地\n那里会有花开四季的屋顶\n那里有广阔的天际\n那里心向黎明\n便不怕要我燃烧殆尽\n就算它只是场幻境\n这一生都难以企及\n可我偏想要一试到底\n用尽我全力\n就算被嘲笑声质疑\n就算被无数人鄙弃\n那也是我终将会到达的\n梦寐之地"
+    },
+    { 
+        title: "我们的明天", 
+        lyrics: "一个人走到终点\n不小心回到起点\n一个新的世界\n此刻我才发现\n时间没有绝对\n直到有另一个人\n能体会我的感觉\n不用说不用问\n就明白就了解\n每一刻都像永远\n我看着 没剩多少时间\n能许愿 好想多一天 我们的明天\n我问着 还有多少时间\n在眼前 以为多一天 能实现我们的预言\n直到有另一个人\n能体会我的感觉\n不用说不用问\n就明白就了解\n每一刻都像永远\n我看着 没剩多少时间\n能许愿 好想多一天 我们的明天\n我问着 还有多少时间\n在眼前 以为多一天 能实现我们的预言\n其实有个传说\n能将时空倒流\n因为有一个梦告诉我\n爱从不曾保留\n才勇敢了我\n我看着 没剩多少时间\n能许愿 好想多一天 我们的明天\n我问着 还有多少时间\n在眼前 以为多一天 能实现我们的预言\n累积成永恒的纪念"
+    },
+    { 
+        title: "敏感", 
+        lyrics: "坏情绪只是瞬间的存在\n内心的反派现在要崩坏\n希望今天世界能多些慷慨\n不用迎合所有期待\n情怀变成尴尬的存在\n催眠自己不该太懈怠\n天色还早灯光别全开\n这些 都不 意外\n安静的空气太敏感\n空气太敏感\n这焦虑就像会传染\n就像会传染\n明明多美好的一天\n美得太骨感\n让我 如此 不安\n灵魂在摩天大楼里孤单地穿行\n想再遇见消失在沿途的曾经\n敏感的人都不轻松\n直到被它压垮了以后才心痛\n我相信世界不会是黑暗森林\n我相信未来依然会如期降临\n如果你安静地用心去听\n幸运都在 慢慢靠近\n越想要表现得很从容\n越会被这些怪力掏空\n当盆栽开始光合作用\n心肺 才能 填充\n安静的空气太敏感\n空气太敏感\n这焦虑就像会传染\n就像会传染\n明明多美好的一天\n美得太骨感\n让我 如此 不安\nCan you help me？什么问题\nCan you help me？该往哪里\nCan you help me？怎么选择\n这个问题 想逃离\n开心太敏感\n悲伤太敏感\n这焦虑就像会传染\n对它会传染\n光速般奔跑的年代\n美都太骨感\n我们 如此 不安"
+    },
+    { 
+        title: "原动力", 
+        lyrics: "Tonight I'm gonna rock this place\nShake it to the ground now\nWanna feel that 8 0 8\n听到节奏就出招\n用激光带动呼吸的时刻\n让我们挣脱存在的规则\nTonight I'm gonna rock this place\n准备好开始尖叫\nTurn it up loud\n上紧发条\n我就是主角\nCuz I'm feeling the force\n现在起跳\n当心跌倒\n全场聚焦\nWe'd be shaking these walls\n今夜我的咒语生效\n今夜烙上我的记号\n给你五秒 用心思考\n要不要让我\nShow it to you right now\nTonight I'm gonna rock this place\nShake it to the ground now\nWanna feel that 8 0 8\n听到节奏就出招\n用激光带动呼吸的时刻\n让我们挣脱存在的规则\nTonight I'm gonna rock this place\n准备好开始尖叫\nTurn it up loud\n上紧发条\n我就是主角\nCuz I'm feeling the force\n现在起跳\n当心跌倒\n全场聚焦\nWe'd be shaking these walls\n今夜我的咒语生效\n今夜烙上我的记号\n给你五秒 用心思考\n要不要让我\nShow it to you right now\n要不要让我\nShow it to you right now\n频率乱套\n高低揭晓\n这是我的名字我的记号\n上紧发条\n现在起跳\nOne two three let's go"
+    },
+    { 
+        title: "漂向宇宙尽头", 
+        lyrics: "现在是几点钟\n思绪漂多久了\n无眠的夜\n像一个黑洞\n宇宙中心来电\nI’m here\n邀我去转一转\n赶在破晓之前\nWoo ah ah\n往海王星方向飞\n要穿越虫洞对不对\nAh 洛希极限在破碎\nAh 那片星云有多么美\n漂向宇宙尽头\n一个人 谁在乎\n漂向宇宙尽头\n一个人 也不孤独\n忘掉时间\n听从内心的直觉\n纵身一跃的跟随\n意识交给夜的深邃\n这一刻 忘了呼吸\n像散落的尘埃\n潜入一场梦境\n带我去哪里\nWoo ah ah\n往海王星方向飞\n要穿越虫洞对不对\nAh 洛希极限在破碎\nAh 那片星云有多么美\n漂向宇宙尽头\n一个人 谁在乎\n漂向宇宙尽头\n一个人 也不孤独"
+    },
+    { 
+        title: "诺言", 
+        lyrics: "也许\n我的爱不适合现代的规则\n有人说青春太短有感觉就要挥霍\n并不代表我没有勇气\n去说爱你\n当我 抱着你在我的怀里\n我真的不想再分离\n你相不相信\n爱的温度在继续\n一切都还来得及\n慢慢靠近你的心\n读最深处你的秘密\n爱需要时间\n才能够被证明\n请对我\n有信心\nI'll promise to you\n你说害怕夏天还没开始就错过\n你不知道\n是因为你我的夏天才来到\n心疼你昨天流着泪\n在耳边说爱我\n当我 抱着你在我的怀里\n我真的不想再分离\n别再想太多\n爱的温度在继续\n一切都还来得及\n慢慢靠近你的心\n读最深处你的秘密\n爱需要时间\n才能够被证明\n请对我 请对我\n有信心\nI'll promise to you\n用你的喘息来代替叹息\n当我们在一起\nMy love\n未来会变得越来越清晰\nThis time, I feel so right\n真爱值得等待\n当你不再顾虑\nGirl I'm gonna promise it to you\n爱的温度在继续\n一切都还来得及\n慢慢靠近你的心\n读最深处你的秘密\n爱需要时间\n才能够被证明\n请对我 请对我\n有信心\nI'll promise to you"
+    },
+    { 
+        title: "时间停了", 
+        lyrics: "天也黑了时间停了\n那些故事不用再说了\n一夜长大之后的我\n还有一句没说的抱歉要说\n有很多的诺言没兑现\n已开始的冒险没终点\n回忆变清楚\n眼睛却开始变模糊\n请别戳破藏起的脆弱\n美好的经过想要你记得\n迷路的我还继续漂泊\n也许会曲折但有你才值得\n可能现在你不快乐\n可能那些伤口都还没愈合\n后来我也学着沉默\n学着面对遗憾不愿再去说\n脑海里对不起循环着\n那一段我一直收藏着\n害怕睁开眼回忆就已经飞走了\n请别戳破藏起的脆弱\n美好的经过想要你记得\n迷路的我还继续漂泊\n也许会曲折但有你才值得\n这一切我们走过\n走过\n但我竟然迷路了\n在熟悉的角落\n有些话还没说够\n想为你唱完这一首歌\n这些时刻你总会记得\nMy baby~\n请别戳破藏起的脆弱\n美好的经过想要你记得\n迷路的我还继续漂泊\n我永远记得属于我们的每一刻"
+    },
+    { 
+        title: "原色", 
+        lyrics: "我可以 耗尽所有天真\n把自己 伪装得更深沉\n沿着 追梦的方向\n涂上 别人的期盼\n绚烂却不再勇敢\n就让远空回到蔚蓝\n眼泪归还给伤怀\n哪怕全世界背叛\n也不再重返\n我每一种色彩\nOh Ai ai ai ai\n都值得灿烂\n就算不被明白\n别见怪\nOh Ai ai ai ai\n我所有的姿态\n都是与生俱来\nHmmm 没有谁 能替代\nHmmm\nHmmm 没有谁 能替代\nHmmm\n我可以 把最后的愚勇\n藏在心底 假装不再冲动\n失去 原色的我们\n就算 背负了成就\n依然需要个出口\n就让远空回到蔚蓝\n眼泪归还给伤怀\n哪怕全世界背叛\n也不再重返\n我每一种色彩\nOh Ai ai ai ai\n都值得灿烂\n就算不被明白\n别见怪\nOh Ai ai ai ai\n我所有的姿态\n都是与生俱来\n每一种色彩\nOh Ai ai ai ai\n对内心坦白\n不被定义存在\n别见怪\nOh Ai ai ai ai\n我在人潮人海\n不渴求被偏爱\nHmmm 没有谁 能替代\nHmmm\nHmmm 没有谁 能替代\nHmmm"
+    },
+    { 
+        title: "Dream All Summer", 
+        lyrics: "拂过晚霞的微风\n温柔 闯入我怀中\n陪着我得闲捕梦\n树影在窃窃私语\n不小心把我吵醒\nI was dreaming all summer\nIt was a dream all summer\nI was dreaming all summer\nIt was a dream all summer\n轻轻把云吹开\n瞳孔染上落日的色彩\nSpent about thousand nights\n装着谁的美梦\n海鸟陪我发呆\n无聊了就飞开\n留我独自徘徊\nTo make it last all summer\nLast all summer\n拂过晚霞的微风\n温柔 闯入我怀中\n陪着我得闲捕梦\n树影在窃窃私语\n不小心把我吵醒\nI was dreaming all summer\nIt was a dream all summer\nI was dreaming all summer\nIt was a dream all summer\n雨轻拍 船在摇摆\n鸢尾染上穆夏的色彩\n夏夜的梦 在浩瀚星空下随着风\nTo make it last all summer\nLast all summer"
+    },
+    { 
+        title: "风吹过", 
+        lyrics: "我听过风说的话\n吹散落一地的表达\n迎着风裹紧外套\n却是无法对答\n每当风开始描画\n我站在飘叶的树下\n算得出它的来去\n就能抓得住吗\n如何逃过时钟的摇摆\n我们都无法变成例外\n熟悉之后丢失的存在\n忘了补缺未完的空白\n回忆模糊感受依然在\n单程的路怎么停下来\n每个站点都有人离开\n陪伴无奈被时间更改\n只能听风从我掠过\n我们想要挽留得太多\n任凭时间阵阵吹过\n直到忘记拥有过什么\n随着风走到悬崖\n向下看却没有害怕\n过去被吹散谷底\n长成灰色的花\n一阵风叶坠落下\n抓不到只好凝望它\n看清了它的弧度\n似乎并不复杂\n如何逃过时钟的摇摆\n我们都无法变成例外\n熟悉之后丢失的存在\n忘了补缺未完的空白\n回忆模糊感受依然在\n单程的路怎么停下来\n每个站点都有人离开\n陪伴无奈被时间更改\n只能听风从我掠过\n我们想要挽留得太多\n任凭时间阵阵吹过\n直到忘记拥有过什么\n听风吹过\n听风吹过"
+    },
+    { 
+        title: "1.1", 
+        lyrics: "暂时忘了吧 昨天\n生活要点改变\n或许\n日复一日的昨天 今天\n随之不再出现 oh\n我不想再停留\n下个路口\n满载着未知向前走\n我不想再等候\n思前顾后\n听不到拒绝的理由\nOhoh 相信世界还有另一种空气等待我呼吸 呼吸\nOhoh 尽情感受在无拘无束畅快自由的经历 经历\n和我 经过这段旅行美好无限在 随心的奔向那未来\nOhoh 相信世界还有另一面崭新指引我追寻 oh\n那就忘了吧 时间 oh\n别被现实改变\n就算是\n有个声音在耳边 盘旋\n挥手让他走远 oh\n我不想再停留\n下个路口\n满载着未知向前走\n我不想再等候\n思前顾后\n听不到拒绝的理由\nOhoh 相信世界还有另一种空气等待我呼吸 呼吸\nOhoh 尽情感受在无拘无束畅快自由的经历 经历\n和我 经过这段旅行美好无限在 随心的奔向那未来\nOhoh 相信世界还有另一面崭新指引我追寻 oh\n忘掉程式的安排\n让指令统统移出 脑海\n我已选择站出来\n特立在规则之外\nOhoh 相信世界还有另一种空气等待我呼吸 呼吸\nOhoh 尽情感受在无拘无束畅快自由的经历 经历\n和我 经过这段旅行美好无限在 随心的奔向那未来\nOhoh 相信世界还有另一面崭新指引我追寻 oh"
+    },
+    { 
+        title: "Don't bother", 
+        lyrics: "闹钟响了 7遍\n我的头在 晕眩\n梦想先搁在 一边\n让我享受片刻 的自由\n不必压抑 的沉默\n没人打扰 是我的flow\n轻快的节奏 漫步街头\n当夜空繁星 陪着我\n在夜里 不寂寞\n所有烦恼 都找到出口 ye\n在这一刻 don't wanna wake up~ ei\n搭上末班地铁 绷着脸\n离线的我一整天\nGive me a break来场电影宵夜Ok\n别再正经 八百了 be myself\n下了班的我 只属于我\nDon't bother 都别来 都别来 烦我\n与我无关 别拿那些问题 烦我\n躺在沙发 是心中唯一渴望\n哪怕只是幻想\n让我享受片刻 的自由\n不必压抑 的沉默\n没人打扰 是我的flow\n轻快的节奏 漫步街头\n当夜空繁星 陪着我\n在夜里 不寂寞\n所有烦恼 都找到出口 ye~\n在这一刻 don't wanna wake up~ ei\n是否 厌倦朝九晚五 工作让人麻木\n看看身边的人 表情冷酷\n不想太认真 也不服输\nWanna be lazy～all day\nDon't bother 都别来 都别来 烦我\n与我无关 别拿那些问题 烦我\n躺在沙发 是心中唯一渴望（I'm happy now~）\n让我享受片刻 的自由\n不必压抑 的沉默\n没人打扰 是我的flow\n轻快的节奏 漫步街头\n当夜空繁星 陪着我\n在夜里 不寂寞\n所有烦恼 都找到出口 ye~\n在这一刻 don't wanna wake up~ ei\nWoo~让我享受片刻 的自由\n不必压抑 的沉默\n没人打扰 是我的flow\n轻快的节奏 漫步街头\n当夜空繁星 陪着我\n在夜里 不寂寞\n所有烦恼 都找到出口 ye~\n在这一刻 don't wanna wake up~ ei"
+    },
+    { 
+        title: "敢", 
+        lyrics: "躲藏在暗处算计\n马戏团小丑的把戏\n围绕我跳转着圈\nYou just wanna play a game\n我能看出\n别再对我装天真无辜\n不可能跟的上我走的步\n妄想能把我抓住\n瞬间在你眼前消失就像魔术表演\nCan't you see 看你周围\nCome try me 我随时奉陪\nCan't get me you got no way\n到处偷窥你该带个头盔\n别惹我\nYou don't want no problem\n别啰嗦\nYou don't want no problem\nPlay with me\n没有好结果\n劝你快点认错\n不然你们会被\nHold that boy\nHold back boy\n追着我在跑不分昼夜 boy\n你疯了 boy\nI'ma get you boy\n惹怒我和我的 crew\nYou don't want that boy\n擅自侵入我的生活\n音响开大耳膜都震破\nTalk that talk\nWhat you mean\n当我一出现 你的脸色就变青\n别再来我家的地库\n再被我们见到就不会饶恕\n嘴里没一句是 truth\n再尝试这么做我就给你嘴巴上锁\nI'm the boss\nYou don't want no problem\n别怪我\nYou don't want no problem\nPlay with me\n没有好结果\n劝你快点认错不然你们会被\nHold that boy\nHold back boy\n追着我在跑不分昼夜boy\n你疯了boy\nI'ma get you boy\n惹怒我和我的 crew\nYou don't want that boy"
+    }
+];
+
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // 动态生成导航栏
+    const navList = sidebar.querySelector('ul');
+    songs.forEach((song, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = song.title;
+      listItem.addEventListener('click', () => {
+        const targetSection = document.getElementById(`song-${index}`);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
+        }
+      });
+      navList.appendChild(listItem);
+    });
+
+    // 动态生成歌词内容
+    songs.forEach((song, index) => {
+      const section = document.createElement('section');
+      section.id = `song-${index}`;
+
+      const h2 = document.createElement('h2');
+      h2.textContent = song.title;
+
+      const pre = document.createElement('pre');
+      pre.textContent = song.lyrics;
+
+      section.appendChild(h2);
+      section.appendChild(pre);
+      content.appendChild(section);
+    });
+
+    // 菜单切换功能
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>

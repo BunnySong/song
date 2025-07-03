@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>十个勤天演唱会歌词本</title>
+  <style>
+    body {
+      margin: 0; 
+    font-family: "Microsoft YaHei", sans-serif; 
+    color: #2e254f; 
+    font-size: 16px; 
+    /*background-color: #F6D222; */
+    background: linear-gradient(to bottom, #C7EBFF, #C7EBFF);
+    background-size: cover; 
+    -webkit-background-size: cover; /* 适配苹果手机 */
+    background-position: top left; 
+    -webkit-background-position: top left; /* 适配苹果手机 */
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    -webkit-background-attachment: fixed; 
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    /* 移除min-height，因为它可能干扰导航栏的定位 */ 
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #C7EBFF;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.25em;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: url('https://img.picui.cn/free/2025/06/27/685e127245b73.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: #BCE1FF;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid #ddd;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav li:hover {
+      background-color: #f0f0f0;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .developer-info {
+      font-size: 0.8em;
+      color: #999;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 30px;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      color: #094b95;
+      font-size: 1.3em;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: rgba(255, 255, 255, 0.5); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      /*border: 1px solid #ffffff;*/
+      font-size: 1.25rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        left: -250px;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      pre {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    十个勤天演唱会歌词本
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <!-- 自动生成的歌曲列表 -->
+    </ul>
+  </nav>
+
+  <main id="content">
+    <p class="developer-info">本网页由Bunnysong007自主开发，如有定制需求请微信联系。</p>
+    <!-- 歌词内容动态插入 -->
+  </main>
+
+  <script>
+  const songs = [
+  {
+    title: "果敢",
+    lyrics: "蒋敦豪：出发 沿着光方向再出发 理想在远方等待解答\n王一珩：光影跟随着我的脚步 就把梦做到最大\n鹭卓：别怕 那些年少时说的大话 你何时在心里萌芽\n赵一博：用尽芳华寻找归宿 拥抱炙热的朝霞\n合：woo woo woo\n蒋敦豪：我还在等待新的冒险\n合：woo\n李昊：追逐吧 把梦种下\n蒋敦豪：就趁现在\n合唱：奔向未来 放肆呐喊 只为这一次果敢\n合唱：心向山海 撕破黑暗 谁生来注定平凡\n合唱：像星空般绚烂 心中的火已被点燃 用我的姿态 我的色彩 书写我的时代 就趁现在\n何浩楠：前方 风浪不怕用我的倔强 用尽全力去触碰星光\n赵小童：在沿途彼岸放声歌唱 趁青春疯狂一场\n陈少熙：我想 成为星辰的一道微光 渺小的我把夜空点亮\n李耕耘：背上行囊再装上翅膀 心之所向即是方向\n合唱：woo\n李昊：我还在等待新的冒险\n合唱：woo\n鹭卓：追逐吧把梦种下\n卓沅：就趁现在\n合唱：奔向未来 放肆呐喊 只为这一次的果敢\n合唱：心向山海 撕破黑暗 谁生来注定平凡\n合唱：像星空般绚烂 心中的火已被点燃 用我的姿态 我的色彩 书写我的时代 就趁现在\n蒋敦豪：到底 可以吗 我也劝过自己放下 时间能够抚平我留的伤疤\n李昊：敢梦 敢去想 到达未到达的远方 风浪再大也没谁能够阻挡\n蒋敦豪 / 卓沅：就趁现在\n合唱：奔向未来 放肆呐喊 只为这一次果敢\n心向山海 撕破黑暗 谁生来注定平凡\n像星空般绚烂 心中的火已被点燃 用我的姿态 我的色彩 书写我的时代 就趁现在\n奔向未来 放肆呐喊 只为这一次果敢\n心向山海 撕破黑暗 谁生来注定平凡\n像星空般绚烂 心中的火已被点燃 用我的姿态 我的色彩 书写我的时代 就趁现在"
+  },
+  {
+    title: "醒来吧少年",
+    lyrics: "日复一日\n年复一年\n收工三点半\n来来回回\n反反复复\n进度没过半\n劝我转行别干\n趁早上岸\n何必还在这里刷存在感\n努力终有回报\n听起来像瞎扯淡\n白天搬砖\n晚上加班\n绩效零点三\n骂我水平太烂\n不如回家蹭饭\n发福之前\n还想做回少年\n\n终于有天我做场美梦\n那里收获只需要播种\n换来三餐\n只需要劳动\n醒来吧少年\n这不是梦\n终于感觉自己超有用\n这元气抵抗成长阵痛\n种下了心愿\n埋进土中\n种地吧少年\n你一定会成功\n\n从来埋头苦干\n最后还是靠边站\n端茶送水\n装乖卖惨\n更能往上蹿\n我没本事习惯\n但也不想摆烂\n不想认输\n要做元气少年\n\n终于有天我做场美梦\n那里收获只需要播种\n换来三餐\n只需要劳动\n醒来吧少年\n这不是梦\n终于感觉自己超有用\n这元气抵抗成长阵痛\n种下了心愿\n埋进土中\n种地吧少年\n你一定会成功\n\n终于有天我做场美梦\n那里收获只需要播种\n换来三餐\n只需要劳动\n醒来吧少年\n这不是梦\n终于感觉自己超有用\n这元气抵抗成长阵痛\n种下了心愿\n埋进土中\n种地吧少年\n你一定会成功"
+  },
+  {
+    title: "雨过之后",
+    lyrics: "擦干汗水 动作干脆\n心血灌溉这一切\n虽不完美 但有玫瑰花蕊\n夕阳秋千和麦穗\nIt's all our life\nLike a paradise\n所有的困难 我们一起分担\n十双筷子怎会轻易被折断\n踏过泥泞 沉醉的是梦境\n没做完的梦 一定都不想醒\n睁开眼 I wanna dream again\n经过大雪 奔跑在冬日的暴风雨\n热浪扭曲了 晒干裂的土地\n就算泥水没过鞋顶 就算精疲力尽\nI just wanna keep going\n扛过的伤痛抛在脑后\n并肩咬牙也要往前走\n雨过之后 是个晴天\n擦干汗水 动作干脆\n心血灌溉这一切\n虽不完美 但有玫瑰花蕊\n夕阳秋千和麦穗\nIt's all our life\nLike the paradise\n未来的困难 我们一起分担\n十双筷子怎会轻易被折断\n咕噜咕噜 我愿在这\n呵护每分每一秒的温暖快乐\n远离喧嚣 拨开我内心的外壳\nI will be right here\nI will love there\nI will always be right here\nOh Everyday we sing to Roses\n我们全部都很爱这\n擦干汗水 动作干脆\n心血灌溉这一切\n虽不完美 但有玫瑰花蕊\n夕阳秋千和麦穗\nIt's all our life\nLike the paradise\n所有的困难 我们一起分担\n十双筷子怎会轻易被折断\n擦干汗水 动作干脆\n心血灌溉这一切\n虽不完美 但有玫瑰花蕊\n夕阳秋千和麦穗\nIt's all our life\nLike the paradise\n所有的困难 我们一起分担\n十双筷子怎会轻易被折断"
+  },
+  {
+    title: "麦芒",
+    lyrics: "那二十出头的脸庞\n正扒着窗框 向外望\n世界是听来的模样\n才美好得如幻想\n他站在空旷的泥塘\n只拥有月光 没聚光\n却像置身万人剧场\n不顾一切放声唱\n把一颗痴心的重量\n扛在他肩膀\n去遥不可及的远方\n天地间的屏障\n终将一道一道闯\n渺小得像麦芒 梦却做得浩荡\n他仍是种子 他总要生长\n少年满身泥浆 眼神依旧清亮\n他两手空空 只是心怀热望\n他名叫理想的桥梁\n尚未被现实 所冲撞\n那一条人生的河床\n仍等着洪水造访\n他握紧破旧的木桨\n就逆着风浪 去流浪\n少年还不懂得退让\n说声再见便起航\n把一颗痴心的重量\n扛在他肩膀\n去遥不可及的远方\n天地间的屏障\n世态里的炎凉\n命运中的无常\n终将一道一道闯\n多年后的晚上 他已白发苍苍\n当谈起过往 语重又心长\n那时他在何方 是否如愿以偿\n昔日的新酒 早成陈酿\n他也曾是麦芒 把梦做得浩荡\n永远别遗忘 无名的时光\n少年满身泥浆 眼神依旧清亮\n他两手空空 只是心怀热望"
+  },
+  {
+    title: "我们宿舍的",
+    lyrics: "盛夏之风随着晚夜吹进屋檐\n洞穿你的眼睛看见蔚蓝晴天\n停止跟随时间指针随波逐流\n伸出双手便照耀这璀璨星空\n\n冥冥中夕阳下的约定\n不止时间孵化的默契\n问我们哪里来的勇气\n让我来告诉你\n\n当天空只因你我而变成了蔚蓝色\n从今之后不必再沉默\n\n一路奔跑无畏是否有目标\n横行霸道有我做你依靠\n稍安毋躁麻烦我来搞\n喜上眉梢如童话般美好\n\n卓而不凡你出现光芒闪耀\n原来是你愿意陪我胡闹\n路途遥远有你多好\n拙而不拙是你给的解药\n\n曾是那一望无际的寂静之海\n撕破往日阴霾在这烈炎之下\n相伴同行给予我的无限勇气\n直指星间一起共赴晴天之约\n\n冥冥中夕阳下的约定\n不止时间孵化的默契\n问我们哪里来的勇气\n让我来告诉你\n\n当天空只因你我而变成了蔚蓝色\n从今之后不必再沉默\n\n一路奔跑无畏是否有目标\n横行霸道有我做你依靠\n稍安毋躁麻烦我来搞\n喜上眉梢如童话般美好\n\n卓而不凡你出现光芒闪耀\n原来是你愿意陪我胡闹\n路途遥远有你多好\n拙而不拙是你给的解药\n\n是五彩斑斓的梦\n是年少热烈的风\n\n我说你太吵\n我又在说你太闹\n但我哭泣的时候是你给的拥抱\n你陪我大笑\n困难时有你撑腰\n有你在的身旁可以把烦恼都忘掉\n就算前方是狂风暴雨\n就算回忆终将逝去\n不再轻易猜测结局\n只因你我的故事还未完待续"
+  },
+  {
+    title: "-18℃",
+    lyrics: "高脚杯搭配香槟\n破碎的气泡代表我的心\n夜晚的舞台被我占领\n快来放松鼓起你的勇气\n领口镶钻的蝴蝶结\n搭配着-18度\n就让我带你逃离\n一起逃离\n进入自己的领域\n你眼神就像作烈酒\n害羞的我不敢抬起头\n当你从我身边擦肩而过的一瞬间\n我想把时间停留\nGirl你需要我来保护你\n酒精也需要一个酒瓶\n我不知道什么时候才能完全把你全部真正拥有\n喝完手中shot\n意识都已经不清楚\n你的脸旁在我眼中变得越来越迷糊\n就让我来告诉你\n举起你的酒杯\n爱用什么搭配\n我的爱要用什么搭配\n你给我的绝对不会浪费‌"
+  },
+  {
+    title: "暖一片星光",
+    lyrics: "晚霞绯色的绚丽\n影子重叠在一起\n你是年少的欢喜\n反过来说也是你\n落在耳边的潮汐\n是人海传来回音\n你经过了我\n没有雨只有天晴\n这感觉 说起来荒唐\n像小鹿迷失方向\n在脑海乱撞\n指尖触碰 电流就击中心脏\n趁夜色 已微凉\n让爱意 掀起波浪\n一颗心 跌宕起伏 摇摇晃晃\n你温柔 的手掌\n暖一片星光\n一抬头 你的目光\n藏着月亮\n片刻就 能抵挡\n岁月的漫长\n阳光下让爱愈发热烈\n炙热的心迫切需要你feel my love\n晚风拂过欲坠的枝叶\n随着风坠入爱河\n你点亮了那一年的仲夏夜\n你眼里的星河到现在我还记得\n如果你想去看看大千世界\n你回头我都会在这\n这感觉 说起来荒唐\n像小鹿迷失方向\n在脑海乱撞\n指尖触碰 电流就击中心脏\n趁夜色 已微凉\n让爱意 掀起波浪\n一颗心 跌宕起伏 摇摇晃晃\n你温柔 的手掌\n暖一片星光\n一抬头 你的目光\n藏着月亮\n片刻就 能抵挡\n岁月的漫长\n一颗心 跌宕起伏 摇摇晃晃\n你温柔 的手掌\n暖一片星光\n一抬头 你的目光\n藏着月亮\n片刻就 能抵挡\n岁月的漫长"
+  },
+  {
+    title: "信物",
+    lyrics: "想送你 信物能被你留存\n却不知 哪件与你才相称\n让某些 往事陈情能够借此容身\n等你到来日 仍可一再地重温\n多年后 新闻漂泊成传闻\n当你再 抚过旧物的裂痕\n回忆转瞬间栩栩如生\n心脏像被轻一吻\n隔时光回望 每一滴泪都赤忱\n哪有信物能封存流年\n让旧岁月永保光鲜\n大千世界不断变迁\n谁又能幸免\n却依然有人捧它上心尖\n以物寄情作纪念\n才任其中故事越悠远\n越能触动后来心弦\n假如在未来的某一天\n我与你人海中失联\n信物却一直在身边\n陪你许多年\n那时你不经意看它一眼\n心中便忽然有了挂牵\n信物多像 长长的线\n你顺着一端走啊走就\n回到从前\n多年后 回忆落笔成杂文\n当拂去 字里行间的灰尘\n透过那洪水般的思绪\n仍能触摸到余温\n你会想念起 记忆中的某个人\n哪有文字能誊抄情感\n不过都是情长纸短\n若能予你片刻温暖\n便算是圆满\n那最为朴实寻常的语言\n也有人当做诗篇\n它在物换星移的世间\n镌刻的是旧日昔年\n假如在未来的某一天\n我与你人海中失联\n信物却一直在身边\n陪你许多年\n那时你不经意看它一眼\n心中便忽然有了挂牵\n信物多像 长长的线\n你顺着一端走啊走就\n回到从前"
+  },
+  {
+    title: "稻海",
+    lyrics: "春来，新芽破土呢喃，\n张开双手，种下期盼，\n风儿吹过脸颊，阳光柔软，\n岁月在，泥土里盛开，\n稻穗像，烟花连片绚烂，\n小狗看，大人们丰收愉快，笑逐颜开，\n日子一粒粒很饱满，\n生命如同诗一般，\n我们在大地写下，耕耘的浪漫，\n啦咦哎，啦咦哎，\n我躺在，层层稻海，\n夏梦成熟得，好快，\n我不想醒来，\n啦咦哎，啦咦哎，\n回忆里，金色的海，\n稻香在心底，弥漫，\n沉甸甸的美满，\n春来，新芽破土呢喃，\n张开双手，种下期盼，\n风儿吹过脸颊，阳光柔软，\n岁月在，泥土里盛开，\n稻穗像，烟花连片绚烂，\n小狗看，大人们丰收愉快，笑逐颜开，\n日子一粒粒很饱满，\n生命如同诗一般，\n我们在大地写下，耕耘的浪漫，\n啦咦哎，啦咦哎，\n我躺在，层层稻海，\n夏梦成熟得，好快，\n我不想醒来，\n啦咦哎，啦咦哎，\n回忆里，金色的海，\n稻香在心底，弥漫，\n沉甸甸的美满，\n啦咦哎，啦咦哎，\n奔跑在，人生稻海，\n脚印被雨水，晕开，\n远方铺满，热爱，\n啦咦哎，啦咦哎，\n回忆像，风吹稻海，\n带给我满身的，稻香，\n心更加灿烂"
+  },
+  {
+    title: "我的轻舟是我自己",
+    lyrics: "是谁点亮 我的月亮 轻轻发光\n是谁走向 我的梦境 缓缓生长\n是谁来过 是谁轻和 是谁高歌\n是另个我 自由的我 无数个我\n我捧起一阵 风啊\n听见了它的回答\n它说你啊 它说我啊\n请勇敢的 飞吧\n我们一起 找到自己\n笑着走去 去自由里\n岁月蹉跎 温柔苦涩\n敬我敬你\n我先是我 才是任何\n日升日落 星星闪烁\n谁在述说 她的平仄\n是我是你\n是谁来过 是谁轻和 是谁高歌\n是另个我 自由的我 无数个我\n我捧起一阵 风啊\n听见了它的回答\n它说你啊 它说我啊\n请勇敢的 飞吧\n我们一起 找到自己\n笑着走去 去自由里\n岁月蹉跎 温柔苦涩\n敬我敬你\n我先是我 才是任何\n日升日落 星星闪烁\n谁在述说 她的平仄\n是我是你\n我们一起 找到自己\n笑着走去 去自由里\n岁月蹉跎 温柔苦涩\n敬我敬你\n我先是我 才是任何\n日升日落 星星闪烁\n谁在述说 她的平仄\n是我是你\n回头看呐 轻舟是你 自己"
+  },
+  {
+    title: "Dust",
+    lyrics: "The world feels like a shattered dream\n痛苦如影似火海\n信仰在黑夜中点燃爱\nWhy\nYou fear to face what's deep inside\n任由生活做反派\n逃避问题无奈是常态\nLife is really tough\nIt can break you\nEvery hits rough\nBut you rise up too\n直到血液变成汽油燃起来\nFire\nBurning through all my desire\nI'm the one who rises from the dust\nDon't doubt me\nTrust me\nFighter\nFierce and strong like a tiger\nI'll defeat all that comes fast\nDon't doubt me\nTrust me\n血洗疆场的烈马\n不甘在舒适驻扎\n安逸平庸不浮夸\n破译生存的密码\n掌握自己的筹码\n森林中凶险复杂\nLife really tough\nIt can break you\nEvery hit is rough\nBut you rise up too\n直到血液变成汽油燃起来\nFire\nBurning through all my desire\nI'm the one who rises from the dust\nDon't doubt me\nTrust me\nFighter\nFierce and strong like a tiger\nI'll defeat all that comes fast\nTrust me\nFire\nBurning through all my desire\nI'm the one who rises from the dust\nDon't doubt me\nTrust me\nFighter\nFierce and strong like a tiger\nI'll defeat all that comes fast\nDon't doubt me\nTrust me"
+  },
+  {
+    title: "干杯",
+    lyrics: "会不会 有一天 时间真的能倒退\n退回 你的我的 回不去的 悠悠的岁月\n也许会 有一天 世界真的有终点\n也要和你举起回忆酿的甜 和你再干一杯\n如果说 要我选出 代表青春 那个画面\n浮现了 那滴眼泪 那片蓝天 那年毕业\n那一张 边哭边笑 还要拥抱 是你的脸\n想起来 可爱可怜 可歌可泣 可是多怀念\n怀念总是 突然怀念 不谈条件\n当回忆 冲破考卷 冲出岁月 在我眼前\n我和你 流着汗水 喝着汽水 在操场边\n说好了 无论如何 一起走到 未来的世界\n现在就是 那个未来 那个世界\n为什么 你的身边 我的身边 不是同一边\n友情曾像 诺亚方舟 坚强誓言\n只是我 望着海面 等着永远 模糊了视线\n会不会有一天 时间真的能倒退\n退回 你的我的 回不去的 悠悠的岁月\n也许会 有一天 世界真的有终点\n也要和你举起回忆酿的甜 和你再干一杯\n这些年 买了四轮 买了手表 买了单眼\n却发现 追不到的 停不了的 还是那些\n人生是 只有认命 只能宿命 只好宿醉\n只剩下 高的笑点 低的哭点 却没成熟点\n成熟就是 幻想幻灭 一场磨练\n为什么 只有梦想 越磨越小 小到不见\n有时候 好想流泪 好想流泪 却没眼泪\n期待会 你会不会 他会不会 开个同学会\n他在等你 你在等我 我在等谁\n又是谁 孩子没睡 电话没电 心情没准备\n天空不断 黑了又亮 亮了又黑\n那光阴 沧海桑田 远走高飞 再没力气追\n会不会有一天 时间真的能倒退\n退回 你的我的 回不去的 悠悠的岁月\n也许会 有一天 世界真的有终点\n也要和你举起回忆酿的甜 和你再干一杯\n终究会 有一天 我们都变成昨天\n是你 陪我走过 一生一回 匆匆的人间\n有一天 就是今天 今天就是有一天\n说出一直没说 对你的感谢 和你再干一杯\n再干一杯永远 喝了就能万岁\n岁岁和年年 时间都停了 他们都回来了\n怀念的人啊 等你的来到"
+  },
+  {
+    title: "Get out",
+    lyrics: "Girl you want go join da my party\n把你的爱 大把放进我包里\nWelcome to my chill room为你唱R&B\n全部Take easy 全部Take easy\n我放心上 你随便的开口\n为更多的爱 不是为了个Title\n如果你需要 我随时为你拍手\n给你的爱 多得就像电脑里的Demo\nWhat you want\n什么是你想要的\n慢慢就知道了\n慢慢不需要了\n慢慢一个眼神我就知道你想要的\n他们可能猜到现在还是不知道的\n不知道是你对他们不需要\nMy baby girl\n我肩膀随时准备为你靠\n那些人动手动脚\n还不对你讲礼貌\n他们做的歌 真的没必要\n你总是不停唠叨\n发微信叫我悄悄\nYou touch my heart again\n把你写进我的Plan\nGirl you want go join da my party\n把你的爱 大把放进我包里\nWelcome to my chill room为你唱R&B\n全部Take easy 全部Take easy\n全部Get out 全部Get out the way\n全部Get out 全部Get out Ye\n全部Get out 全部Get out Emnn\n全部Get out 全部Get out the way\n全部Get out 全部Get out Ye\n全部Get out 全部Get out\n跟我Homies go crazy\n全部Get out 全部Get out\n他知道我是谁我不用自我介绍\n我给了他面子但他始终不敢接招\n我对你的爱像不倒翁根本不会跌倒\n他们怎么可能跟我对比\n我沉迷在你所有面貌里像选了随机\n我这里只有尊重不可能会规定你\n让他们赶紧回家反复播放水星记\n让其他追求者出门右转\n打破你的刻板印象像跆拳道九段\n我带你去Omakase也可以去酒馆\nThis young money lifestyle欢迎你来收看\n迪士尼留给你 暗黑的我包办\n贵腐甜才是形容你的口感\n掉进你的爱河救生圈是Donuts\n我是狗男人也可以为你柔软\nGirl you want go join da my party\n把你的爱 大把放进我包里\nWelcome to my chill room为你唱R&B\n全部Take easy 全部Take easy\n全部Get out 全部Get out the way\n全部Get out 全部Get out Ye\n全部Get out 全部Get out Emnn\n全部Get out 全部Get out the way\n全部Get out 全部Get out Ye\n全部Get out 全部Get out\n跟我Homies go crazy"
+  },
+  {
+    title: "Golden",
+    lyrics: "You made me feel the world is golden\nTill end of time\nYou still got me like\nYou are the one I've really chosen\nI will always sing for you like woah woah woah woah\n想带你去看看\n游乐园里的马戏\n都比不过你的那些内心害羞小把戏\n心跳在同频把周围空气过滤\n让我们一直这样新鲜永不过期\nGolden Golden 最闪亮的Golden\nGolden Golden 最灿烂的Golden\nGolden Golden 宝藏般的Golden\n快进到我的口袋中\nYou made me feel the world is golden\nTill end of time\nYou still got me like\nYou are the one I've really chosen\nI will always sing for you like woah woah woah woah\nYou made me feel the world is golden\nTill end of time\nYou still got me like\nYou are the one I've really chosen\nI will always sing for you like woah woah woah woah\n就这样看着你 盯着你\n对你的内心 唱给你听\n握紧手心 楼下公园一起听R&B\nEvery time everything 请拨通我每部手机\n想诉说我会陪伴你 放下所有再慢慢倾听\n做一颗耀眼的Diamond 永远在 泛着光 灿烂的秀\n就算到太阳落山的那最后一刻\n月光下为你独奏 唱一首专属写给你的R&B\nGolden Golden 最闪亮的Golden\nGolden Golden 最灿烂的Golden\n宝藏般的Golden 快进到我的口袋中"
+  },
+  {
+    title: "向日葵下",
+    lyrics: "Stay Tonight\n让我们\nStay Tonight\n远处挂着一幅画\n是我们坐在夕阳下\n周围为我们盛开好多鲜花\n可能你觉得不算美\n小蜜蜂边飞边回味\n它和它同伴炫耀被说做美梦\n我为何那么冲动\n蚂蚁迷失在草丛中\n不知是谁的怂恿\n相似却又不相同\n好比如作每个春秋\n今年过完才会懂\n风儿它轻轻地撩过你的头发\n一刹那夕阳都汇聚在你脸颊\n微笑的模样仿佛童年的童话啊\n童话啊\n远处挂着一幅画\n是我们坐在夕阳下\n周围为我们盛开好多鲜花\n可能你觉得不算美\n小蜜蜂边飞边回味\n它和它同伴炫耀被说做美梦\n当我扬起了额头脚踩这一片麦田\n兜兜转转在向日葵下 24/7\n不管白天或黑夜\n每天当成 3 天 Working\n不止风声在给我的回答\n风声吹过我的窗外\n我的汗水留在每个 Long nights\n努力和灵感 “互相伤害”\n让我们让我们 Step by step\nGood time 都留在\n远处挂着一幅画\n是我们坐在夕阳下\n周围为我们盛开好多鲜花\n可能你觉得不算美\n小蜜蜂边飞边回味\n它和它同伴炫耀被说做美梦\n后来的我迷失在向日葵下\n兜兜转转疲惫了才想着回家\n朦胧的我才刚刚站稳了步伐\n这个夏天就留在\nStay Tonight\n让我们 Stay Tonight\nStay Tonight\nStay Tonight\n让我们 Stay Tonight\nStay Tonight\nTonight"
+  },
+  {
+    title: "穿越星空拥抱你",
+    lyrics: "想告诉你花开了\n想交换你的日落\n在挂电话了以后\n还有想念没说\n刚在路口挥着手\n就开始找见面的理由\n一天两天要多久才能牵你的手\n\n想见你的时候\n我就抬起头看夜空\n星星在闪烁连成的轮廓\n正是你的笑容\n见到你的时候\n分别的苦痛都化为相拥的手\n哪怕沿途错过\n我一定会在终点等候\n\n想告诉你起风了\n想交换你的问候\n在电话接通以后\n攒的日常没说\n当你在左我在右\n心就有了坚定的温柔\n一步两步我们都把风甩在身后\n\n想见你的时候\n我就抬起头看夜空\n星星在闪烁连成的轮廓\n正是你的笑容\n见到你的时候\n分别的苦痛都化为相拥的手\n哪怕沿途错过\n我一定会在终点等候\n\n想见你的时候\n我就抬起头看夜空\n星星在闪烁连成的轮廓\n正是你的笑容\n见到你的时候\n分别的苦痛都化为相拥的手\n哪怕沿途错过\n我一定会在终点等候\n我一定会在终点等候\n想见你的时候\n我就抬起头看夜空"
+  },
+  {
+    title: "微光",
+    lyrics: "伸出了手掌 摸不到的梦想\n还是那么倔强\n我们的梦没什么不一样\n前方的微光 让我不再迷茫\n一盏一盏的 把我点亮\n哪怕走着的路 有一点辛苦\n但我怎么可能会认输\n不就是忍受孤独\n做些事反反复复\n那就自己待着大哭\n有没有人明白 又谁选择离开\n但我依旧期待爱 只是不 再对谁依赖\n学着释怀 拨开 那些 让人难过的阴霾\n前方的微光 让我不再迷茫\n一盏一盏的 把我照亮\n过的每一天生活自有期\n默默的无言那就别在意\n我不害怕或彷徨 放声歌唱\n就算要独自抵抗 这个世界又何妨\n点亮属于我的微光 把自己给照亮\n哪怕受了伤 也要奔向前方\n我不害怕或彷徨 放声歌唱\n就算要独自抵抗 这个世界又何妨\n点亮属于我的微光 把自己给照亮\n哪怕受了伤 也要奔向前方"
+  },
+  {
+    title: "红玫瑰",
+    lyrics: "梦里梦到醒不来的梦\n红线里被软禁的红\n所有刺激剩下疲乏的痛\n再无动于衷\n从背后抱你的时候\n期待的却是她的面容\n说来实在嘲讽 我不太懂\n偏渴望你懂\n是否幸福轻得太沉重\n过度使用不痒不痛\n烂熟透红空洞了的瞳孔\n终于掏空 终于有始无终\n得不到的永远在骚动\n被偏爱的 都有恃无恐\n玫瑰的红 容易受伤的梦\n握在手中却流失于指缝\n又落空\n红是朱砂痣烙印心口\n红是蚊子血般平庸\n时间美化那仅有的悸动\n也磨平激动\n从背后抱你的时候\n期待的却是她的面容\n说来实在嘲讽\n我不太懂 偏渴望你懂\n是否幸福轻得太沉重\n过度使用 不痒不痛\n烂熟透红空洞了的瞳孔\n终于掏空 终于有始无终\n得不到的永远在骚动\n被偏爱的都有恃无恐\n玫瑰的红 容易受伤的梦\n握在手中却流失于指缝\n又落空\n是否说爱都太过沉重\n过度使用不痒不痛\n烧得火红 蛇行缠绕心中\n终于冷冻终于有始无终\n得不到的永远在骚动\n被偏爱的都有恃无恐\n玫瑰的红 容易受伤的梦\n握在手中却流失于指缝\n得不到的永远在骚动\n被偏爱的 都有恃无恐\n玫瑰的红 伤口绽放的梦\n握在手中却流失于指缝\n再落空"
+  },
+  {
+    title: "我怀念的",
+    lyrics: "我问为什么\n那女孩传简讯给我\n而你为什么\n不解释低着头沉默\n我该相信你很爱我\n不愿意敷衍我\n还是明白\n你已不想挽回什么\n\n想问为什么\n我不再是你的快乐\n可是为什么\n却苦笑说我都懂了\n自尊常常将人拖着\n把爱都走曲折\n假装了解是怕\n真相太赤裸裸\n狼狈比失去难受\n\n我怀念的 是无话不说\n我怀念的 是一起作梦\n我怀念的 是争吵以后\n还是想要爱你的冲动\n我记得那年生日 \n也记得那一首歌 记得那片星空\n最紧的右手 最暖的胸口\n谁记得 谁忘了\n\n想问为什么 我不再是你的快乐\n可是为什么 却苦笑说我都懂了\n自尊常常将人拖着 \n把爱都走曲折\n假装了解是怕 真相太赤裸裸\n狼狈比失去难受\n\n我怀念的 是无话不说\n我怀念的 是一起作梦\n我怀念的 是争吵以后\n还是想要爱你的冲动\n我记得那年生日 也记得那一首歌\n记得那片星空 最紧的右手\n最暖的胸口 谁忘了\n\n我怀念的 是无言感动\n我怀念的 是绝对炽热\n我怀念的 是你很激动\n求我原谅抱得我都痛\n我记得你在背后\n也记得我颤抖着\n记得感觉汹涌\n最美的烟火\n最长的相拥\n\n谁爱得太自由 谁过头太远了\n谁要走我的心\n谁忘了那就是承诺\n谁自顾自地走 谁忘了看着我\n谁让爱变沉重 谁忘了要给你温柔\n\n我还有想要爱你的冲动\n我记得那年生日 也记得那一首歌\n记得那片星空 \n最紧的右手最暖的胸口\n我放手 我让座 假洒脱\n谁懂我多么不舍得\n太爱了 \n所以我 没有哭 没有说"
+  },
+  {
+    title: "只是太爱你",
+    lyrics: "原谅我真的喝醉了\n因为我真的想你了\n一不小心就被寂寞\n吞噬了爱着你的快乐\n我知道这样不应该\n也知道你会受伤害\n只是不想再让自己对你太过依赖\n我明白 你给的爱是真实地存在\n喔 只是我不懂得如何去爱\n才会让你想离开\n因为我不知道\n下一辈子还是否能遇见你\n所以我今生才会\n那么努力 把最好的给你\n爱你都变成伤害你\n我们的爱快要窒息\n不是故意 只是太爱你\n原谅我真的喝醉了\n因为我真的想你了\n一不小心就被寂寞\n吞噬了爱着你的快乐\n我知道这样不应该\n也知道你会受伤害\n只是不想再让自己对你太过依赖\n我明白 你给的爱是真实地存在\n喔 只是我不懂得如何去爱\n才会让你想离开\n因为我不知道\n下一辈子还是否能遇见你\n所以我今生才会\n那么努力 把最好的给你\n爱你都变成伤害你\n我们的爱快要窒息\n不是故意 只是太爱你\n因为我不知道\n下一辈子还是否能遇见你\n所以我今生才会\n那么努力 把最好的都给你\n爱你都变成伤害你\n我们的爱快要窒息\n不是故意 只是太爱你"
+  },
+  {
+    title: "孤独患者",
+    lyrics: "欢笑声 欢呼声\n吵热气氛 心却很冷\n聚光灯 是种蒙恩\n我却不能 喊等一等\n我真佩服我 还能幽默\n掉眼泪时 用笑掩过\n怕人看破 顾虑好多\n不谈寂寞 我们就都快活\n我不唱声嘶力竭的情歌\n不表示没有心碎的时刻\n我不曾摊开伤口任宰割\n愈合 就无人晓得\n我内心挫折\n活像个孤独患者 自我拉扯\n外向的孤独患者 有何不可\n笑越大声 越是残忍\n挤满体温 室温更冷\n万一关灯 空虚扰人\n我却不能 喊等一等\n你说你爱我 却一直说\n说我不该 窝在角落\n策划逃脱 这也有错\n连我脆弱 的权利都掠夺\n我不唱声嘶力竭的情歌\n不表示没有心碎的时刻\n我不曾摊开伤口任宰割\n愈合 就无人晓得\n我内心挫折\n活像个孤独患者 自我拉扯\n外向的孤独患者 有何不可\n我不要声嘶力竭的情歌\n来提示我需要你的时刻\n表面镇定并不是保护色\n反而 是要你懂得\n我不知为何\n活像个孤独患者 自我拉扯\n外向的孤独患者 需要认可"
+  },
+  {
+    title: "不再犹豫",
+    lyrics: "无聊望见了犹豫\n达到理想不太易\n即使有信心\n斗志却抑止\n谁人定我去或留\n定我心中的宇宙\n只想靠两手 向理想挥手\n问句天几高 心中志比天更高\n自信打不死的心态活到老\nWO - OH 我有我心底故事\n亲手写上每段 得失乐与悲与梦儿\nWO - OH 纵有创伤不退避\n梦想有日达成 找到心底梦想的世界 终可见\n谁人没试过犹豫\n达到理想不太易\n即使有信心\n斗志却抑止\n谁人定我去或留\n定我心中的宇宙\n只想靠两手 向理想挥手\n问句天几高 心中志比天更高\n自信打不死的心态活到老\nWO - OH 我有我心底故事\n亲手写上每段 得失乐与悲与梦儿\nWO - OH 纵有创伤不退避\n梦想有日达成 找到心底梦想的世界 终可见\nWO - OH\n亲手写上每段 得失乐与悲与梦儿\nWO - OH\n梦想有日达成 找到心底梦想的世界 终可见"
+  },
+  {
+    title: "向日葵的约定",
+    lyrics: "这世界 因为你而珍贵\n偶尔笑中带泪 互道晚安入睡\n就算某天 我们各自走远\n我也静静守卫 天真\n直到你回来的那天\n爱让我们 越来越相信直觉\n幸福是 有你陪伴着我 每个瞬间\n只想陪在你身边\n还要一起认真执着许每个愿\n就有勇气等明天\n每当我睁开眼\n就有一道光线\n温暖着我的心 布满晴天\n向日葵般的遇见\n那里有我们最初次的感觉\n原来就是全世界\n因为你才明白一切\n快乐一直就在原点\n谢谢你让我放心做自己\n拥抱纯真不变\n也怀疑 梦想隐隐约约\n你像太阳一样 炙热我的信念\n就算某天 我们各自走远\n我也静静守卫 天真\n直到你回来的那天\n爱让我们 越来越相信直觉\n幸福是 有你陪伴着我每个瞬间\n只想陪在你身边\n还要一起认真执着许每个愿\n就有勇气等明天\n每当我睁开眼 就有一道光线\n温暖着我的心 布满晴天\n向日葵般的遇见\n那里有我们最初次的感觉\n原来就是全世界\n因为你才明白一切\n快乐一直就在原点\n谢谢你让我放心做自己\n拥抱纯真不变\n只想陪在你身边\n还要一起认真执着许每个愿\n就有勇气等明天\n每当我睁开眼 就有一道光线\n温暖着我的心 布满晴天\n向日葵般的遇见\n那里有我们最初次的感觉\n原来就是全世界\n因为你才明白一切\n快乐一直就在原点\n谢谢你让我放心做自己\n能拥抱着纯真永不变"
+  },
+  {
+    title: "What You Want",
+    lyrics: "Everything you want girl\nTell me what you want\n你的心事像海浪淹没这夜晚\n我该怎么消散 这狼狈的不安\n别让我 找不到答案\n街边映出你的背影\n疲惫在黑暗中游离\n被困在这梦境里\n刺入我内心的痕迹\n是你言语里的荆棘\nI don't wanna be your shadow\n回忆还在翻涌\n瞬间变冷的感动\n我试着抓住一点温柔\n指缝里只有无尽的空洞\n你保持沉默的理由\n成为我心里的迷雾\n心底对你不停地呼唤\n却没有一点点的回应\nEverything you want girl\nTell me what you want\n你的心事像海浪淹没这夜晚\n我该怎么消散 这狼狈的不安\n别让我 找不到答案\nI'm having an accident\nYour empty word that crash my mind\n你的眼神像冷冽的风\n吹散我充满期待的梦\n所有的努力都化作尘埃\n我们的爱都被误会掩埋\n我在崩溃边缘试探摇摆\n却还听到 你的责怪\n不满像一场风暴 席卷这深夜\n该怎么才能注意到 所有的细节\n这翻腾的记忆像电影情节\n再怎么反转都早已经猜透一切\nEverything you want girl\nTell me what you want\n你的心事像海浪淹没这夜晚\n我该怎么消散 这狼狈的不安\n别让我 找不到答案\n席卷在这深夜里\n这翻腾的记忆 淹没在海浪里\n一点回应\nTell me 在这深夜里\n此刻我只想明白个彻底\nEverything you want girl\nEverything you want girl\nTell me what you want\n你的心事像海浪淹没这夜晚\n我该怎么消散 这狼狈的不安\n别让我 找不到答案\nEverything you want girl\nTell me what you want\n你的心事像海浪淹没这夜晚\n我该怎么消散 这狼狈的不安\n别让我 只留下遗憾"
+  },
+  {
+    title: "印记",
+    lyrics: "时间 一天 一月 一年\n变好像没变 心情如从前\n或是思绪万千 往事 画面 眼前 浮现\n是气愤是哽咽\n是我不好 害你又一次把爱哭成褪色的照片\n曾为我 的夏天 书写完 整的 诗篇\n不敢想象没有你我多胆怯\n我像麦粒 沐浴在阳光里\n你像春风 带来温暖和煦\n我拼尽全力 想要保护你\n脸颊却留下轨迹\n想告诉你 不白流的泪滴\n将它称为 我们爱的印记\n就彼此约定 谁也无法分离\n若你要做自己 我也愿意\n不知不觉走过多少个难 忘的夜\n不知是否带给你的快乐比难过 多一些\n你知道保持沉默 它从来不是懦弱\n倾尽所有的一切 我又怎舍得让你难过\n想说声 对不起 语言却 苍白 无力\n只是不愿再看你留下泪滴\n我像麦粒 沐浴在阳光里\n你像春风 带来温暖和煦\n我拼尽全力 想要保护你\n脸颊却留下轨迹\n想告诉你 不白流的泪滴\n将它称为 我们爱的印记\n就彼此约定 谁也无法分离\n若你要做自己 我也愿意\n曾经梦中画面慢慢变得清晰\n我愿倾尽我所有 为你燃烧自己\n你像晚风 轻拂我的呼吸\n明明无形 却让心跳更清晰\n爱需要勇气 你竭尽全力\n怎会让你输的彻底\n想告诉你 不白流的泪滴\n将它称为 我们爱的印记\n哪怕有天会离去 让你成为自己 我很愿意"
+  },
+  {
+    title: "和你等烟花",
+    lyrics: "不经意间邂逅麦浪之中\n那些少年意气鲜活如梦\n青春难免匆匆此间重逢\n人生不过海海不必孤勇\n那些蒙尘的星点亮夜空\n土地永远真诚有始有终\n那场渺小的梦终会乘风\n岁月总归漫长可期可颂\n这一刻我们都没有遗憾\n因为你奔赴过万水千山\n少年啊他依旧热烈和勇敢\n星辰会等着你闯过重重关\n等夏天晚风悄藏在云端\n有白鹭等着鱼儿跳上岸\n小玫瑰带着小王子的期盼\n会发芽用美好将未来填满\n后陡门的夕阳温暖可拥\n黑夜中的烟花绚烂如虹\n归途中的少年奔跑如风\n记忆中的夏天永远有梦\n当时微风正浓恰似相逢\n随着时光漫长难免回首\n那片青禾之中生机朦朦\n这群青涩少年彼此相拥\n这一刻我们都没有遗憾\n少年他轻舟已过万重山\n每个梦会到达彼岸会圆满\n再相逢愿岁有青禾有晴天\n等夏天晚风悄藏在云端\n有白鹭等着鱼儿跳上岸\n小玫瑰带着小王子的期盼\n盛开吧用美好将未来填满"
+  },
+  {
+    title: "你要的爱",
+    lyrics: "虽然经常梦见你 还是毫无头绪\n外面正在下着雨 今天是星期几 But I don't know 你去哪里\n虽然不曾怀疑你 还是忐忑不定\n谁是你的那个唯一 原谅我怀疑自己\n我明白我要的爱 会把我宠坏\n像一个小孩 只懂在你怀里坏\n你要的爱 不只是依赖\n要像个大男孩 风吹又日晒\n生活自由自在\n虽然不曾怀疑你 还是忐忑不定\n谁是你的那个唯一 原谅我怀疑自己\n我明白我要的爱 会把我宠坏\n像一个小孩 只懂在你怀里坏\n你要的爱 不只是依赖\n要像个大男孩 风吹又日晒\n生活自由自在‌"
+  },
+  {
+    title: "无名的人",
+    lyrics: "我是这路上没名字的人\n我没有新闻 没有人评论\n要拼尽所有 换得普通的剧本\n曲折辗转 不过谋生\n我是离开小镇上的人\n是哭笑着吃过饭的人\n是赶路的人 是养家的人\n是城市背景的无声\n我不过想亲手触摸\n弯过腰的每一刻\n留下的湿透的脚印 是不是值得\n这哽咽 若你也相同\n就是同路的朋友\n致所有顶天立地却平凡普通的无名的人啊\n我敬你一杯酒\n敬你的沉默 和每一声怒吼\n敬你弯着腰 上山往高处走\n头顶苍穹 努力地生活\n你来自于南方的村落\n来自粗糙的双手\n你站在楼宇的缝隙 可你没有退缩\n我来自于北方的春天\n来自一步一回首\n背后有告别的路口 温暖每个日落\n当家乡入冬的时候 列车到站以后\n小时候的风 再吹过\n回忆起单纯的快乐 在熟悉的街头\n有人会用所有的温柔喊出你的名字"
+  },
+  {
+    title: "Find myself",
+    lyrics: "伯远：聚光灯 尖叫声 想要都在梦里\n向前走 一步一脚印\n鹭卓：耕耘就会有收获\n曾经只以为 是安慰的大道理\n现在我坚信不疑\n何浩楠：前方的路只有你在 面对未来充满期待\n再多困难被制造 总有办法想出来\n鹭卓：太多想法在我脑海\n你的支持让我明白\n我不是一个人 想做就做 别怕失败\n伯远：I'm trying to find my own way to life\n让我戒掉浮躁 学会等待\n鹭卓、何浩楠：I try to find my own way to life to life to life\n伯远、鹭卓、何浩楠：我想要的未来 像被证明存在\n梦想或许不会是一场等待\n曾以为的无奈 不过是场阴霾\n种地吧少年伴随阳光醒来\n卓沅：哎 所有烦恼全部给你 喂\n嘿 追上吧 我才不管你谁\nWuhu~ 一切规则全部都摧毁\n我要重新独特 品尝现在 展翅高飞 耶\nYou wanna make me dream me yeah\n这是一个禁锢堡垒 yeah\nanyway 随便谁 错或对 都无所谓\n伯远：前方的路只要你在\n面对未来充满期待\n再多困难从不转弯\n都会反反说不出来\n何浩楠：太多想法在我脑海\n你的支持让我明白\n我不是一个人 想做就做 别怕失败\n鹭卓：I try to find my own way to life\n让我戒掉浮躁 学会等待\n伯远：I try to find my own way to life to life\n伯远、鹭卓、何浩楠：everybody say\n我想要的未来 像被证明存在\n梦想或许不会是一场等待\n曾以为的无奈 不过是场阴霾\n种地吧少年伴随阳光醒来\n卓沅：前方的路只要你在 我充满期待\n何浩楠：再多困难总被制造 不会被责怪\n合：Days of one all the night\nwherever anytime you can take me dream to fly\nFind Myself"
+  },
+  {
+    title: "We higher",
+    lyrics: "蒋敦豪：\n清晨第一缕微光 透过帐篷\n唤醒鸟语花香\n陈少熙：\n焕新美好再启航 我们背上行囊\n逐梦的方向 绽放\n王一珩：\n种的果实放手上 驱散阴霾\n将希望撒播走过的土壤\n卓沅：\n十颗心 聚集成坚不可摧的心脏\n不迷茫 从前现在我一如既往\n赵一博：\n沿途彼岸的方向\n我聆听风的吟唱\n享受自然的交响\n李耕耘：\n是我想去的远方\n不必太过匆忙\n念念不忘就必定会有回响\n十个勤天：\nWe higher we higher we higher woo攀最险峻的山峰\n站在最高的天空翱翔\nWe higher we higher we higher woo看遍各地的夕阳\n在星空下许下的愿望\n李昊：\n天南地北一起去闯\n看最美的风景\n走过每一寸土地\n都留下我们的足迹\n何浩楠：\n绚烂夜空被我点亮\n前行路没人能阻挡\n卓沅：\n要把种下的希望传播到万里飘香\n何浩楠：\n去更高的天空飞翔\n为梦想浇筑双翅膀\n王一珩：\n想要去更高的天空\n势必要扎根最深的土壤\n赵小童：\n风吹草低见牛羊\n家人期待的脸庞\n是我避风的湾港\n鹭卓：\n袅袅炊烟麦饭香\n溪水也为我伴唱\n沉浸享受旷野乐章\n十个勤天：\nWe higher we higher we higher woo攀最险峻的山峰\n站在最高的天空翱翔\nWe higher we higher we higher woo看遍各地的夕阳\n在星空下许下的愿望\n十个勤天：\nWe higher we higher we higher woo攀最险峻的山峰\n站在最高的天空翱翔\nWe higher we higher we higher woo看遍各地的夕阳\n在星空下许下的愿望"
+  },
+  {
+    title: "光",
+    lyrics: "蒋敦豪：\n矫情话藏心里面\n眼泪忍住到雨天\n王一珩：\n我们之间\n眼神做回答\n无需多言\n赵一博：\n宴席散去会留恋\n只因是完美瞬间\n卓沅：\n不再彷徨害怕去面对\n曾经彻夜难熬的夜\n陈少熙：\n你 带我找到追寻的光\n去到我梦中的地方\n赵小童：\n想法再荒唐\n有你陪我倔强\n李耕耘：\n我想握紧这束光\n即使渺小的力量\n何浩楠：\n红了眼眶 也笑着唱\n那束光 散去也会绽放\n李昊：\n即使各奔东西\n到不同目的地\n顶峰相见我们约定\n李耕耘/何浩楠/王一珩：\n只怕没人撑腰打气\n给我眼神肯定\n会陷入自我怀疑\n蒋敦豪/赵小童/陈少熙：\n我曾经\n身后是一片无尽废墟\n你将城堡为我筑起\n李昊/赵一博/卓沅：\n领略满天繁星\n或是梦境\n宁愿梦沉浸\n十个勤天：\n你 带我找到追寻的光\n去到我梦中的地方\n想法再荒唐\n有你陪我倔强\n我想握紧这束光\n即使渺小的力量\n红了眼眶 也笑着唱\n那束光 散去也会绽放\n鹭卓：\n当 我曾向往触碰到光\n光曾是荣耀也是勋章\n如今是时光\n抓不住 却想留在 身旁\n十个勤天：\n握紧这束光\n即使徒劳又怎样\n红了眼眶 我不退让\n那束光 我们称作 太阳"
+  },
+  {
+    title: "我成为我的同时",
+    lyrics: "亲爱的你 别灰心\n开局一片 荒野地\n就种棵 会生长的心\n亲爱的你 别担心\n世界先给你 一场雨\n肯定是想送你 天晴\n我成为我的同时你也成为了你\n我们走在 不同的路 但同样都\n要往明天去\n如果你决定好啦 日落之前就出发\n就不怕 夜晚会带走光\n我们寻找到的答案 \n不会输给问题啊\n其实我知道 这夏天 会过去吧\n所以 更大声地歌唱\n有你的地方就有回响\n亲爱的你 别放弃\n有了歉收 的勇气\n就会有 丰收的运气\n亲爱的你 别怀疑\n若回家路上 一身泥\n月光是温柔的 回信\n我成为我的同时你也成为了你\n我们也许 不必约好\n却都找到 热爱的事情\n如果你决定好啦 \n日落之前就出发\n就不怕 夜晚会带走光\n我们寻找到的答案 \n不会输给问题啊\n其实我知道 这夏天 会过去吧\n所以 更大声地歌唱\n有你的地方就有回响\n如果你决定好啦\n像种子一样发芽\n就祝你 种自己得自己\n制造跟世界的温差\n开不普通的花\n其实我知道 这夏天 还会来的\n所以 离别也不可怕\n说再见就会再见的吧\n说再见就会再见的吧\n说再见就一定会 再见吧"
+  },
+  {
+    title: "友情岁月",
+    lyrics: "消失的光阴散在风里\n仿佛想不起再面对\n流浪日子 你在伴随\n有缘再聚\n天真的声音已在减退\n彼此为着目标相距\n凝望夜空 往日是谁\n领会心中疲累\n来忘掉错对\n来怀念过去\n曾共渡患难日子总有乐趣\n不相信会绝望\n不感觉到踌躇\n在美梦里竞争\n每日拼命进取\n奔波的风雨里\n不羁的醒与醉\n所有故事像已发生飘泊岁月里\n风吹过已静下\n将心意再还谁\n让眼泪已带走夜憔悴‌"
+  },
+  {
+    title: "生来不让",
+    lyrics: "五四少年气宇轩昂\n血脉紧系绳的那端\n牢牢生根在土地上\n我们越过一道道 斑驳的墙\n不让梦中断\n不让故事潦草剩最后几行\n这一抹月光 轻落在纸上\n我们重读过往 历史开始滚烫\n而我们成长\n我们生来不退让\n锁定目标就去闯\n紧握拳头挺起了脊梁\n我们生来不退让\n敢追梦不怕 去远方 始终在眺望\n青年的每一步 都不服输\n一代代走自己的路\n由我们这一代人给出答复\n面对着过去 我从不回避\n原来青春的意义 是我们在一起\n我们生来不退让\n紧握拳头挺起了脊梁\n我们生来不退让\n敢追梦不怕 去远方 始终在眺望\n青春岁月里的勇气 顶天而立地\n不管相距有几万里\n几万里 走下去\n城市里 那人潮依然拥挤\n我们生来不退让\n我们生来不退让\n敢追梦不怕 去远方 始终在眺望\n我们不退让\n我们不彷徨\n这条路上"
+  },
+  {
+    title: "海阔天空",
+    lyrics: "今天我 寒夜里看雪飘过\n怀着冷却了的心窝漂远方\n风雨里追赶 雾里分不清影踪\n天空海阔你与我 可会变 (谁没在变)\n多少次 迎着冷眼与嘲笑\n从没有放弃过心中的理想\n一刹那恍惚 若有所失的感觉\n不知不觉已变淡 心里爱 (谁明白我)\n原谅我这一生不羁放纵爱自由\n也会怕有一天会跌倒\n背弃了理想 谁人都可以\n哪会怕有一天只你共我\n今天我 寒夜里看雪飘过\n怀着冷却了的心窝漂远方\n风雨里追赶 雾里分不清影踪\n天空海阔你与我 可会变 (谁没在变)\n原谅我这一生不羁放纵爱自由\n也会怕有一天会跌倒\n背弃了理想 谁人都可以\n哪会怕有一天只你共我\n仍然自由自我 永远高唱我歌\n走遍千里\n原谅我这一生不羁放纵爱自由\n也会怕有一天会跌倒\n背弃了理想 谁人都可以\n哪会怕有一天只你共我‌"
+  },
+  {
+    title: "后陡门的夏",
+    lyrics: "经过冬 走到夏 一起种下梦的花\n我是不是将会回到城市那个家\n还没说 心里话\n这时光 似流沙\n多想定格在这一刻\n别成回忆啊\n是每个庭院夜深时说的话\n是谁躲在角落忍着偷把眼泪擦\n是谁来把这荒芜变成爱的家\n等枝桠 成繁花\n别把我 一人留在 这个夏\n会纷争 会吵架 损你是我没有他\n我是否还能够遇到像你的人啊\n说大话 分贝大\n别人能够忍受吗\n做事别太逞强\n以退为进也是个办法\n是每个庭院夜深时说的话\n是谁躲在角落忍着偷把眼泪擦\n是谁来把这荒芜变成爱的家\n等枝桠 成繁花\n别把我 一人留在 这个夏\n时间它就像沙漏不经意间慢慢溜走\n喜欢陪你流浪在每个夜晚或蝉鸣午后\n可这场风景太美\n我们却还都没看够\n分别时或许狼狈\n但那有天长地久\n我和你\n我和他\n就一定会再见吧\n未来的\n你也会\n会比现在更好吧\n我也一定会准备好再次出发\n与你再相见\n是每个庭院夜深时说的话\n是谁躲在角落忍着偷把眼泪擦\n是谁来把这荒芜变成爱的家\n等枝桠 成繁花\n别把我 一人留在\n是每个庭院夜深时说的话\n是谁躲在角落忍着偷把眼泪擦\n是谁来把这荒芜变成爱的家\n等枝桠 成繁花\n别把我 一人 留在这个夏"
+  }
+
+];
+
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // 动态生成导航栏
+    const navList = sidebar.querySelector('ul');
+    songs.forEach((song, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = song.title;
+      listItem.addEventListener('click', () => {
+        const targetSection = document.getElementById(`song-${index}`);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
+        }
+      });
+      navList.appendChild(listItem);
+    });
+
+    // 动态生成歌词内容
+    songs.forEach((song, index) => {
+      const section = document.createElement('section');
+      section.id = `song-${index}`;
+
+      const h2 = document.createElement('h2');
+      h2.textContent = song.title;
+
+      const pre = document.createElement('pre');
+      pre.textContent = song.lyrics;
+
+      section.appendChild(h2);
+      section.appendChild(pre);
+      content.appendChild(section);
+    });
+
+    // 菜单切换功能
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
