@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>陶喆演唱会歌词本</title>
+  <style>
+    body {
+    margin: 0; 
+    font-family: "Microsoft YaHei", sans-serif; 
+    color: #fff; 
+    font-size: 16px; 
+    background: linear-gradient(to bottom, #B23610, #ECAC99);
+  
+    /*background-image: url('https://img.picui.cn/free/2025/06/27/685eb0840b78e.png'); */
+    background-size: cover; 
+    -webkit-background-size: cover; /* 适配苹果手机 */
+    background-position: top left; 
+    -webkit-background-position: top left; /* 适配苹果手机 */
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    -webkit-background-attachment: fixed; 
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    /* 移除min-height，因为它可能干扰导航栏的定位 */ 
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #B23610;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.25em;
+      
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: url('https://www.helloimg.com/i/2025/07/15/68758538f14a1.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: #d85a34;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 2px 0 2px rgba(3, 32, 90, 0.1);
+      border-right: 1px solid #b18476;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 12px 20px; 
+      border-bottom: 1px solid #eaab98;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav li:hover {
+      background-color: #f69173;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .developer-info {
+      font-size: 0.8em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 30px;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.3em;
+      text-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    pre {
+
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: rgba(73, 0, 0, 0.3); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #b37777;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      box-shadow: 0 1px 3px rgba(134, 24, 7, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        left: -250px;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      pre {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    陶喆演唱会歌词本
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <!-- 自动生成的歌曲列表 -->
+    </ul>
+  </nav>
+
+  <main id="content">
+    <p class="developer-info">本网页由Bunnysong007自主开发，如需定制请微信联系。</p>
+    <!-- 歌词内容动态插入 -->
+  </main>
+
+  <script>
+  const songs = [
+   {
+    title: "找自己",
+    lyrics: "come on\n昨天晚上做了个梦\n我走进撒哈拉沙漠\n空无一人站在太阳下\n摄氏六十六点六度\n快要焚化我的眼珠\n忽然一场大雨降下来\n汗水被那雨水冲走\n结束四十天的折磨\n荒漠已然变成了绿洲\n彩虹下有一棵大树\n大树上有一个苹果\n咬下一口我就全明白\n可不可以让我再让我\n再一次回到那个美丽时光里\n找自己\n哗啦啦啦啦天在下雨\n哗啦啦啦啦云在哭泣\n哗啦啦啦啦滴入我的心\n不用说我只会胡思乱想\n不用跟我说我只会妄想\n哗啦啦啦啦让我去淋雨\n我只希望能够再能够\n再一次回到那个美丽时光里\n找自己\n挤在公车像个沙丁鱼\n上班下班每天是规律\n这么多的人到哪里去\n（在香港啊 看陶喆演唱会！）\n每个面孔写着无奈\n爸爸妈妈彼此没有爱\n难道这就是生命的真理\n可不可以让我再让我\n再一次回到那个美丽时光里\n跟我一起去逃避\n哗啦啦啦啦天在下雨\n哗啦啦啦啦云在哭泣\n哗啦啦啦啦滴入我的心\n不用说我只会胡思乱想\n不用跟我说我只会妄想\n哗啦啦啦啦让我去淋雨\n我只希望能够再能够\n再一次回到那个美丽时光里\n找自己\n躲在我的屋檐下面哦\n睡在我的被单里面哦\n听着细雨滴滴答答\n滴滴答答滴滴答答\n哗啦啦啦啦啦天在下雨\n哗啦啦啦啦啦云在哭泣\n哗啦啦啦啦啦滴入我的心\n不用说我只会胡思乱想\n不用跟我说我只会妄想\n哗啦啦啦啦啦让我去淋雨\n我只希望能够再能够\n再一次回到那个美丽时光里\n哗啦啦啦啦啦天在下雨\n哗啦啦啦啦啦云在哭泣\n哗啦啦啦啦啦滴入我的心\n不用说我只会胡思乱想\n不用跟我说我只会妄想\n哗啦啦啦啦啦让我去淋雨\n我只希望能够再能够\n再一次回到那个美丽时光里\nDa la la do do do lu lu...\n我只希望能够再\n我只希望能够再\n我只希望能够再一次（可不可以让我再）\n我只希望\n我只希望\n我只希望希望\n我只希望能够再一次\n我只希望能够再一次\n只希望能够在\n耶\n我只希望能够在香港\n找到自己"
+  },
+  {
+    title: "run away",
+    lyrics: "无名的怒火\n有说不出的无力想敲打我自己\n(太阳快要下山了,什么都不做,只拿着遥控器,一直不停的换台)\n麻木的神经\n感觉自己像个机器快不能呼吸\n(打开冰箱,看看里面的东西,处了酱瓜什么也没有,算了吧,去外面吃吧)\n火辣的太阳 永远在前方\n无尽的公路 无尽的追求\n我想要 runaway runaway\n不想再怀疑自己对不对\n甩开一切无所谓\n让你去 runaway\n像困在雾里\n焦躁的想从茫然的现实中逃避\n(你想得太简单了吧,你觉得你想做的都可以做得到吗)\n淡掉的感情\n还坚持下去又有什么样的意义\n(喂,你拿着车钥匙要去哪里啊,你别忘了明天还要上班的,别在外面鬼混了)\n风吹乱头发 黑夜星空下\n无尽的公路 无尽的追求\n我想要 runaway runaway\n不想再怀疑自己对不对\n甩开一切无所谓\n就快点去runaway\n我可以runaway runaway\n不想再怀疑自己对不对\n是为自己不为谁\n不在乎的runaway yeah yeah\n很多人再说 不断的一直说\n必须这个样子做 不能够那样做\n却又没有办法在自己的生命中突破oh yeah\n如果再不走 就永远不会走\n别让自己再回头 没挣扎怎能够有自由 快走\nrunaway runaway\n不想再怀疑自己对不对\n甩开一切无所谓\n就快点去runaway\n现在就 runaway runaway\n跟我一起 runaway\n怀疑自己对不对\n是为自己不为谁\n不在乎的runaway\n现在回去runaway\n今天要runaway\nrunaway runaway\n跟我一起runaway"
+  },
+  {
+    title: "爱是个什么东西",
+    lyrics: "走过这城市 找个没你的角落\n混乱的心要一点冷静\n分手说不定是现在最好的解脱\n该对爱说个暂停\n（怎么try） 心里还是搞不懂\n（想去爱） 但又怕被爱伤害\n（不明白） 怎么样才会满足\nDon’t know why\n想走又离你不开\n爱是个什么东西\n它到底公不公平\n爱有什么了不起\n有没有都是可以\nMy my my my my my\nLai lai lai lai lai lai\n希望这一切只是迷茫过度期\n爱和情欲交战在心底\n锁定一颗心没有想象中那么容易\n安定后就不安定\n（怎么try） 有时心会被摇动\n（想去爱） 但是又不敢去爱\n（我明白） 你的沉默你的痛\nI know why\n但不知道要怎么去改\n爱是个什么东西\n它是太理想主义\n爱有什么了不起\n我充满许多怀疑\nDa da da da da da ~\n难道我全做错\n能否重新来过\n爱能给我多少宽容\n爱是个什么东西\n我一直问我自己\n爱有什么了不起\n有没有都是可以"
+  },
+  {
+    title: "小镇姑娘",
+    lyrics: "还记得多年前跟你手牵手\n你都害羞的不敢抬头\n只会傻傻的看着天上的星星\n你就是那么的纯净\n知道你收到上榜的通知单\n我的心里就变得很乱\n不知为你而高兴还为自己忧愁\n只好就放你走\n不明白 不明白\n为什么我不能放的开\n舍不得 这个爱\n你是一生一世不会了解\n我明白 我明白\n在我心中你永远存在\n或许你会有一天怀念\n可是我已不在\n还记得一开始你不能适应\n那个忙乱又吵的环境\n一个小镇的姑娘到了大城市\n你一定听过这故事\n当你最寂寞的时刻我陪伴你\n给你我的安慰和鼓励\n自己矛盾的私心让我每天忧愁\n只好就让你走\n不明白 不明白\n为什么我不能放的开\n舍不得 这个爱\n你是一生一世不会了解\n我明白 我明白\n在我心中你永远存在\n或许你会有一天怀念\n可是我已不在\n还记得一年前站在火车站\n看着自己的悲剧演完\n透过玻璃窗看见你的泪满面\n那车头依然吐着烟\n听说现在的你成了大经理\n前途好比闪亮的星星\n我只希望这所有能够让你欢喜\n我才能放心走\n不明白 不明白\n为什么我不能放的开\n舍不得 这个爱\n你是一生一世不会了解\n我明白 我明白\n在我心中你永远存在\n或许你会有一天怀念\n可是我已不在\n或许你会有一天怀念\n可是我已不在 我不在\n或许你会有一天怀念\n可是我已\n我已不在"
+  },
+  {
+    title: "王八蛋",
+    lyrics: "把你的快乐建在我的痛苦上\n当我在哭的时候你坐在那边笑\n你这个没有心的王八蛋\n你会有一天后悔\n你会有一天后悔\n在我的伤口上面洒盐巴\n跟银行经理说我信用差\n你看不顺眼你就开口骂\n你会有一天后悔\n你会有一天后悔\n我的心 好像有颗大的石头\n我的头 好像原子弹要爆炸\n我的梦 好像破了洞的气球\n我真的好倒霉\n你会有一天后悔\n你会有一天后悔\n你忌妒我的车子就是比你ㄆㄚ\n你笑我考试考得比你差\n你吃不到你又特别哈\n你会有一天后悔\n不要得意你会后悔\n我的心 好像有颗大的石头\n我的头 好像原子弹要爆炸\n我的梦 好像破了洞的气球\n我真的好倒霉\n你会有一天后悔\n你会有一天后悔\n你会有一天后悔\n把你的快乐建在我的痛苦上\n当我在哭的时候你坐在那边笑\n你这个没有心的王八蛋\n你会有一天后悔\n你会有一天后悔\n我的心 好像有颗大的石头\n我的头 好像原子弹要爆炸\n我的梦 好像破了洞的气球\n我真的好倒霉\n你会有一天后悔"
+  },
+  {
+    title: "Angel",
+    lyrics: "十一年前 十二年前\n梅姐来洛杉矶 来我的录音室\n那时候我正在做黑色柳丁这张专辑\n我就放一些我的Demo给她听\n她就听到这首歌 她就跟我说\n陶喆 你不用这首歌的话\n我就跟你翻脸\n有时候我想不会有人了解\n心里面藏著的痛\n我害怕用真心面对这世界\n只好越来越沉默\n一个人在人海漂\n说话的人找不到\n谁给我温柔拥抱(拥抱我)\n当我感觉心快要碎了\nAngel Angel\n盼望你在我身边\nAngel Angel\n是否听见我在呼唤你\n能不能告诉孤单疲惫的我\n你永远为我守候\nAngel Angel\n请你留在我的身边\nAngel Angel\n请你不要放开我的手"
+  },
+  {
+    title: "月亮代表谁的心",
+    lyrics: "都怪那晚的月光\n浪漫的让人心慌\n其实原来没有怎样\n只是下了一场雨\n我没有想象的那么坚强\n弯弯月亮在天上\n看我们爱的痴狂\n即使月亮没有这样\n我的吻在你肩膀\n在你耳边轻轻唱\n你问我爱你有多深\n我爱你有几分\n我的情也真\n我的爱也那么真\n月亮代表我的心\nOh yeah\n圆圆月亮在天上\n看人们聚散无常\n一个人在街上游荡\n爱恨心里以两茫茫\nYeah 我没有想像坚强\n初一十五的月亮 有些忧伤\n天天变的不一样 在你脸上\n原来所谓地久天长\n也只是误会一场\n那首歌我慢慢唱\n你问我爱你有多深\n我爱你有几分\n我的情也真\n我的爱也不会变\n月亮代表我的心\n轻轻的一个吻\n曾经打动你的心\n深深的一段情\n成了回忆到如今\n你爱我有多深\n你爱我有几分\n你去想一想 你去看一看\n月亮代表谁的心\n月亮代表谁的心\n月亮代表谁 月亮代表我的心"
+  },
+  {
+    title: "是是非非",
+    lyrics: "闭上眼睛绑着你的鞋带\n放朵花在你窗台\n你是我的天使\n虽然偶尔有点坏\n在答录机上留下我的心跳\n你一定偷偷在微笑\n说一百个藉口\n却说不出你不爱我的理由\n哦~\nYou say no no no no no\nI say yes yes yes yes yes\nI'm your baby\nI'm your baby\nYou say no no no no no\nI say yes yes yes yes yes\nYou're my baby\nYou're my baby\nYou say no no no no no\nI say yes yes yes yes yes\nI'm your baby"
+  },
+  {
+    title: "0932",
+    lyrics: "（你拨的电话未开机 请稍后再拨）\n0932\n（我听唔到你把声啊）\n我知道你要给我怎么样的小任性\n我知道你要给我这样的臭脾气\n我知道你要给我这种那种\nI don't wanna 被搜寻\n你知道我要给你怎么样的大道理\n你知道我要给你这样的耍甜蜜\n你知道我要给你这种那种\nI don't wanna 被设定\n0932313 我爱你\n是不是你真的没开机\n有没有看到我传的短讯\n是否应该删除你的记忆\n0932 想一想我爱你\n你不会狠心到又关机\n看着彩色荧幕没反应\n最怕就是没有一格收讯\n0932\n（我已经被忘记）\n我知道你要给我怎么样的小任性\n我知道你要给我这样的臭脾气\n我知道你要给我这种那种\nI don't wanna 被搜寻\n你知道我要给你怎么样的大道理\n你知道我要给你这样的耍甜蜜\n你知道我要给你这种那种\nI don't wanna 被设定\n0932313 我爱你\n是不是你真的没开机\n有没有看到我传的短讯\n是否应该删除你的记忆\n0932 想一想我爱你\n你不会狠心到又关机\n看着彩色荧幕没反应\n最怕就是没有一格收讯\n会议中不敢转成静音\n就怕在第一时间漏掉你的消息\n热恋中多少浓情蜜意\n那些储存的讯息\n每一个字都让人痛心\n0932313 我爱你\n是不是你真的没开机\n有没有看到我传的短讯\n是否应该删除你的记忆\n0932 想一想我爱你\n你是真的狠下心关机\n看着彩色荧幕没反应\n也许应该删除我的记忆\n不要再想过去\n我还是想念你\n0932\n（我只好选关机）"
+  },
+  {
+    title: "Moonchild",
+    lyrics: "善感像潮汐 谁在超现实\n所有的也许都 得到应许\n真实般虚拟 虚拟般真实\n你的心坑坑疤疤有 多少秘密\n（欲上青天揽明月）\n抹去言语 我们物以类聚\n（欲上青天揽明月）\n灵魂牵引 我们物以类聚\nMoon Child 怀抱着月亮那个小孩\n梦在 阴晴圆缺也不离开\n你来 让世界明白另类存在\n我在 我都在 来抱个满怀\n汹涌了潮汐 潜入潜意识\n所有的也许都 得到应许\n梦境般滤镜 滤镜般梦境\n你的心磕磕绊绊总 保持距离\n（欲上青天揽明月）\n抹去差距 我们物以类聚\n（欲上青天揽明月）\n灵魂牵引 我们物以类聚\nMoon Child 怀抱着月亮那个小孩\n梦在 阴晴圆缺也不离开\n你来 让世界明白另类存在\n我在 我都在 来抱个满怀\nMoon Child\n梦在\n你来 (come back to me come back to me)\n我在\nMoon Child\n梦在 阴晴圆缺也不离开\n你来 让世界明白另类存在\n我在 我都在 了解才是爱\nMoon Child\n梦在 阴晴圆缺也不离开\n你来 让世界明白总有例外\n我在 你是我唯一的Moon Child\nMoon Child\nMoon Child\nMoon Child\nMoon Child\nYou are my only Moon Child"
+  },
+  {
+    title: "那个女孩",
+    lyrics: "hola! 最近还好吗 hola! 好久不见啦\n今天忙不忙 想和你分享 我遇见一个女孩\n好巧我也遇见一个女孩 让我想定下来\n她有 最真的笑容 最美的想法\n我一百分的女孩\n那个女孩 留着长长的头发\n穿着白色的衬衫\n很专心听我说话\n她的身上(有着淡淡的玫瑰花香)\n总是那样(认真分析着我的笑话)\n彷彿有种(谁也不应该宠坏她的)倔强\n那个女孩 说男生不要太帅\n但脾气不能太坏\n会唱歌的男生最让她崇拜\n开口笑就会停不下来\n每本书只会读到一半\n没想到我们会喜欢同一种女孩 What a girl\nWhat a lovely girl\nShe's my lovely girl\nWhat a lovely girl\nhola! 好久不见啦 hola! 最近还好吧\n最近忙不忙 想不想谈谈\n我说的那个女孩\n让我先说说我那个女孩\n她最近有点怪\n总是看着我发呆 常漏接电话\n我真的没有办法\n那个女孩 刚刚剪短了头发\n还是穿白色衬衫\n太专心听我说话\n她的身上(一样淡淡的玫瑰花香)\n不再那样(认真分析着我的笑话)\n少了那种(谁也不应该宠坏她的)倔强\n那个女孩 说明年想去希腊\n她现在想学吉他\n想要写一首歌给自己来唱\n她的小狗牠叫做Luka\n她的生日是三月十八\n该不会我们说的是同一个女孩 What a girl\nWhat a crazy girl\nShe's my crazy girl\n喔 竟然结果是这样 woo~\n那个女孩 说男生不要太帅\n但脾气不能太坏\n会唱歌的男生最让她崇拜\n那些她曾经说过的话\n对你对我可能还对他\n没想到我们会输给同一个女孩\n就当作我们的默契吧\n就当作我们的秘密吧\n就当作我们从没遇见那个女孩 what a girl"
+  },
+  {
+    title: "雪豹",
+    lyrics: "我不怕风雪只怕你的坚决。\n闯入我世界难以磨灭。\n敢攻击一切却怕在你面前。\n我的脆弱变得好明显。\n喊不出声音反正你不在意。\n你要我到哪都是你的世界。\n我爱你我却不自由。\n不爱你我也不自由。\n困在你掌心的野兽。\n你对我总不置可否。\n我不怕风雪只怕你的坚决。\n闯入我世界难以磨灭。\n能睥睨一切却怕在你面前。\n我的骄傲都变成不屑。\n从不曾哭泣不代表不伤心。\n我要逃到哪都是你的世界。\n我爱你我却不自由。\n不爱你我也不自由。\n困在你掌心的野兽。\n一念之间化为乌有。\n我爱你我却不自由。\n不爱你我也不自由。\n我爱你我却不自由。\n不爱你我也不自由。\n我要的是一点温柔(一点温柔)\n你却给我一身伤口。\n一身一身一身伤口。\n回不去回不去从前。\n在你的世界我濒临灭绝。"
+  },
+  {
+    title: "似曾相识",
+    lyrics: "似曾相识\n那一瞥人潮如海的街\n和你擦身而过\n有些恍神一再回头\n她发现我的心不在焉\n我却无法解释\n是谁乱了我生活\n该怎么做才能把回忆都删除\n错过的幸福我像跌入迷雾\n遇见你有种似曾相识的感觉\nOh\n仿佛有同样感受在你的眼底\nOh\n能不能让我们再相遇\n能不能让我再次认识你\n似曾相识犹如游戏\nWu 似曾相识\nYeah\n那一瞥陷入你的世界\n和你擦身而过\n却忘了要往哪里走\n她感觉我的心看不见\n我该怎么解释是你\n乱了我生活\n该怎么做才能把回忆都删除\n那错过的幸福像跌入迷雾\n遇见你有种似曾相识的感觉\nOh我看见同样的\n感受在你眼底\n能不能让我们再相遇\n能不能让我再次认识你\n似曾相识犹如游戏\n遇见你有种似曾相识的感觉\nOh\n是否在前世我们有一段过去\n能不能这次改变命运\n能不能这次让我真的爱你\n还是往事别再提起\n似曾相识似曾相识\n遇见你有种似曾相识的感觉\nOh\n是否在前世我们有一段过去\n能不能帮我把你忘记\n能不能帮我停下对你追寻\n或许我能不再想你\n遇见你有种似曾见你有种似曾\n相识的感觉"
+  },
+  {
+    title: "普通朋友",
+    lyrics: "等待\n我随时随地在等待\n做你感情上的依赖\n我没有任何的疑问\n这是爱\n我猜\n你早就想要说明白\n我觉得自己好失败\n从天堂掉落到深渊\n多无奈\n我愿意改变 (what can I do?)\n重新再来一遍(just give me change)\n我无法只是普通朋友\n感情已那么深\n叫我怎么能放手\n但你说\nI only want to be your friend\n做个朋友\n我在\n你心中只是just a friend\n不是情人\n我感激你对我这样的坦白\n但我给你的爱暂时收不回来\nSo I\n我不能只是be 你的朋友\n（你说对不对）\n我不能只是做你的朋友\n我猜\n你早就想要说明白\nThat's right\n我觉得自己好失败\n从天堂掉落到深渊\n多无奈\n我愿意改变 (what can I do?)\n重新再来一遍(just give me change)\n我无法只是 只是做你的朋友\n感情已那么深\n叫我怎么能放手\n但你说\nI only want to be your friend\n做个朋友\n我在\n你心中只是just a friend\n不是情人\n我感激你对我这样的坦白\n但我给你的爱暂时收不回来\nSo I\n我不能只是做 你的 friend\n我不能不能做 耶\nI don't wanna be your\n我不能不能做你的朋友\nI don't wanna be your friend\nI don't wanna be your\nI don't wanna be your friend\nI don't wanna be your\nI don't wanna be your friend\nI don't wanna be your\nI don't wanna be your friend\nI don't wanna be your 只是做你的朋友\n谢谢"
+  },
+  {
+    title: "飞机场的10:30",
+    lyrics: "10:30的飞机快要到了\n机场还是那么的拥挤\n我喝来喝去可乐还是要剩一点\n剩一点给你 oh yeah\nFor my baby\n一年前的我们过的那么快乐\n充满笑与泪的时光\nBaby\n我以为走下去是一种默契\n你却说你需要离开\n需要一些空间呼吸\nBaby baby baby baby oh baby baby oh baby\n是不是拥有以后就会开始要失去\n我给你的越多\n你却越想要躲\n爱已无法回答所有的问题\nBaby\n10:30的飞机已经到了\n可是你的影子没出现\n我想你可能在等待你的行李\n和你的红色和白色的披衣\n一年前的我们过的那么快乐\n充满笑与泪的时光\nBaby\n我以为走下去是一种默契\n你却说你需要离开\n需要一些空间呼吸\nBaby baby baby baby oh baby baby oh baby\n是不是拥有以后就会开始要失去\n我给你的越多\n你却越想要躲\n爱已无法回答所有的问题\nBaby\n1:30的我在回家路上\n旅客名单没你的名字\n我想你已经做了最后决定\n哦 我已失去你\nBaby baby baby baby oh baby baby oh baby\n是不是爱给的不够所以你要怀疑\n你还要再想吗\n你要不要回家\n人总是傻到失去才想珍惜\nBaby baby baby baby oh baby baby oh baby\n是不是拥有以后就会开始要失去\n我给你的越多\n你却越想要躲\n爱已无法回答所有的问题\nBaby baby baby baby oh baby baby oh baby\n是不是爱给的不够所以你要怀疑"
+  },
+  {
+title: "流沙",
+lyrics: "昨天晚上的事\n我看没有什么好谈的吧\n我看就这样吧\nOh yeah oh\n并不是真的路过而已\n也不是真的不会想你\n全都不是真的是骗自己\n其实还爱你\n爱着你\n我以为我早想清楚\n不由自主恍恍惚惚\n又走回头路\n再看一眼有过的幸福\n爱情好像流沙\n我不挣扎\n随它去吧我不害怕\n爱情好像流沙\n心里的牵挂\n不愿放下\nOh Baby 让我这样吧\nOh\n并不是真的路过而已\n也不是真的不会想你\n全都不是\n真的是骗自己\n其实还爱你\n爱着你\n我以为我早想清楚\n不由自主恍恍惚惚\n又走回头路\n再看一眼有过的幸福\n爱情好像流沙\n我不说话\n等待黑暗\n泪能落下\n爱情好像流沙\n明知该躲它\n无法自拔\nOh Baby 是我太傻\nNo no no no no no\n是一再的做一再的错不由我\n我一步一步一步一步\n慢慢走向流沙\n爱情好像流沙\n我不挣扎随它去吧\n我不害怕\n爱情好像流沙\n心里的牵挂\n不愿放下\nOh Baby 让我这样吧\n让我这样吧"
+},
+{
+title: "一念之间",
+lyrics: "你是怎么做到的给了她需要的爱\n你是怎么想象的关于你们的未来\n如果我怀疑幸福不会一直存在\n请告诉我该怎么去得到爱\n你会为爱说什么当作永恒的承诺\n你曾为爱做过的后悔的事多不多\n如果已经不在乎又无法说明白\n请告诉我该怎么去Say Goodbye\n一念是多情一念是无情\n爱情里没有人最聪明\n心中那莫名的墙翻不过来\n最恨是自己\n一念成了佛一念成了魔\n每个人做了心中的选择\n当初心头的最好\n一念之间可以Say Goodbye\n你会为爱说什么当作永恒的承诺\n你曾为爱做过的后悔的事多不多\n如果已经不在乎又无法说明白\n请告诉我该怎么去Say Goodbye\n一念是多情一念是无情\n爱情里没有人最聪明\n心中那莫名的墙翻不过来\n最恨是自己\n一念成了佛一念成了魔\n每个人做了心中的选择\n当初心头的最好\n一念之间可以Say Goodbye\n一念是多情一念是无情\n爱情里没有人最聪明\n心中那莫名的墙翻不过来\n最恨是自己\n一念成了佛一念成了魔\n每个人做了心中的选择\n当初心头的最好\n一念之间可以Say Goodbye\n为何心心念念要的爱\n一念之间可以Say Goodbye"
+},
+{
+title: "沙滩",
+lyrics: "跟沙有关系的歌好不好\n沙沙地啊 我把声\n少少沙沙地\n空无一人这片沙滩\n风吹过来冷冷海岸\n我轻轻抖落鞋里的沙\n看着我的脚印\noh一个人 一步步\n好寂寞\n看海有些绿天有些蓝\n那段爱情有些遗憾\n像不知不觉游向海天\n到最深的地方\n才发现你早已经\n放弃我\n我听着海浪温柔的呼吸\n我看着云朵飘来飘去\n有什么方法\n让自己真的忘记\nonly blue only blue\n爱让人好忧郁\n我的心\n我的心\n我的心\n有点blue"
+},
+{
+title: "暗恋",
+lyrics: "Still lonely, still lonely\n昨晚又再见到你 你还是那么美丽\n我紧张到话都不会说 就傻傻看着你\n渴望永远这距离 就是和你在一起\n醒来发现这一切都只 是我的梦境\n告诉自己要冷静 却又无法不想你\n我的懦弱已经开始让 我讨厌我自己\n是你对我有戒心 还是我没有自信\n可是谁也不能阻止我 我要暗恋你\nso lonely\nso here I am standing all alone\n在某个街头 有个我在这里只为你等候\nhere I am waiting just for you\n开放我所有 希望你能了解你能够接受\nso lonely\n今晚渴望再见你 虽然只是在梦里\n短暂的甜蜜已胜过了 一辈子没有你\n就算没快乐结局 就算从此死了心\n我要付出我所有诚意 只要能感动你\n我愿意 (我愿意)\nso here I am standing all alone\n在某个街头 有个我在这里只为你等候\nhere I am waiting just for you\n开放我所有 我要为你怎么做你才接受我\n(才接受我) 我喜欢 (我喜欢你)\n我要你 (我要你) 我爱你\nso here I am standing all alone (standing all alone)\n在某个街头 有个我在这里只为你等候\nso here I am waiting just for you\n开放我所有 希望你能了解你能够接受\nI am lonely\n故事就说到这里 就算你们再好奇\n我想说的都已说完了 其余是秘密\n在那某一个街头 会流传某个旋律\n那是我在轻轻唱着歌 我多爱你 Janine"
+},
+{
+title: "Dear God",
+lyrics: "刚刚看完六点半的新闻\n那悲剧又重演\n有个妈妈拿著儿子的相片\n期盼他会出现\n看不下那画面\n我转过头却开始流泪\n是惩罚是考验\n还要有多少的心碎\n爱 爱 在这个世界上爱已被忘记\n谁都不相信 谁都不相信 相信爱\n哎 哎 真理和公平都变成了笑话\n我不愿住在这样的城市里\n话题都围绕在腥色暴力\n有八卦没想法\n计算逃避人人都在玩游戏\n没有钱没人理你\n我心里很愤怒\n只能冷酷让自己麻木\n拿生命做赌注\n这些疯狂还要多久\n爱 爱 在这个世界上有没有意义\n没有人在乎 没有人在乎 没有爱\n哎 哎 我真的很想要开口骂脏话\n不是我的错 不是我的错 别怪我\nDear God\n为什么你闭上眼不想想办法\n装做看不见 装做看不见 告诉我\n哎 哎 告诉我把爱找回来的方法\n因为我无法离开这个鬼地方\n我没有办法离开 no no\n这个鬼地方\n它还是我的家\n刚刚看完远方传来的消息\n像恶梦在继续\n给点力量让自己能活下去\nDear God\n你在哪里\nNa wo yeah\nNa wo yeah"
+},
+{
+title: "乱七∞糟",
+lyrics: "一转眼八年就过 改变真多\n我的家是这里吗 请告诉我\n口袋的钱哪里去\n什么你都买不起\n你找的工作在哪里\n你不过只是个数据\n是谁在抹黑谁\n谁最大声觉得谁比较对\n是谁又在比谁\n结论就是你是什么都没\n我的妈呀请你放过我\n我们有什么错\n我的妈呀请你拯救我\n难道你不爱我\n啦啦啦 要这样来爱我\n啦啦啦 你爱却爱死我\n口袋的钱哪里去\n什么你都买不起\n你找的工作在哪里\n你不过只是个数据\n是谁在抹黑谁\n谁最大声觉得谁比较对\n是谁又在比谁\n结论就是你是什么都没\n我的妈呀 请你放过我\n我们有什么错\n我的妈呀 请你拯救我\n难道你不爱我\n啦啦啦 要这样来爱我\n啦啦啦 你爱却爱死我\n啦啦啦\n我的妈呀 请你放过我\n我们有什么错\n我的妈呀 请你拯救我\n难道你不爱我\n我的妈呀 请你放过我\n我们有什么错\n我的妈呀 请你拯救我\n难道你不爱我\n啦啦啦 要这样来爱我\n啦啦啦 你爱却爱死我\n爱我...爱我"
+},
+{
+    title: "孙子兵法",
+    lyrics: "我说 我说 坦克剩很多\n花朵没见过\n传说 传说 季节有四个\n陆地没淹没\n听说 蘑菇云朵 混合\n海啸挽歌\n在你 找快乐的周末\n地球 毁灭性收缩\n谁说过沉默等同许可\n有许多还想要更多\n以爱之名勒索 什么都想囊括\n爸爸的爸爸请问 为何\n这种世界留给我\nLa...\n快说 快说 台北莫斯科\n北极是什么\n传说 传说 同归于荒漠\n高贵或龌龊\n大人 饱得打嗝 小孩 继续挨饿\n怒火 是最后的烟火\n文明 被狠狠抖落\n谁说过沉默等同许可\n有许多还想要更多\n以爱之名勒索 什么都想囊括\n爸爸的爸爸请问\n为何 连我们你也掠夺\n谁说过沉默等同许可\n有许多还想要更多\n以爱之名勒索\n什么都想如火\n爸爸的爸爸请问\n为何 仇恨被一再倒模 一再复活\nLa..."
+},
+{
+    title: "黑色星期二",
+    lyrics: "六月六号的清晨\n昏昏沉沉突然就被惊醒\n一身冷汗的原因\n是现实或梦境让人恐惧\n怎么睡都睡不着\n翻来覆去脑袋快炸了\n没有良心可折磨\n才能无知无觉快活\n黑暗的恨像瘟疫\n人的心只想自己\n用错了勇气和生命\n究竟为了谁\n为了为了谁 把一切摧毁\n难道无所谓\n为什么 为什么\n为什么 用爱扭曲了爱\n不沉默 不走开\n我们站起来 fight\n为什么 为什么\n为什么 改变不能用爱\n不放弃 还要 try\n把世界夺回来\n六月六号的清晨\n昏昏沉沉突然就被惊醒\n一身冷汗的原因\n是现实或梦境让人恐惧\n怎么睡都睡不着\n翻来覆去脑袋快炸了\n没有良心可折磨\n才能无知无觉快活\n黑暗的恨像瘟疫\n人的心只想自己\n用错了勇气和生命\n究竟为了谁\n为了为了谁 把一切摧毁\n难道无所谓\n为什么 为什么\n为什么 用爱扭曲了爱\n不沉默 不走开\n我们站起来 fight\n为什么 为什么\n为什么 改变不能用爱\n不放弃 还要 try\n把世界夺回来 夺回来\n为什么 为什么\n为什么 用爱扭曲了爱\n不沉默 不走开\n我们站起来 fight\n为什么 为什么 为什么 为什么\n为什么 改变不能用爱\n不放弃 还要 try\n把世界夺回来\n不放弃 还要 try\n让美好再回来\n不放弃 还要 try\n让美好再回来"
+},
+{
+    title: "鬼",
+    lyrics: "我想问你相不相信\n这个世界上有一个看不见的空间 在你眼前\n四面八方把你包围\n但又不会让你摸得清楚它的立场 不停改变\n在左右两边 左右你视线\n一定会在面前 突然在后面\n他们徘徊不退 耐心的等天慢慢黑\n不管你感觉有多累 千万不能让自己睡\n鬼 他们是鬼\n鬼 鬼 全都是鬼\nHey Hey 你不能睡\nHey 他们是干不掉的鬼\n被谁压得喘不过去\n地铁每天同一批人扮乘客跟踪我 你懂不懂\n脚步声越来越接近\n感到有只冰冷黑手在身上打手印 却不会痛\n它在我左边 也在你右边\n它不必露脸 它在我里面\n他们徘徊不退\n耐心的等天慢慢黑\n不管你感觉有多累\n千万不能让自己睡\n鬼 他们是鬼\n鬼 全都全是一群鬼\n鬼 一堆死不了的鬼 鬼 鬼\n他们徘徊不退\n一步一步的把你追\n当你发觉眼圈发黑\n你可能已经变成鬼\nAw 你是个鬼\nCome On 你是个鬼 你是个鬼\nYeah 在不知不觉变成死不了的鬼 鬼\n他们徘徊不退\n一步一步的把你追\n等到你觉得好气馁\n等到你会说无所谓\n鬼 你是个鬼\n鬼 全都全是一群鬼\n鬼 一堆死不了的鬼 鬼 鬼\n如果心里有鬼\n谁和谁不算是同类\n你的血在暗里发霉\n这究竟是谁在怕谁\nAw 我是个鬼\nCome On 我是个鬼 我是个鬼\nYeah 你到底怕人还是应该要怕鬼"
+},
+{
+    title: "黑色柳丁",
+    lyrics: "今天我心情有一点怪怪\n可是说不出来到底为什么\n好像有一些悲伤的征兆\n可是病因不知道\n头上有橘色的加州阳光\n我的口袋只有黑色的柳丁\n我只有一个蓝色的感觉\n不要问我为什么\n很想说 但又觉得没有话好说\n我只恨我自己\n逃不出这监狱\n或许我 是个没有出息的小虫\n不该一直作梦\n你不是个英雄\n叶子用坠落证明换季\n可我昏昏沉沉没有办法醒\n你想做什么英雄\n还是你会要放弃\n天是亮的却布满乌云\n所有焦距被闪光判了死刑\n你要做什么英雄\n我看你不过是佣兵\n我只想哭 只想哭 只想哭\n我只想哭 只想哭 只想哭\n今天一起床我就头痛\n不管吃了几瓶药都没有用\n心情有一些莫名的焦躁\n你离我越远越好\n外面有橘色的加州阳光\n我却躲在自己孤独的黑洞\n我只有一个小小的要求\n就是请你Leave me alone\n很想说 但又觉得没有话好说\n我只恨我自己\n逃不出这监狱\n或许我 是个没有出息的小虫\n不该一直作梦\n你不是个英雄\n叶子用坠落证明换季\n可我昏昏沉沉没有办法醒\n你想做什么英雄\n还是你会要放弃\n天是亮的却布满乌云\n所有焦距被闪光判了死刑\n你要做什么英雄\n我看你不过是佣兵\n我只想哭 只想哭 只想哭\n我只想哭 只想哭 只想哭\n我只想哭 只想哭 只想哭\n我只想哭 只想哭 只想哭"
+},
+{
+    title: "寂寞的季节",
+    lyrics: "风吹落最后一片叶\n我的心也飘着雪\n爱只能往回忆里堆叠\nOh 给下个季节\n忽然间树梢冒花蕊\n我怎么会都没有感觉\nOh 整条街都是恋爱的人\n我独自走在暖风的夜\n多想要向过去告别\n当季节不停更迭 oh\n却还是少一点坚决\n在这寂寞的季节\n艳阳高照在那海边\n爱情盛开的世界\n远远看着热闹一切\nOh 记得那狂烈\n窗外是快枯黄的叶\n感伤在心中有一些 oh\n我了解那些爱过的人\n心是如何慢慢在凋谢\n多想要向过去告别\n当季节不停更迭 oh\n却永远少一点坚决\n在这寂寞的季节\n又走过风吹的冷冽\n最后一盏灯熄灭\n从回忆我慢慢穿越\n在这寂寞的季节\n还是寂寞的季节 oh\n一样寂寞的季节"
+},
+{
+    title: "蝴蝶",
+    lyrics: "当这世界已经准备将我遗弃\n像一个伤兵被留在孤独荒野里\n开始怀疑我存在有没有意义\n在别人眼里我似乎变成了隐形\n难道失败就永远翻不了身\n谁来挽救坠落的灵魂\n每次一见到你 心里好平静\n就像一只蝴蝶飞过废墟\n我又能活下去 我又找回勇气\n你的爱像氧气帮忙我呼吸\n我又能呼吸 我又能呼吸\n你就是不愿意放弃\n生命中充满乱七八糟的问题\n像走在没有出口的那个迷宫里\noh no 一次又一次只会用借口逃避\n怎么你从来没对我彻底的死心\n我有何德何能值得你珍惜\n为何你对我有求必应\n每次一想到你 像雨过天晴\n看见一只蝴蝶飞过废墟\n是那么的美丽 就像一个奇迹\n让我从倒下的地方站起\nWoo....只要一靠近你\n就觉得安心\n你看着我的眼没有怀疑\n你对我的相信\n让我又能重生\n不管世界多冷我还有你\n我有你\n爱我这样的人对你来说不容易\n我的痛苦你也经历\n你是唯一 陪我到天堂与地狱\n每次一想到你\n像雨过天晴 看见一只蝴蝶飞过了废墟\n我能撑得下去 我会忘了过去\n是你让我找回新的生命\nyeah.. 每次一见到你 就心存感激\n现在我能坦然面对自己\n我会永远珍惜 我会永远爱你\n在我心底的你位置没有人能代替\nyeah 你就是那唯一"
+},
+{
+    title: "二十二",
+    lyrics: "春天是他最爱的季节\n当微风随意吹乱他的头发\n他并不在意身边世界的吵杂\n只想著自己生命中的变化\n还有十五分钟才午休\n从早到晚没有想像中那么好过\n安定的日子不一定就是幸福\n忘不掉他在心里做过的梦\n他今年农历三月六号刚满二十二\n刚甩掉课本要离开家看看这世界\n却发现许多烦恼要面对 oh yeah\n他常会想望能回到那年他一十二\n只需要好好上学生活单纯没忧愁\n他一直满怀希望\n人生偶尔会走上一条陌路\n像是没有指标的地图\n别让他们说你该知足\n只有你知道什么是你的幸福\n他常会想望能回到那年他一十二\n只需要好好上学生活单纯没忧愁\n他笑著想过未来\noh 他应该得到幸福\n如此的简单的梦\n有没有实现"
+},
+{
+    title: "susan说",
+    lyrics: "男：Yeah\nSusan 说\nSusan 在那命运月台前面\n再上车 春天开始落叶\n转接间 话断了线\n离台北 南京是多么远 oh\n那诺言 还会不会兑现 oh\n不在乎爱情里伤痛在所难免\n一个人却一个世界 oh\n你是否也像我 动摇过几遍\n爱只是个错觉 oh yeah\nSusan说\n思念\n我常常思念不常见面\n她怀疑 sam 是虚拟的脸\n但爱情还在上演\n那是谁 在放古老的唱片\n那片段 像对未来留言\n不在乎爱情里伤痛在所难免\n一个人却一个世界 oh\n你是否也像我 动摇过几遍\n爱会不会实现 oh\n女：Susan离了洪桐县\n将身来在大街前\n合：未曾开言心内惨\n过往的君子听我言\n男：Susan离了洪桐县\n挂了个牌子站在大街前\n被那凶恶群众包围 稍微\n合：等一下\n过往的君子\n女：请你听我言\n哪一位去往南京转\n与我那三郎把信转\n就说苏三把命断\n合：来生变一只狗一只马\n我当报还\n不在乎爱情里伤痛在所难免\n一个人却一个世界\noh\n男：\n我怀疑你像我 动摇过几遍\n是否爱本来擅变 oh\n合：Susan说 我的Susan说\nSusan说 我的Susan说\nSusan说 我的Susan说\nSusan说 我的 Susan说\n女：我说\n我说\n我说\nSusan\nSusan\nSusan说\n合：Susan说"
+},
+{
+    title: "High High High",
+    lyrics: "Dancing tonight\n跟着音乐在摇摆\n我的心跳加快\n看到你走过来\n你问我说我们是否见过\n我很想说有\n可是我说没有\n你是我一见就爱上的人\n你说的话让我越陷越深\n我有点怕\n你的爱情不真\nYa makin me hot\n怎么教我忍\nOh, 你的 Love Love Love\n让我爱又不敢爱\n怎么做，怎么说\n我不愿受伤害\nHigh High, into the Sky\n你的爱让我的心 High 起来\n把我心窗打开\nCrazy tonight\n今晚心情那么坏\n实在是想不开\n你看我心不在\n我对你说我不愿意再犯错\n如果不能有\n那就不要有\n你是我一见就爱上的人\n你说的话似乎有点天真\n我有点怕\n你的爱的分寸\n如果不能有\n那就不要有\nOh 你的 Love Love Love\n让我爱又更想爱\n怎么做，怎么说\n我不愿受伤害\nHigh High, into the Sky\n你的爱给我翅膀飞起来\n飞过寂寞的海\nOh, Love Love Love\n让我爱又不敢爱\n怎么做，怎么说\n我不愿受伤害\nHigh High, into the Sky\n你的爱让我的心 High 起来\n把我心窗打开\nOh, Love Love Love\n让我爱又不敢爱\n怎么做，怎么说\n我不愿受伤害\nHigh High, into the Sky\n你的爱给我翅膀飞起来\n飞过寂寞的海\n怎么做，怎么说\n我不愿受伤害\nHigh High, into the Sky\n你的爱给我翅膀飞起来\n飞过寂寞的海"
+},
+{
+    title: "讨厌红楼梦",
+    lyrics: "你说你被爱情伤太多\n我也懂你说的那种难过\n欢迎加入失恋共合国\n钩心斗角为男人而活\n一颗心在他身上挂着\n他们又回报了你什么\n你说你讨厌红楼梦里女生的柔弱\n坚强又会被说成冷漠\n我说妹妹你别再给自己折磨\n想太多其实爱可以又简单又轻松\nㄅㄆㄇㄈㄉㄊㄋㄌ\ncome on let's fall in love 就这么简单\n一二三四 five six seven eight\n爱没有什么不对 快进我棉被\n你说你把爱情看透了\n就当作是人生的功课\n宁愿享受一个人寂寞\n就一起在沙发上赖着\n我们决定对爱放把火\n推翻爱情无聊的规则\n你说你讨厌红楼梦里女生一百多\n得到幸福的却没几个\n我说妹妹你别再给自己折磨\n想太多其实爱可以又简单又轻松\nㄅㄆㄇㄈㄉㄊㄋㄌ\ncome on let's fall in love 就这么简单\n一二三四 five six seven eight\n爱没有什么不对 快进我棉被\nc'mon baby let's fall in love ok\n你不要在一直去想我们配不配\n我不会搞的你蹦\n只会搞的你跳\n大不了明天早上起床你会有一点累\nc'mon 浪费这眼泪还能怪谁\n别再像宝玉黛玉的结局那么可悲\n不用去后悔\n怕犯规这友谊赛没不对\n只要你会愿意去跟我钻进棉被\nㄅㄆㄇㄈㄉㄊㄋㄌ\ncome on let's fall in love 就这么简单\n一二三四 five six seven eight\n爱没有什么不对 快进我棉被\nㄅㄆㄇㄈㄉㄊㄋㄌ\ncome on let's fall in love 就这么简单\n一二三四 five six seven eight\n爱没有什么不对 快进我棉被"
+},
+{
+    title: "就是爱你",
+    lyrics: "我 一直都想对你说\n你给我想不到的快乐\n像绿洲给了沙漠\n说 你会永远陪着我\n做我的根 我翅膀\n让我飞 也有回去的窝\n我愿意 我也可以 \n付出一切 也不会可惜\n我们在一起 看时间流逝 要记得我们相爱的方式\n就是爱你爱着你\n有悲有喜有你\n平淡也有了意义\n就是爱你爱着你\n甜蜜又安心\n那种感觉就是你 ~\n我 一直都想对你说\n你给我想不到的快乐\n像绿洲给了沙漠\n说 你会永远陪着我\n做我的根 我翅膀\n让我飞 也有回去的窝\n我愿意 真的愿意 \n付出一切 也要保护你\n我们在一起 时间继续流逝 \n请记得我有多么的爱你\n就是爱你爱着你\n不弃不离不在意\n一路有多少风雨\n就是爱你爱着你\n放在你手心\n灿烂的幸福全给你\n就是爱你爱着你\n不弃不离\n不在意一路有多少风雨\n就是爱你爱着你\n放在你手心\n灿烂的幸福全部都给你\n就是爱你"
+},
+{
+    title: "马戏团",
+    lyrics: "傍晚了 在帐篷下\n烛光皮影戏\n是真还是假 啦啦啦啦\n今晚是神秘剧团期待的首映\n人们坐立不安 啦啦啦啦\n孩子们手里紧紧抓住棉花糖\n兴奋在等着马戏团\n妈妈说 不要废话太多\n走钢丝的生活 难过\n爸爸说 妈妈她太罗唆\n有安全网 是干什么\n开幕了 白马弹跳\n喇叭的吵闹\n让气氛到高潮 啦啦啦啦\nA 先生说他九尺高跷踩不到\n吞刀老陶感冒\n吉普赛说我中奖机会特别好\n光头大胖飞出大炮 耶耶\n妈妈说 人生起起落落\n要学习有一点 幽默\n爸爸说 今天你的失落\n会成你明日的收获\n妈妈说 人生起起落落\n要学习有一点 幽默\n爸爸说 今天你的失落\n会成你明日的收获 啦啦啦啦"
+},
+{
+    title: "火鸟功",
+    lyrics: "快都不能呼吸 电车上太拥挤\n我有闻到臭气 是谁放了臭屁\n赶着像只蚂蚁 没时间喝咖啡\n每天八个会议 蹲在马桶透个气\n我和你 都一样 像傻瓜\n我要追 我要飞 超强火鸟功要出发\nFrom Zero to Hero 我向恶魔say no\n我就是我自己的英雄\n你有意见是吗 我不是你的煎蛋寿司\n我要追 现在要飞 我是superhero (superhero)\n终于快下班了 我头痛快爆炸\n可爱的OL 一起吃饭好吗\nBoss一声令下 今晚又要喝挂\n约会只好取消啦 不会又要睡路边吧\n我和你 都一样 像傻瓜\n我要追 我要飞 超强火鸟功要出发\nFrom Zero to Hero 我向恶魔say no\n我就是我自己的英雄\n你有意见是吗 我不是你的煎蛋寿司\n我要追 现在要飞 我是superhero (superhero)\n(混蛋 茶叶蛋 跟我喝一杯深水炸弹)\n(阴阳人) 哈哈 哈哈 给你看看我的厉害吧\n(Hero) 可恶... 准备蓝光雷射炮 发射\n(阴阳人) 哈哈 那是没有用的 你逃不出我的魔掌\n(Hero) 给你看看火鸟功的厉害 火鸟功 变\nFrom Zero to Hero 我向恶魔say no\n我就是我自己的英雄\n你有意见是吗 我不是你的煎蛋寿司\n我要追 现在要飞 我是superhero\n"
+},
+{
+    title: "宫保鸡丁",
+    lyrics: "我有一只小毛驴 我从来也不骑\n有一天我心血来潮骑著去赶集\n在我记忆中从来没有这么热的夏天\n没可能今天只有38度\n一大早五点吃完烧饼油条就去耕田\n幸福就是规律过一天一天\n我爱这种简单的感觉\n快乐就像一hot and spicy 宫保鸡丁\n选一块好鸡配一点乾辣椒\n加上葱花大蒜 花生别忘记\n我来到镇上市场带著我的大公鸡mimi\n在热热闹闹买卖人群\n你就像天使出现在梦境里穿著碎花裙\n你的笑让我一见钟情\n我爱这种天真的感觉\n就算天塌下来也不是什么问题\n我只希望每天跟你在一起\n不用做什么在家里就可以\n我只要你做我的baby\ni don't care if 你发大小姐脾气\n或者你要跟我玩爱的游戏\nooh...you're my baby ooh...you're\n爱就像是宫保鸡丁\n躺在草原地\n我迷失在你眼中\n我的心像风筝断线飘零\n我真的拥有你 我还不能相信\n我常会用力捏我自己看我是否清醒\noh..baby i don't know\n为什么看上我\n我没有钱送你hello kitty\n可以 我所有的一切通通都给你\n因为我爱你\n你亲爱daddy舍不得把他的甜心嫁给我\n我看他好像有点难过\n我没有宾士没有钻戒可是我愿意\n给你我的心爱大公鸡\n我只要每天跟你黏在一起\n不用做什么在家里就可以\n我只要你做我的baby\n(please be my little chickadee)\ni don't care if 你发大小姐脾气\n或者你要跟我玩爱的游戏\nooh...you're my baby,you're\n我只要每天跟你黏在一起\n不用做什么在家里就可以\n我只要你做我的baby\ni don't care if 你发大小姐脾气\n或者你要跟我玩爱的游戏\nooh...you're my baby,you're\n我只要每天跟你黏在一起\n不用做什么在家里就可以\n我只要你做我的baby\n(please be my little chickadee)\ni don't care if 你发大小姐脾气\n或者你要跟我玩爱的游戏\nooh...you're my baby,you're\n我只要每天跟你黏在一起\n不用做什么在家里就可以\n我只要你做我的baby\n(please be my little chickadee)\ni don't care if 你发大小姐脾气\n或者你要跟我玩爱的游戏\nooh...you're my baby,you're\n"
+},
+{
+    title: "心乱飞",
+    lyrics: "耶管不住的心飞\n哦耶耶啦啦啦啦啦啦\n哦啦啦啦啦啦啦啦啦啦啦啦啦啦啦\n哦贝贝\n你说你懒得管我\n说我像无轨电车到处乱追\n你真的最了解我\n那怕是我的想法东南西北\n我想过的快乐夜里好睡\n一切你说OK 我也OK\n假如酷哥就该爱上辣妹\n也许就是你和我最相配\nTELL ME DO I DO I DO I MY BABY\n我就是管不住了心会乱飞\nTELL ME DO I DO I DO I MY BABY\n我是否真要放弃为所欲为\n我怎么做才是对\n你说该做个选择\n我怎么知道这样就一定对\n我真的很在乎你\n却要先想想自己不是为谁\n我想过的快乐夜里好睡\n一切你说OK 我也OK\n假如酷哥就该爱上辣妹\n也许就是你和我最相配\nTELL ME DO I DO I DO I MY BABY\n我就是管不住了心会乱飞\nTELL ME DO I DO I DO I MY BABY\n我是否真要放弃为所欲为\nTELL ME DO I DO I DO I MY BABY\n我就是管不住了心会乱飞\nTELL ME DO I DO I DO I MY BABY\n我是否真要放弃为所欲为\nTELL ME DO I DO I DO I MY BABY\n"
+},
+{
+    title: "望春风",
+    lyrics: "独夜无伴守灯下\n清风对面吹\n十七八岁未出嫁\n想到少年家\n果然标致面肉白\n谁家人子弟\n想要问伊惊歹势\n心内弹琵琶\n谁说女人心难猜\n欠个人来爱\n花开当折直须摘\n青春最可爱\n自己买花自己戴\n爱恨多自在\n只为人生不重来\n何不放开怀\n谁说女人心难猜\n欠个人来爱\n花开当折直须摘\n青春最可爱\n"
+},
+{
+    title: "My Anata",
+    lyrics: "oh 不知道你还爱不爱我\n我哪里做错 请你快告诉我\n我打不还手 我骂不还口\n只要你说一声 「爱してる」（我爱你）\n别说さよなら（再见）\nひとりで （一个人）孤苦伶仃的我\n苦等着あなた（你）两年三个月没有消息\nwhat happened\n快要花轰（快要发疯） 我听到门铃声\n（叮咚~叮咚）\nすみません（对不起）\n宅急便说他要找的在隔壁\noh 我怀疑你已经不爱我\n想要离开我 我求你不要走\n我为你减肥 我为你喝醉\n请不要说你已不爱我\n亲爱的あなた（你）\n我要你知道 我永远爱你\n如果失去你 我就活不下去\n我们最マッチ（适合） 我不会怪你\n因为有一天你会看见我爬出电视机\n"
+},
+{
+    title: "千言万语",
+    lyrics: "Yeah yeah 千言万语那么多\n无法说出的难过\n千言万语 千百叹息\nYo yo yo check it out\nYeah uh\nWaddup\nWest coast\nLA in the house\nDT drop it\n不知道为了什么 忧愁它围绕着我\n我每天都在祈祷 快赶走爱的寂寞\nDa da da da da\n不知道为了什么 忧愁它围绕着我\n我每天都在祈祷 快赶走爱的寂寞\n那天起 你对我说 永远的爱着我\n千言和万语 随浮云掠过\nForever 千言万语这么多\n无法说出的难过\n不用强迫不用懂\n千言万语 千百叹息\n千言万语ever more\n上百理由不能说\n千言万语 千百叹息\n千言万语说了也没有用\n不知道为了什么 忧愁它围绕着我\n我每天都在祈祷 快赶走爱的寂寞\n那天起 你对我说 永远的爱着我\n千言和万语 随浮云掠过\nForever 千言万语这么多\n无法说出的难过\n不用强迫不用懂\n千言万语 千百叹息\n千言万语ever more\n上百理由不能说\n千言万语 千百叹息\nA thousand words or evermore\nForever 千言万语这么多\n无法说出的难过\n不用强迫不用懂\n千言万语 千百叹息\n千言万语ever more\n上百理由不能说\n千言万语 千百叹息\nDa da da da da da da da\n"
+},
+{
+    title: "今天你要嫁给我",
+    lyrics: "春暖的花开带走冬天的感伤\n微风吹来浪漫的气息\n每一首情歌忽然充满意义\n我就在此刻突然见到你 (Take The Way)\n春暖的花香带走冬天的饥寒\n微风吹来意外的爱情 (Its Love)\n鸟儿的高歌拉近我们距离\n我就在此刻突然爱上你\n听我说 手牵手 跟我一起走\n创造幸福的生活\n昨天已来不及 明天就会可惜\n今天嫁给我好吗\nHere we go Er Er\nJolin in the house\nDT in the house\nJolin in the house\nDT in the house\nOhe on  Jolin in the house\nDT in the house\nOur love in the house\nSweet Sweet Love\n夏日的热情打动春天的懒散\n阳光照耀美满的家庭 (Yeah Yeah)\n每一首情歌都会勾起回忆\n想当年我是怎么认识你 (But You Know)\n冬天的忧伤接续秋天的孤单\n微风吹来苦乐的思念(Im missing You Yeah)\n鸟儿的高歌唱着不要别离\n此刻我多么想要拥抱你\n听我说 手牵手 跟我一起走\n过着安定的生活\n昨天已来不及 明天就会可惜\n今天你要嫁给我\n听我说 手牵手 我们一起走\n把你一生交给我\n昨天不要回头 明天要到白首\n今天你要嫁给我\nHey Hey Er Er\n叮当听着礼堂的钟声\n我们在上帝和亲友面前见证\n这对男女现在就要结为夫妻\n不愿忘了这一切是多么的神圣\n你愿望生死苦乐永远和她在一起\n爱惜她 尊重她 安慰她 保护着她\n两人同心建立起美满的家庭\n你愿意这样做吗 Yes I do\n听我说 手牵手 一路到尽头\n把你一生交给我\n昨天已是过去 明天更多回忆\n今天你要嫁给我\n今天你要嫁给我\n今天你要嫁给我\n今天你要嫁给我\n今天你要嫁给我\nOh Oh Oh~\n"
+},
+{
+    title: "Melody",
+    lyrics: "终于明白你已变成回忆\n没有言语能够说明当别人问起\n谱了一段旋律没有句点\n也无法再继续\n像埋伏在街头的某种气息\n无意间经过把往日笑与泪勾起\n忽然心痛的无法再压抑\n原来从未忘记\nMelody\n脑海中的旋律转个不停\n爱过你\n有太多话忘了要告诉你\nMelody\n无数动人音符在我生命\n爱过你\n失去你我才知道要珍惜\noh Melody\n当时无法为你写的那首歌\n却是我永远的遗憾\n当爱逝去\n如果所有的错重来一次\n能否改变结局\n终于落下休止符的那首歌\n我听着每一个音符流过的回忆\n为什么在那么多年以后\n还不能说再见\nMelody\n脑海中的旋律如此熟悉\n爱过你\n在我心里只能轻轻叹息\nMelody\n无数动人音符在我生命\n爱过你\n失去你我才知道要珍惜\nMelody oh Melody\n我永远不能忘记\n你是多么的美丽\n让这音乐一直不停响起\nMelody oh Melody\n我舍不得去忘记\n我们快乐的过去\n请别让我从这梦境清醒\nMelody (Melody oh Melody)\n(我永远不能忘记)\n(你是多么的美丽)\n(让这音乐一直不停响起)\n(Melody oh Melody)\n(我舍不得去忘记)\n(我们快乐的过去)\n(请别让我从这梦境清醒)\nMelody\n脑海中的旋律如此熟悉\n爱着你\n求你听我唱完这一段旋律\n请不要离去\nMelody\n你是在我脑海不停的旋律\n爱过你\n我的心里只能无言叹息\nMelody\n无数动人音符在我生命\n爱过你\n失去后我才知道要珍惜你"
+},
+{
+    title: "爱我还是他",
+    lyrics: "黑暗中的我们都没有说话\n你只想回家\n不想你回家\n寂寞深得像海太让人害怕\n温柔你的手\n轻轻揉着我的发\n你的眉眼说\n你好渴望我拥抱\n你身体却在拼命逃\n当欲望在燃烧\n你爱我还是他\n是不是真的他有比我好\n你为谁在挣扎\n爱我还是他\n就说出你想说的真心话\n你到底要跟我还是他\n这是不是命运对我的惩罚\n爱你也没办法\n恨你也没办法\n陷在这个旋涡只想挣脱它\n拉着你的手\n也把我也拽拖下\n你的眉眼说\n你不渴望我拥抱\n每当爱变成了煎熬\n你就开始要逃\n你爱我还是他\n是不是真的他有比我好\n你为谁在挣扎\n爱我还是他\n就说出你想说的真心话\n你到底要跟我还是他\n你爱我还是他\n我宁愿听到残忍的回答\n也不要再被耍\n你爱我还是他\n你爱我还是他\n是不是我可以做的更好\n让你不再挣扎\n你爱我还是他\n我宁愿听到残忍的回答\n你应该明白吧\n你爱我还是他\n你都已看不到我们的好\n我还灰心牵挂\n你爱我还是他\n是否沉默代替你的回答\n我们都别挣扎\n你去爱他"
+},
+{
+    title: "天天",
+    lyrics: "太阳天或下雨天\n人挤人的咖啡店\n找一个能想你舒服的角落\n看着情人肩靠肩\n慢慢转开我视线 yeh yeh\n有个女孩让我好想念\n我的心\n已经\n飞到这个城市另一边\n想看着你\n我爱的脸\n把心里的感情都对你说\n那马路上天天都在塞\n而每个人天天在忍耐\n没有你日子很黑白\n原来这样就是恋爱\n我想要你在我身边\n分享生命中的一切\n我想要天天说\n天天说\n天天对你说我有多爱你\n太阳天或下雨天\n人挤人的咖啡店\n找一个能想你舒服的角落\n看着情人肩靠肩\n慢慢转开我视线 yeh yeh\n有个男孩让我好想念\n我的心\n已经\n飞到这个城市的另一边\n想看着你\n我爱的脸\n把心里的感情都对你说\n那马路上天天都在塞\n而每个人天天在忍耐\n没有你日子很黑白\n原来这样就是恋爱\n我想要你在我身边\n分享生命中的一切\n我想要天天说\n天天说\n天天对你说我有多爱你\n马路上天天都在塞\n而每个人天天在忍耐\n没有你日子很黑白\n原来这样就是恋爱\n我想要你在我身边\n分享生命中的一切\n我想要天天说\n天天说\n天天对你说我有多爱你\n天天说"
+},
+{
+    title: "爱很简单",
+    lyrics: "忘了是怎么开始\n也许就是对你有一种感觉\n忽然间发现自己已深深爱上你\n真的很简单\n爱得地暗天黑都已无所谓\n是是非非无法决择\n没有后悔为爱日夜去跟随\n那个疯狂的人是我\nOh I Love You\n无法不爱你Baby\n说你也爱我Oh I Love You\n永远不愿意Baby失去你\n不可能更快乐\n只要能在一起做什么都可以\n虽然世界变个不停\n用最真诚的心让爱变得简单\n爱得地暗天黑都已无所谓\n是是非非无法决择\n没有后悔为爱日夜去跟随\n那个疯狂的人是我\nOh I Love You\n我一直在这里Baby\n一直在爱你I Love You\nOH YES I DO\n永远都不放弃这爱你的权利\n如果你还有一些困惑\n请贴着我的心倾听\n听我说着爱你Yes I Do\nI Love You Oh Yes I Do\n我一直在这里Baby\n一直在爱你I Love You\n永远都不放弃这爱你的权利\n永远都不放弃这爱你的权利"
+}
+
+];
+
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // 动态生成导航栏
+    const navList = sidebar.querySelector('ul');
+    songs.forEach((song, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = song.title;
+      listItem.addEventListener('click', () => {
+        const targetSection = document.getElementById(`song-${index}`);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
+        }
+      });
+      navList.appendChild(listItem);
+    });
+
+    // 动态生成歌词内容
+    songs.forEach((song, index) => {
+      const section = document.createElement('section');
+      section.id = `song-${index}`;
+
+      const h2 = document.createElement('h2');
+      h2.textContent = song.title;
+
+      const pre = document.createElement('pre');
+      pre.textContent = song.lyrics;
+
+      section.appendChild(h2);
+      section.appendChild(pre);
+      content.appendChild(section);
+    });
+
+    // 菜单切换功能
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
