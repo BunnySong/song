@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -8,23 +7,17 @@
   <title>五月天演唱会歌词本</title>
   <style>
     body {
-    margin: 0; 
-    font-family: "Microsoft YaHei", sans-serif; 
-    color: #fff; 
-    font-size: 16px; 
-    background: linear-gradient(to bottom, #CAA4C9, #8ec4df);
-  
-    /*background-image: url('https://img.picui.cn/free/2025/06/27/685eb0840b78e.png'); */
-    background-size: cover; 
-    -webkit-background-size: cover; /* 适配苹果手机 */
-    background-position: top left; 
-    -webkit-background-position: top left; /* 适配苹果手机 */
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    -webkit-background-attachment: fixed; 
-    overflow-x: hidden; 
-    -webkit-overflow-scrolling: touch; 
-    /* 移除min-height，因为它可能干扰导航栏的定位 */ 
+      margin: 0; 
+      font-family: "Microsoft YaHei", sans-serif; 
+      color: #fff; 
+      font-size: 16px; 
+      background: linear-gradient(to bottom, #CAA4C9, #8ec4df);
+      background-size: cover; 
+      background-position: top left; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      overflow-x: hidden; 
+      -webkit-overflow-scrolling: touch; 
     }
 
     header {
@@ -37,7 +30,6 @@
       padding: 15px 20px;
       text-align: center;
       font-size: 1.25em;
-      
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       background-image: url('https://youke1.picui.cn/s1/2025/07/24/6881e6d9c5790.jpg');
       background-size: cover;
@@ -45,12 +37,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.2em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     .menu-toggle {
@@ -78,6 +64,45 @@
 
     nav.open {
       left: 0;
+    }
+
+    .search-container {
+      padding: 15px 10px;
+      border-bottom: 1px solid #8f9bb2;
+      display: flex;
+      gap: 8px;
+      box-sizing: border-box;
+      width: 100%;
+      /* 新增以下属性实现吸顶效果 */
+      position: sticky;
+      top: 0;
+      background-color: #94a4d1; /* 与侧边栏背景色保持一致 */
+      z-index: 10; /* 确保在内容上方 */
+}
+
+    .search-input {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      outline: none;
+      min-width:0;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .clear-btn {
+      padding: 8px 12px;
+      background-color: #bf92be; 
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      white-space: nowrap;
     }
 
     nav ul {
@@ -112,8 +137,10 @@
     }
 
     section {
-      margin-top: 30px;
-      scroll-margin-top: 80px;
+      margin-top: 40px;
+      padding-bottom: 20px;
+      scroll-margin-top: 100px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     h2 {
@@ -123,7 +150,6 @@
     }
 
     pre {
-
       white-space: pre-wrap;
       word-wrap: break-word;
       background: rgba(76, 69, 137, 0.2); 
@@ -131,31 +157,13 @@
       padding: 20px;
       border-radius: 6px;
       border: 1px solid #b0b0d3;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       line-height: 1.8;
-      box-shadow: 0 1px 3px rgba(13, 32, 76, 0.05);
     }
 
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
-      }
-
-      nav {
-        left: -250px;
-      }
-
-      nav.open {
-        left: 0;
-      }
-
-      main {
-        margin-left: 0;
-      }
-
-      pre {
-        font-size: 1.1rem;
-        line-height: 1.6;
       }
     }
   </style>
@@ -169,14 +177,17 @@
   </header>
 
   <nav id="sidebar">
-    <ul>
-      <!-- 自动生成的歌曲列表 -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="搜索歌曲...">
+      <button class="clear-btn">清空</button>
+    </div>
+    <ul id="songList">
+      <!-- 歌曲列表 -->
     </ul>
   </nav>
 
   <main id="content">
     <p class="developer-info">本网页由Bunnysong007自主开发，如需定制请微信联系。</p>
-    <!-- 歌词内容动态插入 -->
   </main>
 
   <script>
@@ -373,47 +384,103 @@
         title: "温柔",
         lyrics: "走在风中今天阳光\n突然好温柔\n天的温柔 地的温柔\n像你抱着我\n然后发现你的改变\n孤单的今后\n如果冷 该怎么度过\n天边风光身边的我\n都不在你眼中\n你的眼中藏着什么\n我从来都不懂\n没有关系你的世界\n就让你拥有\n不打扰 是我的温柔\n不知道不明了不想要\n为什么我的心\n明明是想靠近\n却孤单到黎明\n不知道不明了不想要\n为什么我的心\n那爱情的绮丽\n总是在孤单里\n再把我的最好的爱给你\n不知不觉不情不愿\n又到巷子口\n我没有哭也没有笑\n因为这是梦\n没有预兆没有理由\n你真的有说过\n如果有 就让你自由\n不知道不明了不想要\n为什么我的心\n明明是想靠近\n却孤单到黎明\n不知道不明了不想要\n为什么我的心\n那爱情的绮丽\n总是在孤单里\n再把我的最好的爱给你\n不知不觉不情不愿\n又到巷子口\n我没有哭也没有笑\n因为这是梦\n没有预兆没有理由\n你真的有说过\n如果有 就让你自由\n自由\n这是我的温柔\n这是我的温柔\n这是我的温柔\n这是我的\n温柔\n让你自由"
     }
-];
 
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    const menuToggle = document.querySelector('.menu-toggle');
+  ];
 
-    // 动态生成导航栏
-    const navList = sidebar.querySelector('ul');
+  // DOM元素
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const songList = document.getElementById('songList');
+  const content = document.getElementById('content');
+  const searchInput = document.querySelector('.search-input');
+  const clearBtn = document.querySelector('.clear-btn');
+
+  // 初始化所有歌曲
+  function renderAllSongs() {
+    let html = '<p class="developer-info">本网页由Bunnysong007自主开发，如需定制请微信联系。</p>';
     songs.forEach((song, index) => {
-      const listItem = document.createElement('li');
-      listItem.textContent = song.title;
-      listItem.addEventListener('click', () => {
-        const targetSection = document.getElementById(`song-${index}`);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
-        }
+      html += `
+        <section id="song-${index}">
+          <h2>${song.title}</h2>
+          <pre>${song.lyrics}</pre>
+        </section>
+      `;
+    });
+    content.innerHTML = html;
+  }
+
+  // 渲染导航列表
+  function renderSongList(filteredSongs = songs) {
+    songList.innerHTML = '';
+    filteredSongs.forEach(song => {
+      const originalIndex = songs.findIndex(s => s.title === song.title);
+      const li = document.createElement('li');
+      li.textContent = song.title;
+      li.dataset.index = originalIndex;
+      
+
+// 导航点击事件 - 优化后的平滑滚动定位
+li.addEventListener('click', () => {
+  // 1. 先关闭侧边栏和键盘
+  sidebar.classList.remove('open');
+  searchInput.blur();
+  
+  // 2. 等待UI更新后再执行滚动（关键改进）
+  setTimeout(() => {
+    const target = document.getElementById(`song-${originalIndex}`);
+    if (target) {
+      // 计算header高度作为偏移量（根据实际样式计算）
+      const header = document.querySelector('header');
+      const headerHeight = header.offsetHeight;
+      
+      // 计算目标位置（元素顶部 - header高度）
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
+      // 平滑滚动到目标位置
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
       });
-      navList.appendChild(listItem);
+    }
+  }, 200); // 等待侧边栏关闭动画完成
+}, { capture: true });
+      
+      songList.appendChild(li);
     });
+  }
 
-    // 动态生成歌词内容
-    songs.forEach((song, index) => {
-      const section = document.createElement('section');
-      section.id = `song-${index}`;
+  // 搜索功能
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    const filtered = query 
+      ? songs.filter(song => song.title.toLowerCase().includes(query))
+      : songs;
+    renderSongList(filtered);
+  });
 
-      const h2 = document.createElement('h2');
-      h2.textContent = song.title;
+  // 清空按钮
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    renderSongList();
+    searchInput.blur();
+  });
 
-      const pre = document.createElement('pre');
-      pre.textContent = song.lyrics;
+  // 菜单切换
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    searchInput.blur();
+  });
 
-      section.appendChild(h2);
-      section.appendChild(pre);
-      content.appendChild(section);
-    });
+  // 全局点击收起键盘（排除导航和搜索区域）
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && e.target !== searchInput) {
+      searchInput.blur();
+    }
+  });
 
-    // 菜单切换功能
-    menuToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
+  // 初始化
+  renderAllSongs();
+  renderSongList();
   </script>
 </body>
 
