@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>潘玮柏演唱会歌词本</title>
+  <style>
+    body {
+      margin: 0; 
+      font-family: "Microsoft YaHei", sans-serif; 
+      color: #fff; 
+      font-size: 16px; 
+      background: linear-gradient(to bottom, #de203d, #9d192d);
+      background-size: cover; 
+      background-position: top left; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      overflow-x: hidden; 
+      -webkit-overflow-scrolling: touch; 
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #CC0723;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.25em;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-image: url('https://youke1.picui.cn/s1/2025/07/30/6889e286e75b0.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      width: 250px;
+      height: 100vh;
+      background: #920c20;
+      position: fixed;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 2px 0 2px rgba(3, 32, 90, 0.1);
+      border-right: 1px solid #920c20;
+    }
+
+    nav.open {
+      left: 0;
+    }
+
+    .search-container {
+      padding: 15px 10px;
+      border-bottom: 1px solid #760819;
+      display: flex;
+      gap: 8px;
+      box-sizing: border-box;
+      width: 100%;
+      /* 新增以下属性实现吸顶效果 */
+      position: sticky;
+      top: 0;
+      background-color: #920c20; /* 与侧边栏背景色保持一致 */
+      z-index: 10; /* 确保在内容上方 */
+}
+
+    .search-input {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      outline: none;
+      min-width:0;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .clear-btn {
+      padding: 8px 12px;
+      background-color: #d11f39; 
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      padding: 12px 20px;
+      border-bottom: 1px solid #720818;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav li:hover {
+      background-color: #ba2d42;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .developer-info {
+      font-size: 0.8em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-top: 40px;
+      padding-bottom: 20px;
+      scroll-margin-top: 100px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.3em;
+      text-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: rgba(85, 1, 13, 0.3); 
+      backdrop-filter: blur(20px); 
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #c21f37;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    潘玮柏演唱会歌词本
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <nav id="sidebar">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="搜索歌曲...">
+      <button class="clear-btn">清空</button>
+    </div>
+    <ul id="songList">
+      <!-- 歌曲列表 -->
+    </ul>
+  </nav>
+
+  <main id="content">
+    <p class="developer-info">本网页由APTX4869Bunny自主开发，如需定制请微信联系。</p>
+  </main>
+
+  <script>
+  const songs = [
+  {
+    "title": "利柏拉契",
+    "lyrics": "Watch me feel me I'm Liberace\nWatch me hate me I'm Liberace\nWatch me love me I'm Liberace\nI'm Liberace I'm Liberace\nWatch me feel me I'm Liberace\nWatch me hate me I'm Liberace\nWatch me love me I'm Liberace\nI'm Liberace I'm Liberace\nSo baby can u feel my wrath\nCuz I be comin at ya stronger better than ever\nProceed with all the freakin haters\nRoll the dice you can take your chance\nBetter not beware cuz I got this hand\nRollin on chrome body rockin all gold\nSittin on top you be watching my throne\n不削 不为 所动\n你可以恨我\n尊重 为我 感动\n谢谢你爱我\n坚持着让世界撼动\n一声令下让那陨石坠落\n不愿太空洞 不愿太笼统\n地球毁灭的时候你还会记得我\n为那一口气OH\n要吞声忍气OH\nSO holla back\nCuz I'm HOLLY WOOD\nSay halle 路亚\nI'm alive liberace\nWatch me feel me I'm Liberace\nWatch me hate me I'm Liberace\nWatch me love me I'm Liberace\nI'm Liberace I'm Liberace\nWatch me feel me I'm Liberace\nWatch me hate me I'm Liberace\nWatch me love me I'm Liberace\nI'm Liberace I'm Liberace\nWatch me feel me I'm Liberace\nWatch me hate me I'm Liberace\n"
+  },
+  {
+    "title": "节奏先生",
+    "lyrics": "Oh You know you love it 对\n跟着我不后悔\n刺激的感官 像高速飘移的甩尾\n切换了档次 超越平凡的everyday\nKnow I'm on fire\nYea I'm on fire\n我到底是谁\n不需要太多的戒备\n谁错谁对\n这没有绝对的绝对\n天使魔鬼\n把恶意全都烧成灰\nI'm taking you home\n意志和灵魂别违背\nYou know it's on\n迷了途的羔羊请沉默\n凡世间的情爱我掌控\n沉醉万物之名的不朽\nI'm a party start it up 启动\n不能停止疯狂的节奏\n不断燃烧黑暗小宇宙\nI'm a party start it up启动\n不能停止疯狂的节奏\n打开光明世界的出口\n而我早就已经不是我\nOh You know you love it 对\n跟着我不后悔\n刺激的感官 像高速飘移的甩尾\n切换了档次 超越平凡的everyday\nKnow I'm on fire\nYea I'm on fire\n我到底是谁\n不需要太多的戒备\n谁错谁对\n这没有绝对的绝对\n天使魔鬼\n把恶意全都烧成灰\nI'm taking you home\n意志和灵魂别违背\nYou know it's on\n迷了途的羔羊请沉默\n凡世间的情爱我掌控\n沉醉万物之名的不朽\nI'm a party start it up 启动\n不能停止疯狂的节奏\n不断燃烧黑暗小宇宙\nI'm a party start it up启动\n不能停止疯狂的节奏\n打开光明世界的出口\n而我早就已经不是我\nWake up everybody 看我双手布满fire\n带你抽离罪恶的深渊 we go higher\n填补你的内心空洞 I'm a party starter\nWe we go hard 节奏震的如此悦耳\nAye aye aye aye震的如此悦耳\nTik tik tik tik时间没有转折\nBow down and look at me bow down and follow me\nCuz I'm a party start it up 启动\n不能停止疯狂的节奏\n不断燃烧黑暗小宇宙\nI'm a party start it up启动\n不能停止疯狂的节奏\n打开光明世界的出口\n而我早就已经不是我\n"
+  },
+  {
+    "title": "巴比伦",
+    "lyrics": "是我曾经无能懦弱 想要的太多\n想活得更大更有派头\n发现全都不够\n传说是真的想要出头\n就得不停奋斗\n贪婪已成为我的枷锁\n还是想要更多\nAyo 点燃那欲火烧的挥霍\n今天换谁pay 我\n我不为我自己难道等着别人喂我\n我争 我斗 我抢\n我夺 让活 更多\n嘴脸化为秃鹫 啃着腐肉不抬起头\n无理的道理把我压制的不能再呼吸\n变相的伦理道德矛盾\n打造了言语武器\n越成功越有出息\n却得活得不胜唏嘘\n聆听我的告解\n逃不了罪孽 承认都有罪\n善恶之源 迷途中轮回\n野火弥漫浮华世界的气味\n困在那座babylon 糜烂城市内\nEverybody get up\nEverybody get up\nEverybody get up\nOh now say goodbye\nBa ba babylon ba ba babylon\nBa ba ba lone lone lone lone lonely lone\nBa ba babylon ba ba babylon\nBa ba ba lone lone lone lone lonely lone\n坐上宝座 戴上皇冠 all gold\n我的项链首饰配搭习惯 霸气 she knows\n大口呼吸 mula mula散发出的铜臭\n我的人生已经没有办法回到普通\n从来不会越轨 只会take what's mine\n但闲人总是七嘴八舌叫我滚出 line\n想当个vip 晋升v vip\n手中拿着黑卡插队\n过去rip\nShine a light\nShine a light\n祝福你uhh shine a light\nPray for me 这个夜晚\nSave me from 最后夜晚\n让我逃出babylon\n逃不了罪孽 承认都有罪\n善恶之源 迷途中轮回\n野火弥漫浮华世界的气味\n困在那座babylon 糜烂城市内\nEverybody get up\nEverybody get up\nEverybody get up\nOh now say goodbye\nBa ba babylon ba ba babylon\nBa ba ba lone lone lone lone lonely lone\nBa ba babylon ba ba babylon\nBa ba ba lone lone lone lone lonely lone\n为罪过\n为过错\n救赎我\nYea yea yea\n为今天\n为明天\n降临前\nYea yea yea\nTake my heart and make it mend\nSave my soul until the end\nEverybody get up\nEverybody get up\nEverybody get up\nOh now say goodbye\nBa ba babylon ba ba babylon\nBa ba ba lone lone lone lone lonely lone\nBa ba babylon ba ba babylon\nBa ba ba lone lone lone lone lonely lone\n"
+  },
+  {
+    "title": "高手",
+    "lyrics": "你是爱情高手\n我是爱情新手\n他是背后黑手\n谁借口谁是凶手\n是走开还是留下说分手\n不分手你又出现像精彩重播\n拉住我插在口袋里的一双手\n想伸手大雨天\n叉路口无能为力你牵着走\n头发淋湿的身体紧靠着我\n勾着手臂的动作勉强着我\n理智告诉我不会有结果\n你就像有毒的苹果不能入口\n不想再上勾 no\n不想失去你 no\n天使是魔太温柔\n微笑拥抱我\n你是爱情高手\n每天出手伤心留在门口\n我是爱情新手\n比你新手说不定温柔\n他是背后黑手\n难以承受不问的借口\n谁借口谁是凶手\n谁不出手都会不了头\n像一直往下沉没流沙中\n难脱手你假扮我生命的绿洲\n吸引我一步步走向海市蜃楼\n没想过留一手\n想回头舒服自在已被你带走\n你那热情的双手困住了我\n你所安排的推手动摇了我\n理智告诉我不会有结果\n你就像有毒的苹果不能入口\n不想再上勾 no\n不想失去你 no\n天使是魔太温柔\n微笑拥抱我\n你是爱情高手\n每天出手伤心留在门口\n我是爱情新手\n比你新手说不定温柔\n他是背后黑手\n难以承受不问的借口\n谁借口谁是凶手\n谁不出手都会不了头\n你是爱情高手\n每天出手伤心留在门口\n我是爱情新手\n比你新手说不定温柔\n他是背后黑手\n难以承受不问的借口\n谁借口谁是凶手\n谁不出手都会不了头\n"
+  },
+  {
+    "title": "All The Way Up",
+    "lyrics": "I'm all the way up\nYeah all the way up\nAll the way all the way up\nI'm all the way up\nYeah唯我至上 唯我 唯我至上\nI'm all the way up\nYeah all the way up\nAll the way all the way up\nI'm all the way up\nYeah唯我至上 唯我 唯我至上\n张了嘴咬\nTake us all down\n无止尽的随便恶飙\n挡了那些大风吞了那些巨浪\n最后证明你才活得可笑\nI'm all the way up\nYeah唯我至上\n几个能跟上stand up\n星空装的硬顶\n手腕费的劳力\n拼命飞\nYeah you know whassup\nI'm all the way up\nPardon me 对不起\n我曾经 太客气\n所有恩怨今天都要讨齐\n这火力 不离去\n瞄准你 别焦急\n生存游戏慢慢的折磨你\n食物链在你的之上\n看看你那低等的智商\n不戳破是拥有的情商\n现实它会让你很受伤\n单位不谈a mill\nCuz boy we talk about a billi\n经历社会的洗礼\n好好跟我学习\n来吧抄好这笔记\nLiving like HOV\nI be reppin 4040\n点石成金 bling bling\nHoly holy\n猎食者天性不会放过你\n叼起 带你飞上天之后\n让你重重的落地\n天和地之间\n恶意它想遮天\n好坏都一念间\nNow wo\n逆境中加冕\n纯看心不看面\n来日打照面\nI got the mula\nI got the moves\nI got the credit\nAnd I got the crews\nYou ain't got nothing\nYou live like a fool\n愚蠢 无知\nBehold Capice\n张了嘴咬\nTake us all down\n无止尽的随便恶飙\n挡了那些大风吞了那些巨浪\n最后证明你才活得可笑\nI'm all the way up\nYeah唯我至上\n几个能跟上stand up\n星空装的硬顶\n手腕费的劳力\n拼命飞\nYeah you know whassup\nI'm all the way up\nYeah all the way up\nAll the way all the way up\nI'm all the way up\nYeah唯我至上 唯我 唯我至上\nI'm all the way up\nYeah all the way up\nAll the way all the way up\nI'm all the way up\nYeah唯我至上 唯我 唯我至上\nI'm all the way up\nYeah从无到有\nFly high\n曾经漠视我的人照旧傲慢\nNo lies 这个世界早就病态\n神都离开\n凡人争先恐后假扮\nEveryday 我拼搏\nCuz I want to be\n你的人品\n不如一个wannabe\n天上is the place that I want to be\n吸限量的氧气\n你下个地域去\n天和地之间\n恶意它想遮天\n好坏都一念间\n逆境中加冕\n纯看心不看面\n来日打照面\n挂上condo\nIn my condos\n我人生最大的罪过\n就是过的比你好过\nYep savage savage savage beast\n张了嘴咬\nTake us all down\n无止尽的随便恶飙\n挡了那些大风吞了那些巨浪\n最后证明你才活得可笑\nI'm all the way up\nYeah唯我至上\n几个能跟上stand up\n星空装的硬顶\n手腕费的劳力\n拼命飞\nYeah you know whassup\nI'm all the way up\nYeah all the way up\nAll the way all the way up\nI'm all the way up\nYeah唯我至上 唯我 唯我至上\nI'm all the way up\nYeah all the way up\nAll the way all the way up\nI'm all the way up\nYeah唯我至上 唯我 唯我至上\nI'm all the way up\n"
+  },
+  {
+    "title": "反转地球",
+    "lyrics": "Bao wow wow\n让我看到你双手\n对抗地心引力一起反转地球\nBao wow wow\n现在不适合啰嗦\n适者生存不然请你离开这节奏\nBao wow wow\n让我看到你点头\n跟着我的音乐一起跳舞准没错\nBao wow wow\n现在不适合闪躲\n正面出击看我怎么反转地球\n睁开双眼看穿地球\n赤裸裸的一片天空\n我摊开双手接收所有最原始的节奏\n有没有感到心情放松\n有没有感到细胞跳动\n节奏的变化 身体的摆动 让你全身放松\n现在起不能啰嗦\n你踏进我的领域之中\n频率太震撼你的心脏正在此起彼落\n跟着我走 跟着我做\n跟我点头摆动双手\n世界的一切的转动链接到我的音乐\n紧跟着我的脚步在走\n让世界turn around dance around everybody has some fun\n别想压抑我们音乐世界的转动\n让世界turn around dance around everybody has some fun\n没有对或错我只想切入这节奏\n让世界turn around dance around everybody has some fun\n音乐没有自由仿佛坠进了黑洞\n让世界turn around dance around everybody has some fun\n现在看着我们创造新世界秩序 come on\nBao wow wow\n让我看到你双手\n对抗地心引力一起反转地球\nBao wow wow\n现在不适合啰嗦\n适者生存不然请你离开这节奏\nBao wow wow\n让我看到你点头\n跟着我的音乐一起跳舞准没错\nBao wow wow\n现在不适合闪躲\n正面出击看我怎么反转地球\n一道音波划破天空\n在我的领域不停播送\n激发出的热情不能抵挡你\n竖起的耳朵的诱惑\n你停不停 你动不动\n全部在我掌控之中\n你知不知道地心引力在这永远拉不住我\n当音乐力量合而为一\n创造出新的世界秩序\n不跟随的人闭上你的shhh\n有别的比那更好的吗\n有别的比那更出色吗\n有没有别的比我们向往追求的音乐更独特的吗\n让世界turn around dance around everybody has some fun\n别想压抑我们音乐世界的转动\n让世界turn around dance around everybody has some fun\n没有对或错我只想切入这节奏\n让世界turn around dance around everybody has some fun\n音乐没有自由仿佛坠进了黑洞\n让世界turn around dance around everybody has some fun\n现在看着我们创造新世界秩序 come on\nBao wow wow\n让我看到你双手\n对抗地心引力一起反转地球\nBao wow wow\n现在不适合啰嗦\n适者生存不然请你离开这节奏\nBao wow wow\n让我看到你点头\n跟着我的音乐一起跳舞准没错\nBao wow wow\n现在不适合闪躲\n正面出击看我怎么反转地球\nBao wow wow\n让我看到你双手\n对抗地心引力一起反转地球\nBao wow wow\n现在不适合啰嗦\n适者生存不然请你离开这节奏\nBao wow wow\n让我看到你点头\n跟着我的音乐一起跳舞准没错\nBao wow wow\n现在不适合闪躲\n正面出击看我怎么反转地球\n"
+  },
+  {
+    "title": "7.24个比利",
+    "lyrics": "我是我 他是我 你是我 那我是谁\n我是他 我是你 我是我 那我是谁\n我是我 他是我 你是我 那我是谁\n我是他 我是你 我是我 那你是谁\n体内的细胞正在蠢蠢欲动\n不知名的面貌在异度空间领域瞬间转动\n异样的眼光全都注视着我\n不知情绪的请你小心\n因为我可能无法承受 太多 太多\n这是我身体但我发现我却不是唯一\n各个个体都在分离\n几时几何几个聚集在我 心底\n说什么是黄金比例 他们分明喜欢角力\n如何能同体共存成为唯一的习题\n我有个秘密佖密 藏在我的心里心里\n本尊他豪无详情不知谁现身的时机\n请你不要告密 我随时会爆发\n你看的是我但你看我到的并不是\n你面对就是我但我早已经就不是我\n体内的细胞正在蠢蠢欲动\n不知名的面貌在异度空间领域瞬间转动\n异样的眼光全都注视着我\n不知情绪的请你小心\n因为我可能无法承受 太多 太多\n谁谁谁 我到底是谁\n谁谁谁 我到底是谁\n时间几点几分当时我到底哪个你又躲在哪里\n请你不要在逼我 请相信我听不懂\n我也都看不清 离开了光明\n颠覆了黑夜白天尊重你的决定我的在场证明\nso 慢慢 抽离开and GO\n或快快 唤醒后自由\n谁存活 谁逃脱 我该只属于一个我\n别太多 BODY BODY\n不要在 MOVE MOVE\n哭笑 酷尚 哭笑的不得\nshout shout shout shout\n体内的正细在胞蠢蠢欲动\n不知名的面貌在异度空间领域瞬间转动\n异样的眼光全都注视着我\n不知情绪的请你小心\n因为我可能无法承受 太多 太多\n谁谁谁 我到底是谁\n谁谁谁 我到底是谁\n我是我 他是我 你是我 那我是谁\n我是他 我是你 我是我 那我是谁\n我是我 他是我 你是我 那我是谁\n我是他 我是你 我是我 那你是谁\n谁谁谁 我到底是谁\n谁谁谁 我到底是谁\n谁谁谁 我到底是谁\n谁谁谁 我到底是谁\n"
+  },
+  {
+    title: "小丑",
+    lyrics: "我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说你不懂我我说\n说要精彩 要刺激 世界不能没我\n我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说我等你说我说\n说要精彩 要刺激 世界不能没有 我\n自导自演 自言自语 自娱自乐\n过程换来 自暴自弃 自怨自哀 自生自灭\n追自由 求自在 得自夸 得自卖\n妆发下坚持从不曾更改\nJa Ja Mumbo 我唱唱跳跳\n幽默的漫步舞姿 捉弄你的心跳\n掌声响起尖叫 人人带着微笑\n眼泪把它抹掉\n我是小丑 很骄傲\nEverybody happy happy\n口红颜色红的刺激\n血脉喷张 胆跳心惊\nDance dance dance dance\nEveryday we party party\n可正可邪疯到最底\n不要小看 我的命运 我充满惊喜 嬉嬉 嘻嘻\n我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说 你不懂我我说\n说要精彩 要刺激 世界不能没我\n我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说我等你说我说\n说要精彩 要刺激 世界不能没有 我\n可爱可恨 可人可怜 渴望可爱\n背后存在 悲痛悲伤 悲哀悲凄 卑鄙卑微\n求可歌 求可泣 我可屈 我可伸\n戏服下热情从不曾更改\nJa Ja Mambo 我唱唱跳跳\n笨拙的漫步舞姿 骚不到你心跳\n没有掌声尖叫 嘴角画个微笑\n眼泪不让它掉\n我是小丑 继续跳\nEverybody happy happy\n口红颜色红的刺激\n血脉喷张 胆跳心惊\nDance dance dance dance\nEveryday we party party\n可正可邪疯到最底\n不要小看 我的命运 我充满惊喜 嬉嬉 嘻嘻\n我是小丑你说你看透我 你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说你不懂我我说\n说要精彩 要刺激 世界不能没我\n我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说我等你说我说\n说要精彩 要刺激 世界不能没有 我\nJa Ja Mumbo 我唱唱跳跳\nJa Ja Mumbo 我唱唱跳跳\nJa Ja Mumbo 我唱唱跳跳\nJa Ja Mumbo 我唱唱跳跳\n我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说你不懂我我说\n说要精彩 要刺激 世界不能没我\n我是小丑你说你看透我你说\n说我丑陋 没有用 扶不起的阿斗\n我是小丑我说我等你说我说\n说要精彩 要刺激 世界不能没有 我"
+  },
+  {
+    title: "第二顺位",
+    lyrics: "我承认我没有那么的完美\n也不懂如何把你唱的陶醉\n你和他的互动把我撕碎\n我狂奔一步步的为谁追随\n不害怕这条路有多远多累\n请感受我的执意真心无畏\n为你甘心付出掏心掏肺\n却活着像是个窝囊废\n废了 累了 醉了 太颓废\n摧毁 自卑 卑微 都为谁\n在你心中只是第二顺位\n再多付出永远无法匹配\n你的眼神提醒我很可悲\n我到底算是哪一位\n在你心中永远第二顺位\n黑夜中我感觉不停下坠\n请你赐我天空展翅高飞\n让我做好你心中的那位\nHow do I live without you\n心太疲惫 I'm dead and gone\n我喝不醉 what's going on\n我不想沦为累赘\n我不想成为你心中的累赘 no no\n摸不透的地位 我承认我会怕黑\n全都变的无味 只有你能为我解围\n不愿承认我的狼狈\n我只想成为你的number one now baby\n废了 累了 醉了 太颓废\n摧毁 自卑 卑微 都为谁\n在你心中只是第二顺位\n再多付出永远无法匹配\n你的眼神提醒我很可悲\n我到底算是哪一位\n在你心中永远第二顺位\n黑夜中我感觉不停下坠\n请你赐我天空展翅高飞\n让我做好你心中的那位\nHow do I live without you\n再来一杯shot\n不醉不归 让我醉\nAll the bottles up\n管你排名第几位\n不想再沉醉\n我只想要fly away\n肩并肩的fly away\n你心中唯一那一位\n在你心中只是第二顺位\n再多付出永远无法匹配\n你的眼神提醒我很可悲\n我到底算是哪一位\n在你心中永远第二顺位\n黑夜中我感觉不停下坠\n请你赐我天空展翅高飞\n让我做好你心中的那位\nHow do I live without you"
+  },
+  {
+    title: "今夜不回家",
+    lyrics: "上了车看着窗外发呆\n关掉所有旁白\n不想面对偏执的无奈\n曲终人散我还在\n哪有谁不悲哀\n戴上笑脸隐藏某种的病态\n我的心事不准别人猜\n快乐已不存在\n我不想要再忍耐\n漆黑的夜还管什么对错\n用力嘶吼为了盖过脆弱yeah\n所有情绪从摩天楼坠落\nHold up Hold up Hold up Hold up 承受全失控\n今夜不回家今夜不回家no\n今夜不回家 享受限时的洒脱\n置身事外的放纵 无所谓\n这个世界容不下我\n今夜不回家今夜不回家no\n今夜不回家 纪念现实的玩弄\n全世界都别管我就让我\n在这孤独里多留一秒钟\n满桌空瓶晚点再买单\n现在不想太快说晚安\n想把喜怒哀乐滋味全部都品完\n感官放大的夜注定过得不平凡\n漆黑的夜还管什么对错\n用力嘶吼为了盖过脆弱yeah\n所有情绪从摩天楼坠落\nHold up Hold up Hold up Hold up 全失控\n今夜不回家今夜不回家no\n今夜不回家 享受限时的洒脱\n置身事外的放纵 无所谓\n这个世界容不下我\n今夜不回家今夜不回家no\n今夜不回家 纪念现实的玩弄\n全世界都别管我就让我\n在这孤独里多留一秒钟\n太疲惫 留或走\n穿梭霓虹之间找寻着出口\n错过那些过错\n明天的事那就留给破晓以后\n今夜不回家今夜不回家no\n今夜不回家 享受限时的洒脱\n置身事外的放纵 无所谓\n这个世界容不下我\n今夜不回家今夜不回家no\n今夜不回家 纪念现实的玩弄\n全世界都别管我\n就让我在这孤独里多留一秒钟"
+  },
+  {
+    title: "说你爱我",
+    lyrics: "送给我爱的燕子 希望燕子天天开心\n拆开你曾经写给我的信件\n你说你好爱我\n常常我和你泛黄的照片\n你遗忘在角落\n是你说要我和你天长地久\n我烙印在心中\n但你身旁守护着你的男人\n却已经不是我\n说你爱我 说你要我\n说你永远不离开我\n我承认此刻的我懦弱\n说你爱我 说你要我\n说你永远不离开我\n这要求是否太多\n你难道无法爱..爱我吗\n你难道无法爱..爱我吗\n永远是你给的承诺\n我却无法握在手中\n我和你的情节\n是否已走到最后\n爱...你还爱我吗\n潘玮柏 - 说你爱我\n拆开你曾经写给我的信件\n你说你好爱我\n常常我和你泛黄的照片\n被遗忘在角落\n是你说要我和你天长地久\n我烙印在心中\n但你身旁守护着你的男人\n却已经不是我\n说你爱我 说你要我\n说你永远不离开我\n我承认此刻的我懦弱\n说你爱我说你要我\n说你永远不离开我\n这要求是否太多\n你难道无法再爱...爱我吗\n你难道无法爱...爱我吗\n永远是你给的承诺\n我却无法握在手中\n我和你的情节\n是否已走到最后\n爱...你还爱我吗\n爱...爱我吗\n你难道无法再爱...爱我吗\n你难道无法爱...爱我吗"
+  },
+  {
+    title: "我让你走了",
+    lyrics: "我一直坐在咖啡厅的角落\n没有人发现我还在难过\n其实早就已经忘了怎么说\n就算再怎么舍不得\n你还是走了\n我还不想承认这事实\n怎么会变成这个样子\n没有了\n我真的什么都没有了\n就像一个废人\n回家的路上我哭了\n眼泪再一次崩溃了\n无能为力这样走着\n再也不敢骄傲奢求了\n我还能够说些什么\n我还能够做些什么\n我好希望你会听见\n因为爱你我让你走了\n我让你走了Baby\n我一直坐在咖啡厅的角落\n没有人发现我还在难过\n其实早就已经忘了怎么说\n就算再怎么舍不得\n你还是走了\n我还不想承认这事实\n怎么会变成这个样子\n没有了\n我真的什么都没有了\n就像一个废人\n回家的路上我哭了\n眼泪再一次崩溃了\n无能为力这样走着\n再也不敢骄傲奢求了\n我还能够说些什么\n我还能够做些什么\n我好希望你会听见\n因为爱你我让你走了\n回家的路上我哭了\n眼泪再一次崩溃了\n无能为力这样走着\n再也不敢骄傲奢求了\n我还能够说些什么\n我还能够做些什么\n我好希望你会听见\n因为爱你我让你走了\n我让你走了Baby"
+  },
+  {
+    title: "梅雨季",
+    lyrics: "某个触景当下\n脑海里偷偷摸摸的作响\n久久未唱的弦律是青春\n一直放不下的年少轻狂\n老街巷弄已经变了样 我也变了样\n却没有停止闯荡\n不停的犯错 不停的流浪\n你说我是傻瓜\n这句话我从来没有遗忘\n分分合合就像儿戏玩耍\n没想到你那次真的离开\n是否因为我你变了样 表情变了样\n我却喝醉 乱讲话\n等我懂得反省 已经是几年后的过往\n夏天就要来临 梅雨即将离去\n我们都已长大了 就再也回不去\n巷口没你身影 不见人剩回忆\n当一切都没改变的时候\n我原来真的爱过你\n夏天就要来临 梅雨即将离去\n我们都已长大了 就再也回不去\n巷口没你身影 不见人剩回忆\n当一切都没改变的时候\n我原来真的爱过你\n某个触景当下\n脑海里偷偷摸摸的作响\n久久未唱的弦律是青春\n一直放不下的年少轻狂\n老街巷弄已经变了样 我也变了样\n却没有停止闯荡\n不停的犯错 不停的流浪\n你说我是傻瓜\n这句话我从来没有遗忘\n分分合合就像儿戏玩耍\n没想到你那次真的离开\n是否因为我你变了样 表情变了样\n我却喝醉 乱讲话\n等我懂得反省 已经是几年后的过往\n夏天就要来临 梅雨即将离去\n我们都已长大了 就再也回不去\n巷口没你身影 不见人剩回忆\n当一切都没改变的时候\n我原来真的爱过你\n夏天就要来临 梅雨即将离去\n我们都已长大了 就再也回不去\n巷口没你身影 不见人剩回忆\n当一切都没改变的时候\n我原来真的爱过你\n某个触景当下\n脑海里偷偷摸摸的作响\n等我懂得反省 已经是几年后的"
+  },
+  {
+    title: "我对天空说",
+    lyrics: "记忆原来都堆在云里了\n常常告诉我忘了些什么\n所以每一次想见你\n你就落下来了\n\n爱情是渐渐变了样子的\n束手无策的我向前走\n一天一天拭写掉了\n我们从前的快乐\n但是\n我还是做同样的梦\n思念握住你的手\n我的右边座位现在空空荡荡\n假装你还是我的\n\n我对天空说你是真的爱我\n我喜欢的人之后忘记了我\n回忆他一滴一滴\n从天上慢慢降落\n好像说孩子你别难过\n我对天空说你是那么温柔\n我深爱的人现在抱着谁呢\n雨滴他一次一次\n送走了一些寂寞\n可是带不走那天你说一句\n我爱你\n可是带不走你说我爱你"
+  },
+  {
+    title: "小小蚂蚁",
+    lyrics: "我想保护你\n但 我算什么\n要努力爱你\n我 能做什么\n这世界 很美丽\n很无情 烦恼很多\n让我给你 快乐生活\n\n吹了风 受了冻 往前走\n为了梦 忘了痛 你等我\n好几年为了这个原因\n不去看旁边的事情\n\n大马路 斑马线走呀走\n一口气 一场雨 没关系\n让我背着一身你的爱情\n请你跟我一起走\n\n我只是爱你爱你\n我只是爱你爱你\n我是你小小蚂蚁\n带你翻山越岭\n我常常 睡不好\n吃不好 但是开心\n我不会改变方向的\n只想成为你身边的卫兵\n\n灰色小雨里\n我 没怕什么\n白色大雪里\n我 没有退后\n我穿我 黑色的\n隐身衣 为爱努力\n现在的我 觉得快乐\n\n吹了风 受了冻 往前走\n为了梦 忘了痛 你等我\n好几年为了这个原因\n不去看旁边的事情\n\n大马路 斑马线走呀走\n一口气 一场雨 没关系\n让我背着一身你的爱情\n请你跟我一起走\n\n我只是爱你爱你\n我只是爱你爱你\n我是你小小蚂蚁\n带你翻山越岭\n我常常 睡不好\n吃不好 但是开心\n我不会改变方向的\n只想成为你身边的卫兵\n\n我不是蜜蜂一眨眼\n飞到天空\n也不喜欢说大话\n做着白日梦\n认真做自己\n是唯一我的工作\n天热又天冷都无所谓\n因为爱你\n\n爱你爱你\n我只是爱你爱你\n我是你小小蚂蚁\n带你翻山越岭\n我常常 睡不好\n吃不好 但是开心\n我不会改变方向的\n只想成为你身边的卫兵"
+  },
+  {
+    title: "Kiss Me 123",
+    lyrics: "Kiss me， one two three 我最爱的那个你\n让我给你甜蜜 为你挡风遮雨\nKiss me， one two three 唯一爱的就是你\n要和你在一起 为你我什么都愿意\n我什么都愿意\n爱上你的微笑 一夜睡不着 怎么办才好\n因为你的美丽 让我神魂颠倒\n慢慢慢靠近你 不让你知道 我的心在跳\n闭上我的眼睛 幻想你赖在我怀抱\nKiss me， one two three 我最爱的那个你\n让我给你甜蜜 为你挡风遮雨\nKiss me， one two three 唯一爱的就是你\n要和你在一起 为你我什么都愿意\n别让我失去了你 别把爱藏在心里\n让我听一听 让我听一听 你的心\nKiss me， one two three 我最爱的那个你\n让我给你甜蜜 为你挡风遮雨\nKiss me， one two three 唯一爱的就是你\n要和你在一起 为你我什么都愿意\n我什么都愿意\n爱上你的微笑 一夜睡不着 怎么办才好\n因为你的美丽 让我神魂颠倒\n慢慢慢靠近你 不让你知道 我的心在跳\n闭上我的眼睛 幻想你赖在我\n幻想你赖在我怀抱"
+  },
+  {
+    title: "爱上未来的你",
+    lyrics: "我从前不相信 捉摸不定的爱情\n那天的故事像城市传奇\n也许神的安排 让我终于遇见你\n你说要一点时间考虑\n我很愿意 把心快递给你\n你让我把对爱的谜变成决心\n爱上未来的你 为了一颗柔软的心\n我被困在这爱情的迷雾里 （想念着消失的你）\n爱上未来的你 我也没有时光机器\n只能活在第一次的见面里 捍卫我们的约定\n你是那么单纯的一条美人鱼\n活在惊心动魄城市里悄悄呼吸\n没有了力气 看着人海思考爱情谜题\n找到你 爱上你\n我的脑袋里面的大小回忆\n没有留下空白 你占据了所有区域\n我不需要谁定下的规矩说可不可以\n我知道自己很爱你\n我从前不相信 捉摸不定的爱情\n那天的故事像城市传奇\n也许神的安排 让我终于遇见你\n你说要一点时间考虑\n我很愿意 把心快递给你\n你让我把对爱的谜变成决心\n爱上未来的你 为了一颗柔软的心\n我被困在这爱情的迷雾里 （想念着消失的你）\n爱上未来的你 我也没有时光机器\n只能活在第一次的见面里\n捍卫我们的约定\n爱上未来的你 为了一颗柔软的心\n我被困在这爱情的迷雾里 想念着消失的你\n爱上未来的你 我也没有时光机器\n只能活在第一次的见面里\n捍卫我们的约定\n捍卫我们的约定\n捍卫我们的约定 （oh no yeah yeah）\n捍卫我们的约定\n捍卫我们的约定"
+  },
+  {
+    title: "忘记拥抱",
+    lyrics: "你给的回忆太好像刺青很难抹掉\n我一直保持微笑真的我\n别被你看到\n我逃进汹涌人潮寻找藏身的一角\n我眼泪不敢掉我快要受不了\n忘记了拥抱\n忘记了微笑\n忘记我们曾经是那么那么样的好\n我们都太骄傲\n话说的太早\n是谁的怀抱\n是谁在苦笑\n回过头是谁偷偷把眼泪擦掉\n抱歉是我\n傻得可以\n是我\n不好\n我逃进汹涌人潮寻找藏身的一角\n我眼泪不敢掉我快要受不了\n忘记了拥抱\n忘记了微笑\n忘记我们曾经是那么那么样的好\n我们都太骄傲\n话说的太早\n是谁的怀抱\n是谁在苦笑\n回过头是谁偷偷把眼泪擦掉\n抱歉是我\n傻得可以\n是我\n不好\n记忆的拼图\n没有真心拼凑不了\n幸福的城堡\n跌跌撞撞才看的到\n忘记了拥抱\n忘记了微笑\n忘记我们曾经是那么那么样的好\n我们都太骄傲\n话说的太早\n是谁的怀抱\n是谁在苦笑\n回过头是谁偷偷把眼泪擦掉\n抱歉是我\n傻得可以\n是我\n不好"
+  },
+  {
+    title: "站在你这边",
+    lyrics: "在安静关了灯的房间一天\n躺在床上慢慢的沉淀\n那一些曾热闹过的画面\n你的笑脸\n那些不变\n说过的字眼\n我将花生土司切片\n调整咖啡的杯垫\n\n无意义的在计算时间\n你离开　多少年\n心里面还是站在你这边\n那从前一直没走远\n\n就好像是一圈\n散不去的浓烟\n我心甘情愿在中间\n心里面还是站在你这边\n那从前一直没走远\n\n那事过境迁\n如果能重选\n我宁愿危险\n一生不安全\n在你身边"
+  },
+  {
+    title: "我不怕",
+    lyrics: "车开往海边\n我想念你\n鞋子里面满载沙子和回忆\n躺在沙滩上的我\n闭上眼深呼吸\n全世界那么安静就像在专心听\n你不会晓得\n好几次我想吻你吧\n现在睡了吗\n还是在屋顶吹著头发\n你在散步的时候\n还未从前流泪吗\n是不是心里忽然出现另一个他\n我想要说我那天没说的那句话\n就算被没收我也不会怕\n对\n我不怕\n我想要说我永远爱你的那句话\n可能我说的地点有点傻\n是\n是我的\n心里话\n你不会晓得\n好几次我想吻你吧\n现在睡了吗\n还是在屋顶吹著头发\n你在散步的时候\n还未从前流泪吗\n是不是心里忽然出现另一个他\n我想要说我那天没说的那句话\n就算被没收我也不会怕\n对\n我不怕\n我想要说我永远爱你的那句话\n可能我说的地点有点傻\n是\n是我的\n心里话\n心里话"
+  },
+  {
+        title: "不得不爱",
+        lyrics: "天天都需要你爱 我的心思由你猜\nI LOVE YOU 我就是要你让我每天都精彩\n天天把它挂嘴边 到底什么是真爱\nI LOVE YOU 到底有几分 说得比想像更快\n是我们感情丰富太慷慨 还是有上天安排\n是我们本来就是那一派 还是舍不得太乖\n是那一次约定了没有来 让我哭得像小孩\n是我们急着証明我存在 还是不爱会发呆 BABY\n不得不爱 否则快乐从何而来\n不得不爱 否则悲伤从何而来\n不得不爱 否则我就失去未来\n好像身不由己 不能自己很失败 可是每天都过得精彩\n天天都需要你爱 我的心思由你猜\nI LOVE YOU 我就是要你让我每天都精彩\n天天把它挂嘴边 到底什么是真爱\nI LOVE YOU 到底有几分 说得比想像更快\nI ask girlfriend how you been\n来去了几回 我从来没有想过 爱情会变得如此无奈 是命运吗\n难道难过是上天的安排 没办法 天天的每天的心思到底由谁来陪\n我诚心 你诚意 但周围扰人的环境始终\n让我们无法在这样的自由相恋\n我精采 你发呆 两颗心不安的摇摆 应该有的未来\n是否真的那么的无法期待 舍不得再伤害\nYou're girl my girl my friend\nHow much I love you so so much baby\n看着你哀愁 要我如何怎么承受面对\nI'm sorry you're my sweetheart\nMy love My one & only baby\n不得不爱 否则快乐从何而来\n不得不爱 否则悲伤从何而来\n不得不爱 否则我就失去未来\n好像身不由己 不能自己很失败 可是每天都过得精彩\n天天都需要你爱 我的心思由你猜\nI LOVE YOU 我就是要你让我每天都精彩\n天天把它挂嘴边 到底什么是真爱\nI LOVE YOU 到底有几分 说得比想像更快\n会不会有一点无奈\n会不会有一点太快\n可是你给我的爱 让我养成了依赖 心中充满爱的节拍\n天天都需要你爱 我的心思由你猜\nI LOVE YOU 我就是要你让我每天都精彩\n天天把它挂嘴边 到底什么是真爱\nI LOVE YOU 到底有几分 说得比想像更快"
+    },
+    {
+        title: "双人舞",
+        lyrics: "You wanna say love love love love love love And baby girl I say okay okay\n身体贴近我 用体温做回答\n看你眼里 有一句话 和我的一样吗\n那就是 love love love love love love\nAnd baby girl I say okay okay\n真实的触感 爱不只是童话 就深深坠入\n双人舞步里 彼此慢慢欣赏\n有点烦闷吧 浪漫被公式化\n有些爱 加点刺激 更多想象\n你也在期待吗 兴奋和我一样\n把甜蜜 洒满一地 放纵一下\nOh~每个毛细孔 划过你的指甲\nOh~温柔的触碰 不安静的心房\nHot hot baby we can set it off the night\n双人舞 黑暗里 无法自拔\nYou wanna say love love love love love love\nAnd baby girl I say okay okay\n身体贴近我 用体温做回答\n看你眼里 有一句话 和我的一样吗\n那就是 love love love love love love\nAnd baby girl I say okay okay\n真实的触感 爱不只是童话 就深深坠入\n双人舞步里 彼此慢慢欣赏\n有点无聊吧 规律的像打卡\n有些爱 多点尝试 才有变化\n你也在期待吗 兴奋和我一样\n碰撞的电流就像烟火绽放\nOh~耍一点疯狂 拨乱你的头发\nOh~换一个场景 沙发或是厨房\nHot hot baby we can set it off the night\n双人舞 黑暗里 无法自拔\nYou wanna say love love love love love love\nAnd baby girl I say okay okay\n身体贴近我 用体温做回答\n看你眼里 有一句话 和我的一样吗\n那就是 love love love love love love\nAnd baby girl I say okay okay\n真实的触感 爱不只是童话 就深深坠入\n双人舞步里 彼此慢慢欣赏\nlove love love love love love\nokay okay love love love love\n用体温做回答\n看你眼里 有一句话 和我的一样吗\n那就是 love love love love love love\nokay okay love love love love\n爱不只是童话 love love love love 就深深坠入\n双人舞步里 彼此慢慢欣赏\nlove love love love love love"
+    },
+    {
+        title: "U U U U",
+        lyrics: "就像是失去神经\n我感觉不到呼吸\n连空气都窒息\nwhy why\ni love you so\n每秒钟胆颤心惊\n迎战你给的惊奇\n你与众不同的\nlove love\ni want you girl\ntell me baby\ni love u love u love u\n陷入梦幻催眠的魔术\nso baby baby\ntell me baby\ni love u love u love u\n爱情在潜意识被征服\ni'm crazy over\nu u u u\n如此疯狂的中了\ndo do do do\ni'm going crazy over\nu u u u\n触控的心被启动\n点选传说中的幸福\ni'm crazy over\nu u u u\n如此疯狂的中了\ndo do do do\ni'm going crazy over\nu u u u\ncause this is all about u\noh yeah yeah\n就像是失去神经\n我感觉不到呼吸\n连空气都窒息\nwhy why\ni love you so\n每秒钟胆颤心惊\n迎战你给的惊奇\n你与众不同的\nlove love\ni want you girl\ntell me baby\ni love u love u love u\n陷入梦幻催眠的魔术\nso baby baby\ntell me baby\ni love u love u love u\n爱情在潜意识被征服\ni'm crazy over\nu u u u\n如此疯狂的中了\ndo do do do\ni'm going crazy over\nu u u u\n触控的心被启动\n点选传说中的幸福\ni'm crazy over\nu u u u\n如此疯狂的中了\ndo do do do\ni'm going crazy over\nu u u u\ncause this is all about u\noh yeah yeah\ncause this is all about u\ni'm crazy over\nu u u u\n如此疯狂的中了\ndo do do do\ni'm going crazy over\nu u u u\n触控的心被启动\n点选传说中的幸福\ni'm crazy over\nu u u u\n如此疯狂的中了\ndo do do do\ni'm going crazy over\nu u u u\ncause this is all about u\noh yeah yeah\ni'm crazy over u"
+    },
+    {
+        title: "华丽进行曲",
+        lyrics: "华丽进行曲 浪漫的气息\n跳动挑动浓浓的爱意\n跟我说你也爱我\n说你说你说你爱着我\nBaby I want you Baby I need you\n把满满满满幸福都给你\n跟我说你也爱我\n说你说你说你爱着我 oh 没有错\n有时候简单的爱需要点调色\n低调中带着华丽 点缀就不会苦涩\n让我托着你的双手 旋转甩掉烦闷\n不会踩到脚 唉唉呦喂呀\n每位lady 都会期许一个完美的Gentleman\n收到 是 我会好好对你再温柔点\n什么都不需要 给我一首歌的时间\n让我邀请你来跳支舞吧\n所以轻快踏着步伐 一起跳吧\n不用惊讶舞姿跳的如此优雅\n施展复古年华魔法我们不用害怕\n爱的咒语 叭拉叭拉叭叭叭\n华丽进行曲 浪漫的气息\n跳动挑动浓浓的爱意\n跟我说你也爱我\n说你说你说你爱着我\nBaby I want you Baby I need you\n把满满满满幸福都给你\n跟我说你也爱我\n说你说你说你爱着我 oh 没有错\n1 2 3 4 打个节拍\n一起来 5 6 7 8 感觉 bei bai\n不要拘束害羞 我们一起跳个痛快\n相信我 我可以让你依赖\n接下来 加快速度\n乱撞小鹿 没有后顾 感觉很酷\n唯美碰触 眼神专注\n快乐满足 很珍贵的幸福\n只需要你给我一首歌的时间\n左左右右 前前后后 来来来\n所以轻快踏着步伐 一起跳吧\n不用惊讶舞姿跳的如此优雅\n施展复古年华魔法我们不用害怕\n爱的咒语 叭拉叭拉叭叭叭\n华丽进行曲 浪漫的气息\n跳动挑动浓浓的爱意\n跟我说你也爱我\n说你说你说你爱着我\nBaby I want you Baby I need you\n把满满满满幸福都给你\n跟我说你也爱我\n说你说你说你爱着我 oh\n我 我\n我要 我要\n我要你 我要你\n我要你的 我要你的\n我要你的爱 我要你的爱\n我要你的爱 我要你的爱\n我要你的爱 我要你的爱\n华丽进行曲 浪漫的气息\n跳动挑动浓浓的爱意\n跟我说你也爱我\n说你说你说你爱着我\nBaby I want you Baby I need you\n把满满满满幸福都给你\n跟我说你也爱我\n说你说你说你爱着我 oh\n华丽进行曲 浪漫的气息\n跳动挑动浓浓的爱意\n跟我说你也爱我\n说你说你说你爱着我\nBaby I want you Baby I need you\n把满满满满幸福都给你\n跟我说你也爱我\n说你说你说你爱着我 oh\n华丽进行曲 浪漫的气息\n跳动挑动浓浓的爱意\n跟我说你也爱我\n说你说你说你爱着我"
+    },
+    {
+        title: "打呼",
+        lyrics: "曾经的何时我没想过会有这一天\n没法安心入眠 被枕边人频频抱怨\n阖上眼就被嫌 连呼吸都被埋怨\n我到底做错什么还是问题出自\n我不是故意 声音那么明显\n难道我呼吸频率音量分贝高了一点\n哦 baby sorry 让我去隔壁房间\n还给你一个完美无暇宁静私人空间\nOh pretty baby that's ok\n只要有你陪在身边夜里就不怕黑\nOh baby baby that's ok\n喜欢依偎着你慢慢入睡\n在你的身边打呼（打呼）\n起床后打个招呼（hello）\n能在你身边打呼（打呼）\n是我最大的幸福（嘿耶）\n所以是脑人的闹人 还是扰人的人脑\n我担心我在打扰你睡觉\n你说真爱不会计较 爱成为习惯真的很奇妙\n你叫我安心只要有我在你身边\n就算呼噜呼噜奇奇窟窟\n象征一种爱的招呼\n嘿 我还是有点内疚 侧过身换个睡姿也是没救\n天花板不知盯了多久 不想破坏你夜里美丽的梦\n哦 只想你抱着我 哦 只想你陪着我\n哦 my 那不是我 我的声音好像着了魔\nOh pretty baby that's ok\n只要有你陪在身边夜里就不怕黑\nOh baby baby that's ok\n喜欢依偎着你慢慢入睡\n在你的身边打呼（打呼）\n起床后打个招呼（hello）\n能在你身边打呼（打呼）\n是我最大的幸福（嘿耶）\n在你的身边打呼（打呼）\n起床后打个招呼（hello）\n能在你身边打呼（打呼）\n是我最大的幸福（嘿耶）\nSo come and 打个呼 打个呼\nCome on and 打个呼 打个呼 打个呼\n打招呼\n起床后打招呼 打招呼 打招呼 hello\n在你的身边打呼（打呼）\n起床后打个招呼（hello）\n能在你身边打呼（打呼）\n是我最大的幸福（嘿耶）"
+    },
+    {
+        title: "爱你3000",
+        lyrics: "当我把想法画在课桌椅\n为了追到你买了新的Nike\n那女孩儿的心思总稀奇古怪\n她要我学会唱潘玮柏的整张磁带\n记忆停留在了那一个初夏\n篮球后的橘子汽水味道最佳\n太阳光线映衬下她的脸颊\n至今没勇气对她说出那句话\n还没试过干嘛说自己做不到\n它在你心底燃烧等待你的讯号\n梦想被编制成了旗帜我们扬起帆\n无时无刻的告诫自己不一般\n像是种魔力推动我继续\n击碎的玻璃看着自己\n即便前方的道路充满荆棘\n哇把阻碍变成气泡\n从不甘心当个笑柄\n就算今天失败了明天会被热情叫醒\n回到最初我做的梦\n有着你牵着我的手\nYea you know that I believe I believe\nThat you are always with me\n把你守护在我心中\n过多久我都不放手\n请你相信please believe please believe\nThat I will always love you\n当我背上包\n走上路时刚满十八\n那个夏天特别炎热\n沙枣刚开了花\n外面的天多高\n世界多大只出现在梦里\n唯一的舍不得是\n快要告别暗恋的她\n被大都市的孤独寒冷\n伤害不止一次\n远方的妈妈做后盾\n我愿意冒险一试\n我为年轻而歌唱\n伴随着上升的旗帜\n也曾在离别的聚会\n流泪摔碎酒瓶子\n一十年十年过琴弦落\n忙碌到年末\n偶尔感伤来自聚会上的\n那首花田错\n是否她的身旁\n已经有人一生相伴\n我站在原地张望\n亮起灯的家在彼岸\n我看见好友初为人母时\n她笑的多美丽\n看见我的亲人\n终于走完生命的轨迹\n此刻穷或富 甜或苦 迷茫或投入\n别丢了你出发的勇敢\n记得笑着回到家\n回到最初我做的梦\n有着你牵着我的手\nYea you know that I believe I believe\nThat you are always with me\n把你守护在我心中\n过多久我都不放手\n请你相信please believe please believe\nThat I will always love you\n很多人都问我\n如果再来一次的话\n我会怎么怎么选我想\n曾经说过一起走到永远\n曾经说过一路走到最后不会改变\n现在由我把我心中承诺慢慢兑现\n钢铁般的回忆对你说句爱你3000遍\nHold up\nShout out to 我的homies谢谢你们陪我\nShout out 最爱的那位谢谢你曾伤我\nShout out to离开的人永远在我心中\nShout out to 爸爸妈妈谢谢你们爱我\n回到最初我做的梦\n有着你牵着我的手\nYea you know that I believe I believe\nThat you are always with me\n把你守护在我心中\n过多久我都不放手\n请你相信please believe please believe\nThat I will always love you\n回到最初我做的梦\n有着你牵着我的手\nYea you know that I believe I believe\nThat you are always with me\n把你守护在我心中\n过多久我都不放手\n请你相信please believe please believe\nThat I will always love you"
+    },
+    {
+    title: "我想更懂你",
+    lyrics: "Where you going?\nGoing out\nWith who?\nIt's none of your business OK\nWhat you gonna do later?\nStop acting like you care about me\nStop acting like you wanna know something about me\nYou don't know nothing\nYou don't care\nStop asking\nI care\n每次我想更懂你 我们却更有距离\n是不是都用错言语也用错了表情\n其实我想更懂你 不是为了抓紧你\n我只是怕你会忘记 有人永远爱着你\n爱你\n请你听听我的真心话\n你每天看着我长大\n但你是否了解我内心矛盾的对话\n你板着脸孔 不屑的对着我看\n我的视线没有勇气 只好面对冷冰冰的地板\n这就是你 这就是我 我们之间的互动\n何时开始慢慢加以冷藏加以冷冻\n我好想逃 我好想躲进一个洞\n我需要真正了解我的人 为我进行解救\n这就是 我的内心 请你仔细的剖\n我试过好多次的机会想要触碰你手\n课本写说你们应是我最好的朋友\n但是显然不是 我叙述我的故事\n每次我想更懂你 我们却更有距离\n是不是都用错言语也用错了表情\n其实我想更懂你 不是为了抓紧你\n我只是怕你会忘记 有人永远爱着你 （爱你）\nIn this life our love is in our hearts to see\nThough people change the future's still inside of me\nWe must remember that tomorrow comes after the dark\nBut I got something trapped in my heart\nSo I got something to say\nIn this life our love is in our hearts to see\nThough people change the future's still inside of me\nWe must remember that tomorrow comes after the dark\nBut I got something trapped in my heart\nSo I got something to say\n每次我想更懂你 我们却更有距离\n是不是都用错言语也用错了表情\n其实我想更懂你 不是为了抓紧你\n我只是怕你会忘记 有人永远爱着你\nWhenever you come\nWhatever we talk\nAnd I'll right here waiting for you\n你曾经说过当我站在十字路口\n只要有你在 我不会经历漫长的夜 去等待\n现在 十字路口只有我独自站\n没有对象寻找答案 只好自我反叛\n看 我其实没那么好战\n我也希望说话可以婉转不让你心烦对你开口好难\n我想要无话不谈我的人生 我的个性 其实没那么烂 （放下一点自已）\n这就是 我的内心 请你仔细的剖\n我好想回到过去 看你微笑摸摸我的头 （开始慢慢懂你）\n课本写说你们应是我最好的朋友\n如果换个公式 我祈祷不同故事\n每次我想更懂你 我们却更有距离\n是不是都用错言语也用错了表情\n其实我想更懂你 不是为了抓紧你\n我只是怕你会忘记 有人永远爱着你 （永远爱着你）\n每次我想更懂你 我们却更有距离\n是不是都用错言语也用错了表情\n其实我想更懂你 不是为了抓紧你\n我只是怕你会忘记 有人永远爱着你 （永远爱着你）"
+  },
+  {
+    title: "亲爱的",
+    lyrics: "我叮咚的弹奏着故事里那首儿歌\n缤纷的音乐盒木马还旋转着\n我叮咚的弹奏着童年的纯真快乐\n亲爱的这时刻有梦就大声唱歌\n我们迎着风边走边唱\n边坚定来自于远方那坚定的信仰\n沿着那溪边走有水车的声音\n我走着看着风中摇曳可爱的蒲公英\n经过凉亭我们穿越竹林\n看着山顶如棉花糖的白云\n面对着阳光就不需要那阴凉\n拥有不同心境\n相信你会看到更特别的风景\n闭上眼睛静静聆听\n屋檐那串轻脆的风铃\n许愿要找个流星幸福就要\n彼此互相扶持互相关心\nOh 他们说玫瑰象征着爱情\n那插满一把玫瑰花的花瓶\n是否证明不是不笃定\n是不是真的有童话这件事情 hey\n我叮咚的弹奏着故事里那首儿歌\n缤纷的音乐盒木马还旋转着\n我叮咚的弹奏着童年的纯真快乐\n亲爱的这时刻有梦就大声唱歌\n我们手牵手一直的走\n紧紧的相依的努力攀过吊桥绳索\n在脚下经过的一条蜿蜒小河\n心里面联接的是满满友情难以割舍\n整个山坡苹果树已红透\n还有干净泉水大口畅饮\n橘子也成熟田里面还有泥鳅\n真的快乐却是好多朋友\n陪着我们一起走\n闭上眼睛静静聆听屋檐\n那串轻脆的风铃\n许愿要找个流星幸福\n就要彼此互相扶持互相关心\nNahey 爱让我更自由\nNahey 一起大声说出口\n跟我一起手牵手真心到永久\n这就是爱的生活\n我叮咚的弹奏着故事里那首儿歌\n冰棒呢配可乐爆米花还温热\n我叮咚的弹奏着童年的纯真快乐\n开着车遥远了回到最初的选择\n我叮咚的弹奏着故事里那首儿歌\n冰棒呢配可乐爆米花还温热\n我叮咚的弹奏着童年的纯真快乐\n开着车遥远了回到最初的选择\n我叮咚的弹奏着故事里那首儿歌\n冰棒呢配可乐爆米花还温热\n我叮咚的弹奏着童年的纯真快乐\n开着车遥远了回到最初的选择"
+  },
+  {
+    title: "寂屋出租",
+    lyrics: "我努力的习惯 一个人的夜晚\n只是想起你 就会孤单\n回忆像一碗热汤 想念那么滚烫\n只想要取暖 却狠狠被烫伤\n以为幸福 值得勇敢\n可惜 最后还是走散\n放手说真的不难\n心碎 该怎么计算\n要搬过几个地方\n换几个伴 才到对的人身旁\n寂寞的房 灯光别开得太亮\n到夜晚更无处躲藏\n要搬到什么地方\n有谁陪伴 才决定停止流浪\n寂寞的房 装满出租的渴望\n太冰冷的墙 爱永远没有回答\n我努力的习惯 一个人的夜晚\n只是想起你 就会孤单\n回忆像一碗热汤 想念那么滚烫\n只想要取暖 却狠狠被烫伤\n以为幸福 值得勇敢\n可惜 最后还是走散\n放手说真的不难\n心碎 该怎么计算\n要搬过几个地方\n换几个伴 才到对的人身旁\n寂寞的房 灯光别开得太亮\n到夜晚更无处躲藏\n要搬到什么地方\n有谁陪伴 才决定停止流浪\n寂寞的房 装满出租的渴望\n太冰冷的墙 爱永远没有回答\n我倒在沙发上 闭上眼更害怕\n只剩下电视陪着我说话\n你有没有听到 门铃好像在响\n要搬过几个地方\n换几个伴 才到对的人身旁\n寂寞的房 灯光别开得太亮\n到夜晚更无处躲藏\n要搬到什么地方\n有谁陪伴 才决定停止流浪\n寂寞的房 装满出租的渴望\n太冰冷的墙 爱永远没有回答\n寂屋出租吗 爱永远没有回答"
+  },
+  {
+    title: "我们都怕痛",
+    lyrics: "她说她再也不相信真爱\n我能给的安全感也用完\n原本的孤单已变成不安\n像看穿却又放不下依赖\n看着她低头 勇敢牵着她就走\n别怕 只要在一起就能穿越黑昼\n她的眼睛说 爱太迷人却猜不透\n她的脆弱只有我能看懂\n我们都怕痛 但又好想试着牵手\n两颗心隐藏在背后不敢承诺\n不想再难过 丢弃回忆重新来过\n让我永远牵着你 把手给我\n她说她再也不相信真爱\n我能给的安全感也用完\n原本的孤单已变成不安\n想看穿却又放不下依赖\n看着我低头 她说她愿跟我走\n好怕 让她心碎的痛又反覆折磨\n我的眼睛说 笑或泪我都会守候\n她是我唯一执着的执着\n我们都怕痛 但又好想试着牵手\n两颗心隐藏在背后不敢承诺\n不想再难过 丢弃回忆重新来过\n让我永远牵着你 把手给我\n我们都怕痛 但又好想试着牵手\n两颗心隐藏在背后 不敢为爱承诺\n不想再难过 丢弃回忆重新来过\n让我永远牵着你 把手给我\n让我永远牵着你 把手给我"
+  },
+  {
+    title: "哑巴",
+    lyrics: "为了什么在一起\n根本没有了交集\n放宽心谈何容易\n冷漠瀰漫着空气\n说好握紧的距离\n远出视线的焦距\n不想冲动说放弃\n但这疲惫不堪的心\n我承认我没勇气承受\n痛到这一刻我才懂\n就憋在心底走到最后\n断了吧 忘了吧 放手了吧\n别试探自己的狡猾\n安静别说话\n学着做一个哑巴\n试过吧 爱过吧 无所谓吧\n别欺骗自己的虚假\n坠入爱的悬崖\n放手轻声细语 别说话\n说好握紧的距离\n远出视线的焦距\n不想冲动说放弃\n但这疲惫不堪的心\n我承认我没勇气承受\n痛到这一刻我才懂\n就憋在心底走到最后\n断了吧 忘了吧 放手了吧\n别试探自己的狡猾\n安静别说话\n学着做一个哑巴\n试过吧 爱过吧 无所谓吧\n别欺骗自己去接纳\n坠入爱的悬崖\n放手轻声细语 别说话\n我承认我没勇气承受\n痛到这一刻我才懂\n就憋在心底走到最后\n断了吧 忘了吧 放手了吧\n别试探自己的狡猾\n安静别说话\n学着做一个哑巴\n试过吧 爱过吧 无所谓吧\n别欺骗自己去接纳\n坠入爱的悬崖\n放手轻声细语 别说话\n别说话"
+  },
+  {
+    title: "无重力",
+    lyrics: "画面不动了 情歌不唱了\n爱情的重播键明明一直按着\n什么原因 让时间停了\n在伤心的镜头被停格\n电梯不动了 爱也停止了\n可是坠入的感觉怎么还在呢\n热闹的街道还在狂欢着\n为何我却孤单 飘浮着\n无重力腾空 慢慢跌入无尽的黑洞\n没知觉的伤痛 飘荡的心\n却摔得更重\n我爱你 你爱我 是不是 还不够\n我不懂 为什么 付出的 全落空\n无重力 爱坠落\n粉身碎骨的我 不受控制的手\n还能抓住什么\n我爱你 你爱我 算不算 是承诺\n全世界 都沉默 没声音的嘶吼\n无重力 爱坠落\n最缓慢的折磨 只剩遍体鳞伤的我\n撑到最后\n画面不动了 情歌不唱了\n爱情的重播键明明一直按着\n什么原因 让时间停了\n在伤心的镜头被停格\n电梯不动了 爱也停止了\n可是坠入的感觉怎么还在呢\n热闹的街道还在狂欢着\n为何我却孤单 飘浮着\n无重力腾空 慢慢跌入无尽的黑洞\n没知觉的伤痛 飘荡在半空的心\n越挣扎却摔得更重\n我爱你 你爱我 是不是 还不够\n我不懂 为什么 付出的 全落空\n无重力 爱坠落\n粉身碎骨的我 不受控制的手\n还能抓住什么\n我爱你 你爱我 算不算 是承诺\n全世界 都沉默 没声音的嘶吼\n无重力 爱坠落\n最缓慢的折磨 只剩遍体鳞伤的我\n撑到最后\nI love you\n我爱你 你爱我 是不是 还不够\n我不懂 为什么 付出的 全落空\n无重力 爱坠落\n粉身碎骨的我 不受控制的手\n还能抓住什么\n我爱你 你爱我 算不算 是承诺\n全世界 都沉默 没声音的嘶吼\n无重力 爱坠落\n最缓慢的折磨 只剩遍体鳞伤的我\n撑到最后"
+  },
+  {
+    title: "路太弯",
+    lyrics: "我在这里 计算终点的距离\n下一站有没有更期待的结局\n眼 闭上眼看不看的见过去\n看不看的见 原来那个你\n和幸福的关系\n路太弯 梦在转 错过的人已不在\n以为我 能习惯一个人的安全感\n路太弯 爱在转 明知忘记会很难\n我一路上跌跌撞撞\n却找不回拥抱 的形状\n眼 闭上眼看不看的见过去\n看不看的见 原来那个你\n和幸福的关系\n路太弯 梦在转 错过的人已不在\n以为我 能习惯一个人的安全感\n路太弯 爱在转 明知忘记会很难\n我一路上跌跌撞撞\n却找不回拥抱 的形状\n付出过 是不是就换的回希望\n呼吸太乱 世界太宽\n缘分毕竟太短\n路太弯 梦在转 错过的人已不在\n以为我 能习惯一个人的安全感\n路太弯 爱在转 明知忘记会很难\n我一路上跌跌撞撞\n却找不回拥抱 的形状\n我一路上跌跌撞撞\n却找不回拥抱 的形状"
+  },
+  {
+    title: "谢谢",
+    lyrics: "黄昏下的琴键太寂寞\n来来去去只剩很拙的双手\n陪着固执的我\n\n不停弹奏不停地犯错\n想起他为你唱歌时的温柔\n我会笑着难过\n\n他能给你保护\n代替我的照顾\n这是我最后的祝福\n\n谢谢你的结束\n冷却后的残酷\n谢谢你的知足\n告诉我别再付出\n谢谢你的温度\n记忆留在最初\n谢谢你曾让我 幸福\n\n不停唱着愈来愈清楚\n想起你看他眼中的满足\n我学会了服输\n\n他能给你保护\n代替我的照顾\n我只能偷偷地\n为你祝福\n\n谢谢你的结束\n冷却后的残酷\n谢谢你的知足\n告诉我别再付出\n谢谢你的温度\n记忆留在最初\n谢谢你曾经让我 幸福\n\n想着手心的感触\n想着脸颊的温度\n谢谢你那些年\n为我付出\n\n谢谢你的结束\n冷却后的残酷\n谢谢你的知足\n告诉我别再付出\n谢谢你的温度\n记忆留在最初\n\n谢谢你曾让我们\n幸福"
+  },
+  {
+    title: "转机",
+    lyrics: "国语版\n凌晨的飞机\n最孤单的飞行\n从相机里面检视着回忆\n背景是残影\n我哪里都不想再去\n到哪里都触景伤情\n把遗憾托运\n易碎的情绪我手提\n想腻在一起\n我却身不由己\n你每次伤心 我每次缺席\n遥远的距离\n我以为我们的爱情\n誓言里还会有转机\n没想到陌生机场\n写下结局\n各自的转机\n我放不过我自己\n转一圈回到了原地\n眼泪是一种提醒\n我还爱你\n让一切归零\n我放不过我自己\n仍相信爱会有奇迹\n人群中我找到你\n我抱着你\n我们的爱情\n还未完待续\n想腻在一起\n我却身不由己\n你每次伤心 我每次缺席\n遥远的距离\n我以为我们的爱情\n誓言里还会有转机\n没想到陌生机场\n写下结局\n各自的转机\n我放不过我自己\n转一圈回到了原地\n眼泪是一种提醒\n我还爱你\n让一切归零\n我放不过我自己\n仍相信爱会有奇迹\n人群中我找到你\n我抱着你\n我们的爱情\n还未完待续\n我放不过我自己\n转一圈回到了原地\n眼泪是一种提醒\n我还爱你\n让一切归零\n我放不过我自己\n仍相信爱会有奇迹\n寻找我们的转机\n我抱着你\n我们的爱情\n还未完待续\n我放不过我自己\n眼泪是一种提醒\n让我们一起回忆\n我们的爱情\n我放不过我自己\n眼泪是一种提醒\n我们的 我们的\n我们的爱爱爱爱\n我放不过我自己\n眼泪是一种提醒\n让我们一起回忆\n我们的爱情\n我放不过我自己\n眼泪是一种提醒\n我们的 我们的\n我们的爱爱爱爱\n~~End~~\n粤语版\n转机（粤语版）\n侥幸在一起\n曾相熟似知己\n也许仿似霎时困在客机\n邻座刚巧有你\n共醉藉此痛快如飞\n但各有各要去天地\n只可以紧记\n有天将丢淡的惊喜\n一路不断飞\n从欢乐到伤悲\n每一位过客在到站至此\n面对的天气\n问我怎否定我自己\n下次一班机都认得你\n别要退出不舍不弃\n终点很远总必须转机\n连我都不相信我\n途中的曲折有几多\n熟悉的疏远了随幸福走过\n不到我抚摸\n连我都不相信我\n成长中漂泊难安坐\n随缘找不到目标只得经过\n梦里的花火短暂的闪过\n假若可直飞\n无经历也可悲\n也许可以看尽见闻变迁\n是某种福气\n大概必需上了年纪\n便会得知终点是想你\n而这一刻不管天气\n风景不美总找到转机\n连我都不相信我\n途中的曲折有几多\n熟悉的疏远了随幸福走过\n不到我抚摸\n连我都不相信我\n成长中漂泊难安坐\n随缘找不到目标只得经过\n梦里的花火短暂的闪过\n(谁也不知飞哪里)\n从花都飞到了废墟\n但酒馆飞到了进驻的家里\n找到了所需\n行李一堆飞哪里\n从担心飞到了安睡\n沿路风景也踏碎\n空中俯瞰雾里的山水\n转动中引退\n(连我都不相信我)\n途中的曲折有几多\n熟悉的疏远了\n随幸福走过\n连我都不相信我\n途中的曲折有几多\n仍旧会仍旧要\n仍旧爱爱爱爱爱\n连我都不相信我\n途中的曲折有几多\n熟悉的疏远了\n随幸福走过\n连我都不相信我\n途中的曲折有几多\n仍旧会仍旧要\n仍旧爱爱爱爱爱"
+  },
+  {
+    title: "狂爱",
+    lyrics: "对你的狂热 它特别狂\n小心火烛 拿出强心脏\nGotta Get Get\n保持清醒 狂热Lit Lit\nWhat you gonna do\n问题深太狂熬不想狂聊（work work）\nRari on the move 只想狂飙 （skr skr）\n节奏全面重击狂放\n屋顶在发烫温度烧得我有点狂\n不是狂妄 只是有点狂\n对我喜欢的 要特别狂\n我的行事历 特别忙\n但为了你 我甘愿下场\nYea I pull through with the range rover\nHey mama 黑曼巴 出手就是game over\nEvery day every thang 狂热不是偶尔\n电流遍布全身 瓦数伏特+像索尔\n热血不是在于富足 满足付出 别诧异这出入\n别在意数目 给你完美输出\n心中有个底数 我拥有的力度\nBling bling Trice ice 行头像样\n保持饥渴 不用装 forever young\n保持饥饿感直到I'm dead and done\n不用活得忐忑 Me？ Chosen One\n对你的狂热 它特别狂\n小心火烛 拿出强心脏\nGotta Get Get\n保持清醒 狂热Lit Lit\nWhat you gonna do\n问题深太狂熬不想狂聊 （work work）\nRari on the move 只想狂飙 （skr skr）\n节奏全面重击狂放\n屋顶在发烫温度烧得我有点狂\nYea 尾灯lights on\n闪光shine on yea\n音波耳中荡漾\n舞出狂野ok（狂野ok）\n傲视太阳\nYea it's going down yea\n节奏全面重击狂放\n爱得太疯狂没错我就是有点狂\n左脚右脚 now dance with me now come on\n左手右手 now bounce with me now come on\n现场氛围绝对 hot to be you know it\n这感觉不会错 I'm the beast we stuntin\n不会瞎说 yea this shh going down\n狂人狂语 由 我来打个样\n把你双手 缠在我的肩膀上\n得体得体 MAMI 尽情狂 我们尽情狂\nLight it up 不熄灯我们不走\n野火烧不尽内心的怒火\n别去猜测什么如果的如果\n活出完美结果不要像个路人路过\nNow erbody erbody 疯狂跳动\nNow erbody erbody 人潮波动\nNow erbody erbody 别抗拒节奏\n就是要get up要turn up 站上那狂热的顶峰\n对你的狂热 它特别狂\n小心火烛 拿出强心脏\nGotta Get Get\n保持清醒 狂热Lit Lit\nWhat you gonna do\n问题深太狂熬不想狂聊 （work work）\nRari on the move 只想狂飙 （skr skr）\n节奏全面重击狂放\n屋顶在发烫温度烧得我有点狂\nYea 尾灯lights on\n闪光shine on yea\n音波耳中荡漾\n舞出狂野ok（狂野ok）\n傲视太阳\nYea it's going down yea\n节奏全面重击狂放\n爱得太疯狂没错我就是有点狂"
+  },
+  {
+    title: "释放自己",
+    lyrics: "聚光灯围绕着我打出一道发热光芒\n一道道发热光芒让我全身发烫\n舞池中人群的节奏舞出一波热浪\n一波波波的热浪 跟着节奏发烫\n你就算不懂跳舞又如何\n尽情摆动跟着我\n目标明确离开地球表面\n管他地球停不停止转动\nso everybody jump jump\n把手都举高high high\n极度疯狂 不管别人目光\n跳到下道曙光 baby now here we go\nLets Party Par Par Par Par Party\n要 要 要 要Party Lets Party\n释放自己 Party Par Par Par Par Party\n要 要 要 要Party Lets Party\n全力释放自己\nJust go go go Just go go go\nJust go go go Get on the dance floor\nJust go go go Just go go go\nJust go go go Get on the dance floor\n我是最高司令看到我要 站起来\n遵循我的指令听到命令 动起来\n动动动 动起来 动动动 动起来\n当你听到我的指令要你 动起来 (switch it up)\n明天的事我们 再说 困扰的事我们 不说\n别想太多 太多鸟人鸟事\n今晚听到音乐就要立刻放松\nso everybody move and let your body fly\nfly like a G6 我fly G8\n不 邋里邋遢 不 邋里邋里遢\n放肆的摆动让我们看来都很潇洒\n放慢速度 调整脚步 感受氛围 随意摇摆\n邋里邋里遢 邋里邋里邋里遢\nLets Party Par Par Par Par Party\n要 要 要 要Party Lets Party\n释放自己 Party Par Par Par Par Party\n要 要 要 要Party Lets Party\n全力释放自己\nJust go go go Just go go go\nJust go go go Get on the dance floor\nJust go go go Just go go go\nJust go go go Get on the dance floor\n不 邋里邋里遢 不 邋里邋里遢\n不 邋里邋里遢 邋里邋里邋里遢\n不 邋里邋里遢 不 邋里邋里遢\n不 邋里邋里遢 邋里邋里邋里遢\nLets Party Par Par Par Par Party\n要 要 要 要Party Lets Party\n释放自己 Party Par Par Par Par Party\n要 要 要 要Party Lets Party\n全力释放自己\nJust go go go Just go go go\nJust go go go Get on the dance floor\nJust go go go Just go go go\nJust go go go Get on the dance floor"
+  },
+  {
+title: "硬闹",
+lyrics: "眼神锁定目标 正中红心标靶\n当我踏进聚光 all in 这把\n所有诉求 一个重点\n无法无天 不被看扁\n身体围着 炙热火焰\n此时此地写下一页\n由我主导 由我呛\n由我 发飙才像样\n地位和级别全归属重量\n问题有谁能够比我更强\n一触即发 make it hot\n瞬间点燃 make it rock\n脑袋细胞神经够硬\nWe going make the party drop\nTaipei I like it\nShanghai I like it\nTokyo I like it\nWe really really like it\nYo girls we like it\nYo boys we like it\n我队员够硬 全员到齐\n来一起硬闹\nAfter show 还有 after party\nParty后 直达 hotel 大厅\n私人电梯 空中耳鸣\n无理取 now 这是我的天性\n潘玮柏 你到底行不行\n引号加问号 你到底硬不硬\n去的每个场合就是拼第一\n我有99 个问题 硬不是习题\n我自傲 不瞎闹\n全程直播 准备大闹\n地位和级别别担心比较\n站上我的宝座来个皇家礼炮\n一触即发 make it hot\n瞬间点燃 make it rock\n脑袋细胞神经够硬\nWe going make the party drop\nNew York I like it\nLA I like it\nHong Kong I like it\nWe really really like it\nYo girls we like it\nYo boys we like it\n我队员够硬 全员到齐\n来一起硬闹\n来一起硬闹\n来一起硬闹"
+},
+{
+title: "壁虎漫步",
+lyrics: "Here come on move come on\nHere come on move come on\nHere come on move come on\nHere come on move come on\nYeah yeah yeah\nIt's like that ya\nHere we go\nCheck it\n慢动作在巡逻到处走走\n听客厅吊扇在那唱歌\n忘了 旋转\n还真的有点热\n我头晕目眩真的好渴\n冰箱里面那矿泉水 到底还有没有\n桌上凤梨罐头突然开口\n表情诡异 正面看我 又在梦游\n我从沙发掉落 真的很糗\n像壁虎趴在地上口水一直流\n醒来你在 我的四周\n笑嘻嘻 看着我\n啊哈 啊哈 here we go\n我是壁虎等待蚊子\n你是蝴蝶翩翩飞舞\n抓不住 又要赢真是苦\n说什么叫壁虎漫步\n是我创造独门舞步\n是一种啪啪走的壁虎\n蟑螂在旁好心的加油\n发现我 适合在梦中的生活\n壁上有只壁虎在漫步\n四只脚的速度\n突然之间觉得实在是酷\n在一栋旧的仓库 没有人的空屋\n有只壁虎懒洋洋的 在漫步\n但他吃起蚊子的动作 很迅速\n像我们精准的舞步\n分不清 是打呼 还是梦游\n在跳舞 我们这支舞 的名字\n是叫壁虎 在漫步\n但 girl 不像蚊子傻呼呼舌头\n一伸就 抓住\n我是壁虎等待蚊子\n你是蝴蝶翩翩飞舞\n抓不住 又要赢真是苦\n说什么叫壁虎漫步\n是我创造独门舞步\n是一种啪啪走的壁虎\n有些触电 我才发现\n喜欢跟冲动有时难分辨\n想要冒险 靠近一点\n别人的动作比我先\n就站在我的眼前\n然后就将你的手牵\n时间 没站在我这边\n不过也才一瞬间\n拍拍尘土准备 要上路\n我就是 停不住\n我们率性跳舞 叫壁虎漫步\n对那地板有礼貌\n是我们壁虎一族\n最基本的态度\n就算你穿上二手的牛仔裤\n你还是要有那一流的技术\n完美演出\n而不是手脚在忙碌\n辛苦就是酷 绝对是错误\n我是壁虎等待蚊子\n你是蝴蝶翩翩飞舞\n抓不住 又要赢真是苦\n说什么叫壁虎漫步\n是我创造独门舞步\n是一种啪啪走的壁虎\n我是壁虎等待蚊子\n你是蝴蝶翩翩飞舞\n抓不住 又要赢真是苦\n说什么叫壁虎漫步\n是我创造独门舞步\n是一种啪啪走的壁虎"
+},
+{
+title: "来电",
+lyrics: "No No No Yeah Yeah Yeah\n带你进入我的世界 启动来电的时间\n这世界可能危险 请你等待我出现\n这不是国王的游戏 皇后请放心\n可否花点心思设定我这一位来电答铃\nKing and Queen 注定发生不朽的传奇\n来电不接通 童话无法有续集\n如何让你跟着我哭 你跟着我笑\n你跟着我 拥有一切一点都不会少\n所以 再让我靠近一步 嘴部都别再说 不\n皇后棋盘上 千万不要走错步\n我可以对着江山美人都说 不 你点个头\n来电之旅正式的起步\n遥远的距离 我也不会再止步\n因为我相信 我们心里都有数\n所以 试试 到底适合不适合 是就是 不是就不是 这就是事实\nCome on 轻轻一句问候是否听见\n你的眼神是否透露思念 距离是否需要拉近一点\n让你的心情画面全都看见\nBaby see 在一起 的默契 慢慢打造我们爱的黄金比例\n是否能够握住你的手 Baby girl 就等你回答 yes or no, girl\nNo No No, Come on girl Yeah Yeah Yeah\n我只想靠近一步 我愿意静静在这来电等候\n等待你来坐上我的后座\nNo No No, Come on girl Yeah Yeah Yeah\n我只想靠近一步 千万别再说 No No No\n来电之后我们尽情享受\nOh 如果无法电到你我也不可能放弃\n还有别的频率可以接通到你心\n你限时传送秘密可以立即接收心情 王后不能相聚情事机密还能倒叙\n我想要 看你再看什么 听你在听什么 做你在做什么\n这会是一种享受 这种浪漫\nWhen it's on it's on 这种吸引力也不能说 No No No\n所以别说No 只说 Yeah\n来电的直觉不须下注解 距离的长远可能会产生错觉\n但只要一通来电 我出现在你面前\n我没有把柄的包袱 只背个诚恳的态度\nDear Queen 相信我 我保证让你都心服\n所以 试试 到底适合不适合 是就是 不是就不是 这就是事实\nCome on 轻轻一句问候是否听见\n你的眼神是否透露思念 距离是否需要拉近一点\n让你的心情画面全都看见\nBaby see 在一起 的默契 慢慢打造我们爱的黄金比例\n是否能够握住你的手 Baby girl 就等你回答 yes or no, girl\nNo No No, Come on girl Yeah Yeah Yeah\n我只想靠近一步 我愿意静静在这来电等候\n等待你来坐上我的后座\nNo No No, Come on girl Yeah Yeah Yeah\n我只想靠近一步 千万别再说 No No No\n来电之后我们尽情享受 Oh"
+},
+{
+title: "谁是MVP",
+lyrics: "欢迎回来 时间没过那么快\n我从不辜负期待\nso I'm back for a 4 time\nhits you know it\nI got u booty shaking screaming\nI like it pow\n四次出击入侵你的脑细胞\n我的血液在燃烧\n听着节奏在环绕 静静的听\n我释放心中所有的信心\n储备所有能量\n让你知道我再次出击\n要我等 没耐心等\n时间一分一秒飞逝\n还要耐心的等\n因为我上场就发光 我上场就发亮\n你爸爸也爱我 你妈妈更爱我 yo\n但谁是rap的mvp\n那个人手中是否握着M-I-C\n是我是你是你是我是我还是我\nNow that I'm back you will\nnever get your mic back\nI'm back yo you like it\nI'm back yo you know it\nNow 谁是真正的MVP\noh oh will now here we go\nI'm back yo you like it\nI'm back yo you know it\nNow 谁是真正的MVP\noh oh will now here we go\n你是否曾经躺在冰冷冷的病床上\n抱着双膝槌著胸身体却是无法行动\n问候你 你好感动\n嘲笑你 你不能动\n怀疑你 你不能凶\n到底是谁 就是我\n跌倒之后非得爬起来 like jordan\n我穿着背号球衣号码4-5\n我管你眯着眼睛怎么去想怎么看我\n我管你东说西说怎么去说随便去说\nYou know that I can see\nYou know that I can be\n我即使闭上眼睛\n我照样听见呼唤声音\n千万不要不能掉以轻心\n我释放我的动力我的背影\n无时无刻笼罩着你\n你不要 想忽视 我的存在\n我的态度 你知道 从不更改\n我照我的方式站起来\n就算我@*&%# 你都得听\nI'm back yo you like it\nI'm back yo you know it\nNow 谁是真正的MVP\noh oh will now here we go\nI'm back yo you like it\nI'm back yo you know we\nNow 谁是真正的MVP\noh oh will now here we go\n谁是MVP 别怀疑一定就是你\nYeah 谁是MVP\nOh别怀疑一定就是你\n现在才是真正典礼开幕\n赢就赢输就输要走就走我自己的路\n超越自己掌握自己\n掌控一切主宰一切\n别让别人知道你会摧毁你手中的一切\n自己手中拥有自己的梦别睡在挫折当中\n听说胜者为王败者为寇\n赢就赢输就输我真的不在乎\nM to the vp that's me\nI'm back yo you like it\nI'm back yo you know we\nNow 谁是真正的MVP\noh oh will now here we go\nI'm back yo you like it\nI'm back yo you know we\nNow 谁是真正的MVP\noh oh will now here we go\nI'm back yo you like it\nI'm back yo you know we\nNow 谁是真正的MVP\noh oh will now here we go\nI'm back yo you like it\nI'm back yo you know we\nNow 谁是真正的MVP\noh oh will now here we go\n谁是MVP\nNow 谁是真正的MVP\n谁是MVP\nI‘m back"
+},
+{
+title: "王者之声",
+lyrics: "Let’s get hot tonight\nWhat Up What up\n大鼓响起划破片刻宁静\n沉默不语并不代表\n我是属于懦弱 个性\n这是我的王国 驾到\nI am the king yo\n成千上万 万中选一\n千万不能有千万\n口中眼中投射出的一道极光\n冲破一片迷茫\n照亮黑夜发光\n就让全身血液细胞 跳动\nLetz ride or die high\n置声事外 drop it\nWe hot yea we get it on tonite\nTonight is the night\nYou wanna get high\n悬空的心 拒绝在等待\nTonight is the night\nYou wanna get high\n王者之声 就是趁现在\nLet’s get hot tonight\nLet’s get hot tonight\nLet’s get hot tonight\n号角响起\n在所不惜 make it hot tonight\nSo move baby dance baby\n点燃皇家的血脉 yep\n听着那喇叭 响起 叭叭拉叭拉\nNow 想起 手握紧\n今晚注定 掀起革命\n口中眼中投射出的一道极光\n冲破一片迷茫\n照亮黑夜发光\nSo let go向我致敬 礼数不用多\n当我开口 最经典之作\n全城狂欢 没错是为我\nAll eyes on me目睹这传说\nTonight is the night\nYou wanna get high\n悬空的心 拒绝在等待\nTonight is the night\nYou wanna get high\n王者之声 就是趁现在\nLet’s get hot tonight\nLet’s get hot tonight"
+},
+{
+title: "Moonlight",
+lyrics: "I don't ever stare into the sunlight\nBossin' up I'm about to take flight\nI'm feeling like a champ under the strange times\nRollie on my wrist, shoutout to big time\nMama told me don't take no for an answer, I didn't\nIt's new commas every time I deposit the digits\nMama look at what we got, we finally did it\nYou can't tell me that we not, this gotta be living\nAnd everything I do I wanna put a shine on it\nMake or miss, win or lose, I put my name on it\nRaise your hands up, let it reach for the sky\nI know that everything will be alright\nThis is everything I wanted\nDo it one more time\nGotta give it up all night\nGive it up all night\nSee the stars under the moonlight\nDo it one more time\nGotta give it up all night\nGive it up all night\nWent from eating ramen noodles now it's steak knives\nPrivate planes, runways to the West Side\nBossin' up I'm about take flight\nAll gas, no brake lights\nMama told me don't be trippin' over haters hatin'\nIt's love and peace and respect, the motto all we chasin'\nMama told me wipe your face up when them tears be fallin'\nYou know I always light it up, this gotta be living\nAnd everything I do I wanna put a shine on it\nMake or miss, win or lose, I put my name on it\nRaise your hands up, let 'em reach for the sky\nI know that everything will be alright\nThis is everything I wanted\nDo it one more time\nGotta give it up all night\nGive it up all night\nSee the stars under the moonlight\nDo it one more time\nGotta give it up all night\nGive it up all night\nGotta give it up all night\nGive it up all night\nMama told me don't take no for an answer, I didn't\nIt's new commas every time I deposit the digits\nMama look at what we got, we finally did it\nYou can't tell me that we not\nThis gotta be living (this gotta be living)\nThis is everything I wanted\nDo it one more time\nGotta give it up all night\nGive it up all night\nSee the stars under the moonlight\nDo it one more time\nGotta give it up all night\nGive it up all night\nGive it up all night\nGive it up all night"
+},
+{
+title: "Coming Home",
+lyrics: "我想我\n不用重新介绍\n请不用太多指教\n三秒钟之内就可以让\n大家尖叫\n天堂之门敞开大门\n叫我安心回家\n何必滚烫人间浴火\n忍受 喧嚣谩骂\n但我清楚拒绝\n绝对的不妥协\n血滴下我的脸\n回来站在你面前\nDear Lord please let me see another day\n浴火凤凰展开双翼\nain't no kid and play\nI was gone never gone\nNow I'm back where my bros at\n穿梭生死像梦\n伤口麻痹没痛感\n不会 带着怨恨\n复仇者联盟\n回家 感觉好\n让我敬你一杯酒\n不说太多的道理\n不需要太多真理\n字典里 没有两个字\n叫做认命\n这个现实社会\n确实有些不公平\n人生慢慢漫漫人生\nI'm a young OG\n每当黑夜降临\n不自主会抬头望\n杀不死我只会\n让我变得更坚强\n双手合十 感激回归原样\nWe go home\nWe go home\nWe go home\nWe go home now\nHome\nI'm coming home\nYes I'm coming home\nI'm coming home\nHome\nI'm coming home\nYes I'm coming home\nI'm coming home\n曾经花费太多时间\n找寻归属感\n其实早就俯看天下\nchill着不用赶\n人们急着chase the money\n寻找安全感\n我早就戴着骷髅Richard Mille\n在我左腕\n如果说 谣言失言\n八卦遍布弥漫\n事实不 符逻辑\n甲方受伤 乙方赚\n人群盲目相信无知\n跟从 更感叹\nBig shot Curry 打破迷思\n勇士断腕\nKO擂台上搏命\n右勾拳逼你清醒\n消除心中心魔 aka\n康斯坦丁\n天真的忘了\n7 分努力 三分靠运气\n他以为拍张照片\n配个故事就能出名\n他说他渴望随波逐流\n背后刺tattoo\n金项链一条不够\n为什么不能make it two\n斜眼看人变样忘了谦逊\nact a fool\n回家迷路收费代价\n铁定自己付 自负\n每当黑夜降临\n不自主会抬头望\n杀不死我只会\n让我变得更坚强\n双手合十 感激回归原样\nWe go home\nWe go home\nWe go home\nWe go home now\nHome\nI'm coming home\nYes I'm coming home\nI'm coming home\nHome\nI'm coming home\nYes I'm coming home\nI'm coming home\nThere never be another like me\n不论褒贬诬蔑失意\n总是战胜 Mr.BIG\n似乎注定对抗命运\nAll eyes on me\n享受天生不羁\n不在乎他人眼睛you heard\nYou know What's My Name\n地址是Hall Of Fame\n颠覆世界颠覆常理\n不朽加永垂\n杀不死我只会\n让我变得更坚强\nWe go home\nWe go home\nWe go home\nHome\nI'm coming home\nYes I'm coming home\nI'm coming home\nHome\nI'm coming home\nYes I'm coming home\nI'm coming home"
+},
+{
+title: "我的麦克风",
+lyrics: "Pass me the mic\n做一分钟的英雄\nPass me the mic\nYo yo verse 1\n是谁抢走了我的麦克风\n没关系我还有我的喉咙\n是谁看扁了我没有观众\n我自己第一个被感动\n我不是来打工我在卖我的梦\n普通话没教我普通\n只给我五分钟说不定一发功\n会让你一生不相同\n我很有用我很有用\n就等着伯乐试用\n先赚点零用不怕大材小用\n我很有用不管用\n说上一万遍就有用\n给我给我我的麦克风\n一个掌声一个白的灯照亮我\n你到底懂不懂\n到底懂不懂\n管他金的银的红的\n我要我的麦克风\n是谁抢走了我的麦克风\n没关系我还有我的喉咙\n是谁看扁了我没有观众\n我自己第一个被感动\n宣泄了荷尔蒙唱活了白日梦\n我就是我的主人翁\n因为有恃无恐\n比天王还要懂\n怎么唱平凡人的痛\nYo 怕不怕\n不管有想法没想法\n麦克风想拿\n代价怕不怕\n你的妈在这告诉我爸\n唱首传奇歌曲\n我不怕就不怕\n那听完谢谢你\n想要献花\n到旁边排队要个号码吧\n如果没有人\n剩下我跟我的麦克风\n到底怕不怕我不怕\n你怕不怕我不怕\n是谁抢走了我的麦克风\n没关系我还有我的喉咙\n是谁看扁了我没有观众\n我自己第一个被感动\n左边的观众\n右边的观众对面的观众\n有没有观众\n请各位观众做我的观众\nPass me the mic\nPass me the mic\n有谁成功没下过了苦功\n有谁出生就拿着麦克风\n是谁抢走了我的麦克风\n没关系我还有我的喉咙\n是谁看扁了我没有观众\n我自己第一个被感动\n是谁抢走了我的麦克风\n没关系我还有我的喉咙\n是谁看扁了我没有观众\n我自己第一个被感动"
+},
+{
+title: "Tell Me",
+lyrics: "just tell me 为什么\n眼神有话要说\n是不是你想要认识我\n偷偷的看看你要让我等多久\n爱就爱不要用慢动作\noh no no 又是一个寂寞的单身派对\n彷佛没人参加只有我会想去\n不想打扮不是因为无所谓\n只是我看到女孩不会哨子一直吹\nthat's right,maybe that's why我没有女友\n长辈一直逼我需要多交女朋友\n交好的女友哪有这么顺手\n机会来了自然就会轻易到手\na party here a party there实在不想说yo man i'm here\n真的不想在这里活活受虐\n绝对不是胆怯\n哪个女孩真的跟我看对眼\n浪漫故事我们一起演\n哈哈哈哈这种笑话真的好笑\n偏偏这种夜晚就是这么叫好\njust tell me 为什么\n眼神有话要说\n是不是你想要认识我\n偷偷的看看你 要让我等多久\n爱就爱 不要用慢动作\n嘿你走来我走开\n你又walk by 怎么这么没有天理\ngirl friend you better know that you fly\n我不像其他男孩永远都是那么坏\n我的脸红心跳呼吸在加速\n真的应该怎么办我看我只能摆cool\n晚上戴著墨镜却又怕超俗\n求你现在回头我保证立刻回家吃素\n信不信不由你有够神奇\n眼神的交会产生一种电流\n说实在我也不太懂\n要我怎么说要我怎么做你才会明白我的心\nyou'll be looking at me i'll be looking at you like a crazy fool\nhow do i打个招呼\nof all the girls i seen i really wanna meet you\njust tell me 为什么\n眼神有话要说\n是不是你想要认识我\n偷偷的看看你 要让我等多久\n爱就爱 不要用慢动作\n潘玮柏你现在到底说不说\n男子汉的气魄说做就做\n怎么接近你我现在还在摸索\n怎么办怎么瞧怎么挪但是\n就算她不想做你的女朋友是他的自由\n想听音乐举手\nok123千万别想那么多\n拳一握脚一踏现在开始动\n终于到了重要关头就要开口\n这样这样的自信绝对不会失手\n拍拍你的背进行自我介绍\n我叫will 你叫jill 能不能在一起chill\n世界上的机会通常只有3秒\n现在倒数3秒准备好了没有\n这种感觉到底是真是假快点告诉我\n不要瞬间冲动在此错过\nhow deep is your love baby.let me know.\nhow deep is your love baby.tell me so.\njust tell me 为什么\n眼神有话要说\n是不是你想要认识我\n偷偷的看看你 要让我等多久\n爱就爱 不要用慢动作\njust tell me 为什么\n眼神有话要说\n是不是你想要认识我\n偷偷的看看你 要让我等多久\n爱就爱 不要用慢动作\nhow deep is your love baby.let me know.\nhow deep is your love baby.tell me so.\njust tell me 为什么\n眼神有话要说\n是不是你想要认识我\n偷偷的看看你 要让我等多久\n爱就爱 不要用慢动作"
+},
+{
+title: "快乐崇拜",
+lyrics: "One, two, three, here we go\n忘记了姓名的请跟我来 （yeah）\n现在让我们向快乐崇拜\n放下了包袱的请跟我来 （yeah）\n传开去 创建个快乐的时代（ oh）\n快乐到底属于哪个年代 七零 八零 九零 还是Y世代？\n翻开历史课本 答案就算仔细找也会找不到 背也会背不好\n放松 让我来说\n什么年代吹着什么样的风 uh\n我拿着我的麦克风 唱着 old school show y'all ready to roll\n七零的年代 复古我最 high\nDisco fever 从来不肯 say goodbye， uh\n只有放放放克才能酷\n男男女女 老老少少 我们穿着喇叭裤 yo\n爆炸头在望春风\n左右摇摆 上下一指神功 oh\n黑白电视可能无法感受\n但相信你们可以悟出黑色幽默\n忘了你存在 （yeah） 有什么期待 （whoo）\n欢乐你邀请它一定来 （ oh）\n与其渴望关怀 （yeah） 不如一起精彩 （whoo）\n快乐会传染 请你慷慨 come on\n相恋的 失恋的 请跟我来 （yeah）\n一边跳一边向快乐崇拜\n开心不开心的都跟我来 （yeah）\n美丽而神圣的时光不等待\n到了八零年代 要喊什么？\nB-boys, B-girls, let's make some noise\n（要穿什么呢？ 嗯）\n紧裤子 紧上衣 秀出你的身材\n有人露出金牙千万不要惊讶\n嘻哈正在发芽 别拔它假牙\nLocking, popping, we dancing\nAin't no stopping 跟我一起唱\n快乐崇拜 快乐无害\n虽然快乐像个病毒病毒会传染\n九零年 我们等待千禧年\nParty 电子音乐 疯狂玩整夜\nHip hop for life, that's right\n每个人嘴里喊着 Westside\n管你是不是真正 party 天才\n扬起你的嘴角 跟我快乐崇拜\n忘了你存在 （存在） 有什么期待 （期待）\n欢乐你邀请它一定来\n与其渴望关怀 不如一起精彩\n快乐会传染 请你慷慨 come on\n忘记了姓名的请跟我来 （yeah）\n现在让我们向快乐崇拜\n放下了包袱的请跟我来 （yeah）\n传开去 创建个快乐的时代（ oh）\n现代 这个匆忙时代\n虽然少了时间 但千万不要倦怠\n今天的事交给今天去做\n因为明天才有很多时间一起去疯\nYo 放肆的节奏 看你放肆的互动\n看你放肆的感动 看我放肆的创作 （yeah）\n要我怎么再说？ Pepole feel my flow\n看我拿着麦克风 唱出快乐的 show\n忘了你存在 （yeah） 有什么期待 （whoo）\n欢乐你邀请它一定来 （ oh）\n与其渴望关怀 （yeah） 不如一起精彩 （whoo）\n快乐会传染 请你慷慨 come on\n相恋的 失恋的 请跟我来 （yeah）\n一边跳一边向快乐崇拜\n开心不开心的都跟我来 （yeah）\n美丽而神圣的时光不等待 （oh）"
+}
+  
+];
+
+  // DOM元素
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const songList = document.getElementById('songList');
+  const content = document.getElementById('content');
+  const searchInput = document.querySelector('.search-input');
+  const clearBtn = document.querySelector('.clear-btn');
+
+  // 初始化所有歌曲
+  function renderAllSongs() {
+    let html = '<p class="developer-info">本网页由Bunnysong007自主开发，如需定制请微信联系。</p>';
+    songs.forEach((song, index) => {
+      html += `
+        <section id="song-${index}">
+          <h2>${song.title}</h2>
+          <pre>${song.lyrics}</pre>
+        </section>
+      `;
+    });
+    content.innerHTML = html;
+  }
+
+  // 渲染导航列表
+  function renderSongList(filteredSongs = songs) {
+    songList.innerHTML = '';
+    filteredSongs.forEach(song => {
+      const originalIndex = songs.findIndex(s => s.title === song.title);
+      const li = document.createElement('li');
+      li.textContent = song.title;
+      li.dataset.index = originalIndex;
+      
+
+// 导航点击事件 - 优化后的平滑滚动定位
+li.addEventListener('click', () => {
+  // 1. 先关闭侧边栏和键盘
+  sidebar.classList.remove('open');
+  searchInput.blur();
+  
+  // 2. 等待UI更新后再执行滚动（关键改进）
+  setTimeout(() => {
+    const target = document.getElementById(`song-${originalIndex}`);
+    if (target) {
+      // 计算header高度作为偏移量（根据实际样式计算）
+      const header = document.querySelector('header');
+      const headerHeight = header.offsetHeight;
+      
+      // 计算目标位置（元素顶部 - header高度）
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
+      // 平滑滚动到目标位置
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }, 200); // 等待侧边栏关闭动画完成
+}, { capture: true });
+      
+      songList.appendChild(li);
+    });
+  }
+
+  // 搜索功能
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    const filtered = query 
+      ? songs.filter(song => song.title.toLowerCase().includes(query))
+      : songs;
+    renderSongList(filtered);
+  });
+
+  // 清空按钮
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    renderSongList();
+    searchInput.blur();
+  });
+
+  // 菜单切换
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    searchInput.blur();
+  });
+
+  // 全局点击收起键盘（排除导航和搜索区域）
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && e.target !== searchInput) {
+      searchInput.blur();
+    }
+  });
+
+  // 初始化
+  renderAllSongs();
+  renderSongList();
+  </script>
+</body>
+
+</html>
