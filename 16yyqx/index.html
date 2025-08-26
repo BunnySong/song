@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -8,46 +7,36 @@
   <title>易烊千玺演唱会歌词本</title>
   <style>
     body {
-      margin: 0;
-      font-family: "Microsoft YaHei", sans-serif;
-      /*background: #f0f3ff;*/
-   /* background: linear-gradient(to bottom, #dfe6ff, #b9ceff);*/
-      background: linear-gradient(to bottom, #EAEAEA, #ffffff);
-      color: #333;
-      font-size: 16px;
-     background-size: cover; 
-    -webkit-background-size: cover; /* 适配苹果手机 */
-    background-position: top left; 
-    -webkit-background-position: top left; /* 适配苹果手机 */
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    -webkit-background-attachment: fixed; 
-    overflow-x: hidden; 
-    -webkit-overflow-scrolling: touch; 
+      margin: 0; 
+      font-family: "Microsoft YaHei", sans-serif; 
+      color: #fff; 
+      font-size: 16px; 
+      background: linear-gradient(to bottom, #801719, #801719);
+      background-size: cover; 
+      background-position: top left; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      overflow-x: hidden; 
+      -webkit-overflow-scrolling: touch; 
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 999;
-      background-color: #EAEAEA;
-      color: #333;
+      background-color: #801719;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       padding: 15px 20px;
       text-align: center;
       font-size: 1.25em;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-image: url('https://s21.ax1x.com/2025/08/02/pVNcp8J.png');
+      background-image: url('https://www.helloimg.com/i/2025/08/26/68adbe8765f6b.png');
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.2em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     .menu-toggle {
@@ -62,19 +51,58 @@
     nav {
       width: 250px;
       height: 100vh;
-      background: #EAEAEA;
+      background: #802224;
       position: fixed;
       left: -250px;
       top: 0;
       transition: left 0.3s ease;
       z-index: 1000;
       overflow-y: auto;
-      box-shadow: 2px 0 5px rgba(142, 74, 74, 0.1);
-      border-right: 1px solid #716666;
+      box-shadow: 2px 0 2px rgba(3, 32, 90, 0.1);
+      border-right: 1px solid #920c20;
     }
 
     nav.open {
       left: 0;
+    }
+
+    .search-container {
+      padding: 15px 10px;
+      border-bottom: 1px solid #9a3537;
+      display: flex;
+      gap: 8px;
+      box-sizing: border-box;
+      width: 100%;
+      /* 新增以下属性实现吸顶效果 */
+      position: sticky;
+      top: 0;
+      background-color: #802224; /* 与侧边栏背景色保持一致 */
+      z-index: 10; /* 确保在内容上方 */
+}
+
+    .search-input {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      outline: none;
+      min-width:0;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .clear-btn {
+      padding: 8px 12px;
+      background-color: #bb3c3e; 
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      white-space: nowrap;
     }
 
     nav ul {
@@ -85,13 +113,13 @@
 
     nav li {
       padding: 12px 20px;
-      border-bottom: 1px solid #ddd;;
+      border-bottom: 1px solid #720818;
       cursor: pointer;
       font-size: 1rem;
     }
 
     nav li:hover {
-      background-color: #a4a6b2;
+      background-color: #ba2d42;
     }
 
     main {
@@ -103,55 +131,39 @@
 
     .developer-info {
       font-size: 0.8em;
-      color: #aeaeae;
+      color: #fff;
       text-align: center;
       margin-bottom: 20px;
     }
 
     section {
-      margin-top: 30px;
-      scroll-margin-top: 80px;
+      margin-top: 40px;
+      padding-bottom: 20px;
+      scroll-margin-top: 100px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     h2 {
-      color: #333;
+      color: #fff;
       font-size: 1.3em;
+      text-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
     }
 
     pre {
-     white-space: pre-wrap;
+      white-space: pre-wrap;
       word-wrap: break-word;
-     /* background: rgba(23, 30, 48, 0.5); */
-      background: rgba(221, 221, 217, 0.5); 
+      background: rgba(94, 7, 9, 0.5); 
       backdrop-filter: blur(20px); 
       padding: 20px;
       border-radius: 6px;
-      border: 1px solid #d6d6d6;
-      font-size: 1.25rem;
+      border: 1px solid #802224;
+      font-size: 1.1rem;
       line-height: 1.8;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
-      }
-
-      nav {
-        left: -250px;
-      }
-
-      nav.open {
-        left: 0;
-      }
-
-      main {
-        margin-left: 0;
-      }
-
-      pre {
-        font-size: 1.1rem;
-        line-height: 1.6;
       }
     }
   </style>
@@ -160,186 +172,244 @@
 <body>
 
   <header>
-    易烊千玺演唱会歌词本
+    潘玮柏演唱会歌词本
     <div class="menu-toggle">&#9776;</div>
   </header>
 
   <nav id="sidebar">
-    <ul>
-      <!-- 自动生成的歌曲列表 -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="搜索歌曲...">
+      <button class="clear-btn">清空</button>
+    </div>
+    <ul id="songList">
+      <!-- 歌曲列表 -->
     </ul>
   </nav>
 
   <main id="content">
-    <p class="developer-info">本网页由Bunnysong007开发，若有定制需求请微信联系。</p>
-    <!-- 歌词内容动态插入 -->
+    <p class="developer-info">本网页由APTX4869Bunny自主开发，如需定制请微信联系。</p>
   </main>
 
   <script>
-  const songs = 
-  [
-        {
-        title: "Don't Tie Me Down",
-        lyrics: "唉唉唉 你又窥探着我\n拜托 好好看清楚我\n拳头握紧表情放松\n自由都被缴了 好吧 你听我说\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\nTie me down\n人见人爱多无聊\nDon't tie me down\nTie me down\nTie me down\nTie me down\n不要再唠唠叨叨\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色\n嘿嘿嘿嘿 还有什么要求\n幼稚的是你不是我\n你就自己好好地过\n别操纵我的梦 别管我的以后\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\nTie me down\n人见人爱多无聊\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\n不要再\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色\n嘿嘿嘿嘿 还有什么要求\n幼稚的是你不是我\n你就自己好好地过\n别操纵我的梦 别管我的以后\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\n人见人爱多无聊\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\n不要再唠唠叨叨\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色"
-    },
+  const songs = [
+  {
+    "title": "楔木",
+    "lyrics": "坠入我 时针刺骨\n满身泥泞的我\n也从骤雨里打捞\n脚印 回声\n同黑夜 一饮而尽\n重逢我 与风共舞\n纵火于心的我\n灰烬都化变呓语\n无处降落\n环绕在时间裂缝中叹息\n记忆是最沉的行囊\n幽谷深渊筑归乡\n逃奔闲逛无终场\n记忆是最沉的行囊\n幽谷深渊筑归乡\n逃奔闲逛无终场"
+  },
+  {
+    "title": "亲爱的这里没有一个人",
+    "lyrics": "这该是虚惊一场\n手却不自地慌张\n紧紧攥住的拳头\n像来不及预示般\n再一次摇晃\n男人在旁边祷告\n杂志上女人在笑\n他的水洒在地上\n还在努力地维持\n礼貌的样子\n亲爱的\n这是通往一无所知的未来\n可怜的 可爱的\n没人会在意这场晕眩\n给我些时间吧\n请让我把想讲的话讲完\n爱人们还在沉睡\n像什么都没发生\n说时迟那时快啊\n醒来后即将面对\n可笑的伤悲\n被限制四肢无力\n被设定心存侥幸\n可怎么不出声音\n像剩下的寂静岭\n无辜且绝情\n亲爱的\n欢迎进入一无所知的未来\n伟大的失败者\n请在你写下再见之前\n给我些时间吧\n让我有足够的时间告别"
+  },
+  {
+    "title": "Don't Tie Me Down",
+    "lyrics": "唉唉唉 你又窥探着我\n拜托 好好看清楚我\n拳头握紧表情放松\n自由都被缴了 好吧 你听我说\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\nTie me down\n人见人爱多无聊\nDon't tie me down\nTie me down\nTie me down\nTie me down\n不要再唠唠叨叨\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色\n嘿嘿嘿嘿 还有什么要求\n幼稚的是你不是我\n你就自己好好地过\n别操纵我的梦 别管我的以后\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\nTie me down\n人见人爱多无聊\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\n不要再\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色\n嘿嘿嘿嘿 还有什么要求\n幼稚的是你不是我\n你就自己好好地过\n别操纵我的梦 别管我的以后\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\n人见人爱多无聊\nDon't tie me down\nTie me down\nTie me down\nTie me down\nDon't tie me down\n不要再唠唠叨叨\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色\n我乐意沉默 释放内心焰火\n我要的规则 是公平取舍\n我唱我的歌 太多人听懂了\n我要我快乐 谁管你眼色"
+  },
+  {
+    "title": "未来的主人翁",
+    "lyrics": "你走过林立的高楼大厦\n穿过那些拥挤的人\n望着一个现代化的都市\n泛起一片水银灯\n突然想起了遥远的过去\n未曾实现的梦\n曾经一度人们告诉你说\n你是未来的主人翁\n在人潮汹涌的十字路口\n每个人在痴痴的等\n每个人的眼睛都望着那\n象征命运的红绿灯\n在红橙黄绿的世界里\n你这未来的主人翁\n在每一张陌生的面孔里\n寻找儿时的光荣\n每一个今天来到世界的婴孩\n张大了眼睛摸索着一个\n真心的关怀\n每一个来到世界的生命在期待\n因为我们改变的世界\n将是他们的未来\n别以为我们的孩子们太小\n他们什么都不懂\n我听到无言的抗议在他们\n悄悄的睡梦中\n我们不要一个被科学游戏\n污染的天空\n我们不要被你们发明变成\n电脑儿童\n每一个今天来到世界的婴孩\n张大了眼睛摸索着一个\n真心的关怀\n每一个来到世界的生命在期待\n因为我们改变的世界\n将是他们的未来\n有一天孩子们会告诉\n他们后代你们要守规矩\n格言象玩具风筝\n在风里飘来飘去\n当未来的世界充满了\n一些陌生的旋律\n你或许会想起\n现在这首古老的歌曲\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去 就这么飘来飘去\n飘来飘去就这么飘来飘去\n我们不要一个被科学游戏\n污染的天空\n我们不要一个被现实生活\n超越的时空\n我们不要一个越来越远模糊\n的地平线\n我们不要一个越来越近沉默\n的春天\n我们不要被你们发明变成\n电脑儿童\n我们不要被你们忘怀变成\n钥匙儿童\n哦... 哦... 哦..."
+  },
+  {
+    "title": "四字歌",
+    "lyrics": "闲言碎语 造词随意\n弄首烂歌 无关自己\n瓜头小崽 窜街翻墙\n温良恭俭 家教配方\n郊外野生 随地散养\n武艺灌注 登台串场\n四年八载 自我扩容\n准时下课 付费上钟\n指令入耳 头脑空空\n摆好姿态 名利梦中\n艳皮加身 人心浮动\n吹嘘客套 标准笑容\n城墙堡垒 三千裂缝\n一呼百应 内心中庸\n以砞而砌 江际三里\n拔苗助长 出人头地\n火烤土坯 塑成人形\n天生我材 黄金掺泥\n午夜胡同 卤煮解腻\n三杯下肚 肆行无忌\n灵魂汆熟 滋味出奇\n改头换面 名利免疫\n二十啷当 赖赖唧唧\n流浪野王 街头两笔\n弟弟弟弟 掂量自己\n人之大欲 你我如一\n弟弟弟弟 掂量自己\n生活怎能 纸上谈兵\n弟弟弟弟 掂量自己\n戳破幻象 直视内心\n弟弟弟弟 掂量自己\n何必伪装 有限的你\n弟弟弟弟 掂量自己\n弟弟弟弟 掂量自己"
+  },
+  {
+    "title": "九里庄人才中心",
+    "lyrics": "午夜降临 百态艳装夜行\n声光沉浸 立体环绕耳语\n无间丛林 无序藏着规律\n要 征服 先感动自己\n八方呼应 他叱咤过风云\n眉目传情 略施桃红眼影\n人造的花瓶 叫谁一掷千金\n繁嚣过境 沦为背景\n如 电光幻影\n这伏线弯弯曲曲\n跳舞吧 跳到幕天席地\n观众或遭遇\n随时对调 或悲或喜\n这关系 是否关系命运\n我们绽放自己\n我们忘了自己\n但愿我们自在游历\n却为何 不甘于 无声息地沉寂\n感动了自己\n造一场空欢喜\n得到赞许 哪怕怜悯\n别叹息 渡人难渡己\n太认真 何必\n盛况造影 新旧角色更替\n闹市即景 这边缘太拥挤\n自带上话题 毛孔都会演戏\n每个角色 明确目的\n如电光幻影\n这伏线弯弯曲曲\n跳舞吧 跳到幕天席地\n观众或遭遇\n远或近 若即若离\n意难平 改变谁的命运\n我们绽放自己\n我们忘了自己\n但愿我们自在游历\n别自困于方寸间寻觅\n各有不同境遇\n同造一场欢喜\n得到赞许 哪怕怜悯\n别叹息 渡人难渡己\n总有人铭记\n下一个奇迹"
+  },
+  {
+    "title": "五光十色",
+    "lyrics": "又一场猫鼠游戏的追逐\n你抛下面包屑唤我征服\n触手可及 迷人猎物\n一脸无辜\n开场白已越过我的防线\n是我敏感还是你太迟钝\n你不懂得冒险和冒犯\n一线之间\n扑面而来 拥挤笑脸\n昏乱迷恋 还是路过的空荡消遣\n你沉浸在独角剧院\n深情上演 一出一出深刻的肤浅\n五光十色的诺言\n笨拙的真心已濒临灭绝\n感动自己的谎言\n梦醒的瞬间没有人幸免\n欲擒故纵你退我进舞步\n棋逢对手等待也很满足\n你我都是多情动物\n不该陌路\n你用目光炫耀战果累累\n我用背影证明绝非同类\n谁会沦陷在几句赞美\n几分安慰\n天花乱坠 放声陶醉\n最后只为 你漫长情史增添点缀\n礼貌被你故作暧昧\n骄傲作祟 不甘承认我无意奉陪\n千篇一律的宣言\n对着多少人 重复多少遍\n你不会对我抱歉\n习惯将逾越伪装成取悦\n无所顾忌的乐园\n任你自由来去观看挑选\n这荒诞显而易见\n我有口能言却无人听见"
+  },
+  {
+    "title": "冷屁股",
+    "lyrics": "Shall we dance 风采翩翩\n重塑造经典\n四分零三秒的时间\n假装一场爱恋\n熨帖在宽阔双肩\n指缝中缱绻\n对看 这一眼\n由深宵漫步云端\n在耳畔\n声声连绵诉说蜜语甜言\n比呼吸更熟练\n浑厚声线\n量身你的喜好层层渲染\n谁说不体面\n你的美丽由他赞叹\n喜怒哀乐从不怠慢\n谁的心思百般刁难\n不费力 轻巧回旋\n你的脚步随意变换\n他的配合流畅自然\n小情歌 舞翩跹\n多么浪漫 给你星光灿烂\nCharlie Chaplin 无声荒诞\n兰芳太婉转\n阳春和白雪人世间\n谁懂你的孤单\n九官鸟不是科班\n也字正腔圆\n所谓 小演员\n不缺救场的经验\n像鱼贯\n声声连绵层出无穷诗篇\n比呼吸更熟练\n澎湃赞叹\n艺术化处理 略高于自然\n却放得下身段\n你的美丽由他赞叹\n喜怒哀乐从不怠慢\n谁的心思百般刁难\n不费力 轻巧回旋\n你的脚步随意变换\n他的配合流畅自然\n小情歌 舞翩跹\n多么无常 他擅于挑战\n当你 眉头一皱\n洞悉你的心愿\n当你 翻个白眼\n知情识趣 随时差遣\n当你 疲倦厌烦\n肢体毛孔都倾情动员\n喜欢 喜欢\n你的美丽由他赞叹\n喜怒哀乐从不怠慢\n谁的心思吝啬为难\n也慷慨为他买单\n你的脚步随意变换\n他的配合流畅自然\n苦情歌 喜剧片\n欢乐背后还藏着另一面"
+  },
+  {
+    "title": "白日猫",
+    "lyrics": "是不是你说话如果不够大声\n就不足以彰显你身份\n两颗眼珠再瞪\n再瞪得整间屋子都不用开灯\n翻来覆去几句话内容像车轮\n偏偏篇幅要参照散文\n耳朵都生了茧\n破茧都成蝶一曲梁祝送给你们\n别太过分\n要懂得分寸\n凭什么对你容忍\n我一般只对至亲的人孝顺\n别不承认\n你只是泄愤\n看我眼神多真诚\n其实意志早已出离了肉身\n这是属于你的我的他的她的谁的\n直立行走的灵魂\n当每一个夜幕降临弯下腰身\n成为自由化身\n下一步要往西往东往前往后往右\n旁人都无权过问\n并不是我高深\n我只是一只猫 伪装成一个人\n虽然从小就知道要学会感恩\n珍惜相遇的每段缘分\n直到遇见了你\n我才明白造化有时也爱弄人\n凡事都有好也总有坏的可能\n这乐观的态度真万能\n不是自欺欺人\n只是欣然接受这万物给的养分\n别太过分\n要懂得分寸\n我真懒得做区分\n惹到我一律送他几道爪痕\n别不承认\n你真的很笨\n看我笑容多天真\n其实摩拳擦掌抚平了指纹\n这是属于你的我的他的她的谁的\n直立行走的灵魂\n当每一个夜幕降临弯下腰身\n成为自由化身\n下一步要往西往东往前往后往右\n旁人都无权过问\n并不是我高深\n我只是一只猫 伪装成一个人\n这是属于你的我的他的她的谁的\n直立行走的灵魂\n白日里每一次隐忍 独善其身\n为在夜晚获胜\n或许会在某年某月某时某地某分\n我们再一次相认\n不必感到陌生 我就是那只猫\n我是你的主人"
+  },
+  {
+    "title": "她等在午夜前",
+    "lyrics": "秘密 藏得太久 结成怪癖的果\n就像她在深夜准时入座\n黑衣固定挑选沙发最远角落\n同样的酒多点一杯空在边桌\n像旋涡的空心\n等一个人的游戏\n没有来的他\n错过了末班车\n错过了大海上的陆地\n不落脚转不停\n等一个罐头过期\n什么挡着他\n暴雪吗 黑洞吗 日子吗\n某一天毫无征兆的崩塌\n天已黑 在等谁\n流光灯下妆多美\n或这舞池鲜艳破旧得像\n她爱过他的幻觉\n多一杯 在等谁\n美酒献给空余位\n随他疯狂跳舞\n背影不许追\n雨里 车开之后他在雨里消失\n记忆生出苔藓年月潮湿\n沉迷 也许是她刻意设计仪式\n结局未写 某段青春就从未遗失\n像靴子 没落地\n等一个人的归期\n他被困在那\n不回头的离家\n不是她穿白纱的可惜\n时空里的涟漪\n等一个愿被忘记\n他会推门吗\n一秒后 一生后 一梦后\n就像那飞回夜空的烟花\n天已黑 在等谁\n流光灯下妆多美\n或这舞池鲜艳破旧得像\n她爱过他的幻觉\n多一杯 在等谁\n美酒献给空余位\n随他疯狂跳舞\n背影不许追\n她等谁没等谁\n不过烟雾迷了眼\n看这舞池鲜艳破旧得像\n她爱过他的幻觉\n还剩下 酒一杯\n起身随便递给谁\n就像誓言改写\n另一个结尾\n只可疯狂跳舞\n背影不可追"
+  },
+  {
+    "title": "黑光",
+    "lyrics": "天正在黑\n我看不见你的脸\n梦在下沉\n我找不到你的身影\n那是我心里的光\n藏在最黑的天堂\n那是我心里的光\n藏在最黑的地方\n天正在黑\n我看不见你的脸\n梦在下沉\n我找不到你的身影\n那是我心里的光\n藏在最黑的地方\n那是我心里的光\n藏在最黑的地方\n天正在黑\n我看不见你的脸\n梦在下沉\n我找不到你的身影\n那是我心里的光\n藏在最黑的天堂\n那是我心里的光\n藏在最黑的地方"
+  },
+  {
+    "title": "两个傍晚的月亮",
+    "lyrics": "月光打翻了我的身影\n是白色的\n这一颗星球就要掉落下来了\n今天的我啊\n是蓝色的\n我才不要了解你所有的悲伤\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都不会留下\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都会被遗忘\n月亮消失在迂回里\n是红色的\n可这样的夜晚却没人在意了\n今天又怎样\n都不见了\n我才不要了解这所有的沮丧\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都不会留下\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都会被遗忘\n我才不要一个人\n经历那些难过的日子\n我们却若有所失地谈论着明天\n我才不要一个人\n经历那些难过的日子\n显然虚掷很糟糕却重复而无奈"
+  },
     {
-        title: "I Adore You",
-        lyrics: "在梦里 雷阵雨 天昏地暗\n真孤独 游乐场的微光\n我迷了路 没打伞 心却温暖\n逆风里 漫步云端\n我有了你就能忘了时间多慢\n要怎么梦游也不管\n带你走 追上月亮\n我还记得心里藏着多少美丽\n陪回忆一起去流浪\n为以后能快乐 为以后能不凡\nAdore You 我带你滑翔在云海上\nI Adore You 一颗心一滴泪最后可以成双\n别忘了还有我可以让你勾着臂弯\n向命运 向谜语 说声晚安\n星空下 不一样的晚餐\n有梦才酷 追幸福 永远不晚\n认定爱 谁也不换\n我有了你就能忘了时间多慢\n要怎么梦游也不管\n带你走 追上月亮\n我还记得心里藏着多少美丽\n陪回忆一起去流浪\n为以后能快乐 为以后能不凡\nAdore You 我带你滑翔在云海上\nI Adore You 一颗心一滴泪最后可以成双\n别忘了还有我可以让你勾着臂弯\n管世界多宽 多宽都不管\n陪伴你 看每一秒的光 飘荡\n未来要降落在云海上 抓住梦\nAdore You 我陪你暂停在云海上\nI Adore You 一颗心一滴泪最后可以成双\n别忘了还有我可以让你勾着臂弯\nI Adore You"
-    },
-    {
-        title: "My Boo",
-        lyrics: "One you're a stunner\nAnd two I'm intrigued\nAnd three\nI'm not gonna use the tricks up my sleeves\nDon't play with me\nJust wait and see\n别太快决定要自然如呼吸\n请别太快决定这是场游戏\nDon't play this game\nJust come on over my way\n不要太唐突\n但爱也不要太含糊\nDance with me my boo\nMy boo My boo\n想贴近你 贴近你\n贴近你 贴近你\nBoo My boo My boo\nDon't play with me Play with me\nPlay with me Play with me\nIt's getting too late\nNow will you follow me\n请别忘了我不想要玩游戏\nDon't play with me\nJust wait and see\n不为任何人搞得一身狼狈\n时间到了我也会知难而退\nI'm not your game\n这原地踏步好累\n不要太唐突\nBut how can I make you my boo\nDance with me my boo\nMy boo My boo\n想贴近你 贴近你 \n贴近你 贴近你\nBoo My boo My boo\nDon't play with me Play with me\nPlay with me Play with me\nNot a rapper I'm a singer with a flow\nI gotta have her gotta win her let her know\nYou find me ripping and sitting\nI'll be committing we fitting\nAnd I ain't quitting I'm too smitten won't let go\nBounce now 只想要贴近你\nWow how I'm waking my sensories\n直到你开始被我吸引\nYo I'll be dancing there on your street\nDance with me my boo\nMy boo My boo\n想贴近你 贴近你\n贴近你 贴近你\nBoo My boo My boo\nDon't play with me Play with me\nPlay with me Play with me\nBoo My boo My boo\n想贴近你 贴近你\n贴近你 贴近你\nBoo My boo My boo\nDon't play with me\nPlay with me\nPlay with me Play with me\nMy boo"
-    },
-    {
-        title: "Nothing To Lose",
-        lyrics: "I know exactly what to do\nYou make these dreams come true\nAnd you've been there through and through\nSo that's why I sing to you like\n(Ah ah) I won't I won't I won't stop now\n(Ah ah) I know I know I want that crown\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nMy heart only beats for you\nI got a lot of things to prove it\nI would travel to the moon\nIf you be there with me too like\n(Ah ah) I won't I won't I won't stop now\n(Ah ah) I know I know I want that crown\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nOooooo\nShooting for the stars shooting for the stars\nOooooo\nWe made it this far we made it this far\n(Ah ah) I won't I won't I won't stop now\n(Ah ah) I know I know I want that crown\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose\nI'm steady making these moves\nI'm steady making these moves\nI got nothing nothing nothing to lose"
-    },
-    {
-        title: "末日长河",
-        lyrics: "有一棵大树碰到我\n没关系那都是假的\n大树上的小鸟唱歌\n真的假的\n鲜艳的诱惑搭配\n黑白的冷漠作祟\n也许再会\n谁的末日长的像河\n是非曲折\n河的末日长的像我\n平庸赤裸\n复杂的交叉着\n画出轮廓\n热烈陌生的包围\n狂欢而至的赞美\n只等再会\n谁的末日长的像河\n是非曲折\n河的末日长的像我\n平庸赤裸\n复杂的交叉着\n画出轮廓\n或许末日长的像河\n无法挣脱\n河的末日也站着我\n不假思索\n无常的这焰火\n绚烂如歌\n有一棵大树碰到我\n没关系那都是假的"
-    },
-    {
-        title: "牺牲的一半",
-        lyrics: "当你不舍得离开\n他早已习惯你不在\n我留下了一片海\n换来你的一颗尘埃\n真情总会有遗憾\n完美只是那么冷淡\n喜乐无常的姿态\n到底还是败给无奈\n越想要求得答案\n就会种下越多的遗憾\n一心要活得更简单\n发现真的好困难\n与其做牺牲的一半\n不如被冲进麻木人海\n就算世界停止转动 都无关\nYi he he he he he eh\n他笑我笑你笑到最后\n还是哭了\n敏感的心是公害\n小心翼翼不准打开\n压抑到想要呐喊\n想拒绝麻木的乐观\n倒不如疯掉\n倒不如逃跑\n失去的不多也不少\n越想要求得答案\n就会种下越多的遗憾\n一心要活得更简单\n发现真的好困难\n与其做牺牲的一半\n不如被冲进麻木人海\n就算世界停止转动 都无关\n倒不如疯掉\n倒不如逃跑\n失去的我不需要\n越想要求得答案\n就会种下越多的遗憾\n一心要活得更简单\n不如放开更自在\n绝不要牺牲这一半\n还我尖锐的鲜艳情感\n无论世界有多不同 都灿烂\nYi he he he he he eh\n他笑我笑你笑到最后 还是哭了\nYi he he he he he eh\n他笑我笑你笑到最后 还是哭了"
-    },
-    {
-        title: "再一，再二，再三",
-        lyrics: "再一 我刚来过\n我从来不是我\n偶然我 才是我\n再二 这太难过\n我愿意这么做\n冰冷的 像琥珀\n灰烬的花\n我总归得会长大\n黯然的擦 变淡的疤\n我不想变虚假\n世界教会我黑与白\n成熟拽着我左摇右甩\n承载了似乎明媚的姿态\n他们说不准失败\n再一 我刚来过\n我从来不是我\n偶然我 才是我\n再二 这太难过\n我愿意这么做\n冰冷的 像琥珀\n离别的霞\n总归也要学会啊\n不在意吗 刻意的吧\n发抖写出可怕\n世界教会我黑与白\n成熟拽着我左摇右甩\n承载了似乎明媚的姿态\n他们说不准失败\n再三\n像笨蛋\n我想因你而伟大\n我不懂啊 我不懂啊\n可以抱着伤害吗"
-    },
-    {
-        title: "两个傍晚的月亮",
-        lyrics: "月光打翻了我的身影\n是白色的\n这一颗星球就要掉落下来了\n今天的我啊\n是蓝色的\n我才不要了解你所有的悲伤\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都不会留下\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都会被遗忘\n月亮消失在迂回里\n是红色的\n可这样的夜晚却没人在意了\n今天又怎样\n都不见了\n我才不要了解这所有的沮丧\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都不会留下\n我才不要一个人\n经历那些难过的日子\n我们都一如既往什么都会被遗忘\n我才不要一个人\n经历那些难过的日子\n我们却若有所失地谈论着明天\n我才不要一个人\n经历那些难过的日子\n显然虚掷很糟糕却重复而无奈"
-    },
-    {
-        title: "Gone",
-        lyrics: "I feel a distance growing inside of me\nGrowing inside my heart\nGrowing so much it's keeping us apart\nI feel resistance\nPulling you from my love\nHolding you from my touch\nLike nothing I do will ever be enough\nAnswer the question\nYou're living lies\nYou lie to me\nAnd I ain't gonna take no more\nI've learned a lesson\nSo many nights\nNow I can see\nYou're not the one for me no no\nYou no longer speak the same stuff you used to say\nNo you no longer love the same way\nYou no longer love the same way\nYou don't talk the talk you did when you wanted me\nNo you no longer love the same way\nYou no longer love the same way\nI'm gone I'm gone I'm gone so I'm gone\nI'm gone I'm gone I'm gone so I'm gone\nI feel your body\nSlipping away from me\nFurther and out of reach\nGravity makes it hard for me to see\nYou keep me guessing\nStanding on solid ground\nWhen it crumbles I'm falling down\nSpinning because you're messin' me around\nAnswer the question\nYou're living lies\nYou lie to me\nYou're not the one for me no no\nYou no longer speak the same stuff you used to say\nNo you no longer love the same way\nYou no longer love the same way\nYou don't talk the talk you did when you wanted me\nNo you no longer love the same way\nYou no longer love the same way\nSo I'm gone I'm gone I'm gone so I'm gone\nI'm gone I'm gone I'm gone so I'm gone\nNo you no longer love the same way\nNo you no you no you no\nSame way\nYou don't talk the talk you did when you wanted me\nSo I'm gone I'm gone I'm gone so I'm gone\nI'm gone I'm gone I'm gone so I'm gone\nYou no longer speak the same stuff you used to say\nNo you no longer love the same way\nYou no longer love the same way\nYou don't talk the talk you did when you wanted me\nNo you no longer love the same way\nYou no longer love the same way\nYou no longer speak the same stuff you used to say\nNo you no longer love the same way\nYou no longer love the same way\nYou don't talk the talk you did when you wanted me\nNo you no longer love the same way\nYou no longer love the same way\nSo I'm gone I'm gone I'm gone so I'm gone"
-    },
-    {
-        title: "冷静和热情之间",
-        lyrics: "睡眼惺忪 一动不动\n镜中的人表情放松\n不需要什么修饰 多么真实\n欢呼声响起 人山人海里\n准备就绪要做个发光体\n登场之前 是否充满勇气\n我在沸点燃烧我要的冷静\n沉默时用眼神倾诉着秘密\n不言也不语 安静看好的风景\n我在冰点凝固我要的热情\n拥抱世界发出玩耍邀请\n在深邃的海洋里 火山终于惊醒\n啦啦啦啦啦 啦啦啦 啦啦\n啦啦啦啦啦 啦啦啦 啦啦\n欢呼声响起 人山人海里\n准备就绪要做个发光体\n登场之前 是否充满勇气\n我在沸点燃烧我要的冷静\n沉默时用眼神倾诉着秘密\n不言也不语 安静看好的风景\n我在冰点凝固我要的热情\n拥抱世界发出玩耍邀请\n在深邃的海洋里 火山终于惊醒\n我在沸点燃烧我要的冷静\n沉默时用眼神倾诉着秘密\n不言也不语 安静看好的风景\n我在冰点凝固我要的热情\n拥抱世界发出玩耍邀请\n在深邃的海洋里 火山终于惊醒\n每个午夜睡去 温差感让我安心\n每个梦醒时分 一切成真"
-    },
-    {
-        title: "Fall",
-        lyrics: "你是我心深处的秘密\n一直环绕我所有思绪\nWe talked all night\nDon't you remember\nI know you remember\nAfter the summer comes the fall\nWe kept it going way too long\nI shoulda known to never let you in\nNow I can't break free\nNow I can't go back at all\nAfter the summer comes the fall\n季节变得太快\n而我 还不能习惯没你在左右\n你根本不懂\nI shoulda known better than to\nShoulda known better than to fall\n想着你 等着你 我已快放弃\n炎热夏天一转眼它就快离去\nOh ya ya ya\nShow me some\nOh ya ya ya\nNo one around\nOh ya ya ya\nLet's get down\nOh ya ya ya ya\nI just want your heart\nAnd all your love now can you blame me\n不能控制夏天余留下的这份情绪\nLittle things that u do\nLittle things that u do\nDid they happen too soon\nDid they happen too soon\nAfter the summer comes the fall\nWe kept it going way too long\nI shoulda known to never let you in\nNow I can't break free\nNow I can't go back at all\nAfter the summer comes the fall\n季节变得太快\n而我 还不能习惯没你在左右\n你根本不懂\nI shoulda known better than to\nShoulda known better than to"
-    },
-    {
-        title: "陷落美好",
-        lyrics: "完成我们美好的陷落\n在旋转的星空 绚烂地失重\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\n这是一趟往返于天堂\n还有地狱的列车\n路过人们心中的荒凉\n和滚烫的山河\n只剩匆忙还在羡慕着\n远去的森林和白鸽\n闪烁微热的光陨落在\n远方的那颗 原来是我\n完成我们美好的陷落\n在旋转的星空 绚烂地失重\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\nFree free falling\nFree I'm free falling\n呼吸弥补表达的缺口\n深深一句简单问候\n淌过云层翻滚的波澜\n寻找靠近你的理由\n完成我们美好的陷落\n在旋转的星空 绚烂地失重\nFree falling\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\nFree free falling\n完成我们美好的陷落\n在旋转的星空 绚烂地失重\nFree falling\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\nWe are free free falling\n我们美好的陷落\nWe are falling\n我们美好的陷落\nWe are falling\n我们美好的陷落\nFree free falling\n我们美好的陷落"
-    },
-    {
-        title: "念想",
-        lyrics: "非要等 你回来\n非要等 你出现\n才敢坐下来\n才敢坐下来\n说等着你\n已成了习惯\n非要等 你说晚安\n非要等 你睡去\n梦里一路的追\n看着你眼泪 一路的飞\n听两颗心 一路的碎\n是凄美的音乐\n才没过多久就敢\n说我喜欢\n是不是太过草率\n没人能明白\n只是发现心中期待\n何必大声说出来\n没有一生\n哪怕只一瞬\n就到我的世界里\n做一个小孩\n不知会有多自在\n也许这一切\n止步于无奈\n就从现在\n我们都别醒来\n好多梦还没做完\n一同追赶\n只要是与你有关\n我就会勇敢\n只是发现还有遗憾\n就用生命来归还\n不只一瞬\n哪怕用一生\n就到我的世界里\n做一个小孩\n不知会有多自在\n也许这一切\n止步于无奈\n就从现在\n我们都别\n醒来\n非要等 你笑起来\n非要等 这世界\n都乱作一团\n都乱作一团\n我才懂得\n为何要存在"
-    },
-    {
-        title: "野花",
-        lyrics: "山上的野花为谁开又为谁败\n静静地等待是否能有人采摘\n我就像那花一样在等他到来\n拍拍我的肩我就会\n听你的安排\n摇摇摆摆的花呀\n她也需要你的抚慰\n别让她在等待中老去枯萎\n我想问问他知道吗我的心怀\n不要让我在不安中试探徘徊\n我要为你改变多少\n才能让你留下来\n我在希望中焦急等待\n你就没有看出来\n摇摇摆摆的花呀\n她也需要你的抚慰\n别让她在等待中老去枯萎\n我想问问他知道\n不知道我的心怀\n不要让我在不安中试探徘徊\n如果这欲望它真的存在\n你就别再等待\n因为那团火在我心中\n烧得我实在难耐\n让我渴望的坚强的你呀\n经常出现在夜里\n我无法抗拒我无法将你挥去\n让我渴望的坚强的你呀\n经常出现在夜里\n我无法抗拒我无法将你挥去\n山上的野花为谁开\n拍拍我的肩我听你的安排"
-    },
-    {
-        title: "爱情鸟",
-        lyrics: "树上停着一只\n一只什么鸟 呼呼呼\n让我觉得心在跳\n我看不见她\n但却听得到 呼呼呼\n这只爱情鸟\n她在向我欢叫\n树上停着一只\n一只什么鸟 呼呼呼\n如今变得静悄悄\n因为我爱的人\n已经不见了 呼呼呼\n这只爱情鸟\n何时才会来到\n我爱的人 已经飞走了\n爱我的人她 还没有来到\n这只爱情鸟 已经飞走了\n我的爱情鸟 她还没来到\n我爱的人 已经飞走了\n爱我的人她 还没有来到\n这只爱情鸟 已经飞走了\n我的爱情鸟 她还没来到\n树上停着一只\n一只什么鸟 呼呼呼\n如今变得静悄悄\n因为我爱的人\n已经不见了 呼呼呼\n这只爱情鸟\n何时才会来到\n我爱的人 已经飞走了\n爱我的人她 还没有来到\n这只爱情鸟 已经飞走了\n我的爱情鸟 她还没来到\n我爱的人 已经飞走了\n爱我的人她 还没有来到\n这只爱情鸟 已经飞走了\n我的爱情鸟 她还没来到\n我爱的人 已经飞走了\n爱我的人她 还没有来到\n这只爱情鸟 已经飞走了\n我的爱情鸟 她还没来到\n我爱的人 已经飞走了\n爱我的人她 还没有来到\n这只爱情鸟 已经飞走了\n我的爱情鸟 她还没来到\n树上停着一只\n一只什么鸟 呼呼呼\n如今变得静悄悄"
-    },
-    {
-        title: "亲密爱人",
-        lyrics: "今夜还吹着风 想起你好温柔\n有你的日子分外的轻松\n也不是无影踪 只是想你太浓\n怎么会无时无刻把你梦\n爱的路上有你 我并不寂寞\n你对我那么的好 这次真的不同\n也许我应该好好把你拥有\n就像你一直为我守候\n亲爱的人 亲密的爱人\n谢谢你这么长的时间陪着我\n亲爱的人 亲密的爱人呐\n这是我一生中最兴奋的时分\n今夜还吹着风 想起你好温柔\n有你的日子分外的轻松\nYou you you\n也不是无影踪 只是想你太浓\n怎么会无时无刻把你梦\n爱的路上有你 我并不寂寞\n你对我那么的好 这次真的不同\n也许我应该好好把你\n拥\nYou and me\n有\nDon't wanna let you go\n就像你一直为我守候\n亲爱的人 亲爱的人\n亲密的爱人 爱人\n谢谢你这么长的时间陪着我\nGive me love Give me love\n亲爱的人 亲密的爱人呐\n这是我一生中最兴奋的时分\n我最亲爱的人\nOh my god! Oh my god!\n最亲密的人儿呀\n你是我一生中最兴奋的时分"
-    },
-    {
-        title: "孤独的人是可耻的",
-        lyrics: "这是一个恋爱的季节\n空气里都是情侣的味道\n孤独的人是可耻的\n这是一个恋爱的季节\n大家应该相互微笑\n搂搂抱抱这样就好\n我喜欢鲜花\n城市里应该有鲜花\n即使被人摘掉\n鲜花也应该长出来\n这是一个恋爱的季节\n大家应该相互交好\n孤独的人是可耻的\n生命像鲜花一样绽开\n我们不能让自己枯萎\n没有选择\n我们必须恋爱\n鲜花的爱情是随风飘散\n随风飘散随风飘散\n他们并不寻找并不依靠\n非常地骄傲\n孤独的人\n他们想象鲜花一样美丽\n一朵骄傲的心在风中飞舞跌落人们脚下\n可耻的人\n他们反对生命反对无聊\n为了美丽在风中在人们眼中变得枯萎\n孤独的人\n他们想象鲜花一样美丽\n一朵骄傲的心在风中飞舞跌落人们脚下\n可耻的人\n他们反对生命反对无聊\n为了美丽在风中在人们眼中变得枯萎"
-    },
-    {
-        title: "爱的箴言",
-        lyrics: "我将真心付给了你\n将悲伤留给我自己\n我将青春付给了你\n将岁月留给我自己\n我将生命付给了你\n将孤独留给我自己\n我将春天付给了你\n将冬天留给我自己\n爱是没有人能了解的东西\n爱是永恒的旋律\n爱是欢笑泪珠飘落的过程\n爱曾经是我也是你\n我将春天付给了你\n将冬天留给我自己\n我将你的背影留给我自己\n却将自己给了你\n我将生命付给了你\n将孤独留给我自己\n我将春天付给了你\n将冬天留给我自己\n爱是没有人能了解的东西\n爱是永恒的旋律\n爱是欢笑泪珠飘落的过程\n爱曾经是我也是你\n爱是没有人能了解的东西\n爱是永恒的旋律\n爱是欢笑泪珠飘落的过程\n爱曾经是我也是你\n我将春天付给了你\n将冬天留给我自己\n我将你的背影留给我自己\n却将自己给了你"
-    },
-    {
-        title: "九里庄人才中心",
-        lyrics: "午夜降临 百态艳装夜行\n声光沉浸 立体环绕耳语\n无间丛林 无序藏着规律\n要 征服 先感动自己\n八方呼应 他叱咤过风云\n眉目传情 略施桃红眼影\n人造的花瓶 叫谁一掷千金\n繁嚣过境 沦为背景\n如 电光幻影\n这伏线弯弯曲曲\n跳舞吧 跳到幕天席地\n观众或遭遇\n随时对调 或悲或喜\n这关系 是否关系命运\n我们绽放自己\n我们忘了自己\n但愿我们自在游历\n却为何 不甘于 无声息地沉寂\n感动了自己\n造一场空欢喜\n得到赞许 哪怕怜悯\n别叹息 渡人难渡己\n太认真 何必\n盛况造影 新旧角色更替\n闹市即景 这边缘太拥挤\n自带上话题 毛孔都会演戏\n每个角色 明确目的\n如电光幻影\n这伏线弯弯曲曲\n跳舞吧 跳到幕天席地\n观众或遭遇\n远或近 若即若离\n意难平 改变谁的命运\n我们绽放自己\n我们忘了自己\n但愿我们自在游历\n别自困于方寸间寻觅\n各有不同境遇\n同造一场欢喜\n得到赞许 哪怕怜悯\n别叹息 渡人难渡己\n总有人铭记\n下一个奇迹"
-    },
-    {
-        title: "楔木",
-        lyrics: "坠入我 时针刺骨\n满身泥泞的我\n也从骤雨里打捞\n脚印 回声\n同黑夜 一饮而尽\n重逢我 与风共舞\n纵火于心的我\n灰烬都化变呓语\n无处降落\n环绕在时间裂缝中叹息\n记忆是最沉的行囊\n幽谷深渊筑归乡\n逃奔闲逛无终场\n记忆是最沉的行囊\n幽谷深渊筑归乡\n逃奔闲逛无终场"
-    },
-    {
-        title: "逢石",
-        lyrics: "山连着山\n连着一层一层无声的片段\n记忆也在这样的风里\n更加漫长\n呼吸着云层后的闪电\n张开手等待碎石和雨点\n星辰的轮转永不停歇\n怎么去遗忘这岁岁年年\n熄灭语言\n暂停的时间\n等待着不眠的春天\n记忆是最沉的行囊"
-    },
-    {
-        title: "山花",
-        lyrics: "我眼睛 守着一座藩篱\n高树围成天井 而你\n仿佛漫过山脊 那场潮汐\n泥土里 生出千万根系\n情愫再茂密\n只给你 一朵无名\n山花从没开去凡尘里\n漫山遍野地 开在我的雨季\n直到掩盖这整座嶙峋 也许我们会\n在这里重逢\n山花早就开去凡尘里\n开满你眼底 开满我的身体\n若能远离人生的嶙峋 若能不忘记\n就别再重逢\n可是整座山就忘了你\n忘了多艳丽 山花终将离去\n漫山遍野那些荒唐里 我回头望去\n山花了无痕迹"
-    },
-    {
-        title: "离骚",
-        lyrics: "日与月夏与冬更迭难休\n草与木盛与衰问美人依旧\n流言四起的风\n撩拨君臣异梦\n问天可否为明心而见证\n浊与清美与陋颠倒众生\n芷与兰蕙与荃难吐芳馨\n何故逆流而上\n何为孤芳自赏\n无人知晓故乡变他乡\n乱世而不群\n谁可解君意\n云游而远去\n心却系故里\n饮一句离骚别愁\n醉一世报国春秋\n奈何长路漫漫上下难求\n哀民生几多忧\n唱一句离骚别愁\n叹一生知己难留\n心之所善无悔终化作灰\n此梦若颠沛\n留给后人玩味\n浊与清美与陋颠倒众生\n芷与兰蕙与荃难吐芳馨\n何故逆流而上\n何为孤芳自赏\n无人知晓故乡变他乡\n乱世而不群\n谁可解君意\n云游而远去\n心却系故里\n饮一句离骚别愁\n醉一世报国春秋\n奈何长路漫漫上下难求\n哀民生几多忧\n唱一句离骚别愁\n叹一生知己难留\n心之所善无悔终化作灰\n此梦若颠沛\n留给后人玩味\n路漫漫其修远兮\n吾将上下求索\n长太息以掩涕兮\n哀民生之多艰\n亦余心之所善兮\n九死其犹未悔\n既莫足为美政兮\n吾从彭咸所居\n路漫漫其修远兮\n吾将上下求索\n长太息以掩涕兮\n哀民生之多艰\n亦余心之所善兮\n九死其犹未悔\n自既莫足为美政兮\n吾从彭咸所居\n饮一句离骚别愁\n醉一世报国春秋\n奈何长路漫漫上下难求\n哀民生几多忧\n唱一句离骚别愁\n叹一生知己难留\n心之所善无悔终化作灰\n此梦若颠沛\n留给后人玩味"
-    },
-    {
-        title: "粉雾海",
-        lyrics: "窗外的云由浅色转为深红\n月亮又重置想念你的沙漏\n暗恋像不停对焦的长镜头\n每秒都在邂逅\n大人世界匆忙起来多糟糕\n我们只好把爱放在手中 慢慢握紧\n随时的小美好\n夕阳衬托甜蜜行踪\n晚风轻抚你的笑容\nOh藏在口袋的表白\n我红着脸 轻声说\n怎么会 有些摇晃呢\n那片藏在心中的深邃海面 荡起雾了\n怎么会 有一些些晕眩呢\n粉色雾气弥散着\n一点一点被 甜蜜叹息完全包裹\n大人世界匆忙起来多糟糕\n我们只好把爱放在手中 慢慢握紧\n随时的小美好\n夕阳衬托甜蜜行踪\n晚风轻抚你的笑容\nOh藏在口袋的表白\n我红着脸 轻声说\n怎么会 有些摇晃呢\n那片藏在心中的深邃海面 荡起雾了\n怎么会 有一些些晕眩呢\n粉色雾气弥散着\n一点一点被 甜蜜叹息完全包裹\n爱放在手中\n怎么会 有些灼热呢\n平静海面下暗涌 沸腾不断 升起焰火\n如果能 马上就奔向港口\n粉色雾气指引着\n只有你和我 出发向海尽头漂流"
-    },
-    {
-        title: "大花轿",
-        lyrics: "太阳出来我爬山坡\n爬到了山顶我想唱歌\n歌声飘给我妹妹听啊\n听到我歌声她笑呵呵\n春天里那个百花鲜\n我和那妹妹啊把手牵\n又到那山顶我走一遍啊\n看到了满山的红杜鹃\n我嘴里头笑的是呦啊呦啊呦\n我心里头美的是啷个里个啷\n妹妹她不说话只看着我来笑啊\n我知道她等我的大花轿\n我嘴里头笑的是呦啊呦啊呦\n我心里头美的是啷个里个啷\n妹妹她不说话只看着我来笑啊\n我知道她等我来抱一抱\n抱一抱那个抱一抱\n抱着那个月亮它笑弯了腰\n抱一抱那个抱一抱\n抱着那个妹妹我\n抱着妹妹我上花轿\n上大花轿"
-    },
-    {
-        title: "无地自容",
-        lyrics: "人潮人海中\n有你有我\n相遇相识相互琢磨\n人潮人海中\n是你是我\n装作正派面带笑容\n不必过分多说 自己清楚\n你我到底想要谋些什么\n不必在乎许多 更不必难过\n终究有一天你会明白我\n人潮人海中\n又看到你\n一样迷人一样美丽\n慢慢的放松慢慢的抛弃\n同样仍是并不在意\n不必过分多说 自己清楚\n你我到底想要谋些什么\n不必在乎许多 更不必难过\n终究有一天你会离开我\n不再相信 相信什么道理\n人们已是如此冷漠\n不再回忆 回忆什么过去\n现在不是从前的我\n曾感到过寂寞\n也曾被别人冷落\n却从未有感觉\n我无地自容\n不再相信 相信什么道理\n我不再相信Woo\n不再回忆 回忆什么过去\n现在不是从前的我"
-    },
-    {
-        title: "再回首",
-        lyrics: "再回首云遮断归途\n再回首荆棘密布\n今夜不会再有难舍的旧梦\n曾经与你有的梦\n今后要向谁诉说\n再回首背影已远走\n再回首泪眼朦胧\n不管明天面对\n寒夜温暖我\n不管明天要面对多少伤痛和迷惑\n曾经在幽幽暗暗反反复复中追问\n才知道平平淡淡从从容容才是真\n再回首恍然如梦\n再回首我心依旧\n只有那无尽的长路伴着我\n曾经在幽幽暗暗反反复复中追问\n才知道平平淡淡从从容容才是真\n再回首恍然如梦\n再回首我心依旧\n只有那无尽的长路伴着我\n幽幽暗暗反反复复中追问\n才知道平平淡淡从从容容才是真\n再回首恍然如梦\n再回首我心依旧\n只有那无尽的长路伴着我"
-    },
-    {
-        title: "大城小爱",
-        lyrics: "乌黑的发尾 盘成一个圈\n缠绕所有对你的眷恋\n隔着半透明门帘\n嘴里说的语言 完全没有欺骗\n屋顶灰色瓦片 安静的画面\n灯火是你美丽那张脸\n终于找到所有流浪的终点\n你的微笑结束了疲倦\n千万不要说天长地久\n免得你觉得我不切实际\n想多么简单就多么简单\n是妈妈告诉我的哲理\n脑袋都是你 心里都是你\n小小的爱在大城里好甜蜜\n念的都是你 全部都是你\n小小的爱在大城里只为你倾心\n乌黑的发尾 盘成一个圈\n缠绕所有对你的眷恋\n终于找到所有流浪的终点\n你的微笑结束了疲倦\n千万不要说天长地久\n免得你觉得我不切实际\n想多么简单就多么简单\n让我大声的对你说\nI'm thinking of you\n脑袋都是你 心里都是你\n小小的爱在大城里好甜蜜\n念的都是你 全部都是你\n小小的爱在大城里只为你倾心\n那回程的票根你留做纪念\n不必害怕面对离别\n剪掉一束头发 让我放在胸前\n走到哪里都有你陪\n相随\n脑袋都是你 心里都是你\n小小的爱在大城里好甜蜜\n念的都是你 全部都是你\n小小的爱在大城里只为你倾心\n脑袋都是你 心里都是你\n小小的爱在大城里好甜蜜\n念的都是你 全部都是你\n小小的爱在大城里只为你倾心\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n啦啦啦啦啦啦啦啦啦啦\n乌黑的发尾 盘成一个圈\n缠绕所有对你的眷恋\n那一种寸步不离的感觉\n我知道这叫做永远"
-    },
-    {
-        title: "奉献",
-        lyrics: "长路奉献给远方\n玫瑰奉献给爱情\n我拿什么奉献给你\n我的爱人\n白云奉献给草场\n江河奉献给海洋\n我拿什么奉献给你\n我的朋友\n我拿什么奉献给你\n我不停地问\n我不停地找\n不停地想\n白鸽奉献给蓝天\n星光奉献给长夜\n我拿什么奉献给你\n我的小孩\n雨季奉献给大地\n岁月奉献给季节\n我拿什么奉献给你\n我的爹娘\n我拿什么奉献给你\n我不停地问\n我不停地找\n不停地想\n白鸽奉献给蓝天\n星光奉献给长夜\n我拿什么奉献给你\n我的小孩\n雨季奉献给大地\n岁月奉献给季节\n我拿什么奉献给你\n我的爹娘\n长路奉献给远方\n玫瑰奉献给爱情\n我拿什么奉献给你\n我的爱人\n白云奉献给草场\n江河奉献给海洋\n我拿什么奉献给你\n我的朋友\n我拿什么奉献给你\n我拿什么奉献给你"
-    },
-    {
-        title: "找到你是我最伟大的成功",
-        lyrics: "虽然没能 穿上披风\n化身超人英雄\n虽然没做 一呼百诺\n万人迷的总统\n懵懵懂懂 碌碌庸庸\n寻遍宇宙苍穹\n找到你是我 最伟大的成功\n我不在乎 活得平凡辛苦\n日子渺小重复\n儿时作的梦 褪色荒芜\n我不孤独 在有你的旅途\n我就心无旁骛\n陪你看日出 在暮色中漫步\n有时晴朗 有时无常\n一辈子的天空\n我们一起 每分每秒\n穿越同个时空\n缓下步伐 再不莽撞\n闷着头往前冲\n用尽我所能 珍惜你而从容\n我不在乎 活得平凡辛苦\n日子渺小重复\n儿时作的梦 褪色荒芜\n我不孤独 在有你的旅途\n我就心无旁骛\n陪你看日出 在暮色中漫步\n很专注 很幸福\n都是幸福\n我愿糊涂 背着爱的包袱\n走得义无反顾\n管它谁笑我 执迷不悟\n我很满足 有你同甘共苦\n哪怕岁月仓促\n一生的脚步 在你灵魂停驻\n专注 很幸福"
-    }
-   
+    "title": "逢石",
+    "lyrics": "山连着山\n连着一层一层无声的片段\n记忆也在这样的风里\n更加漫长\n呼吸着云层后的闪电\n张开手等待碎石和雨点\n星辰的轮转永不停歇\n怎么去遗忘这岁岁年年\n熄灭语言\n暂停的时间\n等待着不眠的春天\n记忆是最沉的行囊"
+  },
+  {
+    "title": "灾",
+    "lyrics": "游荡在云端念着你\n握紧了拳头不说爱\n花开又花落又花败\n在黎明来临之前走开\n这故事太深刻 执着却也值得\n若参透了什么也不敢大声说\n深入到海底安放你\n摊开了胸怀等你来\n日落后日升又日晒\n在夜色弥漫之后等待\n这故事太深刻 执着却也值得\n若参透了什么也不敢大声说\n我懂世间总有离合悲欢\n也许是爱让我变的苍白\n怎样能让结局不会太坏\n你要让我如何忘掉现在\n时光依旧让一切化为尘埃\n你的身体早已被麻木侵占\n我们的爱多到泛滥成灾\n藏在心里也都早已溃烂\n昏暗的房间\n幽闭的空间\n这样的人间\n像一场表演\n美丽的容颜\n总有点危险\n别装的敷衍\n又显得流连\n请不要再现\n过去的情节\n把故事留在\n另一个世界\n就让它如愿\n就让它如烟\n我不知疲倦\n我不想告别"
+  },
+  {
+    "title": "再一再二再三",
+    "lyrics": "再一 我刚来过\n我从来不是我\n偶然我 才是我\n再二 这太难过\n我愿意这么做\n冰冷的 像琥珀\n灰烬的花\n我总归得会长大\n黯然的擦 变淡的疤\n我不想变虚假\n世界教会我黑与白\n成熟拽着我左摇右甩\n承载了似乎明媚的姿态\n他们说不准失败\n再一 我刚来过\n我从来不是我\n偶然我 才是我\n再二 这太难过\n我愿意这么做\n冰冷的 像琥珀\n离别的霞\n总归也要学会啊\n不在意吗 刻意的吧\n发抖写出可怕\n世界教会我黑与白\n成熟拽着我左摇右甩\n承载了似乎明媚的姿态\n他们说不准失败\n再三\n像笨蛋\n我想因你而伟大\n我不懂啊 我不懂啊\n可以抱着伤害吗"
+  },
+  {
+    "title": "步语",
+    "lyrics": "想象一阵风 吹过我的身体\n反复地温习着褪去的记忆\n或是一道光 是黑暗的秘密\n如此地靠近 带着疲惫的气息\n月光在眼前飘浮\n以一种从未有过的温度\n遮住我回去的路\n寄出一封信 去很远的目的\n透明的期盼里 褪色的眼睛\n慢慢失去 旧日的痕迹\n还有很多没有结局的问题\n漫长停格的夜晚\n阴影在消失中徒劳变换\n无声无息中退散\n回声在空中折返\n树木和飞鸟沉默的答案\n逐渐模糊的景观"
+  },
+  {
+    "title": "陷落美好",
+    "lyrics": "完成我们美好的陷落\n在旋转的星空 绚烂地失重\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\n这是一趟往返于天堂\n还有地狱的列车\n路过人们心中的荒凉\n和滚烫的山河\n只剩匆忙还在羡慕着\n远去的森林和白鸽\n闪烁微热的光陨落在\n远方的那颗 原来是我\n完成我们美好的陷落\n在旋转的星空 绚烂地失重\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\nFree free falling\nFree I'm free falling\n呼吸弥补表达的缺口\n深深一句简单问候\n淌过云层翻滚的波澜\n寻找靠近你的理由\n完成我们美好的陷落\n在旋转的星空 绚烂地失重\nFree falling\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\nFree free falling\n完成我们美好的陷落\n在旋转的星空 绚烂地失重\nFree falling\n终于我们美好的陷落\n你在我的怀中 宇宙才完整\nWe are free free falling\n我们美好的陷落\nWe are falling\n我们美好的陷落\nWe are falling\n我们美好的陷落\nFree free falling\n我们美好的陷落"
+  },
+  {
+    "title": "粉雾海",
+    "lyrics": "窗外的云由浅色转为深红\n月亮又重置想念你的沙漏\n暗恋像不停对焦的长镜头\n每秒都在邂逅\n大人世界匆忙起来多糟糕\n我们只好把爱放在手中 \n慢慢握紧\n随时的小美好\n夕阳衬托甜蜜行踪\n晚风轻抚你的笑容\nOh藏在口袋的表白\n我红着脸 轻声说\n怎么会 有些摇晃呢\n那片藏在心中的深邃海面 \n荡起雾了\n怎么会 有一些些晕眩呢\n粉色雾气弥散着\n一点一点被 甜蜜叹息完全包裹\n大人世界匆忙起来多糟糕\n我们只好把爱放在手中 \n慢慢握紧\n随时的小美好\n夕阳衬托甜蜜行踪\n晚风轻抚你的笑容\nOh藏在口袋的表白\n我红着脸 轻声说\n怎么会 有些摇晃呢\n那片藏在心中的深邃海面 \n荡起雾了\n怎么会 有一些些晕眩呢\n粉色雾气弥散着\n一点一点被 甜蜜叹息完全包裹\n爱放在手中\n怎么会 有些灼热呢\n平静海面下暗涌 沸腾不断 升起焰火\n如果能 马上就奔向港口\n粉色雾气指引着\n只有你和我 出发向海尽头漂流"
+  },
+  {
+    "title": "末日长河",
+    "lyrics": "有一棵大树碰到我\n没关系那都是假的\n大树上的小鸟唱歌\n真的假的\n鲜艳的诱惑搭配\n黑白的冷漠作祟\n也许再会\n谁的末日长的像河\n是非曲折\n河的末日长的像我\n平庸赤裸\n复杂的交叉着\n画出轮廓\n热烈陌生的包围\n狂欢而至的赞美\n只等再会\n谁的末日长的像河\n是非曲折\n河的末日长的像我\n平庸赤裸\n复杂的交叉着\n画出轮廓\n或许末日长的像河\n无法挣脱\n河的末日也站着我\n不假思索\n无常的这焰火\n绚烂如歌\n有一棵大树碰到我\n没关系那都是假的"
+  },
+  {
+    "title": "抚琴小夜曲",
+    "lyrics": "当我15岁的时候从未想过\n命运某天渐行渐近\n面露狰容\n50岁以后就生活在过去\n所以我不喜欢照片更不想回忆\n那欢乐的海洋\n恍惚之中听到有声音在想象里蔓延\n你却不能身在其中\n唯有暗自空叹\n而此刻的时间只是无用的垃圾\n只能让你我凭添几许伤感\n那欢乐的海洋\n屋子里分外整洁但却空芜\n独自编织美丽的泡影\n在灯光下妆扮你的眼睛\n呈现如紫色的或五彩的颜色\n那多像我们热恋时流露的爱意\n远未散尽\n但却遥不可及\n再会吧我那璀璨的时光\n也许在下一次旅途上\n再不想此刻谁在身边\n悲伤的坐在我的床前\n再会吧我那璀璨的时光\n也许在下一次旅途上\n没有什么残留手中\n但是你却依稀能够\n感觉到它残存的温度\n甜美却已无法倾诉\n有一页我从未读及\n已迷失在\n序曲中华丽的韵脚里\n再会吧那些璀璨的时光\n也许在下一次旅途上\n我不想此刻谁在身边\n悲伤的坐在我的床前\n再会吧那些璀璨的时光\n也许在下一次旅途上\n仍有什么残留手中\n但是你却依稀能够\n感觉到它残存的温度\n甜美却已无法倾诉\n有一页我从未读及\n已迷失在\n序曲中华丽的韵脚里"
+  },
+  {
+    "title": "山花",
+    "lyrics": "我眼睛 守着一座藩篱\n高树围成天井 而你\n仿佛漫过山脊 那场潮汐\n泥土里 生出千万根系\n情愫再茂密\n只给你 一朵无名\n山花从没开去凡尘里\n漫山遍野地 开在我的雨季\n直到掩盖这整座嶙峋 也许我们会\n在这里重逢\n山花早就开去凡尘里\n开满你眼底 开满我的身体\n若能远离人生的嶙峋 若能不忘记\n就别再重逢\n可是整座山就忘了你\n忘了多艳丽 山花终将离去\n漫山遍野那些荒唐里 我回头望去\n山花了无痕迹"
+  },
+  {
+    "title": "生活倒影",
+    "lyrics": "半山腰上的人 他还好吗\n为什么看起来 总有悲伤眼睛\n路 过 他 的 人 们\n也许会问候 也许会就走\n也许还没等他回过神\n就已是朝夕又交替\n没有人知道他 他还 好吗\n为什么遇到的 总是苦难的呢\n路 过 他 的 朋 友\n不必用怜悯 不必要问候\n也许还没等他回过神\n就又是一年春天过去\n风轻轻拂过半山腰\n他的眼睛总有些落寞\n云轻轻盖过他头崖\n他的眼睛总是有泪痕\n他在等什么 他在盼着 什么\n没有人知道他 他还 好吗\n为什么遇到的 总是苦难的呢\n路 过 他 的 朋 友\n不必用怜悯 不必要问候\n也许还没等他回过神\n就又是一年春天过去\n风轻轻拂过半山腰\n他的眼睛总有些落寞\n云轻轻盖过他头崖\n他的眼睛总是有泪痕\n他在等什么 他在盼着 什么\n风轻轻拂过半山腰\n他的眼睛总有些落寞\n云轻轻盖过他头崖\n他的眼睛总是有泪痕\n他在等什么 他在盼着 什么\n（嘿 年轻的小伙子\n你怎么看起来没有精神\n你有什么心事可以告诉阿妈\n阿妈帮你出出主意\n阿妈家里养的鸡鸭鹅 鱼鸟菜叶\n我每天都给它们浇水\n觉得很幸福 生活是这样的\n你要学会坚强和面对\n还有发现身边的美好\n你看对面的高山多漂亮）\n风轻轻拂过半山腰\n春天时刻万物苏醒了\n云轻轻盖过他头崖\n悲伤过去迎来朝阳\n他终于笑了 他终于笑了\n他笑得好看\n他终于笑了 他终于笑了\n他笑得好看"
+  },
+  {
+    "title": "送别",
+    "lyrics": "Don't wanna say goodbye\nDon't wanna keep it inside\nJust be together Laugh and cry\nWhen you look me in the eyes\nYou don't have to try\nThere's sunlight in the sky\nYou'd hold me tight\nDon't wanna say goodbye\nDon't wanna keep it inside\nJust be together Laugh and cry\nWhen you look me in the eyes\nYou don't have to try\nThere's sunlight in the sky\nYou'd hold me tight\n长亭外 古道边 芳草碧连天\n晚风拂柳笛声残 夕阳山外山\n情千缕 酒一杯 声声离笛催\n问君此去几时来 来时莫徘徊\nLook into the sky Baby look into the sky\n天之涯 地之角 知交半零落\n一壶浊酒尽馀欢 今宵别梦寒\nLook into the sky Baby look into the sky\nDon't wanna say goodbye\nDon't wanna keep it inside\nJust be together Laugh and cry\nWhen you look me in the eyes\nYou don't have to try\nThere's sunlight in the sky\nYou'd hold me tight\nDon't wanna say goodbye\nDon't wanna keep it inside\nJust be together Laugh and cry\nWhen you look me in the eyes\nYou don't have to try\nThere's sunlight in the sky\nYou'd hold me tight\n天之涯 地之角 知交半零落\nLook into the sky Baby look into the sky\n一壶浊酒尽馀欢 今宵别梦寒\nLook into the sky Baby look into the sky\nLook into the sky\nLook into the sky Baby look into the sky\nTo the sky\nLook into the sky Baby look into the sky\nLove\nLook into the sky Baby look into the sky\n天之涯 地之角 知交半零落\n问君此去几时来 来时莫徘徊\nDon't wanna say goodbye\nDon't wanna keep it inside\nLa la la la\nJust be together Laugh and cry\nLa la la la\nWhen you look me in the eyes\nYou don't have to try\nYeah yeah yeah\nThere's sunlight in the sky\nYou'd hold me tight\nYeah yeah yeah\nDon't wanna say goodbye\nDon't wanna keep it inside\nLa la la la\nJust be together Laugh and cry\nLa la la la\nWhen you look me in the eyes\nYou don't have to try\nYeah yeah yeah\nThere's sunlight in the sky\nYou'd hold me tight\nYeah yeah yeah\nLook into the sky Baby look into the sky\nLook into the sky"
+  },
+  {
+    "title": "4%vol的河",
+    "lyrics": "啤酒冒着泡\n世界在吵这一口抵消\n城市太潦草\n掉队的单车没人要\n走过通惠\n玉霞的店已经坐满了 拥挤得刚好\n整个夜晚都是我的\n真好奇明天会是什么颜色\n红色灰色的 （ooh）\n在街上每个灵魂都各醉各的\n世界晃着 给了我一个吻\n就等着某天或许能明白\n不必飞太高 做一只笨鸟\n这天空一切没有变化 其实无聊\n日子在燃烧飞虫在舞蹈\n而我的影子还在陪我寻找\n红色灰色的 （ooh）\n在街上每个灵魂都各醉各的\n世界晃着 给了我一个吻\n就等着某天我也就明白\nLa-la-la-la-la, la-la\nLa-la-la-la-la-la\nLa-la-la-la-la-la-la\nLa-la-la-la-la\nLa-la-la-la-la\nLa-la"
+  },
+  {
+    "title": "念想",
+    "lyrics": "非要等 你回来\n非要等 你出现\n才敢坐下来\n才敢坐下来\n说等着你\n已成了习惯\n非要等 你说晚安\n非要等 你睡去\n梦里一路的追\n看着你眼泪 一路的飞\n听两颗心 一路的碎\n是凄美的音乐\n才没过多久就敢\n说我喜欢\n是不是太过草率\n没人能明白\n只是发现心中期待\n何必大声说出来\n没有一生\n哪怕只一瞬\n就到我的世界里\n做一个小孩\n不知会有多自在\n也许这一切\n止步于无奈\n就从现在\n我们都别\n醒来\n好多梦还没做完\n一同追赶\n只要是与你有关\n我就会勇敢\n只是发现还有遗憾\n就用生命来归还\n不只一瞬\n哪怕用一生\n就到我的世界里\n做一个小孩\n不知会有多自在\n也许这一切\n止步于无奈\n就从现在\n我们都别醒来\n非要等 你笑起来\n非要等 这世界\n都乱作一团\n都乱作一团\n我才懂得\n为何要存在"
+  },
+  {
+    "title": "送你一朵小红花",
+    "lyrics": "送你一朵小红花\n送你一朵小红花\n开在你昨天新长的枝桠\n奖励你有勇气\n主动来和我说话\n不共戴天的冰水啊\n义无反顾的烈酒啊\n多么苦难的日子里\n你都已战胜了它\n送你一朵小红花\n遮住你今天新添的伤疤\n奖励你在下雨天\n还愿意送我回家\n科罗拉多的风雪啊\n喜马拉雅的骤雨啊\n只要你相信我\n闭上眼就能到达\n送你一朵小红花\n开在那牛羊遍野的天涯\n奖励你走到哪儿\n都不会忘记我啊\n洁白如雪的沙滩啊\n风平浪静的湖水啊\n那些真实的幻影啊\n是我给你的牵挂\n送你一朵小红花\n开在你心底最深的泥沙\n奖励你能感受\n每个命运的挣扎\n是谁挥霍的时光啊\n是谁苦苦的奢望啊\n这不是一个问题\n也不需要你的回答\n送你一朵小红花\n送你一朵小红花\n送你一朵小红花\n送你一朵小红花\n送你一朵小红花"
+  },
+  {
+    "title": "梦想摩天轮",
+    "lyrics": "转过 霓虹闪烁的街头以后\n视野中出现一座摩天大楼\n广告 牌上两个字晶莹通透\n叫做梦想有心之人才能触碰\n伸出 双手 尝试触摸蓝色天空\n微风将头发吹动\n握紧 双手 抬起头仰望着天空\n看那 阳光洒下来\n眼中滑过 追逐着的车流\n耳中响过（时间）在不停奔走\n心中闪过不安分的念头\n那就是我 最想去的地方\n想要闪耀 属于年轻的光芒\n不再等待 现在开始攀登\n伸出 双手 尝试触摸蓝色天空\n微风将头发吹动\n握紧 双手 抬起头仰望着天空\n看那 阳光洒下来\n当我 终于登上了摩天大楼\n向世界望去 景色美不胜收\n笑着 向昨日的自己挥挥手\n新的开始 见证未来的突破口\n伸出 双手 尝试触摸蓝色天空\n微风将头发吹动\n握紧 双手 抬起头仰望着天空\n看那 阳光洒下来\n伸出 双手 尝试触摸蓝色天空\n微风将头发吹动\n握紧 双手 抬起头仰望着天空\n看那 阳光洒下来"
+  },
+  {
+    "title": "谁",
+    "lyrics": "遇见你的我 碰到我的你\n在同样的深夜里 \n写了同样的日记\n望着你的我 望着我的你\n在同样的时光里 \n问着同样的问题\n谁在等你 你在等着谁 \n谁在等我 我在等着谁\n忘了你的我 忘了我的你\n在不同的世界里 \n忘记同样的自己\n想念你的我 想念我的你\n在不同的岁月里 \n同样询问着自己\n谁在爱你 你在爱着谁\n谁在爱我 我在爱着谁\n谁在等你 你在等着谁\n谁在等我 我在等着谁\n谁在等你 你在等着谁\n谁在爱你 你在爱着谁"
+  },
+  {
+    "title": "舒适圈",
+    "lyrics": "离开这里 我要离开这里\n告诉世界 我名字叫千玺\n房间拥挤 小镇缓慢安静\n可我的梦 在召唤我飞行\n去追去闯 去乘风破浪\n就算鞋很脏 也笑得像国王\n去疯去狂 去变成星光\n少年只属于远方\n往前吧 大闹一场\n我离开你 在地图上飞行\n每一厘米 隔你几千公里\n爱太熟悉 让人差点忘记\n我追世界 你追逐我背影\n一步一遥 我往前奔跑\n你还在灯下等我吗 对不起\n天有多高 我渴望知道\n我会飞得更强壮\n因为有你在 眺望\n一步一遥 时光如飞鸟\n人们不得不告别啊 对不起\n走得再远 请把手抓牢\n风筝为何飞得高\n因为地上有人 蹒跚奔跑\n爱太熟悉 让人差点忘记\n我追世界 你追逐我背影"
+  },
+  {
+    "title": "同乘",
+    "lyrics": "车 开过了 一座城 摇晃的灯\n你 漂浮过 哪段旅程\n走远的校门 身边人换乘\n来不及说等一等\n车 开去哪 从家门 驶向前程\n你 紧握着 哪种可能\n可有洞栖身 可有爱幸存\n去一站站的陌生\n幸得与你 同乘\n像叶子 被同阵风亲吻\n我与你 共乘\n在微茫里相认\n车 开去哪 异乡人 从不追问\n晚归的梦 醒在夜深\n满身的灰尘 游牧着星辰\n在泥沙里找天真\n幸得与你 同乘\n像叶子 被同阵风亲吻\n我与你 共乘\n在微茫里相认\n你 可记得 哪一站 学做大人\n从此路就 没有回程\n风景多变更 稀薄了笑声\n车停了又走 快乐忧愁 同乘"
+  }
+
+  
 ];
 
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    const menuToggle = document.querySelector('.menu-toggle');
+  // DOM元素
+  const sidebar = document.getElementById('sidebar');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const songList = document.getElementById('songList');
+  const content = document.getElementById('content');
+  const searchInput = document.querySelector('.search-input');
+  const clearBtn = document.querySelector('.clear-btn');
 
-    // 动态生成导航栏
-    const navList = sidebar.querySelector('ul');
+  // 初始化所有歌曲
+  function renderAllSongs() {
+    let html = '<p class="developer-info">本网页由APTX4869Bunny开发，如需定制纪念票请微信联系。</p>';
     songs.forEach((song, index) => {
-      const listItem = document.createElement('li');
-      listItem.textContent = song.title;
-      listItem.addEventListener('click', () => {
-        const targetSection = document.getElementById(`song-${index}`);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-          sidebar.classList.remove('open'); // 点击导航后隐藏侧边栏
-        }
+      html += `
+        <section id="song-${index}">
+          <h2>${song.title}</h2>
+          <pre>${song.lyrics}</pre>
+        </section>
+      `;
+    });
+    content.innerHTML = html;
+  }
+
+  // 渲染导航列表
+  function renderSongList(filteredSongs = songs) {
+    songList.innerHTML = '';
+    filteredSongs.forEach(song => {
+      const originalIndex = songs.findIndex(s => s.title === song.title);
+      const li = document.createElement('li');
+      li.textContent = song.title;
+      li.dataset.index = originalIndex;
+      
+
+// 导航点击事件 - 优化后的平滑滚动定位
+li.addEventListener('click', () => {
+  // 1. 先关闭侧边栏和键盘
+  sidebar.classList.remove('open');
+  searchInput.blur();
+  
+  // 2. 等待UI更新后再执行滚动（关键改进）
+  setTimeout(() => {
+    const target = document.getElementById(`song-${originalIndex}`);
+    if (target) {
+      // 计算header高度作为偏移量（根据实际样式计算）
+      const header = document.querySelector('header');
+      const headerHeight = header.offsetHeight;
+      
+      // 计算目标位置（元素顶部 - header高度）
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
+      // 平滑滚动到目标位置
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
       });
-      navList.appendChild(listItem);
+    }
+  }, 200); // 等待侧边栏关闭动画完成
+}, { capture: true });
+      
+      songList.appendChild(li);
     });
+  }
 
-    // 动态生成歌词内容
-    songs.forEach((song, index) => {
-      const section = document.createElement('section');
-      section.id = `song-${index}`;
+  // 搜索功能
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    const filtered = query 
+      ? songs.filter(song => song.title.toLowerCase().includes(query))
+      : songs;
+    renderSongList(filtered);
+  });
 
-      const h2 = document.createElement('h2');
-      h2.textContent = song.title;
+  // 清空按钮
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    renderSongList();
+    searchInput.blur();
+  });
 
-      const pre = document.createElement('pre');
-      pre.textContent = song.lyrics;
+  // 菜单切换
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    searchInput.blur();
+  });
 
-      section.appendChild(h2);
-      section.appendChild(pre);
-      content.appendChild(section);
-    });
+  // 全局点击收起键盘（排除导航和搜索区域）
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && e.target !== searchInput) {
+      searchInput.blur();
+    }
+  });
 
-    // 菜单切换功能
-    menuToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
+  // 初始化
+  renderAllSongs();
+  renderSongList();
   </script>
 </body>
 
