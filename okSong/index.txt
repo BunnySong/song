@@ -257,7 +257,10 @@
                                     { "singer": "28五月天5526", "location": "北京", "sort": "8.15" },
                                     { "singer": "2邓紫棋", "location": "香港", "sort": "8.15" },
                                     { "singer": "6鹿晗", "location": "武汉", "sort": "8.15" },
-                                    { "singer": "29任贤齐", "location": "上海", "sort": "8.15" }
+                                    { "singer": "29任贤齐", "location": "上海", "sort": "8.15" },
+                                    { "singer": "35大张伟", "location": "北京", "sort": "8.15" },
+                                    { "singer": "38任贤齐", "location": "上海", "sort": "8.15" },
+                                    { "singer": "40五月天", "location": "北京", "sort": "8.15" }
                                 ]
                             },
                             {
@@ -276,7 +279,12 @@
                                     { "singer": "2邓紫棋", "location": "香港", "sort": "8.16" },
                                     { "singer": "7张杰", "location": "乌鲁木齐", "sort": "8.16" },
                                     { "singer": "29任贤齐", "location": "上海", "sort": "8.16" },
-                                    { "singer": "32胡彦斌", "location": "镇江", "sort": "8.16" }
+                                    { "singer": "32胡彦斌", "location": "镇江", "sort": "8.16" },
+                                    { "singer": "36黄子弘凡", "location": "合肥", "sort": "8.16" },
+                                    { "singer": "37胡彦斌", "location": "镇江", "sort": "8.16" },
+                                    { "singer": "38任贤齐", "location": "上海", "sort": "8.16" },
+                                    { "singer": "40五月天", "location": "北京", "sort": "8.16" },
+                                    { "singer": "41陆虎", "location": "苏州", "sort": "8.16" }
                                 ]
                             },
                             {
@@ -292,7 +300,10 @@
                                     { "singer": "2邓紫棋", "location": "香港", "sort": "8.17" },
                                     { "singer": "6鹿晗", "location": "武汉", "sort": "8.17" },
                                     { "singer": "7张杰", "location": "乌鲁木齐", "sort": "8.17" },
-                                    { "singer": "29任贤齐", "location": "上海", "sort": "8.17" }
+                                    { "singer": "29任贤齐", "location": "上海", "sort": "8.17" },
+                                    { "singer": "36黄子弘凡", "location": "合肥", "sort": "8.17" },
+                                    { "singer": "38任贤齐", "location": "上海", "sort": "8.17" },
+                                    { "singer": "40五月天", "location": "北京", "sort": "8.17" }
                                 ]
                             },
                             {
@@ -317,7 +328,8 @@
                                 "weekday": "Friday",
                                 "events": [
                                     { "singer": "5汪苏泷", "location": "青岛", "sort": "8.22" },
-                                    { "singer": "6鹿晗", "location": "深圳", "sort": "8.22" }
+                                    { "singer": "6鹿晗", "location": "深圳", "sort": "8.22" },
+                                    { "singer": "38任贤齐", "location": "杭州", "sort": "8.22" }
                                 ]
                             },
                             {
@@ -328,7 +340,8 @@
                                     { "singer": "15李荣浩", "location": "绍兴", "sort": "8.23" },
                                     { "singer": "20张韶涵", "location": "衢州", "sort": "8.23" },
                                     { "singer": "5汪苏泷", "location": "青岛", "sort": "8.23" },
-                                    { "singer": "29任贤齐", "location": "杭州", "sort": "8.23" }
+                                    { "singer": "29任贤齐", "location": "杭州", "sort": "8.23" },
+                                    { "singer": "38任贤齐", "location": "杭州", "sort": "8.23" }
                                 ]
                             },
                             {
@@ -339,7 +352,8 @@
                                     { "singer": "24陶喆", "location": "哈尔滨", "sort": "8.24" },
                                     { "singer": "5汪苏泷", "location": "青岛", "sort": "8.24" },
                                     { "singer": "6鹿晗", "location": "深圳", "sort": "8.24" },
-                                    { "singer": "29任贤齐", "location": "杭州", "sort": "8.24" }
+                                    { "singer": "29任贤齐", "location": "杭州", "sort": "8.24" },
+                                    { "singer": "38任贤齐", "location": "杭州", "sort": "8.24" }
                                 ]
                             },
                             {
@@ -366,7 +380,10 @@
                                     { "singer": "2邓紫棋", "location": "上海", "sort": "8.30" },
                                     { "singer": "3周深", "location": "贵阳", "sort": "8.30" },
                                     { "singer": "7张杰", "location": "西安", "sort": "8.30" },
-                                    { "singer": "30潘玮柏", "location": "上海", "sort": "8.30" }
+                                    { "singer": "30潘玮柏", "location": "上海", "sort": "8.30" },
+                                    { "singer": "35大张伟", "location": "北京", "sort": "8.30" },
+                                    { "singer": "38任贤齐", "location": "福州", "sort": "8.30" },
+                                    { "singer": "39潘玮柏", "location": "上海", "sort": "8.30" }
                                 ]
                             },
                             {
@@ -377,7 +394,9 @@
                                     { "singer": "24陶喆", "location": "杭州", "sort": "8.31" },
                                     { "singer": "2邓紫棋", "location": "上海", "sort": "8.31" },
                                     { "singer": "6鹿晗", "location": "南昌", "sort": "8.31" },
-                                    { "singer": "7张杰", "location": "西安", "sort": "8.31" }
+                                    { "singer": "7张杰", "location": "西安", "sort": "8.31" },
+                                    { "singer": "38任贤齐", "location": "福州", "sort": "8.31" },
+                                    { "singer": "39潘玮柏", "location": "上海", "sort": "8.31" }
                                 ]
                             }
                         ]
@@ -403,7 +422,8 @@
                                     { "singer": "12王力宏", "location": "重庆", "sort": "9.06" },
                                     { "singer": "24陶喆", "location": "常州", "sort": "9.06" },
                                     { "singer": "25伍佰", "location": "青岛", "sort": "9.06" },
-                                    { "singer": "2邓紫棋", "location": "上海", "sort": "9.06" }
+                                    { "singer": "2邓紫棋", "location": "上海", "sort": "9.06" },
+                                    { "singer": "36黄子弘凡", "location": "武汉", "sort": "9.06" }
                                 ]
                             },
                             {
@@ -414,7 +434,8 @@
                                     { "singer": "12王力宏", "location": "重庆", "sort": "9.07" },
                                     { "singer": "24陶喆", "location": "常州", "sort": "9.07" },
                                     { "singer": "25伍佰", "location": "青岛", "sort": "9.07" },
-                                    { "singer": "2邓紫棋", "location": "上海", "sort": "9.07" }
+                                    { "singer": "2邓紫棋", "location": "上海", "sort": "9.07" },
+                                    { "singer": "36黄子弘凡", "location": "武汉", "sort": "9.07" }
                                 ]
                             },
                             {
@@ -423,7 +444,8 @@
                                 "weekday": "Friday",
                                 "events": [
                                     { "singer": "20张韶涵", "location": "成都", "sort": "9.12" },
-                                    { "singer": "5汪苏泷", "location": "南京", "sort": "9.12" }
+                                    { "singer": "5汪苏泷", "location": "南京", "sort": "9.12" },
+                                    { "singer": "40五月天", "location": "贵阳", "sort": "9.12" }
                                 ]
                             },
                             {
@@ -436,7 +458,10 @@
                                     { "singer": "29任贤齐", "location": "东莞", "sort": "9.13" },
                                     { "singer": "30潘玮柏", "location": "南昌", "sort": "9.13" },
                                     { "singer": "33颜人中", "location": "佛山", "sort": "9.13" },
-                                    { "singer": "34林忆莲", "location": "天津站", "sort": "9.13" }
+                                    { "singer": "34林忆莲", "location": "天津站", "sort": "9.13" },
+                                    { "singer": "38任贤齐", "location": "东莞", "sort": "9.13" },
+                                    { "singer": "39潘玮柏", "location": "南昌", "sort": "9.13" },
+                                    { "singer": "40五月天", "location": "贵阳", "sort": "9.13" }
                                 ]
                             },
                             {
@@ -445,7 +470,9 @@
                                 "weekday": "Sunday",
                                 "events": [
                                     { "singer": "5汪苏泷", "location": "南京", "sort": "9.14" },
-                                    { "singer": "29任贤齐", "location": "东莞", "sort": "9.14" }
+                                    { "singer": "29任贤齐", "location": "东莞", "sort": "9.14" },
+                                    { "singer": "38任贤齐", "location": "东莞", "sort": "9.14" },
+                                    { "singer": "40五月天", "location": "贵阳", "sort": "9.14" }
                                 ]
                             },
                             {
@@ -476,7 +503,10 @@
                                     { "singer": "30潘玮柏", "location": "天津", "sort": "9.20" },
                                     { "singer": "31周杰伦", "location": "济南", "sort": "9.20" },
                                     { "singer": "33颜人中", "location": "苏州", "sort": "9.20" },
-                                    { "singer": "34林忆莲", "location": "温州站", "sort": "9.20" }
+                                    { "singer": "34林忆莲", "location": "温州站", "sort": "9.20" },
+                                    { "singer": "36黄子弘凡", "location": "太原", "sort": "9.20" },
+                                    { "singer": "38任贤齐", "location": "重庆", "sort": "9.20" },
+                                    { "singer": "39潘玮柏", "location": "天津", "sort": "9.20" }
                                 ]
                             },
                             {
@@ -491,7 +521,9 @@
                                     { "singer": "4孙燕姿", "location": "重庆", "sort": "9.21" },
                                     { "singer": "7张杰", "location": "沈阳", "sort": "9.21" },
                                     { "singer": "29任贤齐", "location": "重庆", "sort": "9.21" },
-                                    { "singer": "31周杰伦", "location": "济南", "sort": "9.21" }
+                                    { "singer": "31周杰伦", "location": "济南", "sort": "9.21" },
+                                    { "singer": "36黄子弘凡", "location": "太原", "sort": "9.21" },
+                                    { "singer": "38任贤齐", "location": "重庆", "sort": "9.21" }
                                 ]
                             },
                             {
@@ -698,7 +730,6 @@
                     }
                 }
             };
-
             // 工具函数：获取当前选中的日期
             function getSelectedDate() {
                 return document.getElementById('date-selector').value;
