@@ -1,0 +1,2904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>周杰伦｜演唱会歌词速查手册</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+:root{
+--main:#c084fc;
+--main-dark:#581c87;
+--main-darker:#1e1b4b;
+--main-light:#e9d5ff;
+--accent:#ec4899;
+--bg-base:#030712;
+--bg-deep:#020617;
+--card:rgba(192,132,252,0.08);
+--card-strong:rgba(192,132,252,0.16);
+--text:#f8fafc;
+--text-soft:#e2e8f0;
+--text-mid:#94a3b8;
+--text-light:#475569;
+--border:rgba(192,132,252,0.25);
+--radius:18px;
+--shadow-soft: 0 4px 18px rgba(192,132,252,0.15);
+--shadow-glow: 0 8px 28px rgba(192,132,252,0.28);
+--glow: 0 0 22px rgba(192,132,252,0.35);
+}
+
+html,body{
+font-family:"PingFang SC","Microsoft YaHei",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+background:var(--bg-base);
+color:var(--text);
+height:100%;
+overflow:hidden;
+}
+
+#app{
+width:100%;
+height:100%;
+position:relative;
+}
+
+.page{
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0;
+display:none;
+overflow-y:auto;
+overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
+}
+.page.active{
+display:block;
+}
+
+/* ==========首页 ========== */
+#list-page{
+position:relative;
+}
+#list-page::before{
+content:"";
+position:absolute;
+top:-140px;
+right:-120px;
+width:380px;height:380px;
+background:radial-gradient(circle, rgba(192,132,252,0.28) 0%, transparent 70%);
+pointer-events:none;
+animation:breath 8s ease-in-out infinite alternate;
+}
+#list-page::after{
+content:"";
+position:absolute;
+bottom:-160px;
+left:-100px;
+width:340px;height:340px;
+background:radial-gradient(circle, rgba(236,72,153,0.18) 0%, transparent 70%);
+pointer-events:none;
+animation:breath 9s ease-in-out infinite alternate-reverse;
+}
+@keyframes breath{
+0%{opacity:0.45;transform:scale(1)}
+100%{opacity:0.9;transform:scale(1.12)}
+}
+
+.list-header{
+position:relative;
+padding:50px 22px 24px;
+background:linear-gradient(180deg,rgba(30,27,75,0.92) 0%,rgba(3,7,18,0) 100%);
+overflow:hidden;
+}
+.list-header::before{
+content:"";
+position:absolute;
+top:22px;
+left:6%;
+width:72px;height:2px;
+background:linear-gradient(90deg,transparent,var(--main),transparent);
+opacity:0.45;
+}
+.list-header::after{
+content:"";
+position:absolute;
+bottom:8px;
+right:8%;
+width:90px;height:2px;
+background:linear-gradient(90deg,transparent,var(--accent),transparent);
+opacity:0.35;
+}
+
+.list-header-inner{
+display:flex;
+align-items:center;
+gap:18px;
+position:relative;
+z-index:2;
+}
+
+.vinyl{
+width:110px;
+height:110px;
+flex-shrink:0;
+position:relative;
+filter:drop-shadow(0 4px 14px rgba(192,132,252,0.30));
+}
+.vinyl svg{
+width:100%;
+height:100%;
+}
+
+.list-header-text{
+flex:1;
+min-width:0;
+}
+.list-header h1{
+font-size:27px;
+font-weight:bold;
+color:var(--main-light);
+line-height:1.35;
+letter-spacing:1px;
+text-shadow:0 0 16px rgba(192,132,252,0.42);
+}
+.list-header .sub{
+font-size:16px;
+color:var(--text-mid);
+margin-top:8px;
+letter-spacing:0.5px;
+}
+
+.search-sticky-wrap{
+position:sticky;
+top:0;
+z-index:12;
+background:rgba(3,7,18,0.88);
+backdrop-filter:blur(22px);
+-webkit-backdrop-filter:blur(22px);
+padding:12px 0 14px;
+box-shadow:none;
+}
+.search-box{
+margin:0 18px;
+position:relative;
+}
+.search-box input{
+width:100%;
+padding:13px 46px 13px 40px;
+border-radius:30px;
+border:1px solid var(--border);
+background:linear-gradient(135deg,rgba(192,132,252,0.09),rgba(192,132,252,0.04));
+font-size:15px;
+outline:none;
+color:var(--text);
+box-shadow:var(--shadow-soft);
+}
+.search-box input::placeholder{color:var(--text-light)}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--text-mid)}
+.search-clear{
+position:absolute;right:14px;
+top:50%;
+transform:translateY(-50%);
+width:24px;height:24px;
+border-radius:50%;
+background:rgba(192,132,252,0.14);
+color:#fff;
+display:flex;align-items:center;justify-content:center;
+font-size:15px;
+cursor:pointer;
+backdrop-filter:blur(4px);
+}
+
+.section-title{
+padding:0 20px;
+margin-bottom:12px;
+font-size:13px;
+color:var(--text-mid);
+display:flex;
+align-items:center;
+gap:10px;
+}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+
+.song-list{padding:0 18px 40px}
+
+.song-item{
+position:relative;
+overflow:hidden;
+background:linear-gradient(135deg,rgba(192,132,252,0.08),rgba(192,132,252,0.04));
+border-radius:var(--radius);
+padding:16px 16px;
+margin-bottom:12px;
+box-shadow:var(--shadow-soft);
+display:flex;
+align-items:center;
+gap:14px;
+cursor:pointer;
+border:1px solid var(--border);
+transition:all 0.24s ease;
+backdrop-filter:blur(8px);
+}
+.song-item::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(192,132,252,0.16),transparent);
+transition:left 0.45s ease;
+}
+.song-item:active{
+transform:scale(0.97);
+box-shadow:var(--shadow-glow);
+background:var(--card-strong);
+}
+.song-item:active::before{
+left:100%;
+}
+
+.song-index{
+padding:3px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:bold;
+flex-shrink:0;
+background:rgba(192,132,252,0.24);
+color:var(--main-light);
+min-width:36px;
+text-align:center;
+}
+.song-name{
+font-size:16px;
+font-weight:bold;
+color:var(--text);
+flex:1;
+min-width:0;
+font-family:"SimSun","宋体","Songti SC","Noto Serif CJK SC","Source Han Serif SC",serif;
+}
+.song-arrow{color:var(--text-mid)}
+
+/* 歌单列表播放按钮：极简小尺寸，弱化视觉 */
+.play-btn-list{
+width:28px;
+height:28px;
+flex-shrink:0;
+border-radius:50%;
+border:1px solid rgba(192,132,252,0.24);
+background:transparent;
+color:var(--main-light);
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:all .2s;
+}
+.play-btn-list svg{width:14px;height:14px;}
+.play-btn-list:active{
+transform:scale(0.92);
+background:rgba(192,132,252,0.20);
+box-shadow:0 0 12px rgba(192,132,252,0.35);
+}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-light);font-size:14px;}
+
+/* ==========歌词详情页 ========== */
+#detail-page{
+background:
+radial-gradient(circle at 15% 12%, rgba(192,132,252,0.24) 0%, transparent 55%),
+radial-gradient(circle at 85% 88%, rgba(236,72,153,0.16) 0%, transparent 55%),
+linear-gradient(18deg,#020617 0%,#030712 45%,#0a0f1a 100%);
+position:relative;
+padding-left:max(18px, env(safe-area-inset-left));
+padding-right:max(18px, env(safe-area-inset-right));
+padding-bottom:140px;
+}
+#detail-page::before{
+content:"";
+position:absolute;
+top:-100px;left:-90px;
+width:260px;height:260px;
+background:radial-gradient(circle, rgba(192,132,252,0.18) 0%,transparent 70%);
+pointer-events:none;
+}
+#detail-page::after{
+content:"";
+position:absolute;
+bottom:-120px;right:-100px;
+width:300px;height:300px;
+background:radial-gradient(circle, rgba(236,72,153,0.14) 0%,transparent 70%);
+pointer-events:none;
+}
+
+.float-back-btn{
+position:fixed;
+top:18px;
+left:18px;
+z-index:99;
+width:42px;height:42px;
+border-radius:50%;
+border:1px solid var(--border);
+background:rgba(192,132,252,0.08);
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;
+box-shadow:0 4px 16px rgba(0,0,0,0.35);
+transition:transform 0.2s ease,background 0.2s ease;
+}
+.float-back-btn:active{
+transform:scale(0.92);
+background:rgba(192,132,252,0.16);
+}
+.float-back-btn svg{width:21px;height:21px;color:var(--main-light)}
+
+.detail-hero{
+padding:24px 0 14px;
+text-align:center;
+position:relative;
+z-index:2;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+.detail-hero h1{
+font-size:28px;
+font-weight:bold;
+color:var(--main-light);
+letter-spacing:2px;
+text-shadow:0 0 18px rgba(192,132,252,0.45);
+}
+/* 详情页顶部播放按钮：缩小尺寸，极简 */
+.play-btn-detail{
+width:32px;
+height:32px;
+flex-shrink:0;
+border-radius:50%;
+border:1px solid rgba(192,132,252,0.30);
+background:linear-gradient(135deg,var(--main),var(--main-dark));
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:all .2s;
+box-shadow:0 0 8px rgba(192,132,252,0.28);
+}
+.play-btn-detail svg{width:16px;height:16px;}
+.play-btn-detail:active{transform:scale(0.92);background:rgba(192,132,252,0.30)}
+
+/* 详情页歌词区域：大面板，无高亮 */
+.lyrics-body{
+position:relative;
+z-index:2;
+max-width:420px;
+width:100%;
+margin:0 auto 40px;
+padding:32px max(24px,env(safe-area-inset-left)) 32px max(24px,env(safe-area-inset-right));
+border-radius:24px;
+background:linear-gradient(135deg,rgba(192,132,252,0.09),rgba(192,132,252,0.04));
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+line-height:2.7;
+font-size:17px;
+color:var(--text-soft);
+font-family:"SimSun","宋体","Songti SC","Noto Serif CJK SC","Source Han Serif SC",serif;
+white-space:pre-wrap;
+text-align:center;
+border:1px solid var(--border);
+box-shadow:
+0 10px 28px rgba(192,132,252,0.20),
+0 4px 12px rgba(0,0,0,0.35);
+max-height:none;
+height:auto;
+overflow:visible;
+}
+.lyrics-body::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:1px;
+background:linear-gradient(90deg,transparent,var(--main),transparent);
+opacity:0.55;
+}
+
+.detail-nav{
+position:fixed;
+bottom:0;left:0;right:0;
+padding:14px 18px 30px;
+background:linear-gradient(0deg,rgba(2,6,23,0.96) 55%,transparent);
+display:flex;
+gap:14px;
+z-index:20;
+}
+.nav-col{
+width:calc(50% - 7px);
+max-width:100%;
+flex:none;
+}
+.nav-btn{
+width:100%;
+max-width:100%;
+padding:13px 10px;
+border-radius:30px;
+border:1px solid var(--border);
+background:rgba(192,132,252,0.08);
+font-size:14px;
+font-weight:bold;
+color:var(--text);
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+cursor:pointer;
+box-shadow:0 3px 12px rgba(0,0,0,0.25);
+backdrop-filter:blur(8px);
+transition:transform 0.2s ease;
+}
+.nav-btn:active{transform:scale(0.96)}
+.nav-btn.primary{
+background:linear-gradient(135deg,var(--main),var(--main-dark));
+color:#fff;
+border-color:transparent;
+box-shadow:0 4px 18px rgba(192,132,252,0.30);
+}
+.nav-btn:disabled{opacity:0.32;cursor:not-allowed;transform:none;box-shadow:none}
+.nav-btn svg{width:16px;height:16px;flex-shrink:0;}
+.btn-text{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+min-width:0;
+}
+
+/* 迷你横向悬浮播放器｜紫调优化 */
+.floating-player{
+position:fixed;
+right:14px;
+bottom:110px;
+z-index:999;
+width:auto;
+max-width:240px;
+border-radius:10px;
+background:linear-gradient(135deg,rgba(30,27,75,0.92),rgba(3,7,18,0.94));
+border:1px solid rgba(192,132,252,0.28);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+box-shadow:0 6px 22px rgba(0,0,0,0.42),0 0 16px rgba(192,132,252,0.20);
+padding:8px 10px;
+display:none;
+align-items:center;
+gap:8px;
+}
+.floating-player.show{display:flex;}
+.fp-title{
+font-size:13px;
+color:var(--main-light);
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+font-family:"SimSun","宋体","Songti SC",serif;
+max-width:5.2em; /* 限制5个汉字宽度 */
+}
+.fp-btn{
+height:32px;
+min-width:32px;
+border-radius:8px;
+border:1px solid rgba(192,132,252,0.24);
+background:rgba(192,132,252,0.10);
+color:var(--text);
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:.2s;
+flex-shrink:0;
+}
+.fp-btn svg{width:15px;height:15px;}
+.fp-btn:active{transform:scale(0.94);background:rgba(192,132,252,0.22)}
+.fp-btn.close{
+background:rgba(236,72,153,0.12);
+border-color:rgba(236,72,153,0.22);
+}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="list-page" class="page active">
+<div class="list-header">
+<div class="list-header-inner">
+<div class="vinyl">
+<svg viewBox="0 0 100 100" fill="none">
+<defs>
+<radialGradient id="vinylBase" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#1e1b4b" />
+<stop offset="48%" stop-color="#0f172a" />
+<stop offset="100%" stop-color="#020617" />
+</radialGradient>
+<linearGradient id="vinylTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#e9d5ff" />
+<stop offset="50%" stop-color="#c084fc" />
+<stop offset="100%" stop-color="#581c87" />
+</linearGradient>
+<linearGradient id="vinylLine" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="transparent" />
+<stop offset="50%" stop-color="rgba(192,132,252,0.55)" />
+<stop offset="100%" stop-color="transparent" />
+</linearGradient>
+</defs>
+<circle cx="50" cy="50" r="48" fill="url(#vinylBase)" stroke="url(#vinylTeal)" stroke-width="1.6"/>
+<circle cx="50" cy="50" r="38" stroke="url(#vinylLine)" stroke-width="0.6"/>
+<circle cx="50" cy="50" r="26" stroke="url(#vinylLine)" stroke-width="0.6"/>
+<circle cx="50" cy="50" r="14" stroke="url(#vinylLine)" stroke-width="0.6"/>
+<circle cx="50" cy="50" r="6" fill="url(#vinylTeal)"/>
+</svg>
+</div>
+<div class="list-header-text">
+<h1>周杰伦｜演唱会</h1>
+<div class="sub">歌词速查手册</div>
+</div>
+</div>
+</div>
+<div class="search-sticky-wrap" id="stickyBar">
+<div class="search-box">
+<svg class="search-icon" viewBox="0 0 24 24" fill="none"><path d="M11.5 3C16.1944 3 20 6.80558 20 11.5C20 13.523 19.2933 15.381 18.1132 16.8404L21.1364 19.8636C21.4879 20.2151 21.4879 20.7849 21.1364 21.1364C20.7849 21.4879 20.2151 21.4879 19.8636 21.1364L16.8404 18.1132C15.381 19.2933 13.523 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3ZM11.5 18.2C15.2003 18.2 18.2 15.2003 18.2 11.5C18.2 7.79969 15.2003 4.8 11.5 4.8C7.79969 4.8 4.8 7.79969 4.8 11.5C4.8 15.2003 7.79969 18.2 11.5 18.2Z" fill="currentColor" /></svg>
+<input type="text" id="searchInput" placeholder="搜索歌名或歌词…" oninput="filterSongs()">
+<div class="search-clear" id="searchClear" onclick="clearSearch()">×</div>
+</div>
+</div>
+<div class="section-title" id="listTitle">全部 <span id="totalCount">0</span>首</div>
+<div class="song-list" id="songList"></div>
+</div>
+
+<div id="detail-page" class="page">
+<div class="float-back-btn" onclick="goPage('list-page')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+</div>
+<div class="detail-hero">
+<h1 id="songSubTitle"></h1>
+<div class="play-btn-detail" id="playBtnDetail" title="播放/暂停">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<polygon points="5 3 19 12 5 21 5 3"></polygon>
+</svg>
+</div>
+</div>
+<div class="lyrics-body" id="lyricsBody"></div>
+
+<div class="detail-nav">
+    <div class="nav-col">
+        <button class="nav-btn" id="btnPrev" onclick="prevSong()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l7-7M5 12l7 7" /></svg>
+            <span class="btn-text" id="btnPrevText">上一首</span>
+        </button>
+    </div>
+    <div class="nav-col">
+        <button class="nav-btn primary" id="btnNext" onclick="nextSong()">
+            <span class="btn-text" id="btnNextText">下一首</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M19 12l-7-7M19 12l-7 7" /></svg>
+        </button>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- 优化后迷你悬浮播放器 -->
+<div class="floating-player" id="floatingPlayer">
+    <div class="fp-title" id="fpTitle">七里香</div>
+    <div class="fp-btn" id="fpPlayPause" title="播放/暂停">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+    </div>
+    <div class="fp-btn close" id="fpClose" title="停止播放">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6L18 18M18 6L6 18"></path>
+        </svg>
+    </div>
+</div>
+
+<script>
+const songs = [
+{
+name:"太阳之子",
+audioUrl:"https://mp3tourl.com/audio/1788785664903-7b4a12b5-f55e-4488-9799-8c4cf8e435f4.mp3",
+lyrics:`谁弹奏着灰黑协奏曲
+蒙娜丽莎微笑着哭泣
+救赎来临前始终不语
+（解剖过去 谁的表情刻意
+松手前的鹅毛笔 指向线索的信）
+莎士比亚笔下的纯真
+哈姆雷特花丛那歌声
+火炬的光不照着剧本
+（黑夜来袭 蝙蝠轰然离去
+远方正邪在对立 黎明前谁参与）
+雏菊紫罗兰飘散在风里
+浮出水面的是不是真理
+克林姆的吻是一种别离
+我就是光 照亮远方黑夜
+我闯 马上将你击溃
+如钢 把心魔都粉碎
+不怯 不退 将邪恶都灭
+光 照亮远方黑夜
+我闯 恶梦灰飞烟灭
+我扛 不管声嘶力竭
+不怯 不退 将邪恶都灭
+吧台后镜子里的世界
+与你对话的人又是谁
+调了一杯迷惑的无解
+（笔触强烈 这张画的细节
+色调暗示着一切 线条却在分裂）
+瞳孔里燃烧的向日葵
+孤独的夜游者等心碎
+左耳纷乱中搁下是非
+（月光低垂 隆河上的星夜
+教堂里有人告解 谁被吸干了血）
+时间的钟被扭曲的声音
+如同被折叠起来的表情
+而我却在风中一路前行
+我就是光 照亮远方黑夜
+我闯 马上将你击溃
+如钢 把心魔都粉碎
+不怯 不退 将邪恶都灭
+光 照亮远方黑夜
+我闯 恶梦灰飞烟灭
+我扛 不管声嘶力竭
+不怯 不退 将邪恶都灭
+我就是光 照亮远方黑夜
+我闯 马上将你击溃
+如钢 把心魔都粉碎
+不怯 不退 将邪恶都灭
+光 照亮远方黑夜
+我闯 恶梦灰飞烟灭
+我扛 不管声嘶力竭
+不怯 不退 将邪恶都灭`
+},
+{
+name:"惊叹号",
+audioUrl:"https://mp3tourl.com/audio/1788785902601-91dfc5e0-387b-4b69-93cd-45adc6047f51.mp3",
+lyrics:`越山丘 过哑口
+云端的空气稀薄
+这街头 敌意多
+烟硝弥漫不了我
+空袭对我是种啰嗦
+警报呢 是让你们有时间走
+哇 靠 毅力极限燃烧
+哇 靠 斗志仰天咆哮
+哇 靠 自己创作跑道
+靠靠靠靠靠靠靠靠靠
+靠 毅力极限燃烧
+哇 靠 斗志仰天咆哮
+哇 靠 高速奔向目标
+靠靠靠靠靠靠靠靠靠
+顺向坡 从不走
+逆着风清醒了我
+我沉默 话不多
+赢的时候才开口
+势均力敌才叫战斗
+希望呢 你们是像样的对手
+哇 靠 毅力极限燃烧
+哇 靠 斗志仰天咆哮
+哇 靠 自己创作跑道
+靠靠靠靠靠靠靠靠靠
+靠 毅力极限燃烧
+哇 靠 斗志仰天咆哮
+哇 靠 高速奔向目标
+靠靠靠靠靠靠靠靠靠
+高楼的视野 不知名的街
+霓虹侵略 庸俗了这一切
+是与非 隔着路口对决
+我主宰 我自己的世界
+横着写 意气风发的谁
+永不放弃 去超越
+去粉碎 是非
+哇 靠 毅力极限燃烧
+哇 靠 斗志仰天咆哮
+哇 靠 自己创作跑道
+靠靠靠靠靠靠靠靠靠
+靠 毅力极限燃烧
+哇 靠 斗志仰天咆哮
+哇 靠 高速奔向目标
+靠`
+},
+{
+name:"甜甜的",
+audioUrl:"https://mp3tourl.com/audio/1788786099679-fc4bb37b-5ee4-4f1c-980a-41ca7b84bbe8.mp3",
+lyrics:`我轻轻地尝一口 你说的爱我
+还在回味你给过的温柔
+我轻轻地尝一口 味道香浓的说
+我喜欢的样子你都有
+我轻轻地尝一口 你说的爱我
+舍不得吃会微笑的糖果
+我轻轻地尝一口 份量虽然不多
+却将你的爱完全吸收
+我微笑着 让香味停留
+缘分走到这也赖着不走
+像夹心饼干 中间有甜头
+继续下去不需要理由
+我轻轻地尝一口 你说的爱我
+还在回味你给过的温柔
+我轻轻地尝一口 味道香浓的说
+我喜欢的样子你都有
+我轻轻地尝一口 你说的爱我
+舍不得吃会微笑的糖果
+我轻轻地尝一口 份量虽然不多
+却将你的爱完全吸收
+我微笑着 让香味停留
+缘分走到这也赖着不走
+像夹心饼干 中间有甜头
+继续下去不需要理由
+我轻轻地尝一口 你说的爱我
+还在回味你给过的温柔
+我轻轻地尝一口 味道香浓的说
+我喜欢的样子你都有
+我轻轻地尝一口 你说的爱我
+舍不得吃会微笑的糖果
+我轻轻地尝一口 份量虽然不多
+却将你的爱完全吸收`
+},
+{
+name:"简单爱",
+audioUrl:"https://mp3tourl.com/audio/1788786525488-b6431f92-fd58-41c6-b866-c3862e2e6564.mp3",
+lyrics:`说不上为什么我变得很主动
+若爱上一个人
+什么都会值得去做
+我想大声宣布对你依依不舍
+连隔壁邻居都猜到我现在的感受
+河边的风 在吹着头发飘动
+牵着你的手 一阵莫名感动
+我想带你回我的外婆家
+一起看着日落
+一直到我们都睡着
+我想就这样牵着你的手不放开
+爱能不能够永远单纯没有悲哀
+我 想带你骑单车
+我 想和你看棒球
+像这样没担忧
+唱着歌一直走
+我想就这样牵着你的手不放开
+爱可不可以简简单单没有伤害
+你 靠着我的肩膀
+你 在我胸口睡着
+像这样的生活我爱你你爱我
+想 简简单单爱
+想 简简单单爱
+我想大声宣布对你依依不舍
+连隔壁邻居都猜到我现在的感受
+河边的风 在吹着头发飘动
+牵着你的手 一阵莫名感动
+我想带你回我的外婆家
+一起看着日落
+一直到我们都睡着
+我想就这样牵着你的手不放开
+爱能不能够永远单纯没有悲哀
+我 想带你骑单车
+我 想和你看棒球
+像这样没担忧
+唱着歌一直走
+我想就这样牵着你的手不放开
+爱可不可以简简单单没有伤害
+你 靠着我的肩膀
+你 在我胸口睡着
+像这样的生活我爱你你爱我
+想 简简单单爱
+想 简简单单爱
+我想就这样牵着你的手不放开
+爱能不能够永远单纯没有悲哀
+我 想带你骑单车
+我 想和你看棒球
+像这样没担忧
+唱着歌一直走
+我想就这样牵着你的手不放开
+爱可不可以简简单单没有伤害
+你 靠着我的肩膀
+你 在我胸口睡着
+像这样的生活我爱你你爱我`
+},
+{
+name:"黑色毛衣",
+audioUrl:"https://mp3tourl.com/audio/1788786552306-97b1af3d-5ad5-4cad-a1f9-239895d2b2d7.mp3",
+lyrics:`一件黑色毛衣
+两个人的回忆
+雨过之后更难忘记
+忘记我还爱你
+你不用在意
+流泪也只是刚好而已
+我早已经待在谷底
+我知道不能再留住你
+也知道不能没有骨气
+感激你让我拥有秋天的美丽
+看着那白色的蜻蜓
+在空中忘了前进
+还能不能 重新编织
+脑海中起毛球的记忆
+再说我爱你
+可能雨也不会停
+黑色毛衣 藏在哪里
+就让回忆永远停在 那里
+一件黑色毛衣
+两个人的回忆
+雨过之后更难忘记
+忘记我还爱你
+你不用在意
+流泪也只是刚好而已
+我早已经待在谷底
+我知道不能再留住你
+也知道不能没有骨气
+感激你让我拥有秋天的美丽
+看着那白色的蜻蜓
+在空中忘了前进
+还能不能 重新编织
+脑海中起毛球的记忆
+再说我爱你
+可能雨也不会停
+黑色毛衣 藏在哪里
+就让回忆永远停在 那里
+看着那白色的蜻蜓
+在空中忘了前进
+还能不能 重新编织
+脑海中起毛球的记忆
+再说我爱你
+可能雨也不会停
+黑色毛衣 藏在哪里
+就让回忆永远停在 那里`
+},
+{
+name:"一路向北",
+audioUrl:"https://mp3tourl.com/audio/1788785489726-5223c8e8-0d54-4fde-9a96-0f406d6aeaf2.mp3",
+lyrics:`后视镜里的世界
+越来越远的道别
+你转身向背 侧脸还是很美
+我用眼光去追 竟听见你的泪
+在车窗外面徘徊 是我错失的机会
+你站的方位 跟我中间隔着泪
+街景一直在后退
+你的崩溃在窗外零碎
+我一路向北 离开有你的季节
+你说你好累 已无法再爱上谁
+风在山路吹
+过往的画面全都是我不对
+细数惭愧 我伤你几回
+后视镜里的世界 越来越远的道别
+你转身向背 侧脸还是很美
+我用眼光去追 竟听见你的泪
+在车窗外面徘徊 是我错失的机会
+你站的方位 跟我中间隔着泪
+街景一直在后退
+你的崩溃在窗外零碎
+我一路向北 离开有你的季节
+你说你好累 已无法再爱上谁
+风在山路吹
+过往的画面全都是我不对
+细数惭愧 我伤你几回
+我一路向北 离开有你的季节
+方向盘周围 回转着我的后悔
+我加速超越
+却甩不掉紧紧跟随的伤悲
+细数惭愧 我伤你几回
+停止狼狈 就让错纯粹`
+},
+{
+name:"谁稀罕",
+audioUrl:"https://mp3tourl.com/audio/1788786775512-919e064f-9519-4ed3-8638-9da37c967694.mp3",
+lyrics:`你说的那些浪漫 我早已经看惯
+甜言蜜语的桥段 全部都已看淡
+没必要再去纠缠 不必假装遗憾
+不属于我的期盼 我全部都归还
+谁稀罕 那些虚假的陪伴
+别拿你的多情 来把我为难
+谁稀罕 编织美丽的梦幻
+我宁愿一个人 落得简单
+你的忽冷忽热 反复不停循环
+暧昧拉扯的桥段 让人心生厌烦
+不用故作伤感 不必继续感叹
+这一场离合聚散 就到此都算完
+谁稀罕 那些虚假的陪伴
+别拿你的多情 来把我为难
+谁稀罕 编织美丽的梦幻
+我宁愿一个人 落得简单
+我不要 虚情假意的温暖
+也不想 陷入无谓的纠缠
+放下了执念 就不再为难
+一个人也可以 灯火阑珊
+谁稀罕 那些虚假的陪伴
+别拿你的多情 来把我为难
+谁稀罕 编织美丽的梦幻
+我宁愿一个人 落得简单`
+},
+{
+name:"那天下雨了",
+audioUrl:"https://mp3tourl.com/audio/1788786809794-753c3ab3-fd3d-453c-afd1-ec8296ce9404.mp3",
+lyrics:`那天下雨了 淋湿旧的街角
+回忆漫上来 像潮水不停翻扰
+旧的路灯下 我们曾经拥抱
+如今只剩我 看雨水在飘摇
+听雨点敲打着 窗沿滴滴答答
+往事一幕幕 又在心里喧哗
+那时的我们 笑的那样无瑕
+转眼时光啊 把故事都融化
+那天下雨了 思念无处可逃
+走过熟悉街道 只剩寂寞缠绕
+曾经的美好 随风雨慢慢苍老
+只剩回忆在 雨夜里不停发酵
+撑一把旧伞 独自慢慢走啊
+空气中弥漫 潮湿旧日年华
+说好的永远 终究败给时差
+物是人非啊 只剩雨声回答
+那天下雨了 思念无处可逃
+走过熟悉街道 只剩寂寞缠绕
+曾经的美好 随风雨慢慢苍老
+只剩回忆在 雨夜里不停发酵
+那天下雨了 雨还在下
+我的想念 也停不下`
+},
+{
+name:"蜗牛",
+audioUrl:"https://mp3tourl.com/audio/1788787398334-793785dc-ee4a-4952-971c-626c9864df15.mp3",
+lyrics:`该不该搁下重重的壳
+寻找到底哪里有蓝天
+随着轻轻的风轻轻地飘
+历经的伤都不感觉疼
+我要一步一步往上爬
+等待阳光静静看着它的脸
+小小的天有大大的梦想
+重重的壳裹着轻轻地仰望
+我要一步一步往上爬
+在最高点乘着叶片往前飞
+小小的天流过的泪和汗
+总有一天我有属于我的天
+我要一步一步往上爬
+在最高点乘着叶片往前飞
+任风吹干流过的泪和汗
+我要一步一步往上爬
+等待阳光静静看着它的脸
+小小的天有大大的梦想
+我有属于我的天
+任风吹干流过的泪和汗
+总有一天我有属于我的天`
+},
+{
+name:"黑色幽默",
+audioUrl:"https://mp3tourl.com/audio/1788787454380-42ba3284-c1f1-4fc1-b003-bf808a8c981c.mp3",
+lyrics:`难过 是因为闷了很久
+是因为想了太多
+是心理起了作用
+你说 苦笑常常陪着你
+在一起有点勉强
+该不该现在休了
+我不想太多
+我想一定是我 听错弄错搞错
+拜托 我想是你的脑袋有问题
+随便说说
+其实我早已经猜透看透不想多说
+只是我怕眼泪撑不住
+不懂 你的黑色幽默
+想通 却又再考倒我
+说散 你想很久了吧
+我不想拆穿你当作 是你开的玩笑
+想通 却又再考倒我
+说散 你想很久了吧
+败给你的黑色幽默
+难过 是因为闷了很久
+是因为想了太多
+是心理起了作用
+你说 苦笑常常陪着你
+在一起有点勉强
+该不该现在休了
+我不想太多
+我想一定是我 听错弄错搞错
+拜托 我想是你的脑袋有问题
+随便说说
+其实我早已经猜透看透不想多说
+只是我怕眼泪撑不住
+不懂 你的黑色幽默
+想通 却又再考倒我
+说散 你想很久了吧
+我不想拆穿你当作 是你开的玩笑
+想通 却又再考倒我
+说散 你想很久了吧
+败给你的黑色幽默
+说散 你想很久了吧
+我的认真败给黑色幽默`
+},
+{
+name:"世界末日",
+audioUrl:"https://mp3tourl.com/audio/1788788278163-a5abb804-ec74-4934-b617-4f1a89340bdf.mp3",
+lyrics:`想笑来伪装掉下的眼泪
+点点头 承认自己会怕黑
+我只求能借一点的时间来陪
+你却连同情都不给
+想哭 来试探自己麻痹了没
+全世界好像只有我疲惫
+无所谓 反正难过就敷衍走一回
+但愿绝望和无奈远走高飞 （远走高飞）
+天灰灰 会不会让我忘了你是谁
+夜越黑 梦违背 难追难回味
+我的世界将被摧毁
+也许事与愿违
+累不累 睡不睡 单影无人相依偎
+夜越黑 梦违背 有谁肯安慰
+我的世界将被摧毁
+也许颓废也是另一种美
+想哭 来试探自己麻痹了没
+全世界好像只有我疲惫
+无所谓 反正难过就敷衍走一回
+但愿绝望和无奈远走高飞 （远走高飞）
+天灰灰 会不会让我忘了你是谁
+夜越黑 梦违背 难追难回味
+我的世界将被摧毁
+也许事与愿违
+累不累 睡不睡 单影无人相依偎
+夜越黑 梦违背 难追难回味
+我的世界将被摧毁
+也许颓废也是另一种美`
+},
+{
+name:"说好的幸福呢",
+audioUrl:"https://mp3tourl.com/audio/1788788300262-bd343a1f-9a73-4396-b1b8-aa682548f4a8.mp3",
+lyrics:`你的回话凌乱着
+在这个时刻
+我想起喷泉旁的白鸽
+甜蜜散落了
+情绪莫名的拉扯
+我还爱你呢
+而你断断续续唱着歌
+假装没事了
+时间过了走了
+爱情面临选择
+你冷了倦了我哭了
+离开时的不快乐
+你用卡片手写着
+有些爱只给到这
+真的痛了
+怎么了你累了
+说好的幸福呢
+我懂了不说了
+爱淡了梦远了
+开心与不开心
+一一细数着你再不舍
+那些爱过的感觉都太深刻
+我都还记得
+你不等了
+说好的幸福呢
+我错了泪干了
+放手了后悔了
+只是回忆的音乐盒还旋转着
+要怎么停呢
+你的回话凌乱着
+在这个时刻
+我想起喷泉旁的白鸽
+甜蜜散落了
+情绪莫名的拉扯
+我还爱你呢
+而你断断续续唱着歌
+假装没事了
+时间过了走了
+爱情面临选择
+你冷了倦了我哭了
+离开时的不快乐
+你用卡片手写着
+有些爱只给到这
+真的痛了
+怎么了你累了
+说好的幸福呢
+我懂了不说了
+爱淡了梦远了
+开心与不开心
+一一细数着你再不舍
+那些爱过的感觉都太深刻
+我都还记得
+你不等了
+说好的幸福呢
+我错了泪干了
+放手了后悔了
+只是回忆的音乐盒还旋转着
+要怎么停呢
+怎么了你累了
+说好的幸福呢
+我懂了不说了
+爱淡了
+梦远了
+我都还记得
+你不等了
+说好的幸福呢
+我错了泪干了
+放手了后悔了
+只是回忆的音乐盒还旋转着
+要怎么停呢`
+},
+{
+name:"连名带姓",
+audioUrl:"https://mp3tourl.com/audio/1788788356441-525932ae-a474-474f-99ee-15f86fc15a93.mp3",
+lyrics:`零七年那一首定情曲的前奏
+要是依然念念不忘太不称头
+早放生彼此好好过
+都多久
+你怎么像标本 杵在我心里头
+后来的那几个 又没做错什么
+他们口中自私的我
+犯了偷窃时间的错
+复制贴上你的爱
+也很精彩的你 不甘寂寞
+这圈子不太大 多少听说
+欣赏你流浪 像是种信仰
+我真这么想
+再被你提起 已是连名带姓
+谎称是友谊 却疏远得可以
+多少人爱我 偏放不下你
+是公开的秘密
+只剩你没拆穿我
+再处心积虑 终究事不关己
+哪来的勇气 我就是不灰心
+我且爱且走 其实在等你
+是仅有的默契
+你会不会又错过
+我没有把握
+算不清多少个跨年夜一起过
+要是依然念念不忘太不称头
+早放生彼此好好过
+都多久
+你怎么像标本 杵在我心里头
+后来的那几个 又没做错什么
+他们口中 自私的我
+犯了偷窃时间的错
+复制贴上你的爱
+也很精彩的你 不甘寂寞
+这圈子不太大 多少听说
+欣赏你流浪 像是种信仰
+我真这么想
+再被你提起 已是连名带姓
+谎称是友谊 却疏远得可以
+多少人爱我 偏放不下你
+是公开的秘密
+只剩你没拆穿我
+再处心积虑 终究事不关己
+哪来的勇气 我就是不灰心
+我且爱且走 其实在等你
+是最后的默契
+要是我们又错过
+就别再回头`
+},
+{
+name:"发如雪",
+audioUrl:"https://mp3tourl.com/audio/1788788388899-609566b9-3867-4c71-b9c1-388ed361f1c7.mp3",
+lyrics:`狼牙月 伊人憔悴
+我举杯 饮尽了风雪
+是谁打翻前世柜 惹尘埃是非
+缘字诀 几番轮回
+你锁眉 哭红颜唤不回
+纵然青史已经成灰 我爱不灭
+繁华如三千东流水
+我只取一瓢爱了解
+只恋你化身的蝶
+你发如雪 凄美了离别
+我焚香感动了谁
+邀明月 让回忆皎洁
+爱在月光下完美
+你发如雪 纷飞了眼泪
+我等待苍老了谁
+红尘醉 微醺的岁月
+我用无悔 刻永世爱你的碑
+狼牙月 伊人憔悴
+我举杯 饮尽了风雪
+是谁打翻前世柜 惹尘埃是非
+缘字诀 几番轮回
+你锁眉 哭红颜唤不回
+纵然青史已经成灰 我爱不灭
+繁华如三千东流水
+我只取一瓢爱了解
+只恋你化身的蝶
+你发如雪 凄美了离别
+我焚香感动了谁
+邀明月 让回忆皎洁
+爱在月光下完美
+你发如雪 纷飞了眼泪
+我等待苍老了谁
+红尘醉 微醺的岁月
+我用无悔 刻永世爱你的碑
+你发如雪 凄美了离别
+我焚香感动了谁
+邀明月 让回忆皎洁
+爱在月光下完美
+你发如雪 纷飞了眼泪
+我等待苍老了谁
+红尘醉 微醺的岁月
+铜镜映无邪 扎马尾
+你若撒野 今生我把酒奉陪`
+},
+{
+name:"湘女多情",
+audioUrl:"https://mp3tourl.com/audio/1788788536215-7b63ff5a-a069-449b-8362-8fc340ca0351.mp3",
+lyrics:`湘女多情 暮色已落地
+檐下满园鸟啼
+你却倚窗锁眉不语
+锣腔唱起 一出花鼓戏
+惆怅又添几许
+是谁离去你不愿提
+落花雨不停 湘女总是多情
+凋谢却将爱 铺满了地
+你说你愿意 静静留在原地
+只为可能的 再次相遇
+秋不舍花季 湘女总是多情
+在梦中浓郁 所有秘密
+微笑等风起 你说缘会如期
+等盛开的菊 带来消息
+湘女多情 暮色已落地
+檐下满园鸟啼
+你却倚窗锁眉不语
+锣腔唱起 一出花鼓戏
+惆怅又添几许
+是谁离去你不愿提
+落花雨不停 湘女总是多情
+凋谢却将爱 铺满了地
+你说你愿意 静静留在原地
+只为可能的 再次相遇
+秋不舍花季 湘女总是多情
+在梦中浓郁 所有秘密
+微笑等风起 你说缘会如期
+等盛开的菊 带来消息
+纷飞细雨 料峭春意
+别离已美成了回忆
+含泪的你永不老去
+停格了那过去
+我跟苍天下了盘棋
+你愁绪在酝酿秘密
+连感伤都轻如柳絮
+落花雨不停 湘女总是多情
+凋谢却将爱 铺满了地
+你说你愿意 静静留在原地
+只为可能的 再次相遇
+秋不舍花季 湘女总是多情
+在梦中浓郁 所有秘密
+微笑等风起 你说缘会如期
+等盛开的菊 带来消息`
+},
+{
+name:"兰亭序",
+audioUrl:"https://mp3tourl.com/audio/1788788594516-5c9a2fd6-da88-44ee-bdd8-b4156c1c29ee.mp3",
+lyrics:`兰亭临帖 行书如行云流水
+月下门推 心细如你脚步碎
+忙不迭 千年碑易拓
+却难拓你的美
+真迹绝 真心能给谁
+牧笛横吹 黄酒小菜又几碟
+夕阳余晖 如你的羞怯似醉
+摹本易写
+而墨香不退
+与你同留余味
+一行朱砂 到底圈了谁
+无关风月 我题序等你回
+悬笔一绝 那岸边浪千叠
+情字何解 怎落笔都不对
+而我独缺 你一生的了解
+无关风月 我题序等你回
+悬笔一绝 那岸边浪千叠
+情字何解 怎落笔都不对
+而我独缺 你一生的了解
+无关风月 我题序等你回
+悬笔一绝 那岸边浪千叠
+情字何解 怎落笔都不对
+而我独缺
+你一生了解
+弹指岁月 倾城顷刻间湮灭
+青石板街 回眸一笑你婉约
+恨了没
+你摇头轻叹谁让你蹙着眉
+而深闺 徒留胭脂味
+人雁南飞 转身一瞥你噙泪
+掬一把月 手揽回忆怎么睡
+又怎么会
+心事密缝绣花鞋针针怨怼
+若花怨蝶 你会怨着谁
+无关风月 我题序等你回
+悬笔一绝 那岸边浪千叠
+情字何解 怎落笔都不对
+而我独缺 你一生的了解
+无关风月 我题序等你回
+手书无愧 无惧人间是非
+雨打蕉叶 又潇潇了几夜
+我等春雷 来提醒你爱谁`
+},
+{
+name:"龙拳",
+audioUrl:"https://mp3tourl.com/audio/1788788652046-d3e8398a-c432-40de-9f7b-97635a45105b.mp3",
+lyrics:`以敦煌为圆心的东北东
+这民族的海岸线像一支弓
+那长城像五千年来待射的梦
+我用手臂拉开这整个土地的重
+蒙古高原南下的风
+写些什么内容
+汉字到底懂不懂
+一样肤色和面孔
+跨越黄河东登上泰山顶峰
+我向西引北风晒成一身古铜
+渴望着血脉相通
+无限个千万弟兄
+我把天地拆封
+将长江水掏空
+人在古老河床蜕变中
+我右拳打开了天化身为龙
+把山河重新移动填平裂缝
+将东方的日出调整了时空
+回到洪荒去支配去操纵
+我右拳打开了天化身为龙
+那大地心脏汹涌不安跳动
+全世界的表情只剩下一种
+等待英雄我就是那条龙
+我右拳打开了天化身为龙
+把山河重新移动填平裂缝
+将东方的日出调整了时空
+回到洪荒去支配去操纵
+我右拳打开了天化身为龙
+那大地心脏汹涌不安跳动
+全世界的表情只剩下一种
+等待英雄我就是那条龙
+渴望着血脉相通
+无限个千万弟兄
+我把天地拆封
+将长江水掏空
+人在古老河床蜕变中
+我右拳打开了天化身为龙
+把山河重新移动填平裂缝
+将东方的日出调整了时空
+回到洪荒去支配去操纵
+我右拳打开了天化身为龙
+那大地心脏汹涌不安跳动
+全世界的表情只剩下一种
+等待英雄我就是那条龙
+我右拳打开了天化身为龙
+把山河重新移动填平裂缝
+将东方的日出调整了时空
+回到洪荒去支配去操纵
+我右拳打开了天化身为龙
+那大地心脏汹涌不安跳动
+全世界的表情只剩下一种
+等待英雄我就是那条龙
+化身为龙 填平裂缝
+填平裂缝 调整了时空
+调整了时空
+去支配去操纵
+化身为龙
+不安跳动
+只剩下一种
+等待英雄我就是那条龙`
+},
+{
+name:"双截棍",
+audioUrl:"https://mp3tourl.com/audio/1788788716115-bc30b03a-9fe1-46e5-9a36-8b8aeeee682f.mp3",
+lyrics:`岩烧店的烟味弥漫 隔壁是国术馆
+店里面的妈妈桑茶道有三段
+教拳脚武术的老板练铁沙掌 耍杨家枪
+硬底子功夫最擅长 还会金钟罩铁布衫
+他们儿子我习惯 从小就耳濡目染
+什么刀枪跟棍棒 我都耍的有模有样
+什么兵器？ 最喜欢双截棍
+柔中带刚
+想要去河南嵩山学少林跟武当
+（干什么？ 干什么？） 呼吸吐纳心自在
+（干什么？ 干什么？） 气沉丹田手心开
+（干什么？ 干什么？） 日行千里系沙袋
+飞檐走壁莫奇怪 去去就来
+一个马步向前 一记左钩拳 右钩拳
+一句惹毛我的人有危险
+一再重演 一根我不抽的烟
+一放好多年 它一直在身边 uh
+（干什么？ 干什么？） 我打开任督二脉
+（干什么？ 干什么？） 东亚病夫的招牌
+（干什么？ 干什么？） 已被我一脚踢开 哈！
+快使用双截棍 哼哼哈兮
+快使用双截棍 哼哼哈兮
+习武之人切记 “仁者无敌”
+是谁在练太极？ 风生水起
+快使用双截棍 哼哼哈兮
+快使用双截棍 哼哼哈兮
+如果我有轻功 飞檐走壁
+为人耿直不屈 一身正气 哈！
+他们儿子我习惯 从小就耳濡目染
+什么刀枪跟棍棒 我都耍的有模有样
+什么兵器？ 最喜欢双截棍
+柔中带刚
+想要去河南嵩山学少林跟武当
+快使用双截棍 哼哼哈兮
+快使用双截棍 哼哼哈兮
+习武之人切记 “仁者无敌”
+是谁在练太极？ 风生水起
+快使用双截棍 哼哼哈兮
+快使用双截棍 哼哼哈兮
+如果我有轻功 飞檐走壁
+为人耿直不屈 一身正气 哈！
+他们儿子我习惯 从小就耳濡目染
+什么刀枪跟棍棒 我都耍的有模有样
+什么兵器？ 最喜欢双截棍
+柔中带刚
+想要去河南嵩山学少林跟武当
+快使用双截棍 哼哼哈兮
+快使用双截棍 哼哼哈兮
+习武之人切记 “仁者无敌”
+是谁在练太极？ 风生水起快使用双截棍 哼
+快使用双截棍 哼
+快使用双截棍 哼
+为人耿直不屈 一身正气 哼
+快使用双截棍 哼
+我用手刀防御 哼
+漂亮的回旋踢`
+},
+{
+name:"断了的弦",
+audioUrl:"https://mp3tourl.com/audio/1788788790836-4c6fe7c5-7f73-4bb3-985a-5e822d59a06f.mp3",
+lyrics:`
+断了的弦 再怎么连
+我的感觉你已听不见
+你的转变像断掉的弦
+再怎么接 音都不对
+你的改变我能够分辨
+我沉默 你的话也不多
+我们之间少了什么不说
+哎哟
+微笑后表情终于有点难过
+握着你的手
+问你 确定了再走
+我突然释怀的笑
+笑声盘旋半山腰
+随风在飘摇啊摇
+来到你的面前绕
+你泪水往下的掉
+说会记住我的好
+我也弯起了嘴角笑
+你的美已经给了谁
+追了又追我要不回
+我了解离开树的叶
+属于地上的世界凋谢
+断了的弦再弹一遍
+我的世界你不在里面
+我的指尖已经弹出茧
+还是无法留你在我身边
+断了的弦 再怎么连
+我的感觉你已听不见
+你的转变像断掉的弦
+再怎么接 音都不对
+你的改变我能够分辨
+我沉默 你的话也不多
+我们之间少了什么不说
+哎哟
+微笑后表情终于有点难过
+握着你的手
+问你 确定了再走
+我突然释怀的笑
+笑声盘旋半山腰
+随风在飘摇啊摇
+来到你的面前绕
+你泪水往下的掉
+说会记住我的好
+我也弯起了嘴角笑
+你的美已经给了谁
+追了又追我要不回
+我了解离开树的叶
+属于地上的世界凋谢
+断了的弦再弹一遍
+我的世界你不在里面
+我的指尖已经弹出茧
+还是无法留你在我身边
+断了的弦 再怎么连
+我的感觉你已听不见
+你的转变像断掉的弦
+再怎么接 音都不对
+你的改变我能够分辨`
+},
+{
+name:"以父之名",
+audioUrl:"https://mp3tourl.com/audio/1788788857758-534c4784-6d57-4412-80a9-ef4f07c1611a.mp3",
+lyrics:`微凉的晨露沾湿黑礼服
+石板路有雾父在低诉
+无奈的觉悟只能更残酷
+一切都为了通往圣堂的路
+吹不散的雾隐没了意图
+谁轻柔踱步停住
+还来不及哭
+穿过的子弹就带走温度
+我们每个人都有罪
+犯着不同的罪
+我能决定谁对
+谁又该要沉睡
+争论不能解决
+在永无止境的夜
+关掉你的嘴
+唯一的恩惠
+挡在前面的人都有罪
+后悔也无路可退
+以父之名判决
+那感觉没有适合词汇
+就像边笑边掉泪
+凝视着完全的黑
+阻挡悲剧蔓延的悲剧会让我沉醉
+低头亲吻我的左手
+换取被宽恕的承诺
+老旧管风琴在角落
+一直一直一直伴奏
+黑色帘幕被风吹动阳光无言的穿透
+洒向那群被我驯服后的兽
+沉默的喊叫 沉默的喊叫
+孤单开始发酵
+不停对着我嘲笑
+回忆逐渐燃烧
+曾经纯真的画面
+残忍的温柔出现
+脆弱时间到
+我们一起来祷告
+仁慈的父 我已坠入
+看不见罪的国度
+请原谅我的自负
+Ah ya ya check it check it
+没人能说 没人可说
+好难承受 荣耀的背后刻着一道孤独
+闭上双眼我又看见
+当年那梦的画面
+天空是蒙蒙的雾
+父亲牵着我的双手
+轻轻走过
+清晨那安安静静的石板路
+微凉的晨露沾湿黑礼服
+石板路有雾父在低诉
+无奈的觉悟只能更残酷
+一切都为了通往圣堂的路
+吹不散的雾隐没了意图
+谁轻柔踱步停住
+还来不及哭
+穿过的子弹就带走温度
+我们每个人都有罪
+犯着不同的罪
+我能决定谁对
+谁又该要沉睡
+争论不能解决
+在永无止境的夜
+关掉你的嘴
+唯一的恩惠
+挡在前面的人都有罪
+后悔也无路可退
+以父之名判决
+那感觉没有适合词汇
+就像边笑边掉泪
+凝视着完全的黑
+阻挡悲剧蔓延的悲剧会让我沉醉
+低头亲吻我的左手
+换取被宽恕的承诺
+老旧管风琴在角落
+一直一直一直伴奏
+黑色帘幕被风吹动阳光无言的穿透
+洒向那群被我驯服后的兽
+沉默的喊叫 沉默的喊叫
+孤单开始发酵
+不停对着我嘲笑
+回忆逐渐燃烧
+曾经纯真的画面
+残忍的温柔出现
+脆弱时间到
+我们一起来祷告
+仁慈的父 我已坠入
+看不见罪的国度
+请原谅我的自负
+Ah ya ya check it check it
+没人能说 没人可说
+好难承受 荣耀的背后刻着一道孤独
+仁慈的父 我已坠入
+看不见罪的国度
+请原谅我的自负
+Ah ya ya check it check it
+没人能说 没人可说
+好难承受 荣耀的背后刻着一道孤独`
+},
+{
+name:"我不配",
+audioUrl:"https://mp3tourl.com/audio/1788789527744-317dd25d-ac3a-45c3-bf72-6d376ec19398.mp3",
+lyrics:`这街上太拥挤
+太多人有秘密
+玻璃上有雾气
+谁被隐藏起过去
+你脸上的情绪
+在还原那场雨
+这巷弄太过弯曲
+走不回故事里
+这日子不再绿
+又斑驳了几句
+剩下搬空回忆的我
+在大房子里
+电影院的座椅
+隔遥远的距离
+感情没有对手戏
+你跟自己下棋
+还来不及 仔仔细细 写下你的关于
+描述我如何爱你
+你却微笑的离我而去
+这感觉已经不对 我努力在挽回
+一些些应该体贴的感觉 我没给
+你嘟嘴许的愿望很卑微 在妥协
+是我忽略 你不过要人陪
+这感觉已经不对 我最后才了解
+一页页不忍翻阅的情节 你好累
+你默背为我掉过几次泪 多憔悴
+而我心碎你受罪 你的美 我不配`
+},
+{
+name:"我落泪情绪零碎",
+audioUrl:"https://mp3tourl.com/audio/1788789562437-07867000-dd08-4f79-95da-4327f00ddf46.mp3",
+lyrics:`地上断了翅的蝶
+雾散之后的满月
+原来爱跟心碎
+都可以很细节
+听夜风绕过几条街
+秋天瘦了满地的落叶
+于是又一整夜
+感性的句子 都枯萎凋谢
+我不想再写 随手撕下这一页
+原来诗跟离别
+可以没有结尾
+憔悴后悔等等这些
+于是我把诗折叠
+邮寄出感觉 夹一束白玫瑰
+你将爱退回
+我不落泪 忍住感觉
+分手在起风 这个季节
+哭久了会累 也只是别人的以为
+冷的咖啡 我清醒着 一再续杯
+我落泪 情绪零碎
+你的世界 一幕幕纷飞
+门外的蔷薇 带刺伤人的很直接
+过去被翻阅 结局满天的风雪`
+},
+{
+name:"听妈妈的话",
+audioUrl:"https://mp3tourl.com/audio/1788790219382-74a4d5ed-9253-4ba6-978b-98d58062efb2.mp3",
+lyrics:`小朋友 你是否有很多问号
+为什么 别人在那看漫画
+我却在学画画
+对着钢琴说话
+别人在玩游戏
+我却靠在墙壁
+背我的 ABC
+我说我要一台大大的飞机
+但却得到一台旧旧录音机
+为什么要听妈妈的话
+长大后你就会开始懂了这段话
+哼
+长大后我开始明白
+为什么我跑得比别人快
+飞得比别人高
+将来大家看的都是我画的漫画
+大家唱的都是我写的歌
+妈妈的辛苦不让你看见
+温暖的食谱在她心里面
+有空就多多握握她的手
+把手牵着一起梦游
+听妈妈的话 别让她受伤
+想快快长大 才能保护她
+美丽的白发 幸福中发芽
+天使的魔法 温暖中慈祥`
+},
+{
+name:"回到过去",
+audioUrl:"https://mp3tourl.com/audio/1788790255380-ee87255c-75e3-4ee2-b7df-9baa5ec79f52.mp3",
+lyrics:`一盏黄黄旧旧的灯
+时间在旁闷不吭声
+寂寞下手毫无分寸
+不懂得轻重之分
+沉默支撑跃过陌生
+静静看着凌晨黄昏
+你的影子 失去平衡
+慢慢下沉
+黑暗已在空中盘旋
+该往哪我看不见
+也许爱在梦的另一端
+无法存活在真实的空间
+想回到过去
+试着抱你在怀里
+羞怯的脸带有一点稚气
+想看你看的世界
+想在你梦的画面
+只要靠在一起
+就能感觉甜蜜
+想回到过去
+试着让故事继续
+至少不再让你离我而去
+分散时间的注意
+这次会抱得更紧
+这样挽留不知
+还来不来得及一盏黄黄旧旧的灯
+时间在旁闷不吭声
+寂寞下手毫无分寸
+不懂得轻重之分
+沉默支撑跃过陌生
+静静看着凌晨黄昏
+你的影子 失去平衡
+慢慢下沉
+想回到过去
+试着抱你在怀里
+羞怯的脸带有一点稚气
+想看你看的世界
+想在你梦的画面
+只要靠在一起
+就能感觉甜蜜
+想回到过去
+试着让故事继续
+至少不再让你离我而去
+分散时间的注意
+这次会抱得更紧
+这样挽留不知
+还来不来得及`
+},
+{
+name:"枫",
+audioUrl:"https://mp3tourl.com/audio/1788790291205-2405af6d-1d80-4811-bb6a-298279c81243.mp3",
+lyrics:`乌云在我们心里搁下一块阴影
+我聆听沉寂已久的心情
+清晰透明 就像美丽的风景
+总在回忆里才看的清
+被伤透的心能不能够继续爱我
+我用力牵起没温度的双手
+过往温柔 已经被时间上锁
+只剩挥散不去的难过
+缓缓飘落的枫叶像思念
+我点燃烛火温暖岁末的秋天
+极光掠夺天边
+北风掠过想你的容颜
+我把爱烧成了落叶
+却换不回熟悉的那张脸
+缓缓飘落的枫叶像思念
+为何挽回要赶在冬天来之前
+爱你穿越时间
+两行来自秋末的眼泪
+让爱渗透了地面
+我要的只是你在我身边
+被伤透的心能不能够继续爱我
+我用力牵起没温度的双手
+过往温柔 已经被时间上锁
+只剩挥散不去的难过
+缓缓飘落的枫叶像思念
+我点燃烛火温暖岁末的秋天
+极光掠夺天边
+北风掠过想你的容颜
+我把爱烧成了落叶
+却换不回熟悉的那张脸
+缓缓飘落的枫叶像思念
+为何挽回要赶在冬天来之前
+爱你穿越时间
+两行来自秋末的眼泪
+让爱渗透了地面
+我要的只是你在我身边`
+},
+{
+name:"最长的电影",
+audioUrl:"https://mp3tourl.com/audio/1788790337309-a9ab1c99-e72d-43f6-bdd4-a060cf74ca5f.mp3",
+lyrics:`我们的开始
+是很长的电影
+放映了三年
+我票都还留着
+冰上的芭蕾
+脑海中还在旋转
+望着你慢慢忘记你
+朦胧的时间
+我们流了多远
+冰刀画的圈
+圈起了谁改变
+如果再重来
+会不会稍显狼狈
+爱是不是 不开口才珍贵
+再给我两分钟
+让我把记忆结成冰
+别融化了眼泪
+你妆都花了 要我怎么记得
+记得你叫我忘了吧
+记得你叫我忘了吧
+你说你会哭 不是因为在乎朦胧的时间
+我们流了多远
+冰刀画的圈
+圈起了谁改变
+如果再重来
+会不会稍显狼狈
+爱是不是 不开口才珍贵
+再给我两分钟
+让我把记忆结成冰
+别融化了眼泪
+你妆都花了 要我怎么记得
+记得你叫我忘了吧
+记得你叫我忘了吧
+你说你会哭 不是因为在乎再给我两分钟
+让我把记忆结成冰
+别融化了眼泪
+你妆都花了 要我怎么记得
+记得你叫我忘了吧
+记得你叫我忘了吧
+你说你会哭 不是因为在乎`
+},
+{
+name:"迷迭香",
+audioUrl:"https://mp3tourl.com/audio/1788790377702-1b152b4b-0ad9-4db7-b569-d36496d790fb.mp3",
+lyrics:`你的嘴角微微上翘
+性感得无可救药
+想象不到如此心跳
+你的一切都想要
+软性的饮料上升的气泡
+我将对你的喜好
+一瓶装全喝掉
+这里最不缺就是热闹
+你煽情给拥抱
+烛火在燃烧
+有某种情调
+眼神失焦了几秒
+关于你的舞蹈
+你慵懒的扭动着腰
+受不了
+你随风飘扬的笑
+有迷迭香的味道
+语带薄荷味的撒娇
+对我发出恋爱的讯号
+你优雅地像一只猫
+动作轻盈地围绕
+爱的甜味蔓延发酵
+暧昧来得刚好
+软性的饮料上升的气泡
+我将对你的喜好
+一瓶装全喝掉
+这里最不缺就是热闹
+你煽情给拥抱
+烛火在燃烧
+有某种情调
+眼神失焦了几秒
+关于你的舞蹈
+你慵懒的扭动着腰
+受不了
+你随风飘扬的笑
+有迷迭香的味道
+语带薄荷味的撒娇
+对我发出恋爱的讯号
+你优雅地像一只猫
+动作轻盈地围绕
+爱的甜味蔓延发酵
+暧昧来得刚好
+你的嘴角微微上翘
+性感得无可救药
+想象不到如此心跳
+你的一切都想要
+你的唇膏鲜艳讨好
+一股自信的骄傲
+什么预兆气氛微妙
+因为爱你我知道
+预兆气氛微妙
+因为爱你我知道`
+},
+{
+name:"Mojito",
+audioUrl:"https://mp3tourl.com/audio/1788790416547-230f90e2-e586-4ad1-897a-392d661cb526.mp3",
+lyrics:`麻烦给我的爱人来一杯 Mojito
+我喜欢阅读她微醺时的眼眸
+而我的咖啡糖不用太多
+这世界已经因为她甜得过头
+没有跟她笑容一样浓郁的雪茄
+就别浪费时间介绍收起来吧
+拱廊的壁画旧城的涂鸦
+所有色彩都因为她说不出话
+这爱不落幕忘了心事的国度
+你所在之处孤单都被征服
+铁铸的招牌错落着就像
+一封封城市献给天空的情书
+当街灯亮起 Havana 漫步
+这是世上最美丽的那双人舞缤纷的老爷车跟着棕榈摇曳
+载着海风私奔漫无目的
+古董书摊漫着时光香气
+我想上辈子是不是就遇过你
+喧嚣的海报躺在慵懒的阁楼阳台
+而你是文学家笔下的那一片海
+麻烦给我的爱人来一杯 Mojito
+我喜欢阅读她微醺时的眼眸
+而我的咖啡糖不用太多
+这世界已经因为她甜得过头
+这爱不落幕忘了心事的国度
+你所在之处孤单都被征服
+铁铸的招牌错落着就像
+一封封城市献给天空的情书
+当街灯亮起 Havana 漫步
+这是世上最美丽的那双人舞铁铸的招牌错落着就像
+一封封城市献给天空的情书
+当街灯亮起 Havana 漫步
+这是世上最美丽的那双人舞`
+},
+{
+name:"I do",
+audioUrl:"https://mp3tourl.com/audio/1788790445621-c1edc58d-aee3-4200-8c9f-2e518bc092a9.mp3",
+lyrics:`看着你 迎着风 坐在海边
+那瞬间 像认识 你好多年
+Baby 想象你在未来的画面
+早遇见 我们一定提早相恋
+我告白 红着脸 的那一天
+多年后 变成了 相恋的纪念
+在我的生命中 感谢有你的出现
+你的无名指上有我承诺的永远
+这一刻最美 的时光
+是你穿婚纱 的模样
+婚礼前将我 领带系上
+穿上你挑的 白西装
+这一刻最美 的时光
+是你走在我 的身旁
+红毯上誓言 浪漫绽放
+在幸福停靠 的地方
+爱的模样 我们遇上 最美的那时光
+看着你 迎着风 坐在海边
+那瞬间 像认识 你好多年
+Baby 想象你在未来的画面
+早遇见 我们一定提早相恋
+我告白 红着脸 的那一天
+多年后 变成了 相恋的纪念
+在我的生命中 感谢有你的出现
+你的无名指上有我承诺的永远
+这一刻最美 的时光
+是你穿婚纱 的模样
+婚礼前将我 领带系上
+穿上你挑的 白西装
+这一刻最美 的时光
+是你走在我 的身旁
+红毯上誓言 浪漫绽放
+在幸福停靠 的地方
+爱的模样 我们遇上 最美的那时光`
+},
+{
+name:"女儿殿下",
+audioUrl:"https://mp3tourl.com/audio/1788790474182-a020fe5a-8414-4627-9181-30abe0c48c97.mp3",
+lyrics:`我要你 拜托拜托嘛
+我不跟你玩啰 爱你喔
+我想你 我不要
+我还没讲完捏 爸爸要迟到啰
+上学要迟到啰
+哎呦不错哦）
+一早带娃出门上学七点半
+一路上车外一堆人们回头看
+我心想今天我也没有特别打扮
+原来是我把奶瓶忘在车顶上（噢）Ha
+疯疯癫癫 Hey 风度翩翩 Hey
+陪我家公主玩变化万千 Hey
+唱都她唱 Hey 歌都她点 Hey
+车里放的全是冰雪奇缘 Hey
+懵懵懂懂是我陪你走过（我美吗？）
+你怎么动不动就生气说你不爱我（我不要）
+放学后要我穿精灵装接你在门口（我美吗？）
+要我跟你的好朋友们一起手牵手（嘻嘻嘻）
+我疯了吗 你说这才叫生活
+去找妈妈 你说我比较温柔
+（拜托拜托嘛）
+我疯了吗 到底有没有听错
+去找妈妈 能不能不要烦我
+（拜托拜托嘛
+哎呦不错哦）
+你开心 就说等我老了会照顾我（嘻嘻嘻）
+不开心 就把我满脸都涂上口红（噢）
+你下指令 我只能够顺着顺着毛摸
+就当作我上辈子真的欠你太多 Ha
+疯疯癫癫 Hey 风度翩翩 Hey
+我切换自如是一种训练 Hey
+在你面前 Hey 只能笑脸 Hey
+惹你不高兴就天崩地裂 Hey
+懵懵懂懂是我陪你走过（我美吗？）
+你怎么动不动就生气说你不爱我（我不要）
+放学后要我穿精灵装接你在门口（我美吗？）
+要我跟你的好朋友们一起手牵手
+我疯了吗 你说这才叫生活
+去找妈妈 你说我比较温柔
+（拜托拜托嘛）
+我疯了吗 到底有没有听错
+去找妈妈 能不能不要烦我
+（拜托拜托嘛
+我可以打给你吗
+可以吗 我可以打给你吗
+爱你喔 我想你
+我想你现在就回家了）`
+},
+{
+name:"三年二班",
+audioUrl:"https://mp3tourl.com/audio/1788790544058-2d7ebbe8-ea6d-4378-b49e-fe3a0644ac51.mp3",
+lyrics:`训导处报告 训导处报告
+三年二班周杰伦
+马上到训导处来
+眼睛你要擦亮
+记住我的模样
+表情不用太紧张
+我是三年二班
+我专心打球的侧脸还蛮好看
+黑板是吸收知识的地方
+只是教室的阳光
+那颜色我不太喜欢
+没有操场的自然
+为何比较漂亮的都是在隔壁班
+还有考卷的答案
+我刚好都不会算
+没关系
+再继续努力
+没关系
+为什么上课时举手很难
+为什么拿线上宝物简单
+为什么女生不喜欢太胖
+为什么都别人手机在响
+正手发长球的打法只是初级乒乓
+反手短打再狠狠杀球是高级乒乓
+回转技巧乒乓
+前场速攻乒乓
+对墙壁在练习乒乓乒乓
+这第一名到底要多强
+不用问 一定有人向你挑战
+到底还要过多少关
+不用怕 告诉他们谁是男子汉
+可不可以不要这个奖
+不想问 我只想要流一点汗
+我当我自己的裁判
+不想说 选择对手跟要打的仗
+这第一名到底要多强
+不用问 一定有人向你挑战
+到底还要过多少关
+不用怕 告诉他们谁是男子汉
+可不可以不要这个奖
+不想问 我只想要流一点汗
+我当我自己的裁判
+不想说 选择对手跟要打的仗
+全体师生注意
+今天我要表扬一位同学
+他为校争光
+我们要向他看齐
+我不想就这样一直走
+每天都遇上充满敌意那种眼光
+等机会就是要打倒对方
+这种结果我不要
+这虚荣的骄傲
+这目的很好笑
+我其实都知道
+你只是想炫耀
+我永远做不到
+你永远赢不了
+我永远做不到
+你永远赢不了
+永远都赢不了
+走下乡寻找哪有花香
+为什么这么简单你做不到
+坐车厢朝着南下方向
+为什么这种速度你追不到
+鸟飞翔穿过这条小巷
+为什么这么简单你做不到
+仔细想这种生活安详
+为什么这种速度你追不到
+不好笑不好笑不好笑
+这第一名到底要多强
+不用问 一定有人向你挑战
+到底还要过多少关
+不用怕 告诉他们谁是男子汉
+可不可以不要这个奖
+不想问 我只想要流一点汗
+我当我自己的裁判
+不想说 选择对手跟要打的仗
+这第一名到底要多强
+到底还要过多少关
+可不可以不要这个奖
+我当我自己的裁判
+走下乡寻找哪有花香
+坐车厢朝着南下方向
+鸟飞翔穿过这条小巷
+仔细想这种生活安详`
+},
+{
+name:"告白气球",
+audioUrl:"https://mp3tourl.com/audio/1788790500648-87da83f4-b016-4209-80f7-feba6b32e6ca.mp3",
+lyrics:`塞纳河畔左岸的咖啡
+我手一杯品尝你的美
+留下唇印的嘴
+花店玫瑰名字写错谁
+告白气球风吹到对街
+微笑在天上飞
+你说你有点难追想让我知难而退
+礼物不需挑最贵
+只要香榭的落叶
+喔营造浪漫的约会
+不害怕搞砸一切
+拥有你就拥有全世界
+亲爱的爱上你从那天起
+甜蜜的很轻易
+亲爱的别任性你的眼睛
+在说我愿意
+塞纳河畔左岸的咖啡
+我手一杯品尝你的美
+留下唇印的嘴
+花店玫瑰名字写错谁
+告白气球风吹到对街
+微笑在天上飞
+你说你有点难追想让我知难而退
+礼物不需挑最贵
+只要香榭的落叶
+喔营造浪漫的约会
+不害怕搞砸一切
+拥有你就拥有全世界
+亲爱的爱上你从那天起
+甜蜜的很轻易
+亲爱的别任性你的眼睛
+在说我愿意
+亲爱的爱上你恋爱日记
+飘香水的回忆
+一整瓶的梦境全都有你
+搅拌在一起
+亲爱的别任性你的眼睛
+在说我愿意`
+},
+{
+name:"爱将不同凡响",
+audioUrl:"",
+lyrics:`我胸口在发烫
+让黑暗烧成一线曙光
+不想再被现实捆绑
+要亲手写下我的荣光
+沸腾的渴望 让意志异常倔强
+跳动的心脏 要比困难还顽强
+锁定方向 乘风破浪 信心再启航
+为爱疯狂 无惧艳阳
+心头的火烧得比谁都旺
+打破框架 贯穿穹苍
+亮出最热血的乐章
+为爱疯狂 勇敢去闯
+梦想就能 再飞扬
+奋力冲向 逆境之墙
+希望就在不远前方
+消极的锁链 潜伏在黑夜
+善变的杂念困住梦想
+难以去实现
+我就不听劝 负面我踏成碎片
+千难万险也别想扑灭
+我不认命的火焰
+我去闯 就算前方路是滚烫的岩浆
+不偷不抢
+朝向光的方向我就有希望
+就算片体鳞伤 疤痕也能化成勋章
+我不退让 爱将不同凡响
+为爱疯狂 无惧艳阳
+心头的火烧得比谁都旺
+打破框架 贯穿穹苍
+亮出最热血的乐章
+为爱疯狂 勇敢去闯
+梦想就能 再飞扬
+奋力冲向 逆境之墙
+希望就在不远前方
+烈火中淬炼成枭
+不向谁屈服求饶
+要让得胜的号角 响彻 云霄
+为爱疯狂 无惧艳阳
+心头的火烧得比谁都旺
+打破框架 贯穿穹苍
+亮出最热血的乐章
+为爱疯狂 勇敢去闯
+梦想就能 再飞扬
+奋力冲向 逆境之墙
+希望就在不远前方`
+},
+{
+name:"七里香（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791304812-10851571-e4db-44f8-8295-c8bb004b279b.mp3",
+lyrics:`窗外的麻雀在电线杆上多嘴
+你说这一句很有夏天的感觉
+手中的铅笔在纸上来来回回
+我用几行字形容你是我的谁
+秋刀鱼的滋味猫跟你都想了解
+初恋的香味就这样被我们寻回
+那温暖的阳光像刚摘的鲜艳草莓
+你说你舍不得吃掉这一种感觉
+雨下整夜我的爱溢出就像雨水
+院子落叶跟我的思念厚厚一叠
+几句是非也无法将我的热情冷却
+你出现在我诗的每一页
+雨下整夜我的爱溢出就像雨水
+窗台蝴蝶像诗里纷飞的美丽章节
+我接着写
+把永远爱你写进诗的结尾
+你是我唯一想要的了解
+雨下整夜我的爱溢出就像雨水
+院子落叶跟我的思念厚厚一叠
+几句是非也无法将我的热情冷却
+你出现在我诗的每一页
+那饱满的稻穗幸福了这个季节
+而你的脸颊像田里熟透的番茄
+你突然对我说七里香的名字很美
+我此刻却只想亲吻你倔强的嘴
+雨下整夜我的爱溢出就像雨水
+院子落叶跟我的思念厚厚一叠
+几句是非也无法将我的热情冷却
+你出现在我诗的每一页
+整夜我的爱溢出就像雨水
+窗台蝴蝶像诗里纷飞的美丽章节
+我接着写
+把永远爱你写进诗的结尾
+你是我唯一想要的了解`
+},
+{
+name:"可爱女人（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791398297-023aba65-5d45-425e-b386-430696303889.mp3",
+lyrics:`想要有直升机
+想要和你飞到宇宙去
+想要和你融化在一起
+融化在银河里
+我每天每天每天在想想想想想着你
+这样的甜蜜
+让我开始相信命运
+感谢地心引力
+让我碰到你
+漂亮的让我面红的可爱女人
+温柔的让我心疼的可爱女人
+聪明的让我感动的可爱女人
+坏坏的让我疯狂的可爱女人漂亮的让我面红的可爱女人
+温柔的让我心疼的可爱女人
+聪明的让我感动的可爱女人
+坏坏的让我疯狂的可爱女人
+想要有直升机
+想要和你飞到宇宙去
+想要和你融化在一起
+融化在银河里
+我每天每天每天在想想想想想着你
+这样的甜蜜
+让我开始相信命运
+感谢地心引力
+让我碰到你
+漂亮的让我面红的可爱女人
+温柔的让我心疼的可爱女人
+聪明的让我感动的可爱女人
+坏坏的让我疯狂的可爱女人漂亮的让我面红的可爱女人
+温柔的让我心疼的可爱女人
+聪明的让我感动的可爱女人
+坏坏的让我疯狂的可爱女人世界这样大而我而我只是只小小小的蚂蚁
+但我要尽全力全力全力保护你漂亮的让我面红的可爱女人
+温柔的让我心疼的可爱女人
+聪明的让我感动的可爱女人
+坏坏的让我疯狂的可爱女人漂亮的让我面红的可爱女人
+温柔的让我心疼的可爱女人
+聪明的让我感动的可爱女人
+坏坏的让我疯狂的可爱女人`
+},
+{
+name:"晴天（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791441380-ef1e2bda-4d4e-4a83-b59f-b7da955e96d1.mp3",
+lyrics:`故事的小黄花
+从出生那年就飘着
+童年的荡秋千
+随记忆一直晃到现在
+Re So So Si Do Si La
+So La Si Si Si Si La Si La So
+吹着前奏望着天空
+我想起花瓣试着掉落
+为你翘课的那一天
+花落的那一天
+教室的那一间
+我怎么看不见
+消失的下雨天
+我好想再淋一遍
+没想到失去的勇气我还留着
+好想再问一遍
+你会等待还是离开
+刮风这天我试过握着你手
+但偏偏雨渐渐大到我看你不见
+还要多久我才能在你身边
+等到放晴的那天也许我会比较好一点
+从前从前有个人爱你很久
+但偏偏风渐渐把距离吹得好远
+好不容易又能再多爱一天
+但故事的最后你好像还是说了拜拜为你翘课的那一天
+花落的那一天
+教室的那一间
+我怎么看不见
+消失的下雨天
+我好想再淋一遍
+没想到失去的勇气我还留着
+好想再问一遍
+你会等待还是离开
+刮风这天我试过握着你手
+但偏偏雨渐渐大到我看你不见
+还要多久我才能在你身边
+等到放晴的那天也许我会比较好一点
+从前从前有个人爱你很久
+偏偏风渐渐把距离吹得好远
+好不容易又能再多爱一天
+但故事的最后你好像还是说了拜拜刮风这天我试过握着你手
+但偏偏雨渐渐大到我看你不见
+还要多久我才能够在你身边
+等到放晴那天也许我会比较好一点
+从前从前有个人爱你很久
+但偏偏风渐渐把距离吹得好远
+好不容易又能再多爱一天
+但故事的最后你好像还是说了拜拜`
+},
+{
+name:"星晴（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791478888-a2c68c99-dcf2-4242-be03-625afc75924c.mp3",
+lyrics:`乘着风游荡在蓝天边
+一片云掉落在我面前
+捏成你的形状
+随风跟着我
+一口一口吃掉忧愁
+载着你仿佛载着阳光
+不管到哪里都是晴天
+蝴蝶自在飞
+花也布满天
+一朵一朵因你而香
+试图让夕阳飞翔
+带领你我环绕大自然
+迎着风
+开始共度每一天
+手牵手
+一步两步三步四步望着天
+看星星一颗两颗三颗四颗连成线
+背对背
+默默许下心愿
+看远方的星
+是否听得见手牵手
+一步两步三步四步望着天
+看星星一颗两颗三颗四颗连成线
+背对背
+默默许下心愿
+看远方的星
+如果听得见
+它一定实现
+载着你仿佛载着阳光
+不管到哪里都是晴天
+蝴蝶自在飞
+花也布满天
+一朵一朵因你而香
+试图让夕阳飞翔
+带领你我环绕大自然
+迎着风
+开始共度每一天
+手牵手一步两步三步四步望着天
+看星星一颗两颗三颗四颗连成线
+背对背
+默默许下心愿
+看远方的星
+是否听得见
+手牵手一步两步三步四步望着天
+看星星一颗两颗三颗四颗连成线
+背对背
+默默许下心愿
+看远方的星
+如果听得见
+它一定实现`
+},
+{
+name:"爱在西元前（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791221637-5dd15ecd-f672-4436-998c-987309c88a70.mp3",
+lyrics:`古巴比伦王颁布了汉谟拉比法典
+刻在黑色的玄武岩
+距今已经三千七百多年
+你在橱窗前
+凝视碑文的字眼
+我却在旁静静欣赏你那张我深爱的脸
+祭司神殿征战弓箭是谁的从前
+喜欢在人潮中你只属于我的那画面
+经过苏美女神身边
+我以女神之名许愿
+思念像底格里斯河般的漫延
+当古文明只剩下难解的语言
+传说就成了永垂不朽的诗篇
+我给你的爱写在西元前
+深埋在美索不达米亚平原
+几十个世纪后出土发现
+泥板上的字迹依然清晰可见
+我给你的爱写在西元前
+深埋在美索不达米亚平原
+用楔形文字刻下了永远
+那已风化千年的誓言
+一切又重演
+祭司神殿征战弓箭是谁的从前
+喜欢在人潮中你只属于我的那画面
+经过苏美女神身边
+我以女神之名许愿
+思念像底格里斯河般的漫延
+当古文明只剩下难解的语言
+传说就成了永垂不朽的诗篇
+我给你的爱写在西元前
+深埋在美索不达米亚平原
+几十个世纪后出土发现
+泥板上的字迹依然清晰可见
+我给你的爱写在西元前
+深埋在美索不达米亚平原
+用楔形文字刻下了永远
+那已风化千年的誓言
+一切又重演我感到很疲倦离家乡还是很远
+害怕再也不能回到你身边
+我给你的爱写在西元前
+深埋在美索不达米亚平原
+几十个世纪后出土发现
+泥板上的字迹依然清晰可见
+我给你的爱写在西元前
+深埋在美索不达米亚平原
+用楔形文字刻下了永远
+那已风化千年的誓言
+爱在西元前`
+},
+{
+name:"听见下雨的声音（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791518242-1c3d4ba9-e91d-447c-8eb2-7f13cafb6fe3.mp3",
+lyrics:`竹篙上停留着蜻蜓
+玻璃瓶里插满小小森林
+青春嫩绿得很鲜明
+百叶窗折射的光影
+像有着心事的一张表情
+而你低头拆信
+想知道关于我的事情青苔入镜檐下风铃
+摇晃曾经
+回忆是一行行无从剪接的风景
+爱始终年轻
+而我听见下雨的声音
+想起你用唇语说爱情
+幸福也可以很安静
+我付出一直很小心
+终于听见下雨的声音
+于是我的世界被吵醒
+就怕情绪红了眼睛
+不舍的泪在彼此的脸上透明
+百叶窗折射的光影
+像有着心事的一张表情
+而你低头拆信
+想知道关于我的事情爱在过境缘份不停
+谁在担心
+窗台上滴落的雨滴
+轻敲着伤心，凄美而动听
+而我听见下雨的声音
+想起你用唇语说爱情
+热恋的时刻最任性
+不顾一切的给约定
+终于听见下雨的声音
+于是我的世界被吵醒
+发现你始终很靠近
+默默的陪在我身边态度坚定
+而我听见下雨的声音
+想起你用唇语说爱情
+幸福也可以很安静
+我付出一直很小心
+终于听见下雨的声音
+于是我的世界被吵醒
+就怕情绪红了眼睛
+不舍的泪在彼此的脸上透明`
+},
+{
+name:"超人不会飞（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791552579-21499590-e6eb-4147-b725-bda1bd9423dc.mp3",
+lyrics:`妈妈说很多事别太计较
+只是使命感找到了我
+我睡不着
+如果说骂人要有点技巧
+我会加点旋律
+你会觉得超好
+我的枪不会装弹药
+所以放心不会有人倒
+我拍青蜂侠不需要替身
+因为自信是我绘画的颜料
+我做很多事背后的意义
+远比你们想象
+拍个电视剧为了友情
+与十年前的梦想
+收视率再高
+也难抗衡我的伟大理想
+因为我的人生
+无须再多一笔那奖项
+我不知道何时变成了
+社会的那榜样
+被狗仔拍要对着镜头
+要大器的模样怎样
+我唱的歌词要有点文化
+因为随时会被当教材
+CNN 能不能等英文好一点再访
+时代杂志封面能不能重拍
+随时随地注意形象
+要控制饮食
+不然就跟
+杜莎夫人蜡像的我不像
+好莱坞的中国戏院
+地上有很多手印脚印
+何时才能看见我的掌
+哦如果超人会飞
+那就让我在空中停一停歇
+再次俯瞰这个世界
+会让我觉得好一些
+拯救地球好累
+虽然有些疲惫但我还是会
+不要问我哭过了没
+因为超人不能流眼泪
+唱歌要拿最佳男歌手
+拍电影也不能
+只拿个最佳新人
+你不参加颁奖典礼
+就是没礼貌
+你去参加就是代表你很在乎
+得奖时你感动落泪
+人家就会觉得你夸张做作
+你没表情别人就会说太嚣张
+如果你天生这表情
+那些人甚至会怪你妈妈
+结果最后是别人在得奖
+你也要给予充分的
+掌声与微笑
+开的车不能太好
+住的楼不能太高
+我到底是一个创作歌手
+还是好人好事代表
+专辑一出就必须是冠军
+拍了电影就必须要大卖
+只能说当超人真的好难
+如果超人会飞
+那就让我在空中停一停歇
+再次俯瞰这个世界
+会让我觉得好一些
+拯救地球好累
+虽然有些疲惫但我还是会
+不要问我哭过了没
+因为超人不能流眼泪`
+},
+{
+name:"分裂（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791599903-478cb975-c4df-4ed4-b7dc-de3afe9bf5d9.mp3",
+lyrics:`坐着我的摩托车
+载你缓缓的离开
+考不上的好学校
+可以不微笑就走
+把手慢慢交给我
+放下心中的困惑
+雨点从两旁划过
+割开两种精神的我
+经过老伯的家
+篮框变得好高
+爬过的那棵树
+又何时变得渺小
+这样也好
+开始没人注意到我
+等雨变强之前
+我们将会分化软弱
+趁时间没发觉
+让我带着你离开
+没有了证明
+没有了空虚
+基于两种立场我会罩着你
+趁时间没发觉
+让我带着你离开
+这不是顽固
+这不是逃避
+没人绑着你走才快乐
+坐着我的摩托车
+载你缓缓的离开
+考不上的好学校
+可以不微笑就走
+把手慢慢交给我
+放下心中的困惑
+雨点从两旁划过
+割开两种精神的我
+经过老伯的家
+篮框变得好高
+爬过的那棵树
+又何时变得渺小
+这样也好
+开始没人注意到你
+我
+等雨变强之前
+我们将会分化软弱
+趁时间没发觉
+让我带着你离开
+没有了证明
+没有了空虚
+基于两种立场我会罩着你
+趁时间没发觉
+让我带着你离开
+这不是顽固
+这不是逃避
+没人绑着你走才快乐`
+},
+{
+name:"借口（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791635983-45e5096d-eb9d-4fbb-bdad-13131ffd2488.mp3",
+lyrics:`翻着我们的照片
+想念若隐若现
+去年的冬天
+我们笑得很甜
+看着你哭泣的脸
+对着我说再见
+来不及听见
+你已走得很远
+也许你已经放弃我
+也许已经很难回头
+我知道是自己错过
+请再给我 一个理由
+说你不爱我
+就算是我不懂
+能不能原谅我
+请不要把分手
+当作你的请求
+我知道坚持要走
+是你受伤的借口
+请你回头
+我会陪你
+一直走到最后
+就算没有结果
+我也能够承受
+我知道你的痛
+是我给的温柔
+你说给过我纵容
+沉默是因为包容
+如果要走
+请你记得我翻着我们的照片
+想念若隐若现
+去年的冬天
+我们笑得很甜
+看着你哭泣的脸
+对着我说再见
+来不及听见
+你已走得很远
+也许你已经放弃我
+也许已经很难回头
+我知道是自己错过
+请再给我一个理由
+说你不爱我
+就算是我不懂
+能不能原谅我
+请不要把分手
+当作你的请求
+我知道坚持要走
+是你受伤的借口
+请你回头
+我会陪你
+一直走到最后
+就算没有结果
+我也能够承受
+我知道你的痛
+是我给的温柔
+你说给过我纵容
+沉默是因为包容
+如果要走
+请你记得我
+如果难过
+请你忘了我`
+},
+{
+name:"稻香（点歌）",
+audioUrl:"https://mp3tourl.com/audio/1788791712077-96f8d3fe-7839-41f3-895f-1a01ccfa96f6.mp3",
+lyrics:`对这个世界如果你有太多的抱怨
+跌倒了就不敢继续往前走
+为什么人要这么的脆弱堕落
+请你打开电视看看
+多少人为生命在努力勇敢的走下去
+我们是不是该知足
+珍惜一切就算没有拥有
+还记得你说家是唯一的城堡
+随着稻香河流继续奔跑
+微微笑 小时候的梦我知道
+不要哭让萤火虫带着你逃跑
+乡间的歌谣永远的依靠
+回家吧 回到最初的美好
+不要这么容易就想放弃
+就像我说的
+追不到的梦想换个梦不就得了
+为自己的人生鲜艳上色
+先把爱涂上喜欢的颜色
+笑一个吧
+功成名就不是目的
+让自己快乐快乐这才叫做意义
+童年的纸飞机
+现在终于飞回我手里
+所谓的那快乐
+赤脚在田里追蜻蜓追到累了
+偷摘水果被蜜蜂给叮到怕了
+谁在偷笑呢
+我靠着稻草人
+吹着风 唱着歌 睡着了
+午后吉他在虫鸣中更清脆
+阳光洒在路上就不怕心碎
+珍惜一切 就算没有拥有
+还记得你说家是唯一的城堡
+随着稻香河流继续奔跑
+微微笑 小时候的梦我知道
+不要哭让萤火虫带着你逃跑
+乡间的歌谣永远的依靠
+回家吧 回到最初的美好
+还记得你说家是唯一的城堡
+随着稻香河流继续奔跑
+微微笑 小时候的梦我知道
+不要哭让萤火虫带着你逃跑
+乡间的歌谣永远的依靠
+回家吧 回到最初的美好`
+}
+]
+
+let currentSongIdx = 0;
+let currentPlaySongIdx = -1;
+let audioPlayer = null;
+
+const songListBox = document.getElementById('songList');
+const songSubTitle = document.getElementById('songSubTitle');
+const lyricText = document.getElementById('lyricsBody');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+const btnPrevText = document.getElementById('btnPrevText');
+const btnNextText = document.getElementById('btnNextText');
+const searchInput = document.getElementById('searchInput');
+const detailPageEl = document.getElementById('detail-page');
+const totalCountEl = document.getElementById('totalCount');
+
+const floatingPlayer = document.getElementById("floatingPlayer");
+const fpTitle = document.getElementById("fpTitle");
+const fpPlayPause = document.getElementById("fpPlayPause");
+const fpClose = document.getElementById("fpClose");
+const playBtnDetail = document.getElementById("playBtnDetail");
+
+function goPage(pageId){
+    document.querySelectorAll('.page').forEach(p=>{
+        p.classList.remove('active');
+        p.scrollTop = 0;
+    });
+    const activePage = document.getElementById(pageId);
+    activePage.classList.add('active');
+    activePage.scrollTop = 0;
+}
+
+function clearSearch(){
+    searchInput.value = '';
+    filterSongs();
+}
+
+function renderSongList(list){
+    songListBox.innerHTML = '';
+    totalCountEl.innerText = songs.length;
+    if(!list.length){
+        songListBox.innerHTML = `<div class="empty-state">没有找到相关歌曲</div>`;
+        return;
+    }
+    list.forEach((item)=>{
+        const realIndex = songs.indexOf(item);
+        const div = document.createElement('div');
+        div.className = 'song-item';
+        div.innerHTML = `
+            <span class="song-index">${realIndex+1}</span>
+            <span class="song-name">${item.name}</span>
+            <div class="play-btn-list" title="播放歌曲" data-idx="${realIndex}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+            </div>
+            <span class="song-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </span>`;
+        div.onclick = (e)=>{
+            if(e.target.closest(".play-btn-list")) return;
+            currentSongIdx = realIndex;
+            renderLyric();
+            goPage('detail-page');
+        };
+        div.querySelector(".play-btn-list").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            playSong(realIndex);
+        })
+        songListBox.appendChild(div);
+    })
+}
+
+function renderLyric(){
+    if(!songs.length) return;
+    const song = songs[currentSongIdx];
+    songSubTitle.innerText = song.name;
+    lyricText.innerText = song.lyrics;
+    detailPageEl.scrollTop = 0;
+
+    if(currentSongIdx>0){
+        btnPrevText.innerText = `上一首《${songs[currentSongIdx-1].name}》`;
+    }else{
+        btnPrevText.innerText = `上一首`;
+    }
+    if(currentSongIdx < songs.length-1){
+        btnNextText.innerText = `下一首《${songs[currentSongIdx+1].name}》`;
+    }else{
+        btnNextText.innerText = `下一首`;
+    }
+
+    btnPrev.disabled = currentSongIdx <= 0;
+    btnNext.disabled = currentSongIdx >= songs.length - 1;
+}
+
+function prevSong(){
+    if(currentSongIdx > 0){
+        currentSongIdx -=1;
+        renderLyric();
+    }
+}
+
+function nextSong(){
+    if(currentSongIdx < songs.length - 1){
+        currentSongIdx +=1;
+        renderLyric();
+    }
+}
+
+function filterSongs(){
+    const kw = searchInput.value.trim().toLowerCase();
+    let arr = [...songs];
+    if(kw){
+        arr = arr.filter(s=> s.name.toLowerCase().includes(kw) || s.lyrics.toLowerCase().includes(kw));
+    }
+    renderSongList(arr);
+}
+
+function playSong(idx){
+    const song = songs[idx];
+    if(currentPlaySongIdx === idx && audioPlayer){
+        if(audioPlayer.paused){
+            audioPlayer.play();
+        }else{
+            audioPlayer.pause();
+        }
+        updatePlayPauseIcon();
+        return;
+    }
+    stopAudio();
+    currentPlaySongIdx = idx;
+    audioPlayer = new Audio(song.audioUrl);
+    audioPlayer.autoplay = true;
+    floatingPlayer.classList.add("show");
+    fpTitle.innerText = song.name;
+    audioPlayer.play().catch(err=>{
+        console.warn("浏览器自动播放限制，需要点击页面后播放",err);
+    })
+    audioPlayer.addEventListener("ended",()=>{
+        stopAudio();
+    })
+    updatePlayPauseIcon();
+}
+
+function stopAudio(){
+    if(audioPlayer){
+        audioPlayer.pause();
+        audioPlayer.src = "";
+        audioPlayer.removeAttribute("src");
+        audioPlayer = null;
+    }
+    currentPlaySongIdx = -1;
+    floatingPlayer.classList.remove("show");
+}
+
+function updatePlayPauseIcon(){
+    if(!audioPlayer){
+        fpPlayPause.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+        playBtnDetail.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+        return;
+    }
+    if(audioPlayer.paused){
+        fpPlayPause.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+        playBtnDetail.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+    }else{
+        fpPlayPause.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>`;
+        playBtnDetail.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>`;
+    }
+}
+
+fpPlayPause.addEventListener("click",()=>{
+    if(!audioPlayer || currentPlaySongIdx === -1) return;
+    if(audioPlayer.paused){
+        audioPlayer.play();
+    }else{
+        audioPlayer.pause();
+    }
+    updatePlayPauseIcon();
+})
+
+fpClose.addEventListener("click",()=>{
+    stopAudio();
+})
+
+playBtnDetail.addEventListener("click",()=>{
+    playSong(currentSongIdx);
+})
+
+renderSongList(songs);
+if(songs.length>0) renderLyric();
+</script>
+</body>
+</html>

@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>李荣浩「黑马」演唱会歌词本</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--main:#b81c22;
+--main-dark:#8c1419;
+--main-light:#e9b4b6;
+--bg-base:#1e1e24;
+--card:#f7f7f9;
+--text:#ececec;
+--text-dark:#222222;
+--text-mid:#aaaaaf;
+--text-light:#77777e;
+--border:#383842;
+--radius:16px;
+--shadow-soft: 0 4px 18px rgba(184,28,34,0.12);
+--shadow-glow: 0 6px 22px rgba(184,28,34,0.18);
+}
+.font-songti{
+font-family:
+"SimSun",
+"宋体",
+"Songti SC",
+"PingFang SC",
+"Noto Serif CJK SC",
+"Source Han Serif SC",
+"Microsoft YaHei",
+sans-serif;
+}
+html,body{
+font-family:"SimSun","宋体",system-ui,-apple-system,BlinkMacSystemFont,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+background:var(--bg-base);
+color:var(--text);
+height:100%;
+overflow:hidden;
+}
+#app{
+width:100%;
+height:100%;
+position:relative;
+}
+.page{
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0;
+display:none;
+overflow-y:auto;
+overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
+}
+.page.active{
+display:block;
+}
+
+/* ==========首页标题区域 ========== */
+#list-page{
+position:relative;
+}
+#list-page::before{
+content:"";
+position:absolute;
+top:-120px;
+right:-100px;
+width:320px;height:320px;
+background:radial-gradient(circle, rgba(184,28,34,0.25) 0%, transparent 70%);
+pointer-events:none;
+animation:breath 8s ease-in-out infinite alternate;
+}
+#list-page::after{
+content:"";
+position:absolute;
+bottom:-140px;
+left:-80px;
+width:280px;height:280px;
+background:radial-gradient(circle, rgba(140,20,25,0.20) 0%, transparent 70%);
+pointer-events:none;
+animation:breath 9s ease-in-out infinite alternate-reverse;
+}
+@keyframes breath{
+0%{opacity:0.5;transform:scale(1)}
+100%{opacity:0.9;transform:scale(1.08)}
+}
+.list-header{
+position:relative;
+padding:50px 22px 24px;
+background:linear-gradient(180deg,#2b1f21 0%,rgba(30,30,36,0) 100%);
+overflow:hidden;
+}
+.list-header::before{
+content:"❀";
+position:absolute;
+top:24px;
+left:6%;
+font-size:22px;
+color:rgba(184,28,34,0.22);
+}
+.list-header::after{
+content:"✿";
+position:absolute;
+bottom:8px;
+right:8%;
+font-size:26px;
+color:rgba(184,28,34,0.18);
+}
+.list-header-inner{
+display:flex;
+align-items:center;
+gap:18px;
+position:relative;
+z-index:2;
+}
+.tape{
+width:106px;
+height:70px;
+flex-shrink:0;
+position:relative;
+filter:drop-shadow(0 2px 8px rgba(184,28,34,0.25));
+}
+.tape svg{
+width:100%;
+height:100%;
+}
+.list-header-text{
+flex:1;
+min-width:0;
+}
+.list-header h1{
+font-size:26px;
+font-weight:bold;
+color:var(--main-light);
+line-height:1.35;
+letter-spacing:1px;
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+}
+.list-header .sub{
+font-size:16px;
+color:var(--text-mid);
+margin-top:8px;
+letter-spacing:0.5px;
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+}
+/* 搜索吸顶栏：无阴影，深色适配 */
+.search-sticky-wrap{
+position:sticky;
+top:0;
+z-index:12;
+background:rgba(30,30,36,0.78);
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+padding:12px 0 14px;
+box-shadow:none;
+}
+.search-box{
+margin:0 18px;
+position:relative;
+}
+.search-box input{
+width:100%;
+padding:13px 46px 13px 40px;
+border-radius:28px;
+border:1px solid var(--border);
+background:rgba(255,255,255,0.08);
+font-size:15px;
+outline:none;
+color:var(--text);
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+box-shadow:var(--shadow-soft);
+}
+.search-box input::placeholder{color:var(--text-light)}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--text-mid)}
+.search-clear{
+position:absolute;right:14px;
+top:50%;
+transform:translateY(-50%);
+width:24px;height:24px;
+border-radius:50%;
+background:rgba(80,80,92,0.6);
+color:#fff;
+display:flex;align-items:center;justify-content:center;
+font-size:15px;
+cursor:pointer;
+backdrop-filter:blur(4px);
+}
+.section-title{padding:0 20px;margin-bottom:12px;font-size:13px;color:var(--text-mid);display:flex;align-items:center;gap:10px;font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+.song-list{padding:0 18px 40px}
+.song-item{
+background:rgba(255,255,255,0.06);
+border-radius:var(--radius);
+padding:16px 16px;
+margin-bottom:12px;
+box-shadow:var(--shadow-soft);
+display:flex;
+align-items:center;
+gap:14px;
+cursor:pointer;
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+border:1px solid var(--border);
+transition:all 0.24s ease;
+backdrop-filter:blur(6px);
+}
+.song-item:active{
+transform:scale(0.97);
+box-shadow:var(--shadow-glow);
+background:rgba(255,255,255,0.12);
+}
+.song-index{
+padding:3px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:bold;
+flex-shrink:0;
+background:rgba(184,28,34,0.22);
+color:var(--main-light);
+min-width:36px;
+text-align:center;
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+}
+.song-name{font-size:16px;font-weight:bold;color:var(--text);flex:1;min-width:0;font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;}
+.song-arrow{color:var(--text-mid)}
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-light);font-size:14px;font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;}
+
+/* ==========歌词详情页 黑红深色主题 ========== */
+#detail-page{
+background:
+radial-gradient(circle at 15% 12%, rgba(184,28,34,0.18) 0%, transparent 55%),
+radial-gradient(circle at 85% 88%, rgba(140,20,25,0.14) 0%, transparent 55%),
+linear-gradient(180deg,#271c1e 0%,#1e1e24 40%,#16161b 100%);
+position:relative;
+padding-left:max(18px, env(safe-area-inset-left));
+padding-right:max(18px, env(safe-area-inset-right));
+padding-bottom:140px;
+}
+#detail-page::before{
+content:"";
+position:absolute;
+top:-100px;left:-90px;
+width:260px;height:260px;
+background:radial-gradient(circle, rgba(184,28,34,0.16) 0%,transparent 70%);
+pointer-events:none;
+}
+#detail-page::after{
+content:"";
+position:absolute;
+bottom:-120px;right:-100px;
+width:300px;height:300px;
+background:radial-gradient(circle, rgba(140,20,25,0.12) 0%,transparent 70%);
+pointer-events:none;
+}
+.float-back-btn{
+position:fixed;
+top:18px;
+left:18px;
+z-index:99;
+width:42px;height:42px;
+border-radius:50%;
+border:1px solid rgba(120,120,135,0.6);
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:0 4px 16px rgba(0,0,0,0.25);
+transition:transform 0.2s ease,background 0.2s ease;
+}
+.float-back-btn:active{
+transform:scale(0.92);
+background:rgba(255,255,255,0.16);
+}
+.float-back-btn svg{width:21px;height:21px;color:#eeeeee}
+
+/* 标题区 */
+.detail-hero{
+padding:24px 0 14px;
+text-align:center;
+position:relative;
+z-index:2;
+}
+.detail-hero h1{
+font-size:28px;
+font-weight:bold;
+color:var(--main-light);
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+letter-spacing:2px;
+}
+
+.lyrics-body{
+position:relative;
+z-index:2;
+max-width:380px;
+width:100%;
+margin:0 auto 40px;
+padding:32px max(24px,env(safe-area-inset-left)) 32px max(24px,env(safe-area-inset-right));
+border-radius:22px;
+background:rgba(255,255,255,0.07);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+line-height:2.5;
+font-size:17px;
+color:#e8e8ed;
+white-space:pre-wrap;
+text-align:center;
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+border:1px solid rgba(255,255,255,0.09);
+box-shadow:
+0 10px 28px rgba(184,28,34,0.14),
+0 4px 10px rgba(0,0,0,0.20);
+}
+
+/* 底部操作栏：两列各占一半，保留间隙 */
+.detail-nav{
+position:fixed;
+bottom:0;left:0;right:0;
+padding:14px 18px 30px;
+background:linear-gradient(0deg,rgba(22,22,27,0.94) 55%,transparent);
+display:flex;
+gap:14px;
+z-index:20;
+}
+.nav-col{
+width:calc(50% - 7px); /* 严格一半宽度，扣除gap一半 */
+max-width:100%;
+flex:none;
+}
+.nav-btn{
+width:100%;
+max-width:100%;
+padding:13px 10px;
+border-radius:28px;
+border:1px solid var(--border);
+background:rgba(255,255,255,0.08);
+font-size:14px;
+font-weight:bold;
+color:var(--text);
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+cursor:pointer;
+box-shadow:0 3px 12px rgba(0,0,0,0.15);
+font-family:"SimSun","宋体","Songti SC","PingFang SC","Noto Serif CJK SC",serif;
+backdrop-filter:blur(8px);
+transition:transform 0.2s ease;
+}
+.nav-btn:active{transform:scale(0.96)}
+.nav-btn.primary{
+background:linear-gradient(135deg,var(--main),var(--main-dark));
+color:#fff;
+border-color:transparent;
+box-shadow:0 4px 16px rgba(184,28,34,0.30);
+}
+.nav-btn:disabled{opacity:0.32;cursor:not-allowed;transform:none;box-shadow:none}
+.nav-btn svg{width:16px;height:16px;flex-shrink:0;}
+/* 文字容器单独做溢出省略，图标不会被挤压 */
+.btn-text{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+min-width:0;
+}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="list-page" class="page active">
+<div class="list-header">
+<div class="list-header-inner">
+<div class="tape">
+<svg viewBox="0 0 110 72" fill="none">
+<rect x="8" y="12" width="94" height="48" rx="6" fill="#1c0c0e" />
+<circle cx="33" cy="36" r="13" fill="#33181a" stroke="#b81c22" stroke-width="2" />
+<circle cx="33" cy="36" r="4.5" fill="#b81c22" />
+<circle cx="77" cy="36" r="13" fill="#33181a" stroke="#b81c22" stroke-width="2" />
+<circle cx="77" cy="36" r="4.5" fill="#b81c22" />
+<rect x="28" y="33" width="54" height="6" fill="#b81c22" opacity=".35" />
+<rect x="8" y="12" width="94" height="48" rx="6" stroke="#b81c22" stroke-width="1.5" fill="none" />
+</svg>
+</div>
+<div class="list-header-text">
+<h1>李荣浩「黑马」演唱会</h1>
+<div class="sub">歌词速查手册</div>
+</div>
+</div>
+</div>
+<div class="search-sticky-wrap" id="stickyBar">
+<div class="search-box">
+<svg class="search-icon" viewBox="0 0 24 24" fill="none"><path d="M11.5 3C16.1944 3 20 6.80558 20 11.5C20 13.523 19.2933 15.381 18.1132 16.8404L21.1364 19.8636C21.4879 20.2151 21.4879 20.7849 21.1364 21.1364C20.7849 21.4879 20.2151 21.4879 19.8636 21.1364L16.8404 18.1132C15.381 19.2933 13.523 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3ZM11.5 18.2C15.2003 18.2 18.2 15.2003 18.2 11.5C18.2 7.79969 15.2003 4.8 11.5 4.8C7.79969 4.8 4.8 7.79969 4.8 11.5C4.8 15.2003 7.79969 18.2 11.5 18.2Z" fill="currentColor" /></svg>
+<input type="text" id="searchInput" placeholder="搜索歌名或歌词…" oninput="filterSongs()">
+<div class="search-clear" id="searchClear" onclick="clearSearch()">×</div>
+</div>
+</div>
+<div class="section-title" id="listTitle">全部 <span id="totalCount">0</span>首</div>
+<div class="song-list" id="songList"></div>
+</div>
+
+<div id="detail-page" class="page">
+<div class="float-back-btn" onclick="goPage('list-page')">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+</div>
+<div class="detail-hero">
+<h1 id="songSubTitle"></h1>
+</div>
+<div class="lyrics-body" id="lyricsBody"></div>
+
+<div class="detail-nav">
+    <div class="nav-col">
+        <button class="nav-btn" id="btnPrev" onclick="prevSong()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l7-7M5 12l7 7" /></svg>
+            <span class="btn-text" id="btnPrevText">上一首</span>
+        </button>
+    </div>
+    <div class="nav-col">
+        <button class="nav-btn primary" id="btnNext" onclick="nextSong()">
+            <span class="btn-text" id="btnNextText">下一首</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M19 12l-7-7M19 12l-7 7" /></svg>
+        </button>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+const songs = [
+{name:"黑马",lyrics:`
+黑马奔向那个事外桃源
+说它命不由天不要再蒙着眼
+孤独向来都是雪上加盐
+若能视而不见方可攻其不备
+缰绳总会言之有理的出现 用各种大众语言
+黑马路过村庄路过草原
+能躲雨的屋檐出于本性留恋
+不问前程或许能走更远
+最好无路可退自然心无杂念
+造旷世免不了 自己挥的鞭
+你骄傲的存在 在百年之外也醒着
+你骄傲的存在 在败了也值得
+你骄傲的存在 在百年之外也活着
+你骄傲的存在 再来已是伯乐
+每当黑马抬起头遥望着星河
+黑马奔向那个事外桃源
+说它命不由天不要再蒙着眼
+孤独向来都是雪上加盐
+若能视而不见方可攻其不备
+缰绳总会言之有理的出现 用各种大众语言
+黑马路过村庄路过草原
+能躲雨的屋檐出于本性留恋
+不问前程或许能走更远
+最好无路可退自然心无杂念
+造旷世免不了 自己挥的鞭
+你骄傲的存在 在百年之外也醒着
+你骄傲的存在 在败了也值得
+你骄傲的存在 在百年之外也活着
+你骄傲的存在 再来已是伯乐
+每当黑马抬起头遥望着星河
+你骄傲的存在 在百年之外也醒着
+你骄傲的存在 在败了也值得
+你骄傲的存在 在百年之外也活着
+你骄傲的存在 再来已是伯乐
+你骄傲的存在 在百年之外也醒着
+你骄傲的存在 在败了也值得
+你骄傲的存在 在百年之外也活着
+你骄傲的存在 再来已是伯乐
+`},
+{name:"快让我在雪地上撒点儿野",lyrics:`
+我光着膀子 我迎着风雪
+跑在那逃出医院的道路上
+别拦着我 我也不要衣裳
+因为我的病就是没有感觉
+给我点儿肉 给我点儿血
+换掉我的志如钢毅如铁
+快让我哭 快让我笑
+快让我在雪地上撒点儿野
+YiYe YiYe
+因为我的病就是没有感觉
+YiYe YiYe
+快让我在雪地上撒点儿野
+YiYe YiYe
+因为我的病就是没有感觉
+YiYe YiYe
+快让我在雪地上撒点儿野
+我没穿着衣裳 也没穿着鞋
+却感觉不到西北风的强和烈
+不知走着还是跑着
+因为我的病就是没有感觉
+给我点儿刺激 大夫老爷
+给我点儿爱 我的护士姐姐
+快让我哭 要么让我笑
+快让我在雪地上撒点儿野
+YiYe YiYe
+因为我的病就是没有感觉
+YiYe YiYe
+快让我在雪地上撒点儿野
+YiYe YiYe
+因为我的病就是没有感觉
+YiYe YiYe
+快让我在雪地上撒点儿野
+`},
+{name:"嗯",lyrics:`
+有一种人类
+没有兄弟姐妹
+刚走进社会
+人得罪一堆
+发型里的另类
+贫穷却有品味
+谁也学不会
+不喜欢纹身龙凤系列
+为一个爱的人去流血
+也许高尚的人不理解
+怀旧热泪和重口味
+少一个都不对
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+所以你不配
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+嗯嗯嗯嗯嗯
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+所以我不配
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+嗯嗯嗯嗯嗯
+崇拜的人物
+是个大人物
+他上山打过鼓
+下山打过虎
+最不害怕吃苦
+拒绝一切认输
+从来都不服
+不喜欢纹身龙凤系列
+为一个爱的人去流血
+也许高尚的人不理解
+怀旧热泪和重口味
+少一个都不对
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+所以你不配
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+嗯嗯嗯嗯嗯
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+所以我不配
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+嗯嗯嗯嗯嗯
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+所以你不配
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+嗯嗯嗯嗯嗯
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+所以我不配
+嗯嗯嗯嗯
+刚过十八岁
+嗯嗯嗯嗯
+嗯嗯嗯嗯嗯
+`},
+{name:"慢冷",lyrics:`
+慢冷
+随意就转折
+慢冷的人啊 会自我折磨
+冲动的人向来听不见挽留
+这世界大得让你很难不旅游
+浪漫让你温柔
+也让你最惹人
+说完了
+好像话都说完了
+总是沉默对坐着
+眼里是浓浓夜色
+感情是偏执的
+越爱越是偏执的
+不相信我看到的
+硬要说裂缝不过是皱褶
+怎么先炽热的却先变冷了
+慢热的却停不了还在沸腾着
+看时光任性快跑随意就转折
+慢冷的人啊 会自我折磨
+冲动的人向来听不见挽留
+这世界大得让你很难不旅游
+浪漫让你温柔
+也让你最惹人泪流
+怎么先炽热的却先变冷了
+慢热的却停不了还在沸腾着
+看时光任性快跑随意就转折
+慢冷的人啊 会自我折磨
+冲动的人向来听不见挽留
+这世界大得让你很难不旅游
+浪漫让你温柔
+也让你最惹人泪流
+`},
+{name:"走走",lyrics:`
+回去的路上自说自谈
+顽固的对抗往往会投降
+被错付了的情感
+确实很遗憾
+慢慢懂得了退让退的理所应当
+油画里的山来回一趟
+猎物受了伤要怎么飞翔
+对抗后的疲惫感叫做成长
+原来世界从没有那种剧情的反转
+去我的心里走一走在多年以后
+世间对错就好聚难收
+我难过就听歌
+醉着放烟火
+没有人追究我
+去我的心里走一走
+在多年以后
+虚构了一爱人一朋友
+相投的定居了不合则散了
+轰轰烈烈路过三三两两停停走走
+油画里的山来回一趟
+猎物受了伤要怎么飞翔
+对抗后的疲惫感叫做成长
+原来世界从没有那种剧情的反转
+去我的心里走一走在多年以后
+世间对错就好聚难收
+我难过就听歌
+醉着放烟火
+没有人追究我
+去我的心里走一走
+在多年以后
+虚构了一爱人一朋友
+相投的定居了不合则散了
+轰轰烈烈路过三三两两停停走走
+去我的心里走一走在多年以后
+世间对错就好聚难收
+我难过就听歌
+醉着放烟火
+没有人追究我
+去我的心里走一走
+在多年以后
+虚构了一爱人一朋友
+相投的定居了不合则散了
+轰轰烈烈路过三三两两停停走走
+轰轰烈烈路过三三两两停停走走
+`},
+{name:"老街",lyrics:`
+一张褪色的照片
+好像带给我一点点怀念
+巷尾老爷爷卖的热汤面
+味道弥漫过旧旧的后院
+流浪猫睡熟在摇晃秋千
+夕阳照了一遍他咪着眼
+那张同桌寄的明信片
+安静的躺在课桌的里面
+快要过完的春天
+还有雕刻着图案的门帘
+窄窄的长长的过道两边
+老房子依然升起了炊烟
+刚刚下完了小雨的季节
+爸妈又一起走过的老街
+记不得哪年的哪一天
+很漫长又很短暂的岁月
+现在已经回不去
+早已流逝的光阴
+手里的那一张渐渐模糊不清的车票
+成了回忆的信号
+忘不掉的是什么我也不知道
+想不起当年模样
+看也看不到去也去不了的地方
+也许那老街的腔调是属于我的忧伤
+嘴角那点微笑越来越勉强
+忘不掉的是什么我也不知道
+放不下熟悉片段
+回头望一眼已经很多年的时间
+透过手指间看着天
+我又回到那老街
+靠在你们身边渐行渐远
+快要过完的春天
+还有雕刻着图案的门帘
+窄窄的长长的过道两边
+老房子依然升起了炊烟
+刚刚下完了小雨的季节
+爸妈又一起走过的老街
+记不得哪年的哪一天
+很漫长又很短暂的岁月
+现在已经回不去
+早已流逝的光阴
+手里的那一张渐渐模糊不清的车票
+成了回忆的信号
+忘不掉的是什么我也不知道
+想不起当年模样
+看也看不到去也去不了的地方
+也许那老街的腔调是属于我的忧伤
+嘴角那点微笑越来越勉强
+忘不掉的是什么我也不知道
+放不下熟悉片段
+回头望一眼已经很多年的时间
+透过手指间看着天
+我又回到那老街
+靠在你们身边渐行渐远
+`},
+{name:"喜剧之王",lyrics:`
+我看着颗猕猴桃
+眼泪突然被引爆
+我可不是可不是特别爱闹
+这叫做这叫做心灵感召
+不信你问李清照
+我天生不爱炫耀
+却太多艺术细胞
+我谈的情拍的拖也许很少
+中的枪挨的刀受的煎熬
+华丽得无法低调
+为什么全世界的恋
+我都失一遍
+为所有的悲剧
+当特约演员
+我伤得断肠
+我哭得夸张
+像一套港产片
+为何普天下的泪
+我先流一遍
+市面上的纸巾
+都由我代言
+站在我旁边
+你不算可怜
+这也是种贡献
+被分手的那一秒
+我疯狂往海边跑
+你有什么资格说我很无聊
+你那次淋着雨失控咆哮
+廉价小说那一套
+为什么全世界的恋
+我都失一遍
+为所有的悲剧
+当特约演员
+我伤得断肠
+我哭得夸张
+像一套港产片
+为何普天下的泪
+我先流一遍
+市面上的纸巾
+都由我代言
+站在我旁边
+你不算可怜
+这也是种贡献
+啦啦啦啦 啦啦啦啦
+啦啦啦啦 啦啦啦啦
+啦啦啦啦 啦啦啦啦
+啦啦啦啦 啦啦啦啦
+啦啦啦啦 啦啦啦啦
+啦啦啦啦 啦啦啦啦
+啦啦啦
+每一天都活在电影里面
+每一天都活在小说里面
+每一天都活在 K 歌里面
+每一天都活在 MV 里面
+这世界本来就是场
+真人秀表演
+实在难避免
+幕揭开 全世界的恋
+我都失一遍
+为所有的悲剧
+当特约演员
+我伤得断肠
+我哭得夸张
+只为了红几年
+`},
+{name:"乐团",lyrics:`
+吉他手女朋友
+又漂亮又很瘦
+键盘手回头潇洒的
+对我说 对我说
+他来唱一段
+排练室的闷热
+闷出好几首歌
+都以为会红会火的那种歌
+呵呵呵
+Wu……
+我们的歌没有人喜欢
+Wu……
+我们的青春留在乐团
+写歌词的时候
+几个人一起凑
+押不上韵的就当做是风格
+呵呵呵
+Wu……
+我们的歌没有人喜欢
+Wu……
+我们的青春留在乐团
+Wu……
+我们的歌有些人喜欢
+Wu……
+我们的青春留在乐团
+Wu……
+我们的歌是人都喜欢
+Wu……
+我们的青春留在乐团
+Wu……
+我们的歌成为了自传
+Wu……
+我们的名字是
+`},
+{name:"鸿门宴",lyrics:`
+平原上的歌好多都记录着
+回不去的昨天最难得
+人们怀念着却不可得
+玫瑰花才开就谢了
+时间从来不会 大发慈悲
+文人墨水难写出原委
+曾经顽固的跟世界对抗着
+兜兜转转头发有白的
+树叶有时绿有时荒的
+为什么哭过更快乐
+时间从来不会 任人支配
+朝夕相对只能够回味
+可惜白天 想念黑夜
+日落的神能不能慢一些
+可惜今天 不能后退
+是不是怎么都不给拖延
+可惜明天 不会慈悲
+回忆的影片都舍不得剪
+才发现时间 摆了鸿门宴
+曾经顽固的跟世界对抗着
+兜兜转转头发有白的
+树叶有时绿有时荒的
+为什么哭过更快乐
+时间从来不会 任人支配
+朝夕相对只能够回味
+可惜白天 想念黑夜
+日落的神能不能慢一些
+可惜今天 不能后退
+是不是怎么都不给拖延
+可惜明天 不会慈悲
+回忆的影片都舍不得剪
+才发现时间 摆了鸿门宴
+可惜白天 想念黑夜
+日落的神能不能慢一些
+可惜今天 不能后退
+会不会后不后退无所谓
+可惜明天 不会慈悲
+回忆只是走远并非搁浅
+才发现时间 撤了鸿门宴
+`},
+{name:"乌梅子酱",lyrics:`
+背靠在树枝上
+蜻蜓落在露水旁乘凉
+表白后的乌梅树下
+土壤发了芽
+美得不像话
+再让我想一想
+那最腻的情话怎么讲
+慢火熬的细水长流
+念长长久久
+约好到白头
+你浅浅的微笑就像 乌梅子酱
+我尝了你嘴角唇膏 薄荷味道
+是甜甜的爱情 来的这么确定
+因为你每个害羞的反应
+你浅浅的微笑就像 乌梅子酱
+迎风吹过你的头发 我好喜欢
+厚厚的甜蜜感用幸福秤杆秤一些收藏
+合照一张和夕阳
+舀一勺这味道 暮暮朝朝比例刚刚好
+果肉配焦糖的温柔
+再几个春秋
+我喂你一口
+你浅浅的微笑就像 乌梅子酱
+我尝了你嘴角唇膏 薄荷味道
+是甜甜的爱情 来的这么确定
+因为你每个害羞的反应
+你浅浅的微笑就像 乌梅子酱
+迎风吹过你的头发 我好喜欢
+厚厚的甜蜜感用幸福秤杆秤一些收藏
+合照一张和夕阳
+厚厚的甜蜜感用幸福秤杆秤一些收藏
+合照一张和夕阳
+`},
+{name:"都一样",lyrics:`
+二月天冲淡河岸边的纹线
+还有那只褪色帆布鞋
+都以为结束也会很美
+都以为不会
+我们俩独自游走路边两旁
+原来的我们不是这样
+拍张照纪念这个地方
+没有内容的微笑
+安静听你说话
+日落下的篱笆
+简单道别回答
+转过身的两个人都放不下
+都一样受了伤
+都好像要陌生了对方
+路走完泪未干
+左手牵着右手都不放
+都一样
+改不掉
+听我的歌流泪的习惯
+越勇敢就越孤单
+这情歌再甜再悲伤
+也让我最后为你唱
+琴声刚起就红了眼眶
+冷了心房
+我们俩独自游走路边两旁
+原来的我们不是这样
+拍张照纪念这个地方
+没有内容的微笑
+安静听你说话
+日落下的篱笆
+简单道别回答
+转过身的两个人都放不下
+都一样受了伤
+都好像要陌生了对方
+路走完泪未干
+左手牵着右手都不放
+都一样改不掉
+听我的歌流泪的习惯
+越勇敢就越孤单
+这情歌再甜再悲伤
+也让我最后为你唱
+琴声刚起就红了眼眶
+都一样改不掉
+听我的歌流泪的习惯
+越勇敢就越孤单
+这情歌再甜再悲伤
+也让我最后为你唱
+琴声刚起就红了眼眶
+冷了心房
+都一样
+`},
+{name:"恋人",lyrics:`
+爱像是一场小雨
+淅沥沥淅沥沥
+滴入我回忆
+爱又像一场旅行
+走停停走停停
+忽然遇见你
+停下了足迹
+是否还是不太喜欢吃香菜
+到现在都没改
+那双原来最喜欢的匡威鞋带
+现在却解不开
+那张磁带一再一再
+它又再一次的卡带
+却还会再一遍一遍
+一遍又一遍听下来
+昨天的爱 已回不来
+却依然在心里徘徊
+却依然在心底徘徊
+爱又像一场旅行
+走停停走停停
+忽然遇见你
+停下了足迹
+是否还是不太喜欢吃香菜
+到现在都没改
+那双原来最喜欢的匡威鞋带
+现在却解不开
+那张磁带一再一再
+它又再一次的卡带
+却还会再一遍一遍
+一遍又一遍听下来
+昨天的爱 已回不来
+却依然在心里徘徊
+却依然在心底徘徊
+凶手和恋人都喜欢事后回现场
+看一看自己从前到底有多疯狂
+回忆里充满着罗曼蒂克的幻想
+那张磁带里藏着过往
+播放了就会回到现场
+再一再它又再一次的卡带
+却还会再一遍一遍
+一遍又一遍听下来
+昨天的爱 已回不来
+却依然在心里徘徊
+却依然在心底徘徊
+`},
+{name:"戒烟",lyrics:`
+已经为了变的更好去掉锋芒
+一不小心成了你的倾诉对象
+电话约在从前约会的地方
+要陪你唱歌吃饭我结账
+保持优良习惯
+你说最近过的还算幸福美满
+喝了几杯唱了几段你却哭了
+想去安慰却不知什么立场
+听你说话看你哭湿头发
+我得到了惩罚
+戒了烟我不习惯
+没有你我怎么办
+三年零一个礼拜
+才学会怎么忍耐
+你给过我的伤害
+是没有一句责怪
+戒了烟 染上悲伤
+我也不想
+你说最近过的还算幸福美满
+喝了几杯唱了几段你却哭了
+想去安慰却不知什么立场
+听你说话看你哭湿头发
+我得到了惩罚
+戒了烟我不习惯
+没有你我怎么办
+三年零一个礼拜
+才学会怎么忍耐
+你给过我的伤害
+是没有一句责怪
+戒了烟 染上悲伤
+我也不想
+我也不想
+谁也不想
+戒了烟我不习惯
+没有你我怎么办
+三年零一个礼拜
+才学会怎么忍耐
+你给过我的伤害
+是没有一句责怪
+戒了烟 染上悲伤
+我也不想
+`},
+{name:"等着等着就老了",lyrics:`
+匆匆忙忙等着和青春说声再会
+等到后来被生活搞的伤痕累累
+终于等到那首不敢听的歌
+听的我放开声哭了
+喝醉后没有等到人能陪我聊天
+工作了好几年也没存下什么钱
+曾经等过海誓山盟好几回
+却没有 一次有结尾
+有可能我某天成为孩子的长辈
+有可能我把后面几十年 全部浪费
+等着等着就老了
+爱着恨着走的好曲折
+不敢回头看的
+都是我没等到的
+等着等着就老了
+喝醉后没有等到人能陪我聊天
+工作了好几年也没存下什么钱
+曾经等过海誓山盟好几回
+却没有 一次有结尾
+有可能我某天成为孩子的长辈
+有可能我把后面几十年 全部浪费
+等着等着就老了
+爱着恨着走的好曲折
+不敢回头看的
+都是我没等到的
+等着等着就老了
+爱着恨着走的好曲折
+不敢回头看的
+是我已经等到的
+等着等着就老了
+`},
+{name:"爸爸妈妈",lyrics:`
+我曾经很想知道
+同样的话要说多少次才好
+那些再三强调的老套
+长大了才知道是不是需要
+很少主动拥抱
+就算为了自豪
+腼腆的笑
+要强而又低调
+穿的布料
+我赠送的外套
+过时也不丢掉
+还是一样
+太多理所应当让人觉得平常
+不算太小的房
+冬暖夏凉的那间放着我的床
+歌颂这种平凡 一两句唱不完
+恩重如山 听起来不自然
+回头去看
+这是说了谢谢
+反而才亏欠的情感
+爸爸妈妈给我的不少不多
+足够我在这年代奔波
+足够我生活
+年少的轻狂不能用来挥霍
+也曾像朋友一样和我诉说
+爸爸妈妈总说经历的坎坷
+是度过青春的快乐
+这时候这个季节
+又想起了这首歌
+还是一样
+太多理所应当让人觉得平常
+不算太小的房
+冬暖夏凉的那间放着我的床
+歌颂这种平凡 一两句唱不完
+恩重如山 听起来不自然
+回头去看
+这是说了谢谢
+反而才亏欠的情感
+爸爸妈妈给我的不少不多
+足够我在这年代奔波
+足够我生活
+年少的轻狂不能用来挥霍
+也曾像朋友一样和我诉说
+爸爸妈妈总说经历的坎坷
+是度过青春的快乐
+这时候这个季节
+又想起了这首歌
+爸爸妈妈给我的不少不多
+足够我在这年代奔波
+足够我生活
+年少的轻狂不能用来挥霍
+也曾像朋友一样和我诉说
+爸爸妈妈总说经历的坎坷
+是度过青春的快乐
+这时候这个季节
+又想起了这首歌
+`},
+{name:"紫荆花盛开",lyrics:`
+Ronghao
+紫荆花飘扬
+飞向 避风的海港
+Gigi
+摇曳 一湾水温柔
+全是 最爱坚守
+Ronghao
+纯真 是你的微笑
+一眼到永远的抱抱
+Gigi
+爱像 亲恩般深长
+时时 为我鼓掌
+爱和唱
+Ronghao
+永远的紫荆花 在爱之下 茁壮发芽
+阳光中笑开花 是暖暖的 翩翩启航
+同屋檐 之下 像一幅画
+日夜 相守相望
+闪闪星光
+照亮你的脸庞
+Gigi
+心中的紫荆花 凭爱开花 同处一家
+多清澈这天空 晴雨相拥 同心逐梦
+坚守我 信心 一路出众
+无惧罡风
+感恩你 热暖送
+花开于 爱之中
+啦啦啦......
+合
+永远的紫荆花 在爱之下 茁壮发芽
+阳光中笑开花 是暖暖的 翩翩启航
+同屋檐 之下 像一幅画
+日夜 相守相望
+闪闪星光
+照亮你的脸庞
+永远的紫荆花 要飞翔啊 纵有浪花
+说不尽的牵挂 有我在啊 温暖的家
+爱流淌 拥抱 彼此心岸
+不负时光
+多骄傲的枝芽
+春暖后 又开花
+`},
+{name:"女儿国",lyrics:`
+世上安得两全法
+不负如来也不负卿
+反省凡心损梵行
+从来如此莫聪明
+既生苦难我西行
+何生红颜你倾城
+如何抹去你身影
+如同忘却我姓名
+说什么王权富贵
+怕什么戒律清规
+心恋我百转千回
+快带我远走高飞
+念什么善恶慈悲
+等什么望穿秋水
+任来世枯朽成灰
+换今生与你相随
+世上安得两全法
+不负如来也不负卿
+反省凡心损梵行
+从来如此莫聪明
+既生苦难我西行
+何生红颜你倾城
+如何抹去你身影
+如同忘却我姓名
+说什么王权富贵
+怕什么戒律清规
+心恋我百转千回
+快带我远走高飞
+念什么善恶慈悲
+等什么望穿秋水
+任来世枯朽成灰
+换今生与你相随
+说什么王权富贵
+世上安得两全法
+怕什么戒律清规
+不负如来也不负卿
+心恋我百转千回
+反省凡心损梵行
+快带我远走高飞
+从来如此莫聪明
+念什么善恶慈悲
+既生苦难我西行
+等什么望穿秋水
+何生红颜你倾城
+任来世枯朽成灰
+如何抹去你身影
+换今生与你相随
+如同忘却我姓名
+`},
+{name:"李白",lyrics:`
+大部分人要我学习去看
+世俗的眼光
+我认真学习了世俗眼光
+世俗到天亮
+一部外国电影没听懂一句话
+看完结局才是笑话
+你看我多乖多聪明多么听话
+多奸诈
+喝了几大碗米酒再离开是为了模仿
+一出门不小心吐的那幅是谁的书画
+你一天一口一个 亲爱的对方
+多么不流行的模样
+都应该练练书法再出门闯荡
+才会有人热情买账
+要是能重来 我要选李白
+几百年前做的好坏
+没那么多人猜
+要是能重来 我要选李白
+至少我还能写写诗来澎湃
+逗逗女孩
+要是能重来 我要选李白
+创作也能到那么高端
+被那么多人崇拜
+要是能重来
+喝了几大碗米酒再离开是为了模仿
+一出门不小心吐的那幅是谁的书画
+你一天一口一个 亲爱的对方
+多么不流行的模样
+都应该练练书法再出门闯荡
+才会有人热情买账
+要是能重来 我要选李白
+几百年前做的好坏
+没那么多人猜
+要是能重来 我要选李白
+至少我还能写写诗来澎湃
+逗逗女孩
+要是能重来 我要选李白
+创作也能到那么高端
+被那么多人崇拜
+要是能重来
+要是能重来 我要选李白
+几百年前做的好坏
+没那么多人猜
+要是能重来 我要选李白
+至少我还能写写诗来澎湃
+逗逗女孩
+要是能重来 我要选李白
+创作也能到那么高端
+被那么多人崇拜
+要是能重来
+`},
+{name:"作曲家",lyrics:`
+又很久没见
+你剪了长发
+谈怎么说话
+谈怎么启发
+怕歌词写的肉麻
+怕浮夸
+放一盘磁带
+七八十年代
+才听了一半
+就悲伤起来
+每一句里的感慨
+都是现在
+作曲家
+写一首我们一生
+最平凡的歌
+作曲家
+告诉你爱的人
+你多真多深刻
+作曲家
+我还是你多年
+未见的老友啊
+而你还是不太明白
+孤独是个节拍
+音符不会写
+写歌是感觉
+看几眼世界
+多几个头衔
+理论书上的观点
+有缺陷
+颁一个奖牌
+说一段对白
+不谈情说爱
+也尽量精彩
+没几个人生下来
+不是天才
+作曲家
+写一首我们一生
+最平凡的歌
+作曲家
+告诉你爱的人
+你多真多深刻
+作曲家
+我还是你多年
+未见的老友啊
+而你还是不太明白
+孤独是个节拍
+是个节拍
+作曲家
+写一首我们一生
+最平凡的歌
+作曲家
+告诉你爱的人
+你多真多深刻
+作曲家
+我还是你多年
+未见的老友啊
+而你还是不太明白
+孤独是个节拍
+`},
+{name:"一百",lyrics:`
+如果我 有一天笑了
+不要打扰我
+鸡汤留给你喝 我愚蠢我的
+如果我 有一天哭了
+也不用劝我
+也许是被感动 你不必硬懂
+一百种事总有一种可悲一种可乐
+我坚持我性格也理解你选择
+没必要关怀 我们有各自的精彩
+一百种事总有一种可悲一种可乐
+治好焦虑的方式是卷土重来
+有没有怀才
+在这渴望就可能的年代
+如果你 有一天累了
+不要打扰我
+关乎你的生活 是关乎你的
+如果说非要用一个词来形容我
+请给我安一个 你觉得好的
+一百种事总有一种可悲一种可乐
+我坚持我性格也理解你选择
+没必要关怀 我们有各自的精彩
+一百种事总有一种可悲一种可乐
+治好焦虑的方式是卷土重来
+有没有怀才
+在这渴望就可能的年代
+一百种事总有一种可悲一种可乐
+我坚持我性格也理解你选择
+没必要关怀 我们有各自的精彩
+一百种事总有一种可悲一种可乐
+治好焦虑的方式是卷土重来
+有没有怀才
+在这渴望就可能的年代
+`},
+{name:"不再见",lyrics:`
+陈学冬：
+离别没说再见 你是否心酸
+转身寥寥笑脸 不甘的甘愿
+也许下个冬天 也许还十年
+再回到你身边 为你撑雨伞
+李荣浩：
+剩几个夜晚 再几次晚安
+等你摘下还戴上指环
+陈学冬：
+原谅捧花的我盛装出席只为错过你
+祈祷天灾人祸分给我只给你这香气
+李荣浩：
+但我卑微奢求让我存留些许的气息
+好让你在梦里能想起我曾紧抱你的 力气
+李荣浩：
+以后遇见风雪 有新的雨伞
+为我留的灯盏 能不能别关
+不要为我伤感 别被绝望打断
+不能一起的白头 也别让风雪染
+陈学冬：
+再一个明天 下一世人间
+等我再为你戴上指环
+李荣浩：
+原谅捧花的我盛装出席却只为献礼
+目送洁白纱裙路过我对他说我愿意
+陈学冬：
+但我继续清扫门前的路和那段阶梯
+如果你疲惫时别忘记那里还能停留 休息
+合：
+原谅捧花的我盛装出席只为错过你
+祈祷天灾人祸分给我只给你这香气
+我想大言不惭卑微奢求来世再爱你
+希望每晚星亮入梦时有人来代替我 吻你
+`},
+{name:"拿走了什么",lyrics:`
+猫常常望着窗口
+也觉得沙发上少个人
+曾经那样 被看好的我们
+隐身在彼此视线
+你变得 开朗
+她语带保留说你没落单
+你们幸福就好
+细节就不必对我交代
+我爱过几个人怎么还不够
+他们明明都比你更爱我
+你到底拿走了什么
+全世界都不说
+你说谎过几次都瞒不过我
+你诚实了为何我会难过
+你究竟拿走了什么
+让我 寂寞
+不管睡在床哪边
+都讽刺我你早已离开
+决心忘怀 是贴心的示范
+不干涉各自明天
+我要我 乐观
+不让共同朋友感觉为难
+好几次快笑场
+可怜自己成这副模样
+我爱过几个人怎么还不够
+他们明明都比你更爱我
+你到底拿走了什么
+全世界都不说
+你说谎过几次都瞒不过我
+你诚实了为何我会难过
+你究竟拿走了什么
+让我 寂寞
+你说谎过几次都瞒不过我
+你诚实了为何我会难过
+你究竟拿走了什么
+让我 寂寞
+`},
+{name:"慢慢喜欢你",lyrics:`
+书里总爱写到喜出望外的傍晚
+骑的单车还有他和她的对谈
+女孩的白色衣裳男孩爱看她穿
+好多桥段
+好多都浪漫
+好多人心酸
+好聚好散
+好多天都看不完
+刚才吻了你一下你也喜欢对吗
+不然怎么一直牵我的手不放
+你说你好想带我回去你的家乡
+绿瓦红砖
+柳树和青苔
+过去和现在
+都一个样
+你说你也会这样
+慢慢喜欢你
+慢慢的亲密
+慢慢聊自己
+慢慢和你走在一起
+慢慢我想配合你
+慢慢把我给你
+慢慢喜欢你
+慢慢的回忆
+慢慢的陪你慢慢的老去
+因为慢慢是个最好的原因
+晚餐后的甜点就点你喜欢的吧
+今晚就换你去床的右边睡吧
+这次旅行我还想去上次的沙滩
+球鞋手表
+袜子和衬衫都已经烫好
+放行李箱
+早上等着你起床
+慢慢喜欢你
+慢慢的亲密
+慢慢聊自己
+慢慢和你走在一起
+慢慢我想配合你
+慢慢把我给你
+慢慢喜欢你
+慢慢的回忆
+慢慢的陪你慢慢的老去
+因为慢慢是个最好的原因
+书里总爱写到喜出望外的傍晚
+`},
+{name:"丑八怪",lyrics:`
+如果世界漆黑 其实我很美
+在爱情里面进退 最多被消费
+无关痛痒的是非
+又怎么不对 无所谓
+如果像你一样 总有人赞美
+围绕着我的卑微 也许能消退
+其实我并不在意 有很多机会
+像巨人一样的无畏
+放纵我心里的鬼
+可是我不配
+丑八怪 能否别把灯打开
+我要的爱 出没在漆黑一片的舞台
+丑八怪 在这暧昧的时代
+我的存在 像意外
+有人用一滴泪 会红颜祸水
+有人丢掉称谓 什么也不会
+只要你足够虚伪 就不怕魔鬼 对不对
+如果剧本写好 谁比谁高贵
+我只能沉默以对 美丽本无罪
+当欲望开始贪杯 有更多机会
+像尘埃一样的无畏 化成灰 谁认得谁
+管他配不配
+丑八怪 能否别把灯打开
+我要的爱 出没在漆黑一片的舞台
+丑八怪 在这暧昧的时代
+我的存在 不意外
+丑八怪 其实见多就不怪
+放肆去 high 用力踩
+那不堪一击的洁白
+丑八怪 这是我们的时代
+我不存在 才意外
+`},
+{name:"不遗憾",lyrics:`
+终于看到
+你穿着想要的 那种婚纱
+你右手接过 那捧花
+从今后 换成他 保护你 照顾你
+不论贫穷富裕
+不论生老病疾
+以后路上
+知道你会过的 有模有样
+我不会中途 先退场
+我要等那一幕
+我知道我会哭
+也知道我哭是为给你祝福
+爱过了 就不遗憾
+有什么 好遗憾
+今后提起 你的姓名 谈笑我也可以
+想到曾经在一起
+争吵欢笑都发自内心
+爱情不止一种定义
+错过了 也不遗憾
+只要是 好答案
+别回头看 回头太难 你要变得勇敢
+这一辈子我欠你
+如果来生还可能继续
+再用尽一生找寻 你在哪里
+以后路上
+知道你会过的 有模有样
+我不会中途 先退场
+我要等那一幕
+我知道我会哭
+也知道我哭是为给你祝福
+爱过了 就不遗憾
+有什么 好遗憾
+今后提起 你的姓名 谈笑我也可以
+想到曾经在一起
+争吵欢笑都发自内心
+爱情不止一种定义
+错过了 也不遗憾
+只要是 好答案
+别回头看 回头太难 你要变得勇敢
+这一辈子我欠你
+如果来生还可能继续
+再用尽一生找寻 你在哪里 oh
+错过了 也不遗憾
+只要是 好答案
+别回头看 回头太难 你要变得勇敢
+这一辈子我欠你
+如果来生还可能继续
+再用尽一生找寻 你在哪里
+`},
+{name:"麻雀",lyrics:`
+山隔壁还是山
+都有一个伴
+相信海枯石烂
+也许我笨蛋
+飞太慢会落单
+太快会受伤
+日子不就都这样
+天会晴就会暗
+我早就习惯
+一日为了三餐
+不至于寒酸
+为给你取暖我把翅膀折断
+我遭遇那些苦难
+你却不管
+我飞翔在乌云之中
+你看着我无动于衷
+有多少次波涛汹涌
+在我心中
+你飞向了雪山之巅
+我留在你回忆里面
+你成仙我替你留守人间
+麻雀也有明天
+天会晴就会暗
+我早就习惯
+一日为了三餐
+不至于寒酸
+为给你取暖我把翅膀折断
+我遭遇那些苦难
+你却不管
+我飞翔在乌云之中
+你看着我无动于衷
+有多少次波涛汹涌
+在我心中
+你飞向了雪山之巅
+我留在你回忆里面
+你成仙我替你留守人间
+麻雀也有明天
+我飞翔在乌云之中
+你看着我无动于衷
+有多少次波涛汹涌
+在我心中
+你飞向了雪山之巅
+我留在你回忆里面
+你成仙我替你留守人间
+麻雀也有明天
+`},
+{name:"年少有为",lyrics:`
+电视一直闪
+联络方式都还没删
+你待我的好
+我却错手毁掉
+也曾一起想
+有个地方睡觉吃饭
+可怎么去熬 日夜颠倒
+连头款也凑不到
+墙板 被我砸烂
+到现在还没修
+一碗热的粥
+你怕我没够
+都留一半带走
+给你形容
+美好今后 你常常眼睛会红
+原来心疼我
+我那时候不懂
+假如我年少有为 不自卑
+懂得什么是珍贵
+那些美梦
+没给你 我一生有愧
+假如我年少有为 知进退
+才不会让你替我受罪
+婚礼上 多喝几杯
+和你现在那位
+也曾一起想
+有个地方睡觉吃饭
+可怎么去熬 日夜颠倒
+连头款也凑不到
+墙板 被我砸烂
+到现在还没修
+一碗热的粥
+你怕我没够
+都留一半带走
+给你形容
+美好今后 你常常眼睛会红
+原来心疼我
+我那时候不懂
+假如我年少有为 不自卑
+懂得什么是珍贵
+那些美梦
+没给你 我一生有愧
+假如我年少有为 知进退
+才不会让你替我受罪
+婚礼上 多喝几杯
+和你现在那位
+假如我年少有为 不自卑
+尝过后悔的滋味
+金钱地位
+搏到了却好想退回
+假如我年少有为 知进退
+才不会让你替我受罪
+婚礼上 多喝几杯
+和你现在那位
+在婚礼上 多喝几杯
+祝我年少有为
+`},
+{name:"海陆风",lyrics:`
+太阳雨后 断线风筝 失去了联络
+换季以后 寻找一个 能落脚的窝
+过往的种种 孰轻孰重 告一段落
+好久不见了 我的脆弱
+温差前后 十度左右 来的没前奏
+太多承诺 时间打磨 最终没结果
+我抬起了头 看向四周 默默承受
+流下的眼泪 变成雨了
+海陆风 吹不走 回忆紧紧抓着天空
+蓝海鸥 掠过我的难过
+悲伤的气候怎么预测
+冰冷怀念温热
+相见却不可得
+海陆风 吹不走 回忆紧紧抓着天空
+被爱着的人不感同身受
+吹散思念结尾的漩涡
+化身一股暖流
+环太平洋四周
+温差前后 十度左右 来的没前奏
+太多承诺 时间打磨 最终没结果
+我抬起了头 看向四周 默默承受
+流下的眼泪 变成雨了
+海陆风 吹不走 回忆紧紧抓着天空
+蓝海鸥 掠过我的难过
+悲伤的气候怎么预测
+冰冷怀念温热
+相见却不可得
+海陆风 吹不走 回忆紧紧抓着天空
+被爱着的人不感同身受
+吹散思念结尾的漩涡
+化身一股暖流
+环太平洋四周
+海陆风 吹不走 回忆紧紧抓着天空
+不被爱的人等不到营救
+吹散思念结尾的漩涡
+化身一股暖流
+卷入风暴自首
+`},
+{name:"太坦白",lyrics:`
+再过一下天空就要变成红色
+看着太阳一点点还剩下半个
+那种感觉还在不在
+我也快颠倒了黑白
+面向左边已看不到 你在
+喝啤酒不是因为争吵了过后
+切蛋糕不是因为你的生日刚过
+只是记忆空了一块
+你怎么还不来涂改
+我以为你能把这变 更精彩
+你不要说话太坦白
+搞的我心里好悲哀
+再不怎么样 好歹也是一场爱
+你不要说话太坦白
+没有谁真的离不开
+现在我就要把自己 找回来
+喝啤酒不是因为争吵了过后
+切蛋糕不是因为你的生日刚过
+只是记忆空了一块
+你怎么还不来涂改
+我以为你能把这变 更精彩
+你不要说话太坦白
+搞的我心里好悲哀
+再不怎么样 好歹也是一场爱
+你不要说话太坦白
+没有谁真的离不开
+现在我就要把自己 找回来
+你的好 我知道
+我喜欢 你微笑
+别再流泪让我看到 让我看到
+你不要说话太坦白
+搞的我心里好悲哀
+再不怎么样 好歹也是一场爱
+你不要说话太坦白
+没有谁真的离不开
+现在我就要把自己 找回来
+`},
+{name:"不将就",lyrics:`
+那时候 我以为爱的是生活
+也算懂得 什么适合什么不可
+最近还是一样努力着
+配合你的性格
+你的追求者 你的坎坷
+我开的车
+算一算 虚度了多少个年头
+仿佛足够写一套错爱的春秋
+如果以后 你还想为谁
+浪费美好时候
+眼泪只能在我的胸膛
+毫无保留
+互相折磨到白头
+悲伤坚决不放手
+开始纠缠之后
+才又被人放大了自由
+你的暴烈太温柔
+感情又痛又享受
+如果我说不吻你不罢休
+谁能逼我将就
+你问我 为什么顽固而专一
+天下太大 总有人比你更合适
+其实我觉得这样不值
+可没选择方式
+你一出场别人都显得不过如此
+互相折磨到白头
+悲伤坚决不放手
+开始纠缠之后
+才又被人放大了自由
+你的暴烈太温柔
+感情又痛又享受
+如果我说不吻你不罢休
+谁能逼我将就
+不吻你不罢休
+谁能逼我将就
+互相折磨到白头
+悲伤坚决不放手
+开始纠缠之后
+才又被人放大了自由
+你的暴烈太温柔
+感情又痛又享受
+如果我说不吻你不罢休
+谁能逼我将就
+他们不过将就
+`},
+{name:"模特",lyrics:`
+穿华丽的服装 为原始的渴望而站着
+用完美的表情 为脆弱的城市而撑着
+我冷漠的接受 你焦急的等待也困着
+像无数生存在橱窗里的模特
+除了灯以外 我还能看见什么
+除了光以外 我还能要求什么
+除了你以外 还能倚赖哪一个
+在千里以外 在呼喊的是什么
+在百年以后 想回忆的是什么
+在离开以前 能否再见那一刻
+记得 你的眼睛将会亮着
+我的手臂将会挥着
+谁说世界早已没有选择
+趁着我会喜怒你会哀乐
+唱几分钟情歌
+没什么 至少证明我们还活着
+像单纯的蝴蝶 为玫瑰的甜美而飞着
+像顽皮的小猫 为明天的好奇而睡着
+是混乱的时代 是透明的监狱也觉得
+是不能继续在橱窗里做模特
+除了灯以外 我还能看见什么
+除了光以外 我还能要求什么
+除了你以外 还能倚赖哪一个
+在千里以外 在呼喊的是什么
+在百年以后 想回忆的是什么
+在离开以前 能否再见那一刻
+记得 你的眼睛将会亮着
+我的手臂将会挥着
+谁说世界早已没有选择
+趁着 我会喜怒你会哀乐
+唱几分钟情歌
+没什么 至少证明我们还活着
+记得 你的眼睛将会亮着
+我的手臂将会挥着
+谁说世界早已没有选择
+趁着 我会喜怒你会哀乐
+唱几分钟情歌
+没什么 至少证明我们还活着
+`},
+{name:"名字",lyrics:`
+最后的焰火 持续燃烧你我
+面对面蜡像两座 爱已逐渐消融
+坍塌了做过的梦 模糊了我们的面容
+称呼和问候 像放馊了的酒
+亲爱的叫不出口 对白拼拼凑凑
+拥挤的房间里头 塞不下我们的沉默
+或许故事已经告一个段落
+我不擦去你名字不可
+因为害怕回忆之中该死的承诺
+就让我们相信这是必然的结果
+转身之后只是个某某
+我不擦去你名字不可
+因为害怕人潮之中我还是回头
+在阳光之下希望你会真的快乐
+你我的名字再沒有以后
+就当没遇过 没有互相探索
+忘了对大海呐喊 披着满天星斗
+叫着彼此的绰号 笑得在怀里打哆嗦
+就当没哭过 没有署名寂寞
+为何用满满的刺 签收各种借口
+眼看着满满的爱 沦为无名氏的玩偶
+或许故事早已告一个段落
+我不擦去你名字不可
+因为害怕回忆之中该死的承诺
+就让我们相信这是必然的结果
+转身之后只是个某某
+我不擦去你名字不可
+因为害怕人潮之中我还是回头
+在阳光之下希望你会真的快乐
+你我的名字再沒有以后
+若不擦去你名字不可
+一片流沙世界你像海市和蜃楼
+就让我们相信这是必然的结果
+转身之后只是个某某
+若不擦去我名字不可
+我完美的背影早已写满了哀愁
+在阳光之下希望你能找到快乐
+尽管那个名字不再是我
+故事的开头 到故事的最后
+从红着脸微笑着 到红着眼泪流
+曾经熟悉的名字 今后列为失踪人口
+`}
+]
+let currentSongIdx = 0;
+const songListBox = document.getElementById('songList');
+const songSubTitle = document.getElementById('songSubTitle');
+const lyricText = document.getElementById('lyricsBody');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+const btnPrevText = document.getElementById('btnPrevText');
+const btnNextText = document.getElementById('btnNextText');
+const searchInput = document.getElementById('searchInput');
+const detailPageEl = document.getElementById('detail-page');
+const totalCountEl = document.getElementById('totalCount');
+
+function goPage(pageId){
+    document.querySelectorAll('.page').forEach(p=>{
+        p.classList.remove('active');
+        p.scrollTop = 0;
+    });
+    const activePage = document.getElementById(pageId);
+    activePage.classList.add('active');
+    activePage.scrollTop = 0;
+}
+
+function clearSearch(){
+    searchInput.value = '';
+    filterSongs();
+}
+
+function renderSongList(list){
+    songListBox.innerHTML = '';
+    totalCountEl.innerText = songs.length;
+    if(!list.length){
+        songListBox.innerHTML = `<div class="empty-state">没有找到相关歌曲</div>`;
+        return;
+    }
+    list.forEach((item)=>{
+        const realIndex = songs.indexOf(item);
+        const div = document.createElement('div');
+        div.className = 'song-item';
+        div.innerHTML = `
+            <span class="song-index">${realIndex+1}</span>
+            <span class="song-name">${item.name}</span>
+            <span class="song-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </span>`;
+        div.onclick = ()=>{
+            currentSongIdx = realIndex;
+            renderLyric();
+            goPage('detail-page');
+        };
+        songListBox.appendChild(div);
+    })
+}
+
+function renderLyric(){
+    if(!songs.length) return;
+    const song = songs[currentSongIdx];
+    songSubTitle.innerText = song.name;
+    lyricText.innerText = song.lyrics;
+    detailPageEl.scrollTop = 0;
+
+    if(currentSongIdx>0){
+        btnPrevText.innerText = `上一首《${songs[currentSongIdx-1].name}》`;
+    }else{
+        btnPrevText.innerText = `上一首`;
+    }
+    if(currentSongIdx < songs.length-1){
+        btnNextText.innerText = `下一首《${songs[currentSongIdx+1].name}》`;
+    }else{
+        btnNextText.innerText = `下一首`;
+    }
+
+    btnPrev.disabled = currentSongIdx <= 0;
+    btnNext.disabled = currentSongIdx >= songs.length - 1;
+}
+
+function prevSong(){
+    if(currentSongIdx > 0){
+        currentSongIdx -=1;
+        renderLyric();
+    }
+}
+function nextSong(){
+    if(currentSongIdx < songs.length - 1){
+        currentSongIdx +=1;
+        renderLyric();
+    }
+}
+
+function filterSongs(){
+    const kw = searchInput.value.trim().toLowerCase();
+    let arr = [...songs];
+    if(kw){
+        arr = arr.filter(s=> s.name.toLowerCase().includes(kw) || s.lyrics.toLowerCase().includes(kw));
+    }
+    renderSongList(arr);
+}
+
+renderSongList(songs);
+if(songs.length>0) renderLyric();
+</script>
+</body>
+</html>
